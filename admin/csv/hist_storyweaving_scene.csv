@@ -1,0 +1,29 @@
+id,story,step,throughline,domain,concern,issue,theme,sequence,encoding
+29,2,1,1,2,6,NULL,NULL,NULL,The French Revolution 1789 demonstrated that everything was possible.
+30,2,2,1,2,0,NULL,NULL,NULL,The passion for liberty turned into a violent character.
+31,2,3,1,2,7,NULL,NULL,NULL,Skepticism with the liberal project raised conservative opposition.
+32,2,4,1,2,0,NULL,NULL,NULL,The Sonderbund was defeated by Confederate military force.
+33,2,5,1,2,8,NULL,NULL,NULL,"The liberals, again in power, had learnt to act with decively and coordinatedly. They also learnt to take opposition serious."
+34,2,6,1,2,0,NULL,NULL,NULL,The conservative direct democratic claims were integrated into the constitution.
+35,2,7,1,2,5,NULL,NULL,NULL,The Swiss understood that sovereignty lied in the ability to integrate plurality and settle conflicts creatively.
+36,2,1,2,3,9,NULL,NULL,NULL,The plan to develop a liberal constituional revolution was executed (1798-1830).
+37,2,2,2,3,0,NULL,NULL,NULL,The liberal revolution and the Concordate of the Seven pushed a liberal constitution through.
+38,2,3,2,3,10,NULL,NULL,NULL,"The liberals adopt the role of the liberators of the country, buty lack true consideration for the people and the ability to accept the liberty of others."
+39,2,4,2,3,0,NULL,NULL,NULL,The Sonderbund war was succesful because the liberals had respected life over truth.
+40,2,5,2,3,11,NULL,NULL,NULL,The liberals learnt that liberty included the respect for the rights of others.
+41,2,6,2,3,0,NULL,NULL,NULL,"New opposition, this time from the communists, was approached by integrating their liberal values into the project of the liberals."
+42,2,7,2,3,12,NULL,NULL,NULL,The idea was conceived that a (semi-)direct democratic state fform was the most liberal constitution.
+43,2,1,4,4,13,NULL,NULL,NULL,"""I think that I achieved much in my life, and yet I could not stay quiet""."
+44,2,2,4,4,0,NULL,NULL,NULL,Katharina Morel got a foster daughter.
+45,2,3,4,4,14,NULL,NULL,NULL,Responsibilities forced Katharina Morel to considerate others and to plan for the future.
+46,2,4,4,4,0,NULL,NULL,NULL,"Accepting her responsibilities, Katharina Morel made the carreer of her life."
+47,2,5,4,4,15,NULL,NULL,NULL,Kathernia Morel's Innermost Desire was to achieve sovereignty.
+48,2,6,4,4,0,NULL,NULL,NULL,The limitations of her own finitud made her aware of transcendental values.
+49,2,7,4,4,16,NULL,NULL,NULL,Katharina Morel was aware that true sovereighnty included the contemplation of caring for others and leaving a heritage.
+50,2,1,3,1,4,NULL,NULL,NULL,The Church was Constantin Siegwart-Müller's home.
+51,2,2,3,1,0,NULL,NULL,NULL,Constantin Siegwart-Müller tried to improve the Church and the political system from the insight.
+52,2,3,3,1,2,NULL,NULL,NULL,The sovereignty of the Church and the development of persoanl faith were threatened.
+53,2,4,3,1,0,NULL,NULL,NULL,"The leader of the conservative movement , Joseph Leu, was murdered."
+54,2,5,3,1,3,NULL,NULL,NULL,"The future was dark, it seemed that violence had won over justice."
+55,2,6,3,1,0,NULL,NULL,NULL,"After around 10 years of exile and constant escapes, Constantin Siegwart-Müller was allowed to return home."
+56,2,7,3,1,1,NULL,NULL,NULL,Siegwart-Müler trusted that through the democratic movement the tradicional values of the old Confederacy and the Church would be preserved.

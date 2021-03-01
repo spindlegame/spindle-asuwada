@@ -1,0 +1,30 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the game_agent_init() hook (in hooks/game_agent.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="game_agent-id-<%%VALUE(id)%%>" class="game_agent-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="game_agent-user_id-<%%VALUE(id)%%>" class="game_agent-user_id"><%%SELECT%%><%%VALUE(user_id)%%><%%ENDSELECT%%></td>
+		<td id="game_agent-memberID-<%%VALUE(id)%%>" class="game_agent-memberID"><%%SELECT%%><%%VALUE(memberID)%%><%%ENDSELECT%%></td>
+		<td id="game_agent-img-<%%VALUE(id)%%>" class="game_agent-img"><a href="<%%BASE_UPLOAD_PATH%%><%%VALUE(img)%%>" data-lightbox="game_agent-img"><img src="thumbnail.php?i=<%%VALUE(img)%%>&t=game_agent&f=img&v=tv" class="img-thumbnail"></a></td>
+		<td id="game_agent-groupID-<%%VALUE(id)%%>" class="game_agent-groupID"><%%SELECT%%><%%VALUE(groupID)%%><%%ENDSELECT%%></td>
+		<td id="game_agent-selection_class-<%%VALUE(id)%%>" class="game_agent-selection_class"><%%SELECT%%><%%VALUE(selection_class)%%><%%ENDSELECT%%></td>
+		<td id="game_agent-agenttype1-<%%VALUE(id)%%>" class="game_agent-agenttype1 text-right"><%%SELECT%%><%%VALUE(agenttype1)%%><%%ENDSELECT%%></td>
+		<td id="game_agent-agenttype2-<%%VALUE(id)%%>" class="game_agent-agenttype2 text-right"><%%SELECT%%><%%VALUE(agenttype2)%%><%%ENDSELECT%%></td>
+		<td id="game_agent-gender-<%%VALUE(id)%%>" class="game_agent-gender"><%%SELECT%%><%%VALUE(gender)%%><%%ENDSELECT%%></td>
+		<td id="game_agent-last_name-<%%VALUE(id)%%>" class="game_agent-last_name"><%%SELECT%%><%%VALUE(last_name)%%><%%ENDSELECT%%></td>
+		<td id="game_agent-first_name-<%%VALUE(id)%%>" class="game_agent-first_name"><%%SELECT%%><%%VALUE(first_name)%%><%%ENDSELECT%%></td>
+		<td id="game_agent-other_name-<%%VALUE(id)%%>" class="game_agent-other_name"><%%SELECT%%><%%VALUE(other_name)%%><%%ENDSELECT%%></td>
+		<td id="game_agent-birthday-<%%VALUE(id)%%>" class="game_agent-birthday"><%%SELECT%%><%%VALUE(birthday)%%><%%ENDSELECT%%></td>
+		<td id="game_agent-birth_location-<%%VALUE(id)%%>" class="game_agent-birth_location"><%%SELECT%%><%%VALUE(birth_location)%%><%%ENDSELECT%%></td>
+		<td id="game_agent-birth_location_map-<%%VALUE(id)%%>" class="game_agent-birth_location_map"><%%SELECT%%><img src="<%%GOOGLEMAPTHUMB(birth_location_map)%%>" style="max-width: 50px; max-height: 50px; " ><%%ENDSELECT%%></td>
+		<td id="game_agent-deathday-<%%VALUE(id)%%>" class="game_agent-deathday"><%%SELECT%%><%%VALUE(deathday)%%><%%ENDSELECT%%></td>
+		<td id="game_agent-death_location-<%%VALUE(id)%%>" class="game_agent-death_location"><%%SELECT%%><%%VALUE(death_location)%%><%%ENDSELECT%%></td>
+		<td id="game_agent-workplace-<%%VALUE(id)%%>" class="game_agent-workplace"><%%SELECT%%><%%VALUE(workplace)%%><%%ENDSELECT%%></td>
+		<td id="game_agent-knows-<%%VALUE(id)%%>" class="game_agent-knows"><%%SELECT%%><%%VALUE(knows)%%><%%ENDSELECT%%></td>
+		<td id="game_agent-data_evaluation-<%%VALUE(id)%%>" class="game_agent-data_evaluation"><%%SELECT%%><%%VALUE(data_evaluation)%%><%%ENDSELECT%%></td>
+		<td id="game_agent-viaf_no-<%%VALUE(id)%%>" class="game_agent-viaf_no"><%%SELECT%%><%%VALUE(viaf_no)%%><%%ENDSELECT%%></td>
+		<td id="game_agent-authority_record-<%%VALUE(id)%%>" class="game_agent-authority_record"><%%SELECT%%><%%VALUE(authority_record)%%><%%ENDSELECT%%></td>
+		<td id="game_agent-authority_organization-<%%VALUE(id)%%>" class="game_agent-authority_organization text-right"><%%SELECT%%><%%VALUE(authority_organization)%%><%%ENDSELECT%%></td>

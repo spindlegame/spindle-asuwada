@@ -1,0 +1,394 @@
+<!-- To change the layout of the detail view form, we recommend using JS code in hooks/bio_storystatic-dv.js rather than editing this file -->
+
+<div id="detail-view"></div>
+<div class="panel-heading"><h3 class="panel-title"><strong><%%DETAIL_VIEW_TITLE%%></strong></h3></div>
+
+<div id="bio_storystatic_dv_container-loading" class="text-center text-info text-bold vspacer-lg"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+<div class="panel-body hidden" id="bio_storystatic_dv_container">
+	<!-- child links -->
+	<div class="row vspacer-md">
+		<div class="col-xs-12 children-links">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm vspacer-sm" href="bio_chr_dev_view.php?filterer_mcs_problem=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="bio_chr_dev_link"><i class="glyphicon glyphicon-list-alt"></i> Bio character dev.</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="bio_chr_dev_view.php?filterer_mcs_problem=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="xs_bio_chr_dev_link"><i class="glyphicon glyphicon-list-alt"></i> Bio character dev.</a>
+			<input type="hidden" id="bio_chr_dev_hclink" value="bio_chr_dev_view.php?filterer_mcs_problem=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm vspacer-sm" href="bio_storydynamic_view.php?filterer_storystatic_mc=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="bio_storydynamic_link"><i class="glyphicon glyphicon-list-alt"></i> Bio dynamic storypoints</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="bio_storydynamic_view.php?filterer_storystatic_mc=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="xs_bio_storydynamic_link"><i class="glyphicon glyphicon-list-alt"></i> Bio dynamic storypoints</a>
+			<input type="hidden" id="bio_storydynamic_hclink" value="bio_storydynamic_view.php?filterer_storystatic_mc=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<input type="hidden" id="hist_storydynamic_hclink" value="hist_storydynamic_view.php?filterer_storystatic_mc=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<hr class="hidden-xs hidden-sm">
+
+	<div class="row">
+		<!-- form inputs -->
+		<div class="col-md-8 col-lg-10" id="bio_storystatic_dv_form">
+			<fieldset class="form-horizontal">
+
+				<!-- Field: ID -->
+				<div class="form-group bio_storystatic-id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="id">ID</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="id"><%%VALUE(id)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Story -->
+				<div class="form-group bio_storystatic-story">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="story" data-parent_link="view_parent_modal">Story</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(story)%%><%%PLINK(story)%%><%%ADDNEW(bio_story)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Throughline -->
+				<div class="form-group bio_storystatic-throughline">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="throughline" data-parent_link="view_parent_modal">Throughline <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#throughline-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="throughline-description"><div class="alert alert-info bspacer-xs">The general are in which the Trouhgline's problem resides as it concernes the Domain.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(throughline)%%><%%PLINK(throughline)%%><%%ADDNEW(class_dramatica_throughline)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Story character mc -->
+				<div class="form-group bio_storystatic-story_character_mc">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="story_character_mc" data-parent_link="view_parent_modal">Story character mc</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(story_character_mc)%%><%%PLINK(story_character_mc)%%><%%ADDNEW(bio_chr)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Throughline_domain -->
+				<div class="form-group bio_storystatic-throughline_domain">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="throughline_domain" data-parent_link="view_parent_modal">Throughline_domain <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#throughline_domain-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="throughline_domain-description"><div class="alert alert-info bspacer-xs">Dramatica Term<br>An item that describes the area in which any one of the four throughlines occurs<br>There are four Throughlines in every complete story, each representing a different perspective in the structure of that story. One is assigned to the Overall Story Throughline and contains the story points attributed to the dispassionate argument of the story while also describing the area in which the Overall Story occurs. Another is for the Relationship Story Throughline and contains the story points which concern the passionate argument of the story and describe the relationship between the Main and Impact Characters. The Main and Impact Character are each assigned Throughlines as well, which contain the story points attributed to their characters and describe the areas in which they each operate. Each Throughline is the matching of a particular Class (either Situation (Universe), Activity (Physics), Manipulation (Psychology), or Fixed Attitude (Mind)) with a particular throughline (either Overall Story, Main Character, Impact Character, or Relationship Story). Each Domain describes the general area in which the problems of its throughline will lie and from what perspective the audience will be directed to view those problems. Domains determine large, genre-like positions in the relationship of audience to story.<br><br></div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(throughline_domain)%%><%%PLINK(throughline_domain)%%><%%ADDNEW(class_dramatica_domain)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Concern -->
+				<div class="form-group bio_storystatic-concern">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="concern" data-parent_link="view_parent_modal">Concern <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#concern-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="concern-description"><div class="alert alert-info bspacer-xs"><br>Type<br>The principal area of concern in a throughline<br>The category or nature of that for which the characters in a given throughline are most anxious, eager, or which they hope to protect or affect.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(concern)%%><%%PLINK(concern)%%><%%ADDNEW(class_dramatica_concern)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Issue -->
+				<div class="form-group bio_storystatic-issue">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="issue" data-parent_link="view_parent_modal">Issue <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#issue-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="issue-description"><div class="alert alert-info bspacer-xs">Variation<br>the thematic focus or topic of the Throughline being explored<br>Each of the four Throughlines: Overall Story, Relationship Story, Main Character, and Impact Character, have a thematic topic which is described by its Issue. The Overall Story Issue, for example, provides a value standard for judging the Overall Story Characters' efforts in a story. Whatever kinds of things are done by the Overall Story Characters in relation to the Story Goal can be said to be linked thematically by this particular item.<br></div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(issue)%%><%%PLINK(issue)%%><%%ADDNEW(class_dramatica_issue)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Problem -->
+				<div class="form-group bio_storystatic-problem">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="problem" data-parent_link="view_parent_modal">Problem <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#problem-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="problem-description"><div class="alert alert-info bspacer-xs">Element<br>the underlying cause of the story's difficulties<br>Of all the Elements, there is a single one that describes the essence of the story's problem. The inclusion of this element in an Overall Story Character identifies him as the Main or Impact Character. This is because it makes that character the only one who can solve both the Overall and Main vs. Impact problems in a single stroke by addressing the problem (changing).<br></div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(problem)%%><%%PLINK(problem)%%><%%ADDNEW(class_dramatica_themes)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Solution -->
+				<div class="form-group bio_storystatic-solution">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="solution" data-parent_link="view_parent_modal">Solution <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#solution-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="solution-description"><div class="alert alert-info bspacer-xs">The solution must be the Element that is dynamic (transversally opposed) to the problem, within the same Element Quad.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(solution)%%><%%PLINK(solution)%%><%%ADDNEW(class_dramatica_themes)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Symptom / Focus -->
+				<div class="form-group bio_storystatic-symptom">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="symptom" data-parent_link="view_parent_modal">Symptom / Focus <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#symptom-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="symptom-description"><div class="alert alert-info bspacer-xs">This one of the other elements within the same Class and Type but not within the same Variation. <br>For an exact encoding, please use Dramatica Pro.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(symptom)%%><%%PLINK(symptom)%%><%%ADDNEW(class_dramatica_themes)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Response / Direction -->
+				<div class="form-group bio_storystatic-response">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="response" data-parent_link="view_parent_modal">Response / Direction <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#response-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="response-description"><div class="alert alert-info bspacer-xs">The response must be the Element that is dynamic (transversally opposed) to the symptome within the same Element Quad.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(response)%%><%%PLINK(response)%%><%%ADDNEW(class_dramatica_themes)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Catalyst / Unique Ability -->
+				<div class="form-group bio_storystatic-catalyst">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="catalyst" data-parent_link="view_parent_modal">Catalyst / Unique Ability <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#catalyst-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="catalyst-description"><div class="alert alert-info bspacer-xs"><br>Variation<br>The item whose presence always pushes the story forward toward the climax<br>The Catalyst creates breakthroughs and accelerates the conflict, or conflict resolution, of the throughline it is in. In both the Overall and Main vs. Impact Stories there occur dramatic "log-jams" when things seem to be approaching a halt. This is when the Catalyst is necessary, for its introduction will either solve the puzzle that's holding things up or else make the puzzle seem suddenly unimportant so the story can continue.<br></div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(catalyst)%%><%%PLINK(catalyst)%%><%%ADDNEW(class_dramatica_themes)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Inhibitor / Critical Flaw -->
+				<div class="form-group bio_storystatic-inhibitor">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="inhibitor" data-parent_link="view_parent_modal">Inhibitor / Critical Flaw <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#inhibitor-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="inhibitor-description"><div class="alert alert-info bspacer-xs">Variation<br>the kind of item that serves to impede the throughline's progress (either Overall Story or Relationship Story throughlines)<br>The throughline Inhibitor is what prevents the throughline from just rushing full speed to the solution. It is like a brake mechanism which can be applied as the author pleases. The introduction of this item always slows the progress of the throughline. It works as the antidote to the throughline's Catalyst.<br></div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(inhibitor)%%><%%PLINK(inhibitor)%%><%%ADDNEW(class_dramatica_themes)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Benchmark -->
+				<div class="form-group bio_storystatic-benchmark">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="benchmark" data-parent_link="view_parent_modal">Benchmark <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#benchmark-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="benchmark-description"><div class="alert alert-info bspacer-xs">Type<br>The indicator of growth, progress, or degree or concern<br>The Benchmark is a measuring stick which is used to judge progress in whichever throughline it is operating in. In the Overall Story, it is used to see how close the Overall Story Characters think they are to solving their problems. It describes where they apply their efforts, and thus is where they look to see how everything is coming along.<br></div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(benchmark)%%><%%PLINK(benchmark)%%><%%ADDNEW(class_dramatica_themes)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Signpost1 -->
+				<div class="form-group bio_storystatic-signpost1">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="signpost1" data-parent_link="view_parent_modal">Signpost1</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(signpost1)%%><%%PLINK(signpost1)%%><%%ADDNEW(class_dramatica_concern)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Signpost2 -->
+				<div class="form-group bio_storystatic-signpost2">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="signpost2" data-parent_link="view_parent_modal">Signpost2</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(signpost2)%%><%%PLINK(signpost2)%%><%%ADDNEW(class_dramatica_concern)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Signpost3 -->
+				<div class="form-group bio_storystatic-signpost3">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="signpost3" data-parent_link="view_parent_modal">Signpost3</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(signpost3)%%><%%PLINK(signpost3)%%><%%ADDNEW(class_dramatica_concern)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Signpost4 -->
+				<div class="form-group bio_storystatic-signpost4">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="signpost4" data-parent_link="view_parent_modal">Signpost4</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(signpost4)%%><%%PLINK(signpost4)%%><%%ADDNEW(class_dramatica_concern)%%></div>
+					</div>
+				</div>
+
+			</fieldset>
+		</div>
+
+		<!-- DV action buttons -->
+		<hr class="hidden-md hidden-lg">
+		<div class="col-md-4 col-lg-2" id="bio_storystatic_dv_action_buttons">
+			<div class="btn-toolbar">
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%UPDATE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%DESELECT_BUTTON%%>
+					<%%DVPRINT_BUTTON%%>
+					<%%DELETE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%INSERT_BUTTON%%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- child records -->
+	<hr>
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1">
+			<div id="bio_storystatic-children" class="children-tabs">
+				<div class="text-center"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+			</div>
+		</div>
+	</div>
+
+</div><!-- /div class="panel-body" -->
+	<script>
+		$j(function() {
+			var add_new_mode = (!$j('input[name=SelectedID]').val());
+			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			/* auto-close embedded page? */
+			var autoclose_mode = ($j('input[name=AutoClose]').val() == 1);
+			var record_added_ok = (location.search.split('record-added-ok=').length == 2);
+			var record_updated_ok = (location.search.split('record-updated-ok=').length == 2);
+			if((record_added_ok || record_updated_ok) && embedded_mode && autoclose_mode) {
+				setTimeout(AppGini.closeParentModal, 2000);
+			}
+
+			/* enable DV action buttons to float on scrolling down the form */
+			enable_dvab_floating();
+
+
+			setTimeout(function() {
+				$j('#bio_storystatic_dv_container-loading').addClass('hidden');
+				$j('#bio_storystatic_dv_container').removeClass('hidden');
+				AppGini.focusFormElement('bio_storystatic', 'story');
+			}, 1100);
+
+			$j('form').eq(0).change(function() {
+				if($j(this).data('already_changed')) return;
+				if($j('#deselect').length) $j('#deselect').removeClass('btn-default').addClass('btn-warning').get(0).lastChild.data = " <%%TRANSLATION(Cancel)%%>";
+				$j(this).data('already_changed', true);
+			});
+
+			$j('a[href="<%%BASE_UPLOAD_PATH%%>"]').click(function() { return false; });
+
+			if(embedded_mode) {
+				/* hide links to children tables in embedded mode */
+				$j('.detail_view a[id$=_link]').remove();
+
+				/* append embedded mode to all links */
+				var append_embedded = function() {
+					$j('a[href]:not([href^="#"]):not([href^="javascript"]):not([href$="Embedded=1"]):not([href*="link.php?t="]):not([href^="mailto:"])').each(
+						function() {
+							$j(this).attr('href', $j(this).attr('href') + '&Embedded=1');
+						}
+					);
+				}
+				setTimeout(append_embedded, 500);
+				setTimeout(append_embedded, 1500);
+				setTimeout(append_embedded, 2500);
+				setTimeout(append_embedded, 3500);
+			}
+
+			/* when no record is selected ('add new' mode) */
+			if(add_new_mode) {
+				/* hide links to children tables */
+				$j('.detail_view a[id$=_link]').remove();
+			} else {
+				post(
+					'parent-children.php', {
+						ParentTable: 'bio_storystatic',
+						SelectedID: '<%%VALUE(id)%%>',
+						Operation: 'show-children'
+					},
+					'bio_storystatic-children'
+				);
+			}
+
+			if(!embedded_mode) {
+				/* add a horizontal spacer to [add new parent] buttons that don't have a spacered element before them */
+				$j('.add_new_parent').prev(':not(.hspacer-md)').next().addClass('hspacer-md');
+
+				$j('.add_new_parent').click(function() {
+					var pt = $j(this).attr('id').replace(/_add_new$/, '');
+					modal_window({
+						url: pt + '_view.php?addNew_x=1&Embedded=1',
+						close: function() {
+							var field_id = $j('#' + pt + '_add_new').prevAll('input:hidden').eq(0).attr('id');
+							$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+							/* if a new parent was added, select it */
+							var new_id = localStorage.getItem(pt + '_last_added_id');
+							if(new_id === null) return;
+
+							localStorage.clear(pt + '_last_added_id');
+							AppGini.lookupText({
+								id: new_id,
+								table: 'bio_storystatic',
+								field: field_id,
+								callback: function(data) {
+									$j('#' + field_id + '-container').select2('data', data, true);
+								}
+							});
+						},
+						size: 'full',
+						title: $j(this).attr('title')
+					});
+				});
+			}
+
+			AppGini.hideViewParentLinks();
+
+			$j('form').on('click', '.view_parent', function() {
+				var pt = $j(this).attr('id').replace(/_view_parent$/, '');
+				if($j(this).prevAll('input:hidden').length) {
+					var parent_id = $j(this).prevAll('input:hidden').eq(0).val();
+				} else {
+					var parent_id = $j(this).prevAll().children('input:hidden').eq(0).val();
+				}
+
+				/* handle radio lookups */
+				if($j(this).prevAll('[type=radio]').length) {
+					parent_id = $j(this).prevAll('[type=radio]').eq(0).val();
+				}
+
+				if(parent_id != '{empty_value}' && parent_id != undefined && parent_id != '') {
+					var parent_link = $j(this).parents('.form-group').children('label').data('parent_link');
+					switch(parent_link) {
+						case 'view_parent_hidden':
+							break;
+						case 'view_parent_modal':
+							modal_window({
+								url: pt + '_view.php?Embedded=1&SelectedID=' + encodeURIComponent(parent_id),
+								close: function() {
+									var field_id = $j('#' + pt + '_view_parent').prevAll('input:hidden').eq(0).attr('id');
+									$j('#' + field_id + '-container').select2('focus').select2('focus');
+								},
+								size: 'full',
+								title: $j(this).attr('title')
+							});
+							break;
+						case 'view_parent_same_window':
+							window.location = pt + '_view.php?Embedded=' + (embedded_mode ? '1' : '') + '&SelectedID=' + encodeURIComponent(parent_id);
+							break;
+						case 'view_parent_new_window':
+							window.open(pt + '_view.php?SelectedID=' + encodeURIComponent(parent_id));
+							break;
+					}
+
+				}
+			});
+
+
+			/* load admin tools for admin user */
+			if(!add_new_mode) {
+				$j('body').append('<div id="admin-tools-appendix"></div>');
+				$j('#admin-tools-appendix').load(
+					'ajax_admin_tools.php?table=bio_storystatic&id=<%%URLVALUE(id)%%>',
+					function(resp) {
+						if(!resp.length) return;
+						$j.ajax('ajax_admin_tools.php?action=get_admin_tools_js&table=bio_storystatic&id=<%%URLVALUE(id)%%>');
+					}
+				);
+			}
+
+			/* warn user if 'add new' clicked while unsaved changes exist */
+			$j('#addNew').click(function() {
+				if($j('#deselect.btn-warning').length) {
+					return confirm('<%%TRANSLATION(discard changes confirm)%%>');
+				}
+			});
+
+		});
+	</script>

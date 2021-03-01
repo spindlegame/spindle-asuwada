@@ -1,0 +1,30 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the  and  formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the game_agents_init() hook (in hooks/game_agents.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="game_agents-id-<%%VALUE(id)%%>" class="game_agents-id text-right"><%%VALUE(id)%%></td>
+		<td id="game_agents-user_id-<%%VALUE(id)%%>" class="game_agents-user_id"><%%VALUE(user_id)%%></td>
+		<td id="game_agents-memberID-<%%VALUE(id)%%>" class="game_agents-memberID"><%%VALUE(memberID)%%></td>
+		<td id="game_agents-img-<%%VALUE(id)%%>" class="game_agents-img"><a href="<%%BASE_UPLOAD_PATH%%><%%VALUE(img)%%>" data-lightbox="game_agents-img"><img src="thumbnail.php?i=<%%VALUE(img)%%>&t=game_agents&f=img&v=tv" class="img-thumbnail"></a></td>
+		<td id="game_agents-groupID-<%%VALUE(id)%%>" class="game_agents-groupID"><%%VALUE(groupID)%%></td>
+		<td id="game_agents-selection_class-<%%VALUE(id)%%>" class="game_agents-selection_class"><%%VALUE(selection_class)%%></td>
+		<td id="game_agents-agenttype1-<%%VALUE(id)%%>" class="game_agents-agenttype1 text-right"><%%VALUE(agenttype1)%%></td>
+		<td id="game_agents-agenttype2-<%%VALUE(id)%%>" class="game_agents-agenttype2 text-right"><%%VALUE(agenttype2)%%></td>
+		<td id="game_agents-gender-<%%VALUE(id)%%>" class="game_agents-gender"><%%VALUE(gender)%%></td>
+		<td id="game_agents-last_name-<%%VALUE(id)%%>" class="game_agents-last_name"><%%VALUE(last_name)%%></td>
+		<td id="game_agents-first_name-<%%VALUE(id)%%>" class="game_agents-first_name"><%%VALUE(first_name)%%></td>
+		<td id="game_agents-other_name-<%%VALUE(id)%%>" class="game_agents-other_name"><%%VALUE(other_name)%%></td>
+		<td id="game_agents-birthday-<%%VALUE(id)%%>" class="game_agents-birthday"><%%VALUE(birthday)%%></td>
+		<td id="game_agents-birth_location-<%%VALUE(id)%%>" class="game_agents-birth_location"><%%VALUE(birth_location)%%></td>
+		<td id="game_agents-birth_location_map-<%%VALUE(id)%%>" class="game_agents-birth_location_map"><img src="<%%GOOGLEMAPTHUMB(birth_location_map)%%>" style="max-width: 50px; max-height: 50px; " ></td>
+		<td id="game_agents-deathday-<%%VALUE(id)%%>" class="game_agents-deathday"><%%VALUE(deathday)%%></td>
+		<td id="game_agents-death_location-<%%VALUE(id)%%>" class="game_agents-death_location"><%%VALUE(death_location)%%></td>
+		<td id="game_agents-workplace-<%%VALUE(id)%%>" class="game_agents-workplace"><%%VALUE(workplace)%%></td>
+		<td id="game_agents-knows-<%%VALUE(id)%%>" class="game_agents-knows"><%%VALUE(knows)%%></td>
+		<td id="game_agents-data_evaluation-<%%VALUE(id)%%>" class="game_agents-data_evaluation"><%%VALUE(data_evaluation)%%></td>
+		<td id="game_agents-viaf_no-<%%VALUE(id)%%>" class="game_agents-viaf_no"><%%VALUE(viaf_no)%%></td>
+		<td id="game_agents-authority_record-<%%VALUE(id)%%>" class="game_agents-authority_record"><%%VALUE(authority_record)%%></td>
+		<td id="game_agents-authority_organization-<%%VALUE(id)%%>" class="game_agents-authority_organization text-right"><%%VALUE(authority_organization)%%></td>

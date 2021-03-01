@@ -1,0 +1,19 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the  and  formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the bio_chr_init() hook (in hooks/bio_chr.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="bio_chr-id-<%%VALUE(id)%%>" class="bio_chr-id text-right"><%%VALUE(id)%%></td>
+		<td id="bio_chr-img-<%%VALUE(id)%%>" class="bio_chr-img"><a href="<%%BASE_UPLOAD_PATH%%><%%VALUE(img)%%>" data-lightbox="bio_chr-img"><img src="thumbnail.php?i=<%%VALUE(img)%%>&t=bio_chr&f=img&v=tv" class="img-thumbnail"></a></td>
+		<td id="bio_chr-author_id-<%%VALUE(id)%%>" class="bio_chr-author_id text-right"><%%VALUE(author_id)%%></td>
+		<td id="bio_chr-author_name-<%%VALUE(id)%%>" class="bio_chr-author_name"><%%VALUE(author_name)%%></td>
+		<td id="bio_chr-agent_id-<%%VALUE(id)%%>" class="bio_chr-agent_id"><%%VALUE(agent_id)%%></td>
+		<td id="bio_chr-agent_name-<%%VALUE(id)%%>" class="bio_chr-agent_name"><%%VALUE(agent_name)%%></td>
+		<td id="bio_chr-bio_story-<%%VALUE(id)%%>" class="bio_chr-bio_story text-right"><%%VALUE(bio_story)%%></td>
+		<td id="bio_chr-bio_character-<%%VALUE(id)%%>" class="bio_chr-bio_character"><%%VALUE(bio_character)%%></td>
+		<td id="bio_chr-bio_archetype-<%%VALUE(id)%%>" class="bio_chr-bio_archetype text-right"><%%VALUE(bio_archetype)%%></td>
+		<td id="bio_chr-character_name-<%%VALUE(id)%%>" class="bio_chr-character_name"><%%VALUE(character_name)%%></td>
+		<td id="bio_chr-role-<%%VALUE(id)%%>" class="bio_chr-role"><%%VALUE(role)%%></td>
+		<td id="bio_chr-comment-<%%VALUE(id)%%>" class="bio_chr-comment"><%%VALUE(comment)%%></td>

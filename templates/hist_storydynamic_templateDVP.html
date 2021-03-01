@@ -1,0 +1,291 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: ID -->
+		<div class="form-group hist_storydynamic-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Hist story -->
+		<div class="form-group hist_storydynamic-hist_story" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Hist story</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="hist_story<%%RND1%%>"><%%COMBOTEXT(hist_story)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Biography -->
+		<div class="form-group hist_storydynamic-bio_story_mc" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Biography</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="bio_story_mc<%%RND1%%>"><%%COMBOTEXT(bio_story_mc)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Mc character -->
+		<div class="form-group hist_storydynamic-hist_chr_mc" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Mc character</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="hist_chr_mc<%%RND1%%>"><%%COMBOTEXT(hist_chr_mc)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Static Storypoints MC -->
+		<div class="form-group hist_storydynamic-storystatic_mc" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Static Storypoints MC</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="storystatic_mc<%%RND1%%>"><%%COMBOTEXT(storystatic_mc)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: MC from Chr. Dev. -->
+		<div class="form-group hist_storydynamic-story_chr_mc" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">MC from Chr. Dev.</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="story_chr_mc<%%RND1%%>"><%%COMBOTEXT(story_chr_mc)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: MC problem -->
+		<div class="form-group hist_storydynamic-mc_problem" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">MC problem</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mc_problem<%%RND1%%>"><%%COMBOTEXT(mc_problem)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: MC resolve -->
+		<div class="form-group hist_storydynamic-mc_resolve" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">MC resolve</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mc_resolve<%%RND1%%>"><%%COMBOTEXT(mc_resolve)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: MC growth -->
+		<div class="form-group hist_storydynamic-mc_growth" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">MC growth</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mc_growth<%%RND1%%>"><%%COMBOTEXT(mc_growth)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: MC approach -->
+		<div class="form-group hist_storydynamic-mc_approach" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">MC approach</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mc_approach<%%RND1%%>"><%%COMBOTEXT(mc_approach)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: MC PS style -->
+		<div class="form-group hist_storydynamic-mc_ps_style" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">MC PS style</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mc_ps_style<%%RND1%%>"><%%COMBOTEXT(mc_ps_style)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: IC from Chr. Dev. -->
+		<div class="form-group hist_storydynamic-story_chr_ic" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">IC from Chr. Dev.</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="story_chr_ic<%%RND1%%>"><%%COMBOTEXT(story_chr_ic)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: IC resolve -->
+		<div class="form-group hist_storydynamic-ic_resolve" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">IC resolve</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="ic_resolve<%%RND1%%>"><%%COMBOTEXT(ic_resolve)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Dynamic storypoint Class 1 -->
+		<div class="form-group hist_storydynamic-dp_cat1" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Dynamic storypoint Class 1</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="dp_cat1<%%RND1%%>"><%%COMBOTEXT(dp_cat1)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Dynamic storypoint Class 2 -->
+		<div class="form-group hist_storydynamic-dp_cat2" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Dynamic storypoint Class 2</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="dp_cat2<%%RND1%%>"><%%COMBOTEXT(dp_cat2)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Dynamic storypoint value Driver -->
+		<div class="form-group hist_storydynamic-dp_cat3_driver" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Dynamic storypoint value Driver</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="dp_cat3_driver<%%RND1%%>"><%%COMBOTEXT(dp_cat3_driver)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: OS driver -->
+		<div class="form-group hist_storydynamic-os_driver" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS driver</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_driver<%%RND1%%>"><%%COMBOTEXT(os_driver)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Dynamic storypoint value Limit -->
+		<div class="form-group hist_storydynamic-dp_cat3_limit" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Dynamic storypoint value Limit</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="dp_cat3_limit<%%RND1%%>"><%%COMBOTEXT(dp_cat3_limit)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: OS limit -->
+		<div class="form-group hist_storydynamic-os_limit" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS limit</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_limit<%%RND1%%>"><%%COMBOTEXT(os_limit)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Dynamic storypoint value Outcome -->
+		<div class="form-group hist_storydynamic-dp_cat3_outcome" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Dynamic storypoint value Outcome</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="dp_cat3_outcome<%%RND1%%>"><%%COMBOTEXT(dp_cat3_outcome)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: OS outcome -->
+		<div class="form-group hist_storydynamic-os_outcome" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS outcome</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_outcome<%%RND1%%>"><%%COMBOTEXT(os_outcome)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Dynamic storypoint value Judgement -->
+		<div class="form-group hist_storydynamic-dp_cat3_judgement" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Dynamic storypoint value Judgement</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="dp_cat3_judgement<%%RND1%%>"><%%COMBOTEXT(dp_cat3_judgement)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: OS judgement -->
+		<div class="form-group hist_storydynamic-os_judgement" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS judgement</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_judgement<%%RND1%%>"><%%COMBOTEXT(os_judgement)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: OS goal domain -->
+		<div class="form-group hist_storydynamic-os_goal_domain" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS goal domain</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_goal_domain<%%RND1%%>"><%%COMBOTEXT(os_goal_domain)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: OS goal concern -->
+		<div class="form-group hist_storydynamic-os_goal_concern" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS goal concern</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_goal_concern<%%RND1%%>"><%%COMBOTEXT(os_goal_concern)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: OS consquence domain -->
+		<div class="form-group hist_storydynamic-os_consequence_domain" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS consquence domain</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_consequence_domain<%%RND1%%>"><%%COMBOTEXT(os_consequence_domain)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: OS consequence concern -->
+		<div class="form-group hist_storydynamic-os_consequence_concern" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS consequence concern</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_consequence_concern<%%RND1%%>"><%%COMBOTEXT(os_consequence_concern)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: OS cost domain -->
+		<div class="form-group hist_storydynamic-os_cost_domain" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS cost domain</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_cost_domain<%%RND1%%>"><%%COMBOTEXT(os_cost_domain)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: OS cost concern -->
+		<div class="form-group hist_storydynamic-os_cost_concern" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS cost concern</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_cost_concern<%%RND1%%>"><%%COMBOTEXT(os_cost_concern)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: OS dividend domain -->
+		<div class="form-group hist_storydynamic-os_dividend_domain" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS dividend domain</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_dividend_domain<%%RND1%%>"><%%COMBOTEXT(os_dividend_domain)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: OS dividend concern -->
+		<div class="form-group hist_storydynamic-os_dividend_concern" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS dividend concern</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_dividend_concern<%%RND1%%>"><%%COMBOTEXT(os_dividend_concern)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: OS requirements domain -->
+		<div class="form-group hist_storydynamic-os_requirements_domain" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS requirements domain</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_requirements_domain<%%RND1%%>"><%%COMBOTEXT(os_requirements_domain)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: OS requirements concern -->
+		<div class="form-group hist_storydynamic-os_requirements_concern" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS requirements concern</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_requirements_concern<%%RND1%%>"><%%COMBOTEXT(os_requirements_concern)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: OS prerequisites domain -->
+		<div class="form-group hist_storydynamic-os_prerequesites_domain" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS prerequisites domain</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_prerequesites_domain<%%RND1%%>"><%%COMBOTEXT(os_prerequesites_domain)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: OS prerequisites concern -->
+		<div class="form-group hist_storydynamic-os_prerequesites_concern" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS prerequisites concern</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_prerequesites_concern<%%RND1%%>"><%%COMBOTEXT(os_prerequesites_concern)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: OS preconditions domain -->
+		<div class="form-group hist_storydynamic-os_preconditions_domain" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS preconditions domain</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_preconditions_domain<%%RND1%%>"><%%COMBOTEXT(os_preconditions_domain)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: OS preconditions concern -->
+		<div class="form-group hist_storydynamic-os_preconditions_concern" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS preconditions concern</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_preconditions_concern<%%RND1%%>"><%%COMBOTEXT(os_preconditions_concern)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: OS forewarnings domain -->
+		<div class="form-group hist_storydynamic-os_forewarnings_domain" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS forewarnings domain</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_forewarnings_domain<%%RND1%%>"><%%COMBOTEXT(os_forewarnings_domain)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: OS forewarnings concern -->
+		<div class="form-group hist_storydynamic-os_forewarnings_concern" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS forewarnings concern</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_forewarnings_concern<%%RND1%%>"><%%COMBOTEXT(os_forewarnings_concern)%%></span></div>
+			</div>
+		</div>
+	</fieldset>
+</div>

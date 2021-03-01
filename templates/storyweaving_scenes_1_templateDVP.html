@@ -1,0 +1,81 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: ID -->
+		<div class="form-group storyweaving_scenes_1-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Story -->
+		<div class="form-group storyweaving_scenes_1-story" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Story</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="story<%%RND1%%>"><%%COMBOTEXT(story)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Step -->
+		<div class="form-group storyweaving_scenes_1-step" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Step</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="step<%%RND1%%>"><%%COMBOTEXT(step)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Throughline -->
+		<div class="form-group storyweaving_scenes_1-throughline" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Throughline</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="throughline<%%RND1%%>"><%%COMBOTEXT(throughline)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Domain -->
+		<div class="form-group storyweaving_scenes_1-domain" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Domain</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="domain<%%RND1%%>"><%%COMBOTEXT(domain)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Concern -->
+		<div class="form-group storyweaving_scenes_1-concern" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Concern</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="concern<%%RND1%%>"><%%COMBOTEXT(concern)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Issue -->
+		<div class="form-group storyweaving_scenes_1-issue" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Issue</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="issue<%%RND1%%>"><%%COMBOTEXT(issue)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Theme -->
+		<div class="form-group storyweaving_scenes_1-theme" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Theme</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="theme<%%RND1%%>"><%%COMBOTEXT(theme)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Sequence -->
+		<div class="form-group storyweaving_scenes_1-sequence" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Sequence</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(sequence)%%></div>
+			</div>
+		</div>
+	</fieldset>
+</div>

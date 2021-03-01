@@ -1,0 +1,10 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the  and  formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the hist_community_init() hook (in hooks/hist_community.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="hist_community-id-<%%VALUE(id)%%>" class="hist_community-id text-right"><%%VALUE(id)%%></td>
+		<td id="hist_community-com_name-<%%VALUE(id)%%>" class="hist_community-com_name"><%%VALUE(com_name)%%></td>
+		<td id="hist_community-description-<%%VALUE(id)%%>" class="hist_community-description"><%%VALUE(description)%%></td>

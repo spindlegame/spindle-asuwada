@@ -1,0 +1,27 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the chr_scenes_init() hook (in hooks/chr_scenes.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="chr_scenes-id-<%%VALUE(id)%%>" class="chr_scenes-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="chr_scenes-author_id-<%%VALUE(id)%%>" class="chr_scenes-author_id text-right"><%%SELECT%%><%%VALUE(author_id)%%><%%ENDSELECT%%></td>
+		<td id="chr_scenes-author_name-<%%VALUE(id)%%>" class="chr_scenes-author_name"><%%SELECT%%><%%VALUE(author_name)%%><%%ENDSELECT%%></td>
+		<td id="chr_scenes-bibliography-<%%VALUE(id)%%>" class="chr_scenes-bibliography text-right"><%%SELECT%%><%%VALUE(bibliography)%%><%%ENDSELECT%%></td>
+		<td id="chr_scenes-transcript-<%%VALUE(id)%%>" class="chr_scenes-transcript text-right"><%%SELECT%%><%%VALUE(transcript)%%><%%ENDSELECT%%></td>
+		<td id="chr_scenes-token_sequence-<%%VALUE(id)%%>" class="chr_scenes-token_sequence text-right"><%%SELECT%%><%%VALUE(token_sequence)%%><%%ENDSELECT%%></td>
+		<td id="chr_scenes-token-<%%VALUE(id)%%>" class="chr_scenes-token text-right"><%%SELECT%%><%%VALUE(token)%%><%%ENDSELECT%%></td>
+		<td id="chr_scenes-invivo_code-<%%VALUE(id)%%>" class="chr_scenes-invivo_code text-right"><%%SELECT%%><%%VALUE(invivo_code)%%><%%ENDSELECT%%></td>
+		<td id="chr_scenes-startdate-<%%VALUE(id)%%>" class="chr_scenes-startdate text-right"><%%SELECT%%><%%VALUE(startdate)%%><%%ENDSELECT%%></td>
+		<td id="chr_scenes-enddate-<%%VALUE(id)%%>" class="chr_scenes-enddate text-right"><%%SELECT%%><%%VALUE(enddate)%%><%%ENDSELECT%%></td>
+		<td id="chr_scenes-person-<%%VALUE(id)%%>" class="chr_scenes-person text-right"><%%SELECT%%><%%VALUE(person)%%><%%ENDSELECT%%></td>
+		<td id="chr_scenes-place-<%%VALUE(id)%%>" class="chr_scenes-place text-right"><%%SELECT%%><%%VALUE(place)%%><%%ENDSELECT%%></td>
+		<td id="chr_scenes-herme_code-<%%VALUE(id)%%>" class="chr_scenes-herme_code text-right"><%%SELECT%%><%%VALUE(herme_code)%%><%%ENDSELECT%%></td>
+		<td id="chr_scenes-impression-<%%VALUE(id)%%>" class="chr_scenes-impression text-right"><%%SELECT%%><%%VALUE(impression)%%><%%ENDSELECT%%></td>
+		<td id="chr_scenes-noetictension-<%%VALUE(id)%%>" class="chr_scenes-noetictension text-right"><%%SELECT%%><%%VALUE(noetictension)%%><%%ENDSELECT%%></td>
+		<td id="chr_scenes-pc-<%%VALUE(id)%%>" class="chr_scenes-pc"><%%SELECT%%><%%VALUE(pc)%%><%%ENDSELECT%%></td>
+		<td id="chr_scenes-chr_element-<%%VALUE(id)%%>" class="chr_scenes-chr_element"><%%SELECT%%><%%VALUE(chr_element)%%><%%ENDSELECT%%></td>
+		<td id="chr_scenes-comment-<%%VALUE(id)%%>" class="chr_scenes-comment text-right"><%%SELECT%%><%%VALUE(comment)%%><%%ENDSELECT%%></td>
+		<td id="chr_scenes-illustration-<%%VALUE(id)%%>" class="chr_scenes-illustration"><%%SELECT%%><%%VALUE(illustration)%%><%%ENDSELECT%%></td>
+		<td id="chr_scenes-scene-<%%VALUE(id)%%>" class="chr_scenes-scene text-right"><%%SELECT%%><%%VALUE(scene)%%><%%ENDSELECT%%></td>

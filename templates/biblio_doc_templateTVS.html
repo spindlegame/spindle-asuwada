@@ -1,0 +1,40 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the  and  formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the biblio_doc_init() hook (in hooks/biblio_doc.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="biblio_doc-id-<%%VALUE(id)%%>" class="biblio_doc-id text-right"><%%VALUE(id)%%></td>
+		<td id="biblio_doc-img-<%%VALUE(id)%%>" class="biblio_doc-img"><a href="<%%BASE_UPLOAD_PATH%%><%%VALUE(img)%%>" data-lightbox="biblio_doc-img"><img src="thumbnail.php?i=<%%VALUE(img)%%>&t=biblio_doc&f=img&v=tv" class="img-thumbnail"></a></td>
+		<td id="biblio_doc-author_name-<%%VALUE(id)%%>" class="biblio_doc-author_name text-right"><%%VALUE(author_name)%%></td>
+		<td id="biblio_doc-author_id-<%%VALUE(id)%%>" class="biblio_doc-author_id text-right"><%%VALUE(author_id)%%></td>
+		<td id="biblio_doc-type-<%%VALUE(id)%%>" class="biblio_doc-type text-right"><%%VALUE(type)%%></td>
+		<td id="biblio_doc-genre-<%%VALUE(id)%%>" class="biblio_doc-genre text-right"><%%VALUE(genre)%%></td>
+		<td id="biblio_doc-created-<%%VALUE(id)%%>" class="biblio_doc-created"><%%VALUE(created)%%></td>
+		<td id="biblio_doc-published-<%%VALUE(id)%%>" class="biblio_doc-published"><%%VALUE(published)%%></td>
+		<td id="biblio_doc-title-<%%VALUE(id)%%>" class="biblio_doc-title"><%%VALUE(title)%%></td>
+		<td id="biblio_doc-subtitle-<%%VALUE(id)%%>" class="biblio_doc-subtitle"><%%VALUE(subtitle)%%></td>
+		<td id="biblio_doc-publisher-<%%VALUE(id)%%>" class="biblio_doc-publisher"><%%VALUE(publisher)%%></td>
+		<td id="biblio_doc-location-<%%VALUE(id)%%>" class="biblio_doc-location"><%%VALUE(location)%%></td>
+		<td id="biblio_doc-citation-<%%VALUE(id)%%>" class="biblio_doc-citation"><%%VALUE(citation)%%></td>
+		<td id="biblio_doc-description-<%%VALUE(id)%%>" class="biblio_doc-description"><%%VALUE(description)%%></td>
+		<td id="biblio_doc-source-<%%VALUE(id)%%>" class="biblio_doc-source"><%%VALUE(source)%%></td>
+		<td id="biblio_doc-medium-<%%VALUE(id)%%>" class="biblio_doc-medium"><%%VALUE(medium)%%></td>
+		<td id="biblio_doc-language-<%%VALUE(id)%%>" class="biblio_doc-language text-right"><%%VALUE(language)%%></td>
+		<td id="biblio_doc-format-<%%VALUE(id)%%>" class="biblio_doc-format"><%%VALUE(format)%%></td>
+		<td id="biblio_doc-subject-<%%VALUE(id)%%>" class="biblio_doc-subject"><%%VALUE(subject)%%></td>
+		<td id="biblio_doc-rights-<%%VALUE(id)%%>" class="biblio_doc-rights text-right"><%%VALUE(rights)%%></td>
+		<td id="biblio_doc-rights_holder-<%%VALUE(id)%%>" class="biblio_doc-rights_holder"><%%VALUE(rights_holder)%%></td>
+		<td id="biblio_doc-data_evaluation-<%%VALUE(id)%%>" class="biblio_doc-data_evaluation"><%%VALUE(data_evaluation)%%></td>
+		<td id="biblio_doc-world_cat_no-<%%VALUE(id)%%>" class="biblio_doc-world_cat_no"><%%VALUE(world_cat_no)%%></td>
+		<td id="biblio_doc-authority_record-<%%VALUE(id)%%>" class="biblio_doc-authority_record"><%%VALUE(authority_record)%%></td>
+		<td id="biblio_doc-authority_organization-<%%VALUE(id)%%>" class="biblio_doc-authority_organization text-right"><%%VALUE(authority_organization)%%></td>
+		<td id="biblio_doc-pdf_book-<%%VALUE(id)%%>" class="biblio_doc-pdf_book"><a href="link.php?t=biblio_doc&f=pdf_book&i=<%%VALUE(id)%%>" target="_blank" title="<%%VALUE(pdf_book)%%>" class="btn btn-default"><i class="glyphicon glyphicon-lg glyphicon-file text-info"></i></a></td>
+		<td id="biblio_doc-ext_source-<%%VALUE(id)%%>" class="biblio_doc-ext_source"><%%VALUE(ext_source)%%></td>
+		<td id="biblio_doc-tags-<%%VALUE(id)%%>" class="biblio_doc-tags"><%%VALUE(tags)%%></td>
+		<td id="biblio_doc-team-<%%VALUE(id)%%>" class="biblio_doc-team"><%%VALUE(team)%%></td>
+		<td id="biblio_doc-biblio_lead-<%%VALUE(id)%%>" class="biblio_doc-biblio_lead"><%%VALUE(biblio_lead)%%></td>
+		<script>$j(function() {
+			var e_pdf_book = '<%%VALUE(pdf_book)%%>'; if(e_pdf_book == '' || e_pdf_book == '&nbsp;') $j(/*<*/ '#biblio_doc-pdf_book-<%%VALUE(id)%%>' /*>*/).html('');
+		});</script>

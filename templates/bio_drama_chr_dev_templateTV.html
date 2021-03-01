@@ -1,0 +1,52 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the bio_drama_chr_dev_init() hook (in hooks/bio_drama_chr_dev.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="bio_drama_chr_dev-id-<%%VALUE(id)%%>" class="bio_drama_chr_dev-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-agent_id-<%%VALUE(id)%%>" class="bio_drama_chr_dev-agent_id text-right"><%%SELECT%%><%%VALUE(agent_id)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-agent_name-<%%VALUE(id)%%>" class="bio_drama_chr_dev-agent_name text-right"><%%SELECT%%><%%VALUE(agent_name)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-bio_story-<%%VALUE(id)%%>" class="bio_drama_chr_dev-bio_story"><%%SELECT%%><%%VALUE(bio_story)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-cw_name-<%%VALUE(id)%%>" class="bio_drama_chr_dev-cw_name"><%%SELECT%%><%%VALUE(cw_name)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-dp1_resolve-<%%VALUE(id)%%>" class="bio_drama_chr_dev-dp1_resolve"><%%SELECT%%><%%VALUE(dp1_resolve)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-dp2_resolve-<%%VALUE(id)%%>" class="bio_drama_chr_dev-dp2_resolve"><%%SELECT%%><%%VALUE(dp2_resolve)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-dp3_resolve-<%%VALUE(id)%%>" class="bio_drama_chr_dev-dp3_resolve"><%%SELECT%%><%%VALUE(dp3_resolve)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-mc_resolve-<%%VALUE(id)%%>" class="bio_drama_chr_dev-mc_resolve"><%%SELECT%%><%%VALUE(mc_resolve)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-illust_resolve-<%%VALUE(id)%%>" class="bio_drama_chr_dev-illust_resolve"><%%SELECT%%><%%VALUE(illust_resolve)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-dp3_growth-<%%VALUE(id)%%>" class="bio_drama_chr_dev-dp3_growth"><%%SELECT%%><%%VALUE(dp3_growth)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-mc_growth-<%%VALUE(id)%%>" class="bio_drama_chr_dev-mc_growth text-right"><%%SELECT%%><%%VALUE(mc_growth)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-illust_growth-<%%VALUE(id)%%>" class="bio_drama_chr_dev-illust_growth"><%%SELECT%%><%%VALUE(illust_growth)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-dp3_approach-<%%VALUE(id)%%>" class="bio_drama_chr_dev-dp3_approach"><%%SELECT%%><%%VALUE(dp3_approach)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-mc_approach-<%%VALUE(id)%%>" class="bio_drama_chr_dev-mc_approach"><%%SELECT%%><%%VALUE(mc_approach)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-illust_approach-<%%VALUE(id)%%>" class="bio_drama_chr_dev-illust_approach"><%%SELECT%%><%%VALUE(illust_approach)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-dp3_psstyle-<%%VALUE(id)%%>" class="bio_drama_chr_dev-dp3_psstyle"><%%SELECT%%><%%VALUE(dp3_psstyle)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-mc_ps_style-<%%VALUE(id)%%>" class="bio_drama_chr_dev-mc_ps_style text-right"><%%SELECT%%><%%VALUE(mc_ps_style)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-illust_ps_style-<%%VALUE(id)%%>" class="bio_drama_chr_dev-illust_ps_style"><%%SELECT%%><%%VALUE(illust_ps_style)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-cw_age-<%%VALUE(id)%%>" class="bio_drama_chr_dev-cw_age"><%%SELECT%%><%%VALUE(cw_age)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-cw_gender-<%%VALUE(id)%%>" class="bio_drama_chr_dev-cw_gender text-right"><%%SELECT%%><%%VALUE(cw_gender)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-cw_communication_style-<%%VALUE(id)%%>" class="bio_drama_chr_dev-cw_communication_style"><%%SELECT%%><%%VALUE(cw_communication_style)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-cw_background-<%%VALUE(id)%%>" class="bio_drama_chr_dev-cw_background"><%%SELECT%%><%%VALUE(cw_background)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-cw_appearance-<%%VALUE(id)%%>" class="bio_drama_chr_dev-cw_appearance"><%%SELECT%%><%%VALUE(cw_appearance)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-cw_relationships-<%%VALUE(id)%%>" class="bio_drama_chr_dev-cw_relationships"><%%SELECT%%><%%VALUE(cw_relationships)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-cw_ambition-<%%VALUE(id)%%>" class="bio_drama_chr_dev-cw_ambition"><%%SELECT%%><%%VALUE(cw_ambition)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-cw_defects-<%%VALUE(id)%%>" class="bio_drama_chr_dev-cw_defects"><%%SELECT%%><%%VALUE(cw_defects)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-cw_thoughts-<%%VALUE(id)%%>" class="bio_drama_chr_dev-cw_thoughts"><%%SELECT%%><%%VALUE(cw_thoughts)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-cw_relatedness-<%%VALUE(id)%%>" class="bio_drama_chr_dev-cw_relatedness"><%%SELECT%%><%%VALUE(cw_relatedness)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-cw_restrictions-<%%VALUE(id)%%>" class="bio_drama_chr_dev-cw_restrictions"><%%SELECT%%><%%VALUE(cw_restrictions)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-locations-<%%VALUE(id)%%>" class="bio_drama_chr_dev-locations"><%%SELECT%%><%%VALUE(locations)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-persons-<%%VALUE(id)%%>" class="bio_drama_chr_dev-persons"><%%SELECT%%><%%VALUE(persons)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-events-<%%VALUE(id)%%>" class="bio_drama_chr_dev-events"><%%SELECT%%><%%VALUE(events)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-noetictension-<%%VALUE(id)%%>" class="bio_drama_chr_dev-noetictension text-right"><%%SELECT%%><%%VALUE(noetictension)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-illust_nt-<%%VALUE(id)%%>" class="bio_drama_chr_dev-illust_nt"><%%SELECT%%><%%VALUE(illust_nt)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-impression-<%%VALUE(id)%%>" class="bio_drama_chr_dev-impression text-right"><%%SELECT%%><%%VALUE(impression)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-illust_im-<%%VALUE(id)%%>" class="bio_drama_chr_dev-illust_im"><%%SELECT%%><%%VALUE(illust_im)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-mcs_problem-<%%VALUE(id)%%>" class="bio_drama_chr_dev-mcs_problem"><%%SELECT%%><%%VALUE(mcs_problem)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-illust_mcs_problem-<%%VALUE(id)%%>" class="bio_drama_chr_dev-illust_mcs_problem"><%%SELECT%%><%%VALUE(illust_mcs_problem)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-mcs_solution-<%%VALUE(id)%%>" class="bio_drama_chr_dev-mcs_solution"><%%SELECT%%><%%VALUE(mcs_solution)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-illust_mcs_solution-<%%VALUE(id)%%>" class="bio_drama_chr_dev-illust_mcs_solution"><%%SELECT%%><%%VALUE(illust_mcs_solution)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-mcs_symptom-<%%VALUE(id)%%>" class="bio_drama_chr_dev-mcs_symptom"><%%SELECT%%><%%VALUE(mcs_symptom)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-illust_mcs_symptom-<%%VALUE(id)%%>" class="bio_drama_chr_dev-illust_mcs_symptom"><%%SELECT%%><%%VALUE(illust_mcs_symptom)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-mcs_response-<%%VALUE(id)%%>" class="bio_drama_chr_dev-mcs_response"><%%SELECT%%><%%VALUE(mcs_response)%%><%%ENDSELECT%%></td>
+		<td id="bio_drama_chr_dev-illust_mcs_response-<%%VALUE(id)%%>" class="bio_drama_chr_dev-illust_mcs_response"><%%SELECT%%><%%VALUE(illust_mcs_response)%%><%%ENDSELECT%%></td>

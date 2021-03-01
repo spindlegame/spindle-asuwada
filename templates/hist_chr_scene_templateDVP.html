@@ -1,0 +1,145 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: ID -->
+		<div class="form-group hist_chr_scene-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Author -->
+		<div class="form-group hist_chr_scene-author_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Author</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="author_id<%%RND1%%>"><%%COMBOTEXT(author_id)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Author name -->
+		<div class="form-group hist_chr_scene-author_name" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Author name</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="author_name<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Hist story -->
+		<div class="form-group hist_chr_scene-hist_story" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Hist story</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="hist_story<%%RND1%%>"><%%COMBOTEXT(hist_story)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Character -->
+		<div class="form-group hist_chr_scene-character" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Character</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="character<%%RND1%%>"><%%COMBOTEXT(character)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Agent id -->
+		<div class="form-group hist_chr_scene-agent_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Agent id</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="agent_id<%%RND1%%>"><%%COMBOTEXT(agent_id)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Agent name -->
+		<div class="form-group hist_chr_scene-agent_name" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Agent name</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="agent_name<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Bibliography -->
+		<div class="form-group hist_chr_scene-bio_story" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Bibliography</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="bio_story<%%RND1%%>"><%%COMBOTEXT(bio_story)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Token -->
+		<div class="form-group hist_chr_scene-bio_storyline_no" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Token</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="bio_storyline_no<%%RND1%%>"><%%COMBOTEXT(bio_storyline_no)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Token_sequence -->
+		<div class="form-group hist_chr_scene-bio_storyline_text" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Token_sequence</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="bio_storyline_text<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Chr element -->
+		<div class="form-group hist_chr_scene-chr_element" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Chr element</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="chr_element<%%RND1%%>"><%%COMBOTEXT(chr_element)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Scene -->
+		<div class="form-group hist_chr_scene-scene" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Scene</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(scene)%%></div>
+			</div>
+		</div>
+		<!-- Field: Illustration -->
+		<div class="form-group hist_chr_scene-illustration" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Illustration</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(illustration)%%></div>
+			</div>
+		</div>
+		<!-- Field: Comment -->
+		<div class="form-group hist_chr_scene-comment" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Comment</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(comment)%%></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!-- child records -->
+<div class="panel-body">
+	<div id="hist_chr_scene-children"></div>
+</div>
+
+<script>
+	$j(function() {
+		/* prevent loading child records in multiple DVP */
+		if($j('[id=hist_chr_scene-children]').length > 1) return;
+
+		post(
+			'parent-children.php', {
+				ParentTable: 'hist_chr_scene',
+				SelectedID: '<%%VALUE(id)%%>',
+				Operation: 'show-children-printable'
+			},
+			'hist_chr_scene-children',
+			'disable-element',
+			'loading-element',
+			apply_persisting_children
+		);
+
+		$j('form').on('click', '#children-tabs button[data-target]', function() {
+			$j(this).toggleClass('active');
+			persist_expanded_child($j(this).attr('id'));
+		});
+	})
+</script>
+

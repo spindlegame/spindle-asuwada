@@ -1,0 +1,261 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: ID -->
+		<div class="form-group biblio_doc-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Cover image -->
+		<div class="form-group biblio_doc-img" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Cover image</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><script>
+				var imgSrc1<%%RND1%%>='<%%BASE_UPLOAD_PATH%%><%%VALUE(img)%%>';
+				var imgSrc2<%%RND1%%>='thumbnail.php?t=biblio_doc&f=img&i=<%%VALUE(img)%%>&v=dv'
+			</script>
+			<a href="#" onclick="$('imgImg<%%RND1%%>').src=($('imgImg<%%RND1%%>').src.search(/thumbnail\.php/) != -1 && imgSrc1<%%RND1%%> != '<%%BASE_UPLOAD_PATH%%>' ? imgSrc1<%%RND1%%> : imgSrc2<%%RND1%%>); return false;"><img id="imgImg<%%RND1%%>" src="thumbnail.php?t=biblio_doc&f=img&i=<%%VALUE(img)%%>&v=dv" class="img-thumbnail"></a></div>
+			</div>
+		</div>
+		<!-- Field: Author name -->
+		<div class="form-group biblio_doc-author_name" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Author name</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="author_name<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Author_id -->
+		<div class="form-group biblio_doc-author_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Author_id</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="author_id<%%RND1%%>"><%%COMBOTEXT(author_id)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Type -->
+		<div class="form-group biblio_doc-type" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Type</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="type<%%RND1%%>"><%%COMBOTEXT(type)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Genre -->
+		<div class="form-group biblio_doc-genre" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Genre</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="genre<%%RND1%%>"><%%COMBOTEXT(genre)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Created -->
+		<div class="form-group biblio_doc-created" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Created</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(created)%%></div>
+			</div>
+		</div>
+		<!-- Field: Published -->
+		<div class="form-group biblio_doc-published" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Published</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(published)%%></div>
+			</div>
+		</div>
+		<!-- Field: Title -->
+		<div class="form-group biblio_doc-title" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Title</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(title)%%></div>
+			</div>
+		</div>
+		<!-- Field: Subtitle -->
+		<div class="form-group biblio_doc-subtitle" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Subtitle</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(subtitle)%%></div>
+			</div>
+		</div>
+		<!-- Field: Publisher -->
+		<div class="form-group biblio_doc-publisher" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Publisher</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(publisher)%%></div>
+			</div>
+		</div>
+		<!-- Field: Location -->
+		<div class="form-group biblio_doc-location" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Location</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(location)%%></div>
+			</div>
+		</div>
+		<!-- Field: Citation -->
+		<div class="form-group biblio_doc-citation" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Citation</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(citation)%%></div>
+			</div>
+		</div>
+		<!-- Field: Description -->
+		<div class="form-group biblio_doc-description" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Description</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(description)%%></div>
+			</div>
+		</div>
+		<!-- Field: Source -->
+		<div class="form-group biblio_doc-source" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Source</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(source)%%></div>
+			</div>
+		</div>
+		<!-- Field: Medium -->
+		<div class="form-group biblio_doc-medium" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Medium</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(medium)%%></div>
+			</div>
+		</div>
+		<!-- Field: Language -->
+		<div class="form-group biblio_doc-language" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Language</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="language<%%RND1%%>"><%%COMBOTEXT(language)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Format -->
+		<div class="form-group biblio_doc-format" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Format</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(format)%%></div>
+			</div>
+		</div>
+		<!-- Field: Subject -->
+		<div class="form-group biblio_doc-subject" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Subject</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(subject)%%></div>
+			</div>
+		</div>
+		<!-- Field: Rights -->
+		<div class="form-group biblio_doc-rights" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Rights</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="rights<%%RND1%%>"><%%COMBOTEXT(rights)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Rights_holder -->
+		<div class="form-group biblio_doc-rights_holder" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Rights_holder</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(rights_holder)%%></div>
+			</div>
+		</div>
+		<!-- Field: Data evaluation -->
+		<div class="form-group biblio_doc-data_evaluation" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Data evaluation</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="data_evaluation<%%RND1%%>"><%%COMBOTEXT(data_evaluation)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: World cat no -->
+		<div class="form-group biblio_doc-world_cat_no" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">World cat no</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(world_cat_no)%%></div>
+			</div>
+		</div>
+		<!-- Field: Authority code -->
+		<div class="form-group biblio_doc-authority_record" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Authority code</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(authority_record)%%></div>
+			</div>
+		</div>
+		<!-- Field: Authority organization -->
+		<div class="form-group biblio_doc-authority_organization" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Authority organization</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="authority_organization<%%RND1%%>"><%%COMBOTEXT(authority_organization)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Pdf_book -->
+		<div class="form-group biblio_doc-pdf_book" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Pdf_book</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><a id="pdf_book-link" href="link.php?t=biblio_doc&f=pdf_book&i=<%%VALUE(id)%%>" target="_blank"><i class="glyphicon glyphicon-lg glyphicon-file" title="<%%VALUE(pdf_book)%%>"></i></a><script>jQuery(function() { var e_pdf_book = '<%%VALUE(pdf_book)%%>'; if(e_pdf_book == '' || e_pdf_book == '&nbsp;' || e_pdf_book == 'blank.gif') jQuery('#pdf_book-link').hide(); });</script></div>
+			</div>
+		</div>
+		<!-- Field: Ext_source -->
+		<div class="form-group biblio_doc-ext_source" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Ext_source</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(ext_source)%%></div>
+			</div>
+		</div>
+		<!-- Field: Tags -->
+		<div class="form-group biblio_doc-tags" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Tags</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(tags)%%></div>
+			</div>
+		</div>
+		<!-- Field: Team -->
+		<div class="form-group biblio_doc-team" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Team</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="team<%%RND1%%>"><%%COMBOTEXT(team)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Analyst -->
+		<div class="form-group biblio_doc-biblio_lead" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Analyst</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="biblio_lead<%%RND1%%>"><%%COMBOTEXT(biblio_lead)%%></span></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!-- child records -->
+<div class="panel-body">
+	<div id="biblio_doc-children"></div>
+</div>
+
+<script>
+	$j(function() {
+		/* prevent loading child records in multiple DVP */
+		if($j('[id=biblio_doc-children]').length > 1) return;
+
+		post(
+			'parent-children.php', {
+				ParentTable: 'biblio_doc',
+				SelectedID: '<%%VALUE(id)%%>',
+				Operation: 'show-children-printable'
+			},
+			'biblio_doc-children',
+			'disable-element',
+			'loading-element',
+			apply_persisting_children
+		);
+
+		$j('form').on('click', '#children-tabs button[data-target]', function() {
+			$j(this).toggleClass('active');
+			persist_expanded_child($j(this).attr('id'));
+		});
+	})
+</script>
+
