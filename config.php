@@ -2,7 +2,7 @@
 	$dbServer = 'localhost';
 	$dbUsername = 'spindle';
 	$dbPassword = 'spindle';
-	$dbDatabase = 'spindle21_alpha';
+	$dbDatabase = 'spindle_2_1_0';
 	$appURI = 'www/spindle_2_1_0_alpha';
 
 	$adminConfig = array(
