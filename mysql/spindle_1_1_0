@@ -1,0 +1,1146 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.4
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 01-03-2021 a las 14:08:14
+-- Versión del servidor: 10.4.17-MariaDB
+-- Versión de PHP: 7.3.26
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `spindle_1_1_0`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `biblio_author`
+--
+
+CREATE TABLE `biblio_author` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `memberID` varchar(40) DEFAULT NULL,
+  `img` varchar(40) DEFAULT NULL,
+  `groupID` varchar(40) DEFAULT NULL,
+  `selection_class` varchar(40) DEFAULT NULL,
+  `agenttype1` int(10) UNSIGNED DEFAULT NULL,
+  `agenttype2` int(10) UNSIGNED DEFAULT NULL,
+  `gender` varchar(40) DEFAULT NULL,
+  `last_name` varchar(40) DEFAULT NULL,
+  `first_name` varchar(40) DEFAULT NULL,
+  `other_name` varchar(40) DEFAULT NULL,
+  `birthday` datetime DEFAULT NULL,
+  `birth_location` varchar(40) DEFAULT NULL,
+  `deathday` datetime DEFAULT NULL,
+  `death_location` varchar(40) DEFAULT NULL,
+  `workplace` varchar(40) DEFAULT NULL,
+  `knows` varchar(40) DEFAULT NULL,
+  `shortbio` text DEFAULT NULL,
+  `data_evaluation` varchar(40) DEFAULT NULL,
+  `authority_record` varchar(255) DEFAULT NULL,
+  `authority_organization` int(10) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `biblio_doc`
+--
+
+CREATE TABLE `biblio_doc` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `img` varchar(40) DEFAULT NULL,
+  `author_name` int(10) UNSIGNED DEFAULT NULL,
+  `author_id` int(10) UNSIGNED DEFAULT NULL,
+  `type` int(10) UNSIGNED DEFAULT NULL,
+  `genre` int(10) UNSIGNED DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `published` datetime DEFAULT NULL,
+  `title` longtext DEFAULT NULL,
+  `subtitle` longtext DEFAULT NULL,
+  `publisher` varchar(40) DEFAULT NULL,
+  `location` varchar(40) DEFAULT NULL,
+  `citation` text DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `source` varchar(40) DEFAULT NULL,
+  `medium` varchar(40) DEFAULT NULL,
+  `language` int(10) UNSIGNED DEFAULT NULL,
+  `format` varchar(40) DEFAULT NULL,
+  `subject` text DEFAULT NULL,
+  `rights` int(10) UNSIGNED DEFAULT NULL,
+  `rights_holder` varchar(255) DEFAULT NULL,
+  `data_evaluation` varchar(40) DEFAULT NULL,
+  `authority_record` varchar(255) DEFAULT NULL,
+  `authority_organization` int(10) UNSIGNED DEFAULT NULL,
+  `pdf_book` varchar(255) DEFAULT NULL,
+  `ext_source` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `biblio_token`
+--
+
+CREATE TABLE `biblio_token` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `author` int(10) UNSIGNED DEFAULT NULL,
+  `bibliography` int(10) UNSIGNED DEFAULT NULL,
+  `transcript` int(10) UNSIGNED DEFAULT NULL,
+  `token_sequence` int(11) DEFAULT NULL,
+  `token` longtext DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `biblio_trascript`
+--
+
+CREATE TABLE `biblio_trascript` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `author` int(10) UNSIGNED DEFAULT NULL,
+  `author_memberID` int(10) UNSIGNED DEFAULT NULL,
+  `bibliography_id` int(10) UNSIGNED DEFAULT NULL,
+  `bibliography_title` int(10) UNSIGNED DEFAULT NULL,
+  `trascriber_memberID` varchar(40) DEFAULT NULL,
+  `transcript_title` varchar(40) DEFAULT NULL,
+  `transcript` varchar(40) DEFAULT NULL,
+  `credits` varchar(40) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `class_agent_type1`
+--
+
+CREATE TABLE `class_agent_type1` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `type` varchar(40) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `class_agent_type2`
+--
+
+CREATE TABLE `class_agent_type2` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `type` varchar(40) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `class_authority_agent`
+--
+
+CREATE TABLE `class_authority_agent` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `abbreviation` varchar(40) DEFAULT NULL,
+  `authority_name` varchar(250) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `class_authority_library`
+--
+
+CREATE TABLE `class_authority_library` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `abbreviation` varchar(40) DEFAULT NULL,
+  `authority_name` varchar(80) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `class_bibliography_genre`
+--
+
+CREATE TABLE `class_bibliography_genre` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `genre` varchar(40) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `class_bibliography_type`
+--
+
+CREATE TABLE `class_bibliography_type` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `type` varchar(40) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `class_character_element`
+--
+
+CREATE TABLE `class_character_element` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `element` varchar(40) DEFAULT NULL,
+  `value` varchar(40) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `class_dramatica_archetype`
+--
+
+CREATE TABLE `class_dramatica_archetype` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `archetype` varchar(40) DEFAULT NULL,
+  `description` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `class_dramatica_concern`
+--
+
+CREATE TABLE `class_dramatica_concern` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `domain` int(10) UNSIGNED DEFAULT NULL,
+  `concern` varchar(40) DEFAULT NULL,
+  `description` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `class_dramatica_domain`
+--
+
+CREATE TABLE `class_dramatica_domain` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `domain` varchar(40) DEFAULT NULL,
+  `description` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `class_dramatica_issue`
+--
+
+CREATE TABLE `class_dramatica_issue` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `domain` int(10) UNSIGNED DEFAULT NULL,
+  `concern` int(10) UNSIGNED DEFAULT NULL,
+  `issue` varchar(40) DEFAULT NULL,
+  `description` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `class_dramatica_themes`
+--
+
+CREATE TABLE `class_dramatica_themes` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `domain` int(10) UNSIGNED DEFAULT NULL,
+  `concern` int(10) UNSIGNED DEFAULT NULL,
+  `issue` int(10) UNSIGNED DEFAULT NULL,
+  `theme` varchar(40) DEFAULT NULL,
+  `description` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `class_dramatica_throughline`
+--
+
+CREATE TABLE `class_dramatica_throughline` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `throughline` varchar(40) DEFAULT NULL,
+  `description` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `class_im`
+--
+
+CREATE TABLE `class_im` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `impression` varchar(40) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `category` varchar(40) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `class_language`
+--
+
+CREATE TABLE `class_language` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `short` varchar(40) DEFAULT NULL,
+  `language` varchar(40) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `class_nt`
+--
+
+CREATE TABLE `class_nt` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `noetictension` varchar(40) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `class_rights`
+--
+
+CREATE TABLE `class_rights` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `right` varchar(40) DEFAULT NULL,
+  `description` text DEFAULT NULL,
+  `certification` varchar(40) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `code_character_development`
+--
+
+CREATE TABLE `code_character_development` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `story` int(10) UNSIGNED DEFAULT NULL,
+  `agent` int(10) UNSIGNED DEFAULT NULL,
+  `story_character` int(10) UNSIGNED DEFAULT NULL,
+  `author` int(10) UNSIGNED DEFAULT NULL,
+  `bibliography` int(10) UNSIGNED DEFAULT NULL,
+  `transcript` int(10) UNSIGNED DEFAULT NULL,
+  `token_sequence` int(10) UNSIGNED DEFAULT NULL,
+  `token` int(10) UNSIGNED DEFAULT NULL,
+  `code` int(10) UNSIGNED DEFAULT NULL,
+  `character_element` int(10) UNSIGNED DEFAULT NULL,
+  `character_elem_value` int(10) UNSIGNED DEFAULT NULL,
+  `comment` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `code_chrev_scenes`
+--
+
+CREATE TABLE `code_chrev_scenes` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `author` int(10) UNSIGNED DEFAULT NULL,
+  `bibliography` int(10) UNSIGNED DEFAULT NULL,
+  `transcript` int(10) UNSIGNED DEFAULT NULL,
+  `token_sequence` int(10) UNSIGNED DEFAULT NULL,
+  `token` int(10) UNSIGNED DEFAULT NULL,
+  `agent` int(10) UNSIGNED DEFAULT NULL,
+  `invivo_code` int(10) UNSIGNED DEFAULT NULL,
+  `startdate` int(10) UNSIGNED DEFAULT 1,
+  `end_date` int(10) UNSIGNED DEFAULT 1,
+  `person` int(10) UNSIGNED DEFAULT NULL,
+  `place` int(10) UNSIGNED DEFAULT NULL,
+  `freecode` int(10) UNSIGNED DEFAULT NULL,
+  `herme_code` int(10) UNSIGNED DEFAULT NULL,
+  `impression` int(10) UNSIGNED DEFAULT NULL,
+  `noetictension` int(10) UNSIGNED DEFAULT NULL,
+  `comment` int(10) UNSIGNED DEFAULT NULL,
+  `scene` int(10) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `code_encounters`
+--
+
+CREATE TABLE `code_encounters` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `agentA` int(10) UNSIGNED DEFAULT NULL,
+  `authorA` int(10) UNSIGNED DEFAULT NULL,
+  `bibliographyA` int(10) UNSIGNED DEFAULT NULL,
+  `transcriptA` int(10) UNSIGNED DEFAULT NULL,
+  `tokenA` int(10) UNSIGNED DEFAULT NULL,
+  `sceneA` int(10) UNSIGNED DEFAULT NULL,
+  `agentB` int(10) UNSIGNED DEFAULT NULL,
+  `authorB` int(10) UNSIGNED DEFAULT NULL,
+  `bibliographyB` int(10) UNSIGNED DEFAULT NULL,
+  `transcriptB` int(10) UNSIGNED DEFAULT NULL,
+  `tokenB` int(10) UNSIGNED DEFAULT NULL,
+  `sceneB` int(10) UNSIGNED DEFAULT NULL,
+  `type` varchar(40) DEFAULT NULL,
+  `conflicttype` varchar(40) DEFAULT NULL,
+  `story_scene` int(10) UNSIGNED DEFAULT NULL,
+  `nd_color` int(10) UNSIGNED DEFAULT NULL,
+  `nd_width` varchar(40) DEFAULT NULL,
+  `nd_style` varchar(40) DEFAULT NULL,
+  `nd_opacity` varchar(40) DEFAULT NULL,
+  `nd_visibility` varchar(40) DEFAULT NULL,
+  `lbl_lable` varchar(40) DEFAULT NULL,
+  `lbl_color` varchar(40) DEFAULT NULL,
+  `lbl_size` varchar(40) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `code_encounter_scenes`
+--
+
+CREATE TABLE `code_encounter_scenes` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `scene` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `code_herme`
+--
+
+CREATE TABLE `code_herme` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `author` int(10) UNSIGNED DEFAULT NULL,
+  `bibliography` int(10) UNSIGNED DEFAULT NULL,
+  `transcript` int(10) UNSIGNED DEFAULT NULL,
+  `token_sequence` int(10) UNSIGNED DEFAULT NULL,
+  `token` int(10) UNSIGNED DEFAULT NULL,
+  `impression` int(10) UNSIGNED DEFAULT NULL,
+  `noetictension` int(10) UNSIGNED DEFAULT NULL,
+  `freecode` longtext DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `code_invivo`
+--
+
+CREATE TABLE `code_invivo` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `author` int(10) UNSIGNED DEFAULT NULL,
+  `bibliography` int(10) UNSIGNED DEFAULT NULL,
+  `transcript` int(10) UNSIGNED DEFAULT NULL,
+  `token_sequence` int(10) UNSIGNED DEFAULT NULL,
+  `token` int(10) UNSIGNED DEFAULT NULL,
+  `invivo` longtext DEFAULT NULL,
+  `start_date` datetime DEFAULT NULL,
+  `end_date` datetime DEFAULT NULL,
+  `person` varchar(255) DEFAULT NULL,
+  `place` varchar(40) DEFAULT NULL,
+  `freecode` longtext DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `dictionary`
+--
+
+CREATE TABLE `dictionary` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `term` varchar(40) DEFAULT NULL,
+  `definition` varchar(40) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `story`
+--
+
+CREATE TABLE `story` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `subject` varchar(40) DEFAULT NULL,
+  `story` varchar(40) DEFAULT NULL,
+  `tags` varchar(80) DEFAULT NULL,
+  `collaboration_status` varchar(40) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `storydynamic`
+--
+
+CREATE TABLE `storydynamic` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `story` int(10) UNSIGNED DEFAULT NULL,
+  `MC_resolve` varchar(40) DEFAULT NULL,
+  `MC_growth` varchar(40) DEFAULT NULL,
+  `MC_approach` varchar(40) DEFAULT NULL,
+  `MC_PS_style` varchar(40) DEFAULT NULL,
+  `IC_resolve` varchar(40) DEFAULT NULL,
+  `OS_driver` varchar(40) DEFAULT NULL,
+  `OS_limit` varchar(40) DEFAULT NULL,
+  `OS_outcome` varchar(40) DEFAULT NULL,
+  `OS_judgement` varchar(40) DEFAULT NULL,
+  `OS_goal_domain` int(10) UNSIGNED DEFAULT NULL,
+  `OS_goal_concern` int(10) UNSIGNED DEFAULT NULL,
+  `OS_consequence_domain` int(10) UNSIGNED DEFAULT NULL,
+  `OS_consequence_concern` int(10) UNSIGNED DEFAULT NULL,
+  `OS_cost_domain` int(10) UNSIGNED DEFAULT NULL,
+  `OS_cost_concern` int(10) UNSIGNED DEFAULT NULL,
+  `OS_dividend_domain` int(10) UNSIGNED DEFAULT NULL,
+  `OS_dividend_concern` int(10) UNSIGNED DEFAULT NULL,
+  `OS_requirements_domain` int(10) UNSIGNED DEFAULT NULL,
+  `OS_requirements_concern` int(10) UNSIGNED DEFAULT NULL,
+  `OS_prerequesites_domain` int(10) UNSIGNED DEFAULT NULL,
+  `OS_prerequesites_concern` int(10) UNSIGNED DEFAULT NULL,
+  `OS_preconditions_domain` int(10) UNSIGNED DEFAULT NULL,
+  `OS_preconditions_concern` int(10) UNSIGNED DEFAULT NULL,
+  `OS_forewarnings_domain` int(10) UNSIGNED DEFAULT NULL,
+  `OS_forewarnings_concern` int(10) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `storylines`
+--
+
+CREATE TABLE `storylines` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `story` int(10) UNSIGNED DEFAULT NULL,
+  `story_act` varchar(40) DEFAULT NULL,
+  `storyweaving_scene_no` int(10) UNSIGNED DEFAULT NULL,
+  `storyweaving_scene` int(10) UNSIGNED DEFAULT NULL,
+  `storyweaving_sequence` int(10) UNSIGNED DEFAULT NULL,
+  `storyweaving_theme` int(10) UNSIGNED DEFAULT NULL,
+  `role` int(10) UNSIGNED DEFAULT NULL,
+  `character` int(10) UNSIGNED DEFAULT NULL,
+  `characterevent_scene` int(10) UNSIGNED DEFAULT NULL,
+  `character_event` int(10) UNSIGNED DEFAULT NULL,
+  `storyline_no` varchar(40) DEFAULT NULL,
+  `storyline` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `storypoints_static`
+--
+
+CREATE TABLE `storypoints_static` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `story` int(10) UNSIGNED DEFAULT NULL,
+  `throughline` int(10) UNSIGNED DEFAULT NULL,
+  `throughline_domain` int(10) UNSIGNED DEFAULT NULL,
+  `concern` int(10) UNSIGNED DEFAULT NULL,
+  `issue` int(10) UNSIGNED DEFAULT NULL,
+  `problem` int(10) UNSIGNED DEFAULT NULL,
+  `solution` int(10) UNSIGNED DEFAULT NULL,
+  `symptom` int(10) UNSIGNED DEFAULT NULL,
+  `response` int(10) UNSIGNED DEFAULT NULL,
+  `catalyst` int(10) UNSIGNED DEFAULT NULL,
+  `inhibitor` int(10) UNSIGNED DEFAULT NULL,
+  `benchmark` int(10) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `storyweaving_scenes`
+--
+
+CREATE TABLE `storyweaving_scenes` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `story` int(10) UNSIGNED DEFAULT NULL,
+  `step` varchar(40) DEFAULT NULL,
+  `throughline` int(10) UNSIGNED DEFAULT NULL,
+  `domain` int(10) UNSIGNED DEFAULT NULL,
+  `concern` int(10) UNSIGNED DEFAULT NULL,
+  `sequence` varchar(40) DEFAULT NULL,
+  `issue` int(10) UNSIGNED DEFAULT NULL,
+  `theme` int(10) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `story_characters`
+--
+
+CREATE TABLE `story_characters` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `story` int(10) UNSIGNED DEFAULT NULL,
+  `role` int(10) UNSIGNED DEFAULT NULL,
+  `character` varchar(40) DEFAULT NULL,
+  `memberID` int(10) UNSIGNED DEFAULT NULL,
+  `agent_name` int(10) UNSIGNED DEFAULT NULL,
+  `cw_name` varchar(40) DEFAULT NULL,
+  `img` int(10) UNSIGNED DEFAULT NULL,
+  `MC_resolve` int(10) UNSIGNED DEFAULT NULL,
+  `MC_growth` int(10) UNSIGNED DEFAULT NULL,
+  `MC_approach` int(10) UNSIGNED DEFAULT NULL,
+  `MC_PS_style` int(10) UNSIGNED DEFAULT NULL,
+  `cw_age` varchar(40) DEFAULT NULL,
+  `cw_gender` int(10) UNSIGNED DEFAULT NULL,
+  `cw_communication_style` text DEFAULT NULL,
+  `cw_background` text DEFAULT NULL,
+  `cw_appearance` text DEFAULT NULL,
+  `cw_relationships` varchar(255) DEFAULT NULL,
+  `cw_ambition` text DEFAULT NULL,
+  `cw_character_defects` text DEFAULT NULL,
+  `cw_thoughts` text DEFAULT NULL,
+  `cw_relatedness` varchar(255) DEFAULT NULL,
+  `cw_restrictions` text DEFAULT NULL,
+  `locations` varchar(255) DEFAULT NULL,
+  `persons` varchar(255) DEFAULT NULL,
+  `events` text DEFAULT NULL,
+  `noetictension` int(10) UNSIGNED DEFAULT NULL,
+  `impression` int(10) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `biblio_author`
+--
+ALTER TABLE `biblio_author`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `memberID` (`memberID`),
+  ADD KEY `agenttype1` (`agenttype1`),
+  ADD KEY `agenttype2` (`agenttype2`),
+  ADD KEY `authority_organization` (`authority_organization`);
+
+--
+-- Indices de la tabla `biblio_doc`
+--
+ALTER TABLE `biblio_doc`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `author_name` (`author_name`),
+  ADD KEY `type` (`type`),
+  ADD KEY `genre` (`genre`),
+  ADD KEY `language` (`language`),
+  ADD KEY `rights` (`rights`),
+  ADD KEY `authority_organization` (`authority_organization`);
+
+--
+-- Indices de la tabla `biblio_token`
+--
+ALTER TABLE `biblio_token`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `author` (`author`),
+  ADD KEY `bibliography` (`bibliography`),
+  ADD KEY `transcript` (`transcript`);
+
+--
+-- Indices de la tabla `biblio_trascript`
+--
+ALTER TABLE `biblio_trascript`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `author` (`author`),
+  ADD KEY `bibliography_title` (`bibliography_title`);
+
+--
+-- Indices de la tabla `class_agent_type1`
+--
+ALTER TABLE `class_agent_type1`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `class_agent_type2`
+--
+ALTER TABLE `class_agent_type2`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `class_authority_agent`
+--
+ALTER TABLE `class_authority_agent`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `class_authority_library`
+--
+ALTER TABLE `class_authority_library`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `class_bibliography_genre`
+--
+ALTER TABLE `class_bibliography_genre`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `class_bibliography_type`
+--
+ALTER TABLE `class_bibliography_type`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `class_character_element`
+--
+ALTER TABLE `class_character_element`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `class_dramatica_archetype`
+--
+ALTER TABLE `class_dramatica_archetype`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `class_dramatica_concern`
+--
+ALTER TABLE `class_dramatica_concern`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `domain` (`domain`);
+
+--
+-- Indices de la tabla `class_dramatica_domain`
+--
+ALTER TABLE `class_dramatica_domain`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `class_dramatica_issue`
+--
+ALTER TABLE `class_dramatica_issue`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `domain` (`domain`),
+  ADD KEY `concern` (`concern`);
+
+--
+-- Indices de la tabla `class_dramatica_themes`
+--
+ALTER TABLE `class_dramatica_themes`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `domain` (`domain`),
+  ADD KEY `concern` (`concern`),
+  ADD KEY `issue` (`issue`);
+
+--
+-- Indices de la tabla `class_dramatica_throughline`
+--
+ALTER TABLE `class_dramatica_throughline`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `class_im`
+--
+ALTER TABLE `class_im`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `class_language`
+--
+ALTER TABLE `class_language`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `class_nt`
+--
+ALTER TABLE `class_nt`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `class_rights`
+--
+ALTER TABLE `class_rights`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `code_character_development`
+--
+ALTER TABLE `code_character_development`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `story` (`story`),
+  ADD KEY `agent` (`agent`),
+  ADD KEY `author` (`author`),
+  ADD KEY `bibliography` (`bibliography`),
+  ADD KEY `transcript` (`transcript`),
+  ADD KEY `token` (`token`),
+  ADD KEY `code` (`code`),
+  ADD KEY `character_element` (`character_element`);
+
+--
+-- Indices de la tabla `code_chrev_scenes`
+--
+ALTER TABLE `code_chrev_scenes`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `author` (`author`),
+  ADD KEY `bibliography` (`bibliography`),
+  ADD KEY `transcript` (`transcript`),
+  ADD KEY `token_sequence` (`token_sequence`),
+  ADD KEY `agent` (`agent`),
+  ADD KEY `invivo_code` (`invivo_code`),
+  ADD KEY `herme_code` (`herme_code`),
+  ADD KEY `scene` (`scene`);
+
+--
+-- Indices de la tabla `code_encounters`
+--
+ALTER TABLE `code_encounters`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `agentA` (`agentA`),
+  ADD KEY `authorA` (`authorA`),
+  ADD KEY `bibliographyA` (`bibliographyA`),
+  ADD KEY `transcriptA` (`transcriptA`),
+  ADD KEY `tokenA` (`tokenA`),
+  ADD KEY `sceneA` (`sceneA`),
+  ADD KEY `agentB` (`agentB`),
+  ADD KEY `authorB` (`authorB`),
+  ADD KEY `bibliographyB` (`bibliographyB`),
+  ADD KEY `transcriptB` (`transcriptB`),
+  ADD KEY `tokenB` (`tokenB`),
+  ADD KEY `sceneB` (`sceneB`),
+  ADD KEY `story_scene` (`story_scene`);
+
+--
+-- Indices de la tabla `code_encounter_scenes`
+--
+ALTER TABLE `code_encounter_scenes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `code_herme`
+--
+ALTER TABLE `code_herme`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `author` (`author`),
+  ADD KEY `bibliography` (`bibliography`),
+  ADD KEY `transcript` (`transcript`),
+  ADD KEY `token_sequence` (`token_sequence`),
+  ADD KEY `impression` (`impression`),
+  ADD KEY `noetictension` (`noetictension`);
+
+--
+-- Indices de la tabla `code_invivo`
+--
+ALTER TABLE `code_invivo`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `author` (`author`),
+  ADD KEY `bibliography` (`bibliography`),
+  ADD KEY `transcript` (`transcript`),
+  ADD KEY `token_sequence` (`token_sequence`);
+
+--
+-- Indices de la tabla `dictionary`
+--
+ALTER TABLE `dictionary`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `story`
+--
+ALTER TABLE `story`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `storydynamic`
+--
+ALTER TABLE `storydynamic`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `story` (`story`),
+  ADD KEY `OS_goal_domain` (`OS_goal_domain`),
+  ADD KEY `OS_goal_concern` (`OS_goal_concern`),
+  ADD KEY `OS_consequence_domain` (`OS_consequence_domain`),
+  ADD KEY `OS_consequence_concern` (`OS_consequence_concern`),
+  ADD KEY `OS_cost_domain` (`OS_cost_domain`),
+  ADD KEY `OS_cost_concern` (`OS_cost_concern`),
+  ADD KEY `OS_dividend_domain` (`OS_dividend_domain`),
+  ADD KEY `OS_dividend_concern` (`OS_dividend_concern`),
+  ADD KEY `OS_requirements_domain` (`OS_requirements_domain`),
+  ADD KEY `OS_requirements_concern` (`OS_requirements_concern`),
+  ADD KEY `OS_prerequesites_domain` (`OS_prerequesites_domain`),
+  ADD KEY `OS_prerequesites_concern` (`OS_prerequesites_concern`),
+  ADD KEY `OS_preconditions_domain` (`OS_preconditions_domain`),
+  ADD KEY `OS_preconditions_concern` (`OS_preconditions_concern`),
+  ADD KEY `OS_forewarnings_domain` (`OS_forewarnings_domain`),
+  ADD KEY `OS_forewarnings_concern` (`OS_forewarnings_concern`);
+
+--
+-- Indices de la tabla `storylines`
+--
+ALTER TABLE `storylines`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `story` (`story`),
+  ADD KEY `storyweaving_scene_no` (`storyweaving_scene_no`),
+  ADD KEY `role` (`role`),
+  ADD KEY `character` (`character`),
+  ADD KEY `characterevent_scene` (`characterevent_scene`);
+
+--
+-- Indices de la tabla `storypoints_static`
+--
+ALTER TABLE `storypoints_static`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `story` (`story`),
+  ADD KEY `throughline` (`throughline`),
+  ADD KEY `throughline_domain` (`throughline_domain`),
+  ADD KEY `concern` (`concern`),
+  ADD KEY `issue` (`issue`),
+  ADD KEY `problem` (`problem`),
+  ADD KEY `solution` (`solution`),
+  ADD KEY `symptom` (`symptom`),
+  ADD KEY `response` (`response`),
+  ADD KEY `catalyst` (`catalyst`),
+  ADD KEY `inhibitor` (`inhibitor`),
+  ADD KEY `benchmark` (`benchmark`);
+
+--
+-- Indices de la tabla `storyweaving_scenes`
+--
+ALTER TABLE `storyweaving_scenes`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `story` (`story`),
+  ADD KEY `throughline` (`throughline`),
+  ADD KEY `domain` (`domain`),
+  ADD KEY `concern` (`concern`),
+  ADD KEY `issue` (`issue`),
+  ADD KEY `theme` (`theme`);
+
+--
+-- Indices de la tabla `story_characters`
+--
+ALTER TABLE `story_characters`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `story` (`story`),
+  ADD KEY `role` (`role`),
+  ADD KEY `agent_name` (`agent_name`),
+  ADD KEY `noetictension` (`noetictension`),
+  ADD KEY `impression` (`impression`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `biblio_author`
+--
+ALTER TABLE `biblio_author`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `biblio_doc`
+--
+ALTER TABLE `biblio_doc`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `biblio_token`
+--
+ALTER TABLE `biblio_token`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `biblio_trascript`
+--
+ALTER TABLE `biblio_trascript`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `class_agent_type1`
+--
+ALTER TABLE `class_agent_type1`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `class_agent_type2`
+--
+ALTER TABLE `class_agent_type2`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `class_authority_agent`
+--
+ALTER TABLE `class_authority_agent`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `class_authority_library`
+--
+ALTER TABLE `class_authority_library`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `class_bibliography_genre`
+--
+ALTER TABLE `class_bibliography_genre`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `class_bibliography_type`
+--
+ALTER TABLE `class_bibliography_type`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `class_character_element`
+--
+ALTER TABLE `class_character_element`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `class_dramatica_archetype`
+--
+ALTER TABLE `class_dramatica_archetype`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `class_dramatica_concern`
+--
+ALTER TABLE `class_dramatica_concern`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `class_dramatica_domain`
+--
+ALTER TABLE `class_dramatica_domain`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `class_dramatica_issue`
+--
+ALTER TABLE `class_dramatica_issue`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `class_dramatica_themes`
+--
+ALTER TABLE `class_dramatica_themes`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `class_dramatica_throughline`
+--
+ALTER TABLE `class_dramatica_throughline`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `class_im`
+--
+ALTER TABLE `class_im`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `class_language`
+--
+ALTER TABLE `class_language`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `class_nt`
+--
+ALTER TABLE `class_nt`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `class_rights`
+--
+ALTER TABLE `class_rights`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `code_character_development`
+--
+ALTER TABLE `code_character_development`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `code_chrev_scenes`
+--
+ALTER TABLE `code_chrev_scenes`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `code_encounters`
+--
+ALTER TABLE `code_encounters`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `code_encounter_scenes`
+--
+ALTER TABLE `code_encounter_scenes`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `code_herme`
+--
+ALTER TABLE `code_herme`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `code_invivo`
+--
+ALTER TABLE `code_invivo`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `dictionary`
+--
+ALTER TABLE `dictionary`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `story`
+--
+ALTER TABLE `story`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `storydynamic`
+--
+ALTER TABLE `storydynamic`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `storylines`
+--
+ALTER TABLE `storylines`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `storypoints_static`
+--
+ALTER TABLE `storypoints_static`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `storyweaving_scenes`
+--
+ALTER TABLE `storyweaving_scenes`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `story_characters`
+--
+ALTER TABLE `story_characters`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
