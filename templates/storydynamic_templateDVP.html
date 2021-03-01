@@ -1,0 +1,210 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Story</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="story<%%RND1%%>"><%%COMBOTEXT(story)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Agent</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="agent<%%RND1%%>"><%%COMBOTEXT(agent)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Story dev chr</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="story_dev_chr<%%RND1%%>"><%%COMBOTEXT(story_dev_chr)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Story static ost</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="storystatic_ost<%%RND1%%>"><%%COMBOTEXT(storystatic_ost)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Mc character</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="storystatic_chr_mc<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Mc goal</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mc_problem<%%RND1%%>"><%%COMBOTEXT(mc_problem)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">MC resolve</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mc_resolve<%%RND1%%>"><%%COMBOTEXT(mc_resolve)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">MC growth</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mc_growth<%%RND1%%>"><%%COMBOTEXT(mc_growth)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">MC approach</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mc_approach<%%RND1%%>"><%%COMBOTEXT(mc_approach)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">MC PS style</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mc_ps_style<%%RND1%%>"><%%COMBOTEXT(mc_ps_style)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">IC resolve</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(ic_resolve)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS driver</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(os_driver)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS limit</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(os_limit)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS outcome</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(os_outcome)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS judgement</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(os_judgement)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS goal domain</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_goal_domain<%%RND1%%>"><%%COMBOTEXT(os_goal_domain)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS goal concern</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_goal_concern<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS consquence domain</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_consequence_domain<%%RND1%%>"><%%COMBOTEXT(os_consequence_domain)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS consequence concern</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_consequence_concern<%%RND1%%>"><%%COMBOTEXT(os_consequence_concern)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS cost domain</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_cost_domain<%%RND1%%>"><%%COMBOTEXT(os_cost_domain)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS cost concern</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_cost_concern<%%RND1%%>"><%%COMBOTEXT(os_cost_concern)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS dividend domain</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_dividend_domain<%%RND1%%>"><%%COMBOTEXT(os_dividend_domain)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS dividend concern</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_dividend_concern<%%RND1%%>"><%%COMBOTEXT(os_dividend_concern)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS requirements domain</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_requirements_domain<%%RND1%%>"><%%COMBOTEXT(os_requirements_domain)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS requirements concern</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_requirements_concern<%%RND1%%>"><%%COMBOTEXT(os_requirements_concern)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS prerequisites domain</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_prerequesites_domain<%%RND1%%>"><%%COMBOTEXT(os_prerequesites_domain)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS prerequisites concern</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_prerequesites_concern<%%RND1%%>"><%%COMBOTEXT(os_prerequesites_concern)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS preconditions domain</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_preconditions_domain<%%RND1%%>"><%%COMBOTEXT(os_preconditions_domain)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS preconditions concern</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_preconditions_concern<%%RND1%%>"><%%COMBOTEXT(os_preconditions_concern)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS forewarnings domain</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_forewarnings_domain<%%RND1%%>"><%%COMBOTEXT(os_forewarnings_domain)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">OS forewarnings concern</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_forewarnings_concern<%%RND1%%>"><%%COMBOTEXT(os_forewarnings_concern)%%></span></div>
+			</div>
+		</div>
+	</fieldset>
+</div>

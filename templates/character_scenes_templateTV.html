@@ -1,0 +1,24 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the character_scenes_init() hook (in hooks/character_scenes.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="character_scenes-id-<%%VALUE(id)%%>" class="character_scenes-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="character_scenes-author-<%%VALUE(id)%%>" class="character_scenes-author text-right"><%%SELECT%%><%%VALUE(author)%%><%%ENDSELECT%%></td>
+		<td id="character_scenes-bibliography-<%%VALUE(id)%%>" class="character_scenes-bibliography text-right"><%%SELECT%%><%%VALUE(bibliography)%%><%%ENDSELECT%%></td>
+		<td id="character_scenes-transcript-<%%VALUE(id)%%>" class="character_scenes-transcript text-right"><%%SELECT%%><%%VALUE(transcript)%%><%%ENDSELECT%%></td>
+		<td id="character_scenes-token_sequence-<%%VALUE(id)%%>" class="character_scenes-token_sequence text-right"><%%SELECT%%><%%VALUE(token_sequence)%%><%%ENDSELECT%%></td>
+		<td id="character_scenes-token-<%%VALUE(id)%%>" class="character_scenes-token text-right"><%%SELECT%%><%%VALUE(token)%%><%%ENDSELECT%%></td>
+		<td id="character_scenes-invivo_code-<%%VALUE(id)%%>" class="character_scenes-invivo_code text-right"><%%SELECT%%><%%VALUE(invivo_code)%%><%%ENDSELECT%%></td>
+		<td id="character_scenes-startdate-<%%VALUE(id)%%>" class="character_scenes-startdate text-right"><%%SELECT%%><%%VALUE(startdate)%%><%%ENDSELECT%%></td>
+		<td id="character_scenes-enddate-<%%VALUE(id)%%>" class="character_scenes-enddate text-right"><%%SELECT%%><%%VALUE(enddate)%%><%%ENDSELECT%%></td>
+		<td id="character_scenes-person-<%%VALUE(id)%%>" class="character_scenes-person text-right"><%%SELECT%%><%%VALUE(person)%%><%%ENDSELECT%%></td>
+		<td id="character_scenes-place-<%%VALUE(id)%%>" class="character_scenes-place text-right"><%%SELECT%%><%%VALUE(place)%%><%%ENDSELECT%%></td>
+		<td id="character_scenes-herme_code-<%%VALUE(id)%%>" class="character_scenes-herme_code text-right"><%%SELECT%%><%%VALUE(herme_code)%%><%%ENDSELECT%%></td>
+		<td id="character_scenes-impression-<%%VALUE(id)%%>" class="character_scenes-impression text-right"><%%SELECT%%><%%VALUE(impression)%%><%%ENDSELECT%%></td>
+		<td id="character_scenes-noetictension-<%%VALUE(id)%%>" class="character_scenes-noetictension text-right"><%%SELECT%%><%%VALUE(noetictension)%%><%%ENDSELECT%%></td>
+		<td id="character_scenes-pc-<%%VALUE(id)%%>" class="character_scenes-pc"><%%SELECT%%><%%VALUE(pc)%%><%%ENDSELECT%%></td>
+		<td id="character_scenes-comment-<%%VALUE(id)%%>" class="character_scenes-comment text-right"><%%SELECT%%><%%VALUE(comment)%%><%%ENDSELECT%%></td>
+		<td id="character_scenes-scene-<%%VALUE(id)%%>" class="character_scenes-scene text-right"><%%SELECT%%><%%VALUE(scene)%%><%%ENDSELECT%%></td>

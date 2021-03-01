@@ -1,0 +1,46 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the character_development_init() hook (in hooks/character_development.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="character_development-id-<%%VALUE(id)%%>" class="character_development-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="character_development-agent_id-<%%VALUE(id)%%>" class="character_development-agent_id text-right"><%%SELECT%%><%%VALUE(agent_id)%%><%%ENDSELECT%%></td>
+		<td id="character_development-agent_name-<%%VALUE(id)%%>" class="character_development-agent_name text-right"><%%SELECT%%><%%VALUE(agent_name)%%><%%ENDSELECT%%></td>
+		<td id="character_development-cw_name-<%%VALUE(id)%%>" class="character_development-cw_name"><%%SELECT%%><%%VALUE(cw_name)%%><%%ENDSELECT%%></td>
+		<td id="character_development-img-<%%VALUE(id)%%>" class="character_development-img"><a href="<%%TRANSLATION(ImageFolder)%%><%%VALUE(img)%%>" data-lightbox="character_development-img"><img src="thumbnail.php?i=<%%VALUE(img)%%>&t=character_development&f=img&v=tv" class="img-thumbnail"></a></td>
+		<td id="character_development-mc_resolve-<%%VALUE(id)%%>" class="character_development-mc_resolve text-right"><%%SELECT%%><%%VALUE(mc_resolve)%%><%%ENDSELECT%%></td>
+		<td id="character_development-illust_resolve-<%%VALUE(id)%%>" class="character_development-illust_resolve"><%%SELECT%%><%%VALUE(illust_resolve)%%><%%ENDSELECT%%></td>
+		<td id="character_development-mc_growth-<%%VALUE(id)%%>" class="character_development-mc_growth text-right"><%%SELECT%%><%%VALUE(mc_growth)%%><%%ENDSELECT%%></td>
+		<td id="character_development-illust_growth-<%%VALUE(id)%%>" class="character_development-illust_growth"><%%SELECT%%><%%VALUE(illust_growth)%%><%%ENDSELECT%%></td>
+		<td id="character_development-mc_approach-<%%VALUE(id)%%>" class="character_development-mc_approach text-right"><%%SELECT%%><%%VALUE(mc_approach)%%><%%ENDSELECT%%></td>
+		<td id="character_development-illust_approach-<%%VALUE(id)%%>" class="character_development-illust_approach"><%%SELECT%%><%%VALUE(illust_approach)%%><%%ENDSELECT%%></td>
+		<td id="character_development-mc_ps_style-<%%VALUE(id)%%>" class="character_development-mc_ps_style text-right"><%%SELECT%%><%%VALUE(mc_ps_style)%%><%%ENDSELECT%%></td>
+		<td id="character_development-illust_ps_style-<%%VALUE(id)%%>" class="character_development-illust_ps_style"><%%SELECT%%><%%VALUE(illust_ps_style)%%><%%ENDSELECT%%></td>
+		<td id="character_development-cw_age-<%%VALUE(id)%%>" class="character_development-cw_age"><%%SELECT%%><%%VALUE(cw_age)%%><%%ENDSELECT%%></td>
+		<td id="character_development-cw_gender-<%%VALUE(id)%%>" class="character_development-cw_gender text-right"><%%SELECT%%><%%VALUE(cw_gender)%%><%%ENDSELECT%%></td>
+		<td id="character_development-cw_communication_style-<%%VALUE(id)%%>" class="character_development-cw_communication_style"><%%SELECT%%><%%VALUE(cw_communication_style)%%><%%ENDSELECT%%></td>
+		<td id="character_development-cw_background-<%%VALUE(id)%%>" class="character_development-cw_background"><%%SELECT%%><%%VALUE(cw_background)%%><%%ENDSELECT%%></td>
+		<td id="character_development-cw_appearance-<%%VALUE(id)%%>" class="character_development-cw_appearance"><%%SELECT%%><%%VALUE(cw_appearance)%%><%%ENDSELECT%%></td>
+		<td id="character_development-cw_relationships-<%%VALUE(id)%%>" class="character_development-cw_relationships"><%%SELECT%%><%%VALUE(cw_relationships)%%><%%ENDSELECT%%></td>
+		<td id="character_development-cw_ambition-<%%VALUE(id)%%>" class="character_development-cw_ambition"><%%SELECT%%><%%VALUE(cw_ambition)%%><%%ENDSELECT%%></td>
+		<td id="character_development-cw_defects-<%%VALUE(id)%%>" class="character_development-cw_defects"><%%SELECT%%><%%VALUE(cw_defects)%%><%%ENDSELECT%%></td>
+		<td id="character_development-cw_thoughts-<%%VALUE(id)%%>" class="character_development-cw_thoughts"><%%SELECT%%><%%VALUE(cw_thoughts)%%><%%ENDSELECT%%></td>
+		<td id="character_development-cw_relatedness-<%%VALUE(id)%%>" class="character_development-cw_relatedness"><%%SELECT%%><%%VALUE(cw_relatedness)%%><%%ENDSELECT%%></td>
+		<td id="character_development-cw_restrictions-<%%VALUE(id)%%>" class="character_development-cw_restrictions"><%%SELECT%%><%%VALUE(cw_restrictions)%%><%%ENDSELECT%%></td>
+		<td id="character_development-locations-<%%VALUE(id)%%>" class="character_development-locations"><%%SELECT%%><%%VALUE(locations)%%><%%ENDSELECT%%></td>
+		<td id="character_development-persons-<%%VALUE(id)%%>" class="character_development-persons"><%%SELECT%%><%%VALUE(persons)%%><%%ENDSELECT%%></td>
+		<td id="character_development-events-<%%VALUE(id)%%>" class="character_development-events"><%%SELECT%%><%%VALUE(events)%%><%%ENDSELECT%%></td>
+		<td id="character_development-noetictension-<%%VALUE(id)%%>" class="character_development-noetictension text-right"><%%SELECT%%><%%VALUE(noetictension)%%><%%ENDSELECT%%></td>
+		<td id="character_development-illust_nt-<%%VALUE(id)%%>" class="character_development-illust_nt"><%%SELECT%%><%%VALUE(illust_nt)%%><%%ENDSELECT%%></td>
+		<td id="character_development-impression-<%%VALUE(id)%%>" class="character_development-impression text-right"><%%SELECT%%><%%VALUE(impression)%%><%%ENDSELECT%%></td>
+		<td id="character_development-illust_im-<%%VALUE(id)%%>" class="character_development-illust_im"><%%SELECT%%><%%VALUE(illust_im)%%><%%ENDSELECT%%></td>
+		<td id="character_development-mcs_problem-<%%VALUE(id)%%>" class="character_development-mcs_problem"><%%SELECT%%><%%VALUE(mcs_problem)%%><%%ENDSELECT%%></td>
+		<td id="character_development-illust_mcs_problem-<%%VALUE(id)%%>" class="character_development-illust_mcs_problem"><%%SELECT%%><%%VALUE(illust_mcs_problem)%%><%%ENDSELECT%%></td>
+		<td id="character_development-mcs_solution-<%%VALUE(id)%%>" class="character_development-mcs_solution"><%%SELECT%%><%%VALUE(mcs_solution)%%><%%ENDSELECT%%></td>
+		<td id="character_development-illust_mcs_solution-<%%VALUE(id)%%>" class="character_development-illust_mcs_solution"><%%SELECT%%><%%VALUE(illust_mcs_solution)%%><%%ENDSELECT%%></td>
+		<td id="character_development-mcs_symptom-<%%VALUE(id)%%>" class="character_development-mcs_symptom"><%%SELECT%%><%%VALUE(mcs_symptom)%%><%%ENDSELECT%%></td>
+		<td id="character_development-illust_mcs_symptom-<%%VALUE(id)%%>" class="character_development-illust_mcs_symptom"><%%SELECT%%><%%VALUE(illust_mcs_symptom)%%><%%ENDSELECT%%></td>
+		<td id="character_development-mcs_response-<%%VALUE(id)%%>" class="character_development-mcs_response"><%%SELECT%%><%%VALUE(mcs_response)%%><%%ENDSELECT%%></td>
+		<td id="character_development-illust_mcs_response-<%%VALUE(id)%%>" class="character_development-illust_mcs_response"><%%SELECT%%><%%VALUE(illust_mcs_response)%%><%%ENDSELECT%%></td>

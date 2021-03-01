@@ -1,0 +1,285 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">MemberID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="agent_id<%%RND1%%>"><%%COMBOTEXT(agent_id)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Agent name</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="agent_name<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Character name</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cw_name)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Img</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><script>
+				var imgSrc1<%%RND1%%>='<%%TRANSLATION(ImageFolder)%%><%%VALUE(img)%%>';
+				var imgSrc2<%%RND1%%>='thumbnail.php?t=character_development&f=img&i=<%%VALUE(img)%%>&v=dv'
+			</script>
+			<a href="#" onclick="$('imgImg<%%RND1%%>').src=($('imgImg<%%RND1%%>').src.search(/thumbnail\.php/) != -1 && imgSrc1<%%RND1%%> != '<%%TRANSLATION(ImageFolder)%%>' ? imgSrc1<%%RND1%%> : imgSrc2<%%RND1%%>); return false;"><img id="imgImg<%%RND1%%>" src="thumbnail.php?t=character_development&f=img&i=<%%VALUE(img)%%>&v=dv" class="img-thumbnail"></a></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Resolve</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(mc_resolve)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Illustration of MC Resolve</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="illust_resolve<%%RND1%%>"><%%COMBOTEXT(illust_resolve)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Growth</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(mc_growth)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Illustration of MC Growth</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="illust_growth<%%RND1%%>"><%%COMBOTEXT(illust_growth)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Approach</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(mc_approach)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Illustration of MC Approach</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="illust_approach<%%RND1%%>"><%%COMBOTEXT(illust_approach)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Problem Solving Style</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(mc_ps_style)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Illustration of MC PS Style</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="illust_ps_style<%%RND1%%>"><%%COMBOTEXT(illust_ps_style)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Age</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cw_age)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Gender</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cw_gender)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Communication style</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cw_communication_style)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Background</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cw_background)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Appearance</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cw_appearance)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Relationships</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cw_relationships)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Ambition</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cw_ambition)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Defects</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cw_defects)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Thoughts</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cw_thoughts)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Relatedness</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cw_relatedness)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Restrictions</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cw_restrictions)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Locations</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(locations)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Persons</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(persons)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Events</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(events)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Noetic tension</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="noetictension<%%RND1%%>"><%%COMBOTEXT(noetictension)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Illustration of Noetic Tension</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="illust_nt<%%RND1%%>"><%%COMBOTEXT(illust_nt)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Overall Impression Management</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="impression<%%RND1%%>"><%%COMBOTEXT(impression)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Illustration of Impression Mnmt.</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="illust_im<%%RND1%%>"><%%COMBOTEXT(illust_im)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Problem</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mcs_problem<%%RND1%%>"><%%COMBOTEXT(mcs_problem)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Illustration of MCS Problem</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="illust_mcs_problem<%%RND1%%>"><%%COMBOTEXT(illust_mcs_problem)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Solution</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mcs_solution<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Illustration of MCS Solution</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="illust_mcs_solution<%%RND1%%>"><%%COMBOTEXT(illust_mcs_solution)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Symptom</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mcs_symptom<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Illustration of MCS Symptome</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="illust_mcs_symptom<%%RND1%%>"><%%COMBOTEXT(illust_mcs_symptom)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Response</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mcs_response<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Illustration of MCS Response</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="illust_mcs_response<%%RND1%%>"><%%COMBOTEXT(illust_mcs_response)%%></span></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!-- child records -->
+<div class="panel-body">
+	<div id="character_development-children"></div>
+</div>
+
+<script>
+	$j(function(){
+		/* prevent loading child records in multiple DVP */
+		if($j('[id=character_development-children]').length > 1) return;
+
+		post(
+			'parent-children.php', {
+				ParentTable: 'character_development',
+				SelectedID: '<%%VALUE(id)%%>',
+				Operation: 'show-children-printable'
+			},
+			'character_development-children',
+			'disable-element',
+			'loading-element',
+			apply_persisting_children
+		);
+
+		$j('form').on('click', '#children-tabs button[data-target]', function(){
+			$j(this).toggleClass('active');
+			persist_expanded_child($j(this).attr('id'));
+		});
+	})
+</script>
+

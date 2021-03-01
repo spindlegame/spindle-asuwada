@@ -1,0 +1,15 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the  and  formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the story_characters_init() hook (in hooks/story_characters.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="story_characters-id-<%%VALUE(id)%%>" class="story_characters-id text-right"><%%VALUE(id)%%></td>
+		<td id="story_characters-agent-<%%VALUE(id)%%>" class="story_characters-agent text-right"><%%VALUE(agent)%%></td>
+		<td id="story_characters-agent_name-<%%VALUE(id)%%>" class="story_characters-agent_name"><%%VALUE(agent_name)%%></td>
+		<td id="story_characters-character-<%%VALUE(id)%%>" class="story_characters-character"><%%VALUE(character)%%></td>
+		<td id="story_characters-story_character-<%%VALUE(id)%%>" class="story_characters-story_character"><%%VALUE(story_character)%%></td>
+		<td id="story_characters-story-<%%VALUE(id)%%>" class="story_characters-story text-right"><%%VALUE(story)%%></td>
+		<td id="story_characters-story_archetype-<%%VALUE(id)%%>" class="story_characters-story_archetype text-right"><%%VALUE(story_archetype)%%></td>
+		<td id="story_characters-comment-<%%VALUE(id)%%>" class="story_characters-comment"><%%VALUE(comment)%%></td>

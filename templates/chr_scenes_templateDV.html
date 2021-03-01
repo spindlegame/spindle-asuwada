@@ -1,0 +1,379 @@
+<!-- Edit this file to change the layout of the detail view form -->
+
+<a name="detail-view"></a>
+<div class="panel-heading"><h3 class="panel-title"><strong><%%DETAIL_VIEW_TITLE%%></strong></h3></div>
+
+<div class="panel-body" id="chr_scenes_dv_container">
+	<!-- child links -->
+	<div class="row vspacer-md">
+		<div class="col-xs-12">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm" href="chr_dev_view.php?filterer_illust_resolve=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="chr_dev_link"><i class="glyphicon glyphicon-list-alt"></i> IV.1. Character Dev.</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="chr_dev_view.php?filterer_illust_resolve=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="xs_chr_dev_link"><i class="glyphicon glyphicon-list-alt"></i> IV.1. Character Dev.</a>
+			<input type="hidden" id="chr_dev_hclink" value="chr_dev_view.php?filterer_illust_resolve=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm" href="code_encounters_view.php?filterer_sceneA=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="code_encounters_link"><i class="glyphicon glyphicon-list-alt"></i> IV.5. Encounters</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="code_encounters_view.php?filterer_sceneA=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="xs_code_encounters_link"><i class="glyphicon glyphicon-list-alt"></i> IV.5. Encounters</a>
+			<input type="hidden" id="code_encounters_hclink" value="code_encounters_view.php?filterer_sceneA=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm" href="storylines_view.php?filterer_characterevent_scene=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="storylines_link"><i class="glyphicon glyphicon-list-alt"></i> V.3. Story lines</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="storylines_view.php?filterer_characterevent_scene=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="xs_storylines_link"><i class="glyphicon glyphicon-list-alt"></i> V.3. Story lines</a>
+			<input type="hidden" id="storylines_hclink" value="storylines_view.php?filterer_characterevent_scene=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<hr class="hidden-xs hidden-sm">
+
+	<div class="row">
+		<!-- form inputs -->
+		<div class="col-md-8 col-lg-10" id="chr_scenes_dv_form">
+			<fieldset class="form-horizontal">
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="id" class="control-label col-lg-3">ID</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="id"><%%VALUE(id)%%></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="author_id" class="control-label col-lg-3" data-parent_link="view_parent_modal">Author</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(author_id)%%><%%PLINK(author_id)%%><%%ADDNEW(biblio_author)%%><span id="author_idLoading"></span></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="author_name" class="control-label col-lg-3">Author name</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="author_name"></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="bibliography" class="control-label col-lg-3" data-parent_link="view_parent_modal">Bibliography</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bibliography)%%><%%PLINK(bibliography)%%><%%ADDNEW(biblio_doc)%%></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="transcript" class="control-label col-lg-3" data-parent_link="view_parent_modal">Transcript</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(transcript)%%><%%PLINK(transcript)%%><%%ADDNEW(biblio_transcript)%%></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="token_sequence" class="control-label col-lg-3">Token_sequence</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="token_sequence"></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="token" class="control-label col-lg-3" data-parent_link="view_parent_modal">Token</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(token)%%><%%PLINK(token)%%><%%ADDNEW(biblio_token)%%><span id="tokenLoading"></span></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="invivo_code" class="control-label col-lg-3" data-parent_link="view_parent_modal">Invivo_code</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(invivo_code)%%><%%PLINK(invivo_code)%%><%%ADDNEW(code_invivo)%%><span id="invivo_codeLoading"></span></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="startdate" class="control-label col-lg-3" data-parent_link="view_parent_modal">Startdate</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(startdate)%%><%%PLINK(startdate)%%><%%ADDNEW(code_invivo)%%></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="enddate" class="control-label col-lg-3">End_date</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="enddate"></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="person" class="control-label col-lg-3">Person</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="person"></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="place" class="control-label col-lg-3">Place</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="place"></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="herme_code" class="control-label col-lg-3" data-parent_link="view_parent_modal">Herme_code</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(herme_code)%%><%%PLINK(herme_code)%%><%%ADDNEW(code_herme)%%><span id="herme_codeLoading"></span></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="impression" class="control-label col-lg-3">Impression</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="impression"></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="noetictension" class="control-label col-lg-3">Noetictension</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="noetictension"></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="pc" class="control-label col-lg-3">Pc</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="pc"></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="chr_element" class="control-label col-lg-3" data-parent_link="view_parent_modal">Chr element</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(chr_element)%%><%%PLINK(chr_element)%%><%%ADDNEW(class_character_element)%%></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="comment" class="control-label col-lg-3">Comment</label>
+					<div class="col-lg-9">
+						<textarea class="form-control" name="comment" id="comment" rows="5"><%%VALUE(comment)%%></textarea>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="illustration" class="control-label col-lg-3">Illustration</label>
+					<div class="col-lg-9">
+						<textarea class="form-control" name="illustration" id="illustration" rows="5"><%%VALUE(illustration)%%></textarea>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="scene" class="control-label col-lg-3">Scene <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#scene-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block collapse" id="scene-description"><div class="alert alert-info">Convert the text now into a drama scene here.</div></span>
+
+						<textarea class="form-control" name="scene" id="scene" rows="5"><%%VALUE(scene)%%></textarea>
+					</div>
+				</div>
+
+			</fieldset>
+		</div>
+
+		<!-- DV action buttons -->
+		<hr class="hidden-md hidden-lg">
+		<div class="col-md-4 col-lg-2" id="chr_scenes_dv_action_buttons">
+			<div class="btn-toolbar">
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%UPDATE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%DESELECT_BUTTON%%>
+					<%%DVPRINT_BUTTON%%>
+					<%%DELETE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%INSERT_BUTTON%%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- child records -->
+	<hr>
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1">
+			<div id="chr_scenes-children" class="children-tabs"></div>
+		</div>
+	</div>
+
+</div><!-- /div class="panel-body" -->
+	<script>
+		$j(function() {
+			var add_new_mode = (!$j('input[name=SelectedID]').val());
+			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			/* auto-close embedded page? */
+			var autoclose_mode = ($j('input[name=AutoClose]').val() == 1);
+			var record_added_ok = (location.search.split('record-added-ok=').length == 2);
+			var record_updated_ok = (location.search.split('record-updated-ok=').length == 2);
+			if((record_added_ok || record_updated_ok) && embedded_mode && autoclose_mode){
+				setTimeout(AppGini.closeParentModal, 2000);
+			}
+
+			/* enable DV action buttons to float on scrolling down the form */
+			enable_dvab_floating();
+
+			if(!(embedded_mode && AppGini.mobileDevice())){
+				$j('select, input[type=text], textarea').not(':disabled').eq(0).focus();
+			}
+
+			$j('form').eq(0).change(function(){
+				if($j(this).data('already_changed')) return;
+				if($j('#deselect').length) $j('#deselect').removeClass('btn-default').addClass('btn-warning').get(0).lastChild.data = " <%%TRANSLATION(Cancel)%%>";
+				$j(this).data('already_changed', true);
+			});
+
+			$j('a[href="<%%TRANSLATION(ImageFolder)%%>"]').click(function(){ /* */ return false; });
+
+			if(embedded_mode){
+				/* hide links to children tables in embedded mode */
+				$j('.detail_view a[id$=_link]').remove();
+
+				/* append embedded mode to all links */
+				var append_embedded = function(){
+					$j('a[href]:not([href^="#"]):not([href^="javascript"]):not([href$="Embedded=1"]):not([href*="link.php?t="]):not([href^="mailto:"])').each(
+						function(){
+							$j(this).attr('href', $j(this).attr('href') + '&Embedded=1');
+						}
+					);
+				}
+				setTimeout(append_embedded, 500);
+				setTimeout(append_embedded, 1500);
+				setTimeout(append_embedded, 2500);
+				setTimeout(append_embedded, 3500);
+			}
+
+			/* when no record is selected ('add new' mode) */
+			if(add_new_mode){
+				/* hide links to children tables */
+				$j('.detail_view a[id$=_link]').remove();
+			}else{
+				post(
+					'parent-children.php', {
+						ParentTable: 'chr_scenes',
+						SelectedID: '<%%VALUE(id)%%>',
+						Operation: 'show-children'
+					},
+					'chr_scenes-children'
+				);
+			}
+
+			if(!embedded_mode){
+				/* add a horizontal spacer to [add new parent] buttons that don't have a spacered element before them */
+				$j('.add_new_parent').prev(':not(.hspacer-md)').next().addClass('hspacer-md');
+
+				$j('.add_new_parent').click(function(){
+					var pt = $j(this).attr('id').replace(/_add_new$/, '');
+					modal_window({
+						url: pt + '_view.php?addNew_x=1&Embedded=1',
+						close: function(){
+							var field_id = $j('#' + pt + '_add_new').prevAll('input:hidden').eq(0).attr('id');
+							$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+							/* if a new parent was added, select it */
+							var new_id = localStorage.getItem(pt + '_last_added_id');
+							if(new_id === null) return;
+
+							localStorage.clear(pt + '_last_added_id');
+							AppGini.lookupText({
+								id: new_id,
+								table: 'chr_scenes',
+								field: field_id,
+								callback: function(data) {
+									$j('#' + field_id + '-container').select2('data', data, true);
+								}
+							});
+						},
+						size: 'full',
+						title: $j(this).attr('title')
+					});
+				});
+			}
+
+			AppGini.hideViewParentLinks();
+
+			$j('form').on('click', '.view_parent', function(){
+				var pt = $j(this).attr('id').replace(/_view_parent$/, '');
+				if($j(this).prevAll('input:hidden').length){
+					var parent_id = $j(this).prevAll('input:hidden').eq(0).val();
+				}else{
+					var parent_id = $j(this).prevAll().children('input:hidden').eq(0).val();
+				}
+
+				/* handle radio lookups */
+				if($j(this).prevAll('[type=radio]').length){
+					parent_id = $j(this).prevAll('[type=radio]').eq(0).val();
+				}
+
+				if(parent_id != '{empty_value}' && parent_id != undefined && parent_id != ''){
+					var parent_link = $j(this).parents('.form-group').children('label').data('parent_link');
+					switch(parent_link){
+						case 'view_parent_hidden':
+							break;
+						case 'view_parent_modal':
+							modal_window({
+								url: pt + '_view.php?Embedded=1&SelectedID=' + encodeURIComponent(parent_id),
+								close: function(){
+									var field_id = $j('#' + pt + '_view_parent').prevAll('input:hidden').eq(0).attr('id');
+									$j('#' + field_id + '-container').select2('focus').select2('focus');
+								},
+								size: 'full',
+								title: $j(this).attr('title')
+							});
+							break;
+						case 'view_parent_same_window':
+							window.location = pt + '_view.php?Embedded=' + (embedded_mode ? '1' : '') + '&SelectedID=' + encodeURIComponent(parent_id);
+							break;
+						case 'view_parent_new_window':
+							window.open(pt + '_view.php?SelectedID=' + encodeURIComponent(parent_id));
+							break;
+					}
+
+				}
+			});
+
+
+			/* load admin tools for admin user */
+			if(!add_new_mode){
+				$j('body').append('<div id="admin-tools-appendix"></div>');
+				$j('#admin-tools-appendix').load(
+					'ajax_admin_tools.php?table=chr_scenes&id=<%%URLVALUE(id)%%>',
+					function(resp){
+						if(!resp.length) return;
+						$j.ajax('ajax_admin_tools.php?action=get_admin_tools_js&table=chr_scenes&id=<%%URLVALUE(id)%%>');
+					}
+				);
+			}
+
+			/* warn user if 'add new' clicked while unsaved changes exist */
+			$j('#addNew').click(function(){
+				if($j('#deselect.btn-warning').length){
+					return confirm('<%%TRANSLATION(discard changes confirm)%%>');
+				}
+			});
+
+		});
+	</script>

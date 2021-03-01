@@ -1,0 +1,17 @@
+point_value_id,point_value,point_id,point_term,class2_id,class2,class1_id,class1,Story Points,catcode_name,Description
+1,Change,1,Resolve,1,Dynamics,2,Genre Points,Story Points,dramatica,the ultimate disposition of the Main Character to Change or Remain Steadfast
+2,Steadfeast,1,Resolve,1,Dynamics,2,Genre Points,Story Points,dramatica,the ultimate disposition of the Main Character to Change or Remain Steadfast
+3,Stop,2,Growth,1,Dynamics,2,Genre Points,Story Points,dramatica,the Main Character's growth toward an ending or beginning
+4,Start,2,Growth,1,Dynamics,2,Genre Points,Story Points,dramatica,the Main Character's growth toward an ending or beginning
+5,Do-er,3,Approach,1,Dynamics,2,Genre Points,Story Points,dramatica,the Main Character's preference for external or internal problem solving techniques
+6,Be-er,3,Approach,1,Dynamics,2,Genre Points,Story Points,dramatica,the Main Character's preference for external or internal problem solving techniques
+7,Logical,4,Problem-Solving Style,1,Dynamics,2,Genre Points,Story Points,dramatica,the Main Character's tendency toward linear or holistic problem solving
+8,Intuitive,4,Problem-Solving Style,1,Dynamics,2,Genre Points,Story Points,dramatica,the Main Character's tendency toward linear or holistic problem solving
+9,Action,5,Driver,1,Dynamics,2,Genre Points,Story Points,dramatica,the kind of activity that pushes the overall story forward
+10,Decision,5,Driver,1,Dynamics,2,Genre Points,Story Points,dramatica,the kind of activity that pushes the overall story forward
+11,Timelock,6,Limit,1,Dynamics,2,Genre Points,Story Points,dramatica,"the constraint of time or otpions that, by running out, forces the story to a climax"
+12,Optionlock,6,Limit,1,Dynamics,2,Genre Points,Story Points,dramatica,"the constraint of time or otpions that, by running out, forces the story to a climax"
+13,Success,7,Outcome,1,Dynamics,2,Genre Points,Story Points,dramatica,a logistic assessment of how things ended up
+14,Failure,7,Outcome,1,Dynamics,2,Genre Points,Story Points,dramatica,a logistic assessment of how things ended up
+15,Good,8,Judgement,1,Dynamics,2,Genre Points,Story Points,dramatica,the story assessment of whether or not the Main Character ultimately resolves her personal problem
+16,Bad,8,Judgement,1,Dynamics,2,Genre Points,Story Points,dramatica,the story assessment of whether or not the Main Character ultimately resolves her personal problem

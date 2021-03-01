@@ -1,0 +1,555 @@
+<!-- Edit this file to change the layout of the detail view form -->
+
+<a name="detail-view"></a>
+<div class="panel-heading"><h3 class="panel-title"><strong><%%DETAIL_VIEW_TITLE%%></strong></h3></div>
+
+<div class="panel-body" id="characters_dv_container">
+	<!-- child links -->
+	<div class="row vspacer-md">
+		<div class="col-xs-12">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm" href="character_development_view.php?filterer_story_character=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="character_development_link"><i class="glyphicon glyphicon-list-alt"></i> IV.4. Character dev.</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="character_development_view.php?filterer_story_character=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="xs_character_development_link"><i class="glyphicon glyphicon-list-alt"></i> IV.4. Character dev.</a>
+			<input type="hidden" id="character_development_hclink" value="character_development_view.php?filterer_story_character=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm" href="storylines_view.php?filterer_role=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="storylines_link"><i class="glyphicon glyphicon-list-alt"></i> V.1. Story lines</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="storylines_view.php?filterer_role=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="xs_storylines_link"><i class="glyphicon glyphicon-list-alt"></i> V.1. Story lines</a>
+			<input type="hidden" id="storylines_hclink" value="storylines_view.php?filterer_role=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<input type="hidden" id="storydynamic_hclink" value="storydynamic_view.php?filterer_mc_character=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<hr class="hidden-xs hidden-sm">
+
+	<div class="row">
+		<!-- form inputs -->
+		<div class="col-md-8 col-lg-10" id="characters_dv_form">
+			<fieldset class="form-horizontal">
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="id" class="control-label col-lg-3">ID</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="id"><%%VALUE(id)%%></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="agent_id" class="control-label col-lg-3" data-parent_link="view_parent_modal">MemberID</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(agent_id)%%><%%PLINK(agent_id)%%><%%ADDNEW(biblio_author)%%><span id="agent_idLoading"></span></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="agent_name" class="control-label col-lg-3">Agent name <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#agent_name-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block collapse" id="agent_name-description"><div class="alert alert-info">The author of biographical writings this character is based on.</div></span>
+
+						<div class="form-control-static" id="agent_name"></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="cw_name" class="control-label col-lg-3">Character name <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#cw_name-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block collapse" id="cw_name-description"><div class="alert alert-info">The name of the character in your story.</div></span>
+
+						<input maxlength="40" type="text" class="form-control" name="cw_name" id="cw_name" value="<%%VALUE(cw_name)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Img <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#img-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block collapse" id="img-description"><div class="alert alert-info">Maximum file size allowed: 500 KB.<br>Allowed file types: jpg, jpeg, gif, png</div></span>
+
+						<div class="form-control-static"><div class="pull-left">
+
+						<a href="<%%TRANSLATION(ImageFolder)%%><%%VALUE(img)%%>" data-lightbox="characters_dv"><img src="thumbnail.php?i=<%%VALUE(img)%%>&t=characters&f=img&v=dv" class="img-thumbnail" id="img-image"></a>
+</div>
+
+												<div class="pull-right" style="overflow-x: hidden;">
+							<div class="hidden-md hidden-lg vspacer-lg"></div>
+							<%%UPLOADFILE(img)%%>
+							<%%REMOVEFILE(img)%%>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="mc_resolve" class="control-label col-lg-3">Resolve <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#mc_resolve-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block collapse" id="mc_resolve-description"><div class="alert alert-info">This field will define Main Character Throughline, if this character is taken as Main Character in a Story.</div></span>
+
+						<%%COMBO(mc_resolve)%%>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="illust_resolve" class="control-label col-lg-3" data-parent_link="view_parent_modal">Illustration of MC Resolve</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_resolve)%%><%%PLINK(illust_resolve)%%><%%ADDNEW(character_illustration)%%></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="mc_growth" class="control-label col-lg-3">Growth</label>
+					<div class="col-lg-9">
+						<%%COMBO(mc_growth)%%>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="illust_growth" class="control-label col-lg-3" data-parent_link="view_parent_modal">Illustration of MC Growth</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_growth)%%><%%PLINK(illust_growth)%%><%%ADDNEW(character_illustration)%%></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="mc_approach" class="control-label col-lg-3">Approach</label>
+					<div class="col-lg-9">
+						<%%COMBO(mc_approach)%%>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="illust_approach" class="control-label col-lg-3" data-parent_link="view_parent_modal">Illustration of MC Approach</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_approach)%%><%%PLINK(illust_approach)%%><%%ADDNEW(character_illustration)%%></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="mc_ps_style" class="control-label col-lg-3">Problem Solving Style</label>
+					<div class="col-lg-9">
+						<%%COMBO(mc_ps_style)%%>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="illust_ps_style" class="control-label col-lg-3" data-parent_link="view_parent_modal">Illustration of MC PS Style</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_ps_style)%%><%%PLINK(illust_ps_style)%%><%%ADDNEW(character_illustration)%%></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="cw_age" class="control-label col-lg-3">Age</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="cw_age" id="cw_age" value="<%%VALUE(cw_age)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="cw_gender" class="control-label col-lg-3">Gender</label>
+					<div class="col-lg-9">
+						<input maxlength="10" type="text" class="form-control" name="cw_gender" id="cw_gender" value="<%%VALUE(cw_gender)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="cw_communication_style" class="control-label col-lg-3">Communication style</label>
+					<div class="col-lg-9">
+						<input maxlength="" type="text" class="form-control" name="cw_communication_style" id="cw_communication_style" value="<%%VALUE(cw_communication_style)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="cw_background" class="control-label col-lg-3">Background</label>
+					<div class="col-lg-9">
+						<input maxlength="" type="text" class="form-control" name="cw_background" id="cw_background" value="<%%VALUE(cw_background)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="cw_appearance" class="control-label col-lg-3">Appearance</label>
+					<div class="col-lg-9">
+						<input maxlength="" type="text" class="form-control" name="cw_appearance" id="cw_appearance" value="<%%VALUE(cw_appearance)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="cw_relationships" class="control-label col-lg-3">Relationships</label>
+					<div class="col-lg-9">
+						<input maxlength="255" type="text" class="form-control" name="cw_relationships" id="cw_relationships" value="<%%VALUE(cw_relationships)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="cw_ambition" class="control-label col-lg-3">Ambition</label>
+					<div class="col-lg-9">
+						<input maxlength="" type="text" class="form-control" name="cw_ambition" id="cw_ambition" value="<%%VALUE(cw_ambition)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="cw_defects" class="control-label col-lg-3">Defects</label>
+					<div class="col-lg-9">
+						<input maxlength="" type="text" class="form-control" name="cw_defects" id="cw_defects" value="<%%VALUE(cw_defects)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="cw_thoughts" class="control-label col-lg-3">Thoughts</label>
+					<div class="col-lg-9">
+						<input maxlength="" type="text" class="form-control" name="cw_thoughts" id="cw_thoughts" value="<%%VALUE(cw_thoughts)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="cw_relatedness" class="control-label col-lg-3">Relatedness</label>
+					<div class="col-lg-9">
+						<input maxlength="255" type="text" class="form-control" name="cw_relatedness" id="cw_relatedness" value="<%%VALUE(cw_relatedness)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="cw_restrictions" class="control-label col-lg-3">Restrictions</label>
+					<div class="col-lg-9">
+						<input maxlength="" type="text" class="form-control" name="cw_restrictions" id="cw_restrictions" value="<%%VALUE(cw_restrictions)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="locations" class="control-label col-lg-3">Locations</label>
+					<div class="col-lg-9">
+						<input maxlength="255" type="text" class="form-control" name="locations" id="locations" value="<%%VALUE(locations)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="persons" class="control-label col-lg-3">Persons</label>
+					<div class="col-lg-9">
+						<input maxlength="255" type="text" class="form-control" name="persons" id="persons" value="<%%VALUE(persons)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="events" class="control-label col-lg-3">Events</label>
+					<div class="col-lg-9">
+						<input maxlength="" type="text" class="form-control" name="events" id="events" value="<%%VALUE(events)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="noetictension" class="control-label col-lg-3" data-parent_link="view_parent_modal">Noetic tension</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(noetictension)%%><%%PLINK(noetictension)%%><%%ADDNEW(class_nt)%%></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="illust_nt" class="control-label col-lg-3" data-parent_link="view_parent_modal">Illustration of Noetic Tension</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_nt)%%><%%PLINK(illust_nt)%%><%%ADDNEW(character_illustration)%%></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="impression" class="control-label col-lg-3" data-parent_link="view_parent_modal">Overall Impression Management</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(impression)%%><%%PLINK(impression)%%><%%ADDNEW(class_im)%%></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="illust_im" class="control-label col-lg-3" data-parent_link="view_parent_modal">Illustration of Impression Mnmt.</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_im)%%><%%PLINK(illust_im)%%><%%ADDNEW(character_illustration)%%></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="mcs_problem" class="control-label col-lg-3" data-parent_link="view_parent_modal">Problem <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#mcs_problem-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block collapse" id="mcs_problem-description"><div class="alert alert-info">This field is encoded in the Static Story Points of Dramatica.</div></span>
+
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(mcs_problem)%%><%%PLINK(mcs_problem)%%><%%ADDNEW(storypoints_static)%%><span id="mcs_problemLoading"></span></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="illust_mcs_problem" class="control-label col-lg-3" data-parent_link="view_parent_modal">Illustration of MCS Problem</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_mcs_problem)%%><%%PLINK(illust_mcs_problem)%%><%%ADDNEW(character_illustration)%%></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="mcs_solution" class="control-label col-lg-3">Solution <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#mcs_solution-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block collapse" id="mcs_solution-description"><div class="alert alert-info">This field is encoded in the Static Story Points of Dramatica.</div></span>
+
+						<div class="form-control-static" id="mcs_solution"></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="illust_mcs_solution" class="control-label col-lg-3" data-parent_link="view_parent_modal">Illustration of MCS Solution</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_mcs_solution)%%><%%PLINK(illust_mcs_solution)%%><%%ADDNEW(character_illustration)%%></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="mcs_symptom" class="control-label col-lg-3">Symptom <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#mcs_symptom-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block collapse" id="mcs_symptom-description"><div class="alert alert-info">This field is encoded in the Static Story Points of Dramatica.</div></span>
+
+						<div class="form-control-static" id="mcs_symptom"></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="illust_mcs_symptom" class="control-label col-lg-3" data-parent_link="view_parent_modal">Illustration of MCS Symptome</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_mcs_symptom)%%><%%PLINK(illust_mcs_symptom)%%><%%ADDNEW(character_illustration)%%></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="mcs_response" class="control-label col-lg-3">Response <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#mcs_response-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block collapse" id="mcs_response-description"><div class="alert alert-info">This field is encoded in the Static Story Points of Dramatica.</div></span>
+
+						<div class="form-control-static" id="mcs_response"></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<hr class="hidden-md hidden-lg">
+					<label for="illust_mcs_response" class="control-label col-lg-3" data-parent_link="view_parent_modal">Illustration of MCS Response</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_mcs_response)%%><%%PLINK(illust_mcs_response)%%><%%ADDNEW(character_illustration)%%></div>
+					</div>
+				</div>
+
+			</fieldset>
+		</div>
+
+		<!-- DV action buttons -->
+		<hr class="hidden-md hidden-lg">
+		<div class="col-md-4 col-lg-2" id="characters_dv_action_buttons">
+			<div class="btn-toolbar">
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%UPDATE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%DESELECT_BUTTON%%>
+					<%%DVPRINT_BUTTON%%>
+					<%%DELETE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%INSERT_BUTTON%%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- child records -->
+	<hr>
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1">
+			<div id="characters-children" class="children-tabs"></div>
+		</div>
+	</div>
+
+</div><!-- /div class="panel-body" -->
+	<script>
+		$j(function() {
+			var add_new_mode = (!$j('input[name=SelectedID]').val());
+			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			/* auto-close embedded page? */
+			var autoclose_mode = ($j('input[name=AutoClose]').val() == 1);
+			var record_added_ok = (location.search.split('record-added-ok=').length == 2);
+			var record_updated_ok = (location.search.split('record-updated-ok=').length == 2);
+			if((record_added_ok || record_updated_ok) && embedded_mode && autoclose_mode){
+				setTimeout(AppGini.closeParentModal, 2000);
+			}
+
+			/* enable DV action buttons to float on scrolling down the form */
+			enable_dvab_floating();
+
+			if(!(embedded_mode && AppGini.mobileDevice())){
+				$j('select, input[type=text], textarea').not(':disabled').eq(0).focus();
+			}
+
+			$j('form').eq(0).change(function(){
+				if($j(this).data('already_changed')) return;
+				if($j('#deselect').length) $j('#deselect').removeClass('btn-default').addClass('btn-warning').get(0).lastChild.data = " <%%TRANSLATION(Cancel)%%>";
+				$j(this).data('already_changed', true);
+			});
+
+			$j('a[href="<%%TRANSLATION(ImageFolder)%%>"]').click(function(){ /* */ return false; });
+
+			if(embedded_mode){
+				/* hide links to children tables in embedded mode */
+				$j('.detail_view a[id$=_link]').remove();
+
+				/* append embedded mode to all links */
+				var append_embedded = function(){
+					$j('a[href]:not([href^="#"]):not([href^="javascript"]):not([href$="Embedded=1"]):not([href*="link.php?t="]):not([href^="mailto:"])').each(
+						function(){
+							$j(this).attr('href', $j(this).attr('href') + '&Embedded=1');
+						}
+					);
+				}
+				setTimeout(append_embedded, 500);
+				setTimeout(append_embedded, 1500);
+				setTimeout(append_embedded, 2500);
+				setTimeout(append_embedded, 3500);
+			}
+
+			/* when no record is selected ('add new' mode) */
+			if(add_new_mode){
+				/* hide links to children tables */
+				$j('.detail_view a[id$=_link]').remove();
+			}else{
+				post(
+					'parent-children.php', {
+						ParentTable: 'characters',
+						SelectedID: '<%%VALUE(id)%%>',
+						Operation: 'show-children'
+					},
+					'characters-children'
+				);
+			}
+
+			if(!embedded_mode){
+				/* add a horizontal spacer to [add new parent] buttons that don't have a spacered element before them */
+				$j('.add_new_parent').prev(':not(.hspacer-md)').next().addClass('hspacer-md');
+
+				$j('.add_new_parent').click(function(){
+					var pt = $j(this).attr('id').replace(/_add_new$/, '');
+					modal_window({
+						url: pt + '_view.php?addNew_x=1&Embedded=1',
+						close: function(){
+							var field_id = $j('#' + pt + '_add_new').prevAll('input:hidden').eq(0).attr('id');
+							$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+							/* if a new parent was added, select it */
+							var new_id = localStorage.getItem(pt + '_last_added_id');
+							if(new_id === null) return;
+
+							localStorage.clear(pt + '_last_added_id');
+							AppGini.lookupText({
+								id: new_id,
+								table: 'characters',
+								field: field_id,
+								callback: function(data) {
+									$j('#' + field_id + '-container').select2('data', data, true);
+								}
+							});
+						},
+						size: 'full',
+						title: $j(this).attr('title')
+					});
+				});
+			}
+
+			AppGini.hideViewParentLinks();
+
+			$j('form').on('click', '.view_parent', function(){
+				var pt = $j(this).attr('id').replace(/_view_parent$/, '');
+				if($j(this).prevAll('input:hidden').length){
+					var parent_id = $j(this).prevAll('input:hidden').eq(0).val();
+				}else{
+					var parent_id = $j(this).prevAll().children('input:hidden').eq(0).val();
+				}
+
+				/* handle radio lookups */
+				if($j(this).prevAll('[type=radio]').length){
+					parent_id = $j(this).prevAll('[type=radio]').eq(0).val();
+				}
+
+				if(parent_id != '{empty_value}' && parent_id != undefined && parent_id != ''){
+					var parent_link = $j(this).parents('.form-group').children('label').data('parent_link');
+					switch(parent_link){
+						case 'view_parent_hidden':
+							break;
+						case 'view_parent_modal':
+							modal_window({
+								url: pt + '_view.php?Embedded=1&SelectedID=' + encodeURIComponent(parent_id),
+								close: function(){
+									var field_id = $j('#' + pt + '_view_parent').prevAll('input:hidden').eq(0).attr('id');
+									$j('#' + field_id + '-container').select2('focus').select2('focus');
+								},
+								size: 'full',
+								title: $j(this).attr('title')
+							});
+							break;
+						case 'view_parent_same_window':
+							window.location = pt + '_view.php?Embedded=' + (embedded_mode ? '1' : '') + '&SelectedID=' + encodeURIComponent(parent_id);
+							break;
+						case 'view_parent_new_window':
+							window.open(pt + '_view.php?SelectedID=' + encodeURIComponent(parent_id));
+							break;
+					}
+
+				}
+			});
+
+
+			/* load admin tools for admin user */
+			if(!add_new_mode){
+				$j('body').append('<div id="admin-tools-appendix"></div>');
+				$j('#admin-tools-appendix').load(
+					'ajax_admin_tools.php?table=characters&id=<%%URLVALUE(id)%%>',
+					function(resp){
+						if(!resp.length) return;
+						$j.ajax('ajax_admin_tools.php?action=get_admin_tools_js&table=characters&id=<%%URLVALUE(id)%%>');
+					}
+				);
+			}
+
+			/* warn user if 'add new' clicked while unsaved changes exist */
+			$j('#addNew').click(function(){
+				if($j('#deselect.btn-warning').length){
+					return confirm('<%%TRANSLATION(discard changes confirm)%%>');
+				}
+			});
+
+		});
+	</script>

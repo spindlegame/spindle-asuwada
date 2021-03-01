@@ -1,0 +1,28 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the  and  formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the biblio_author_init() hook (in hooks/biblio_author.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="biblio_author-id-<%%VALUE(id)%%>" class="biblio_author-id text-right"><%%VALUE(id)%%></td>
+		<td id="biblio_author-memberID-<%%VALUE(id)%%>" class="biblio_author-memberID"><%%VALUE(memberID)%%></td>
+		<td id="biblio_author-img-<%%VALUE(id)%%>" class="biblio_author-img"><a href="<%%TRANSLATION(ImageFolder)%%><%%VALUE(img)%%>" data-lightbox="biblio_author-img"><img src="thumbnail.php?i=<%%VALUE(img)%%>&t=biblio_author&f=img&v=tv" class="img-thumbnail"></a></td>
+		<td id="biblio_author-groupID-<%%VALUE(id)%%>" class="biblio_author-groupID"><%%VALUE(groupID)%%></td>
+		<td id="biblio_author-selection_class-<%%VALUE(id)%%>" class="biblio_author-selection_class"><%%VALUE(selection_class)%%></td>
+		<td id="biblio_author-agenttype1-<%%VALUE(id)%%>" class="biblio_author-agenttype1 text-right"><%%VALUE(agenttype1)%%></td>
+		<td id="biblio_author-agenttype2-<%%VALUE(id)%%>" class="biblio_author-agenttype2 text-right"><%%VALUE(agenttype2)%%></td>
+		<td id="biblio_author-gender-<%%VALUE(id)%%>" class="biblio_author-gender"><%%VALUE(gender)%%></td>
+		<td id="biblio_author-last_name-<%%VALUE(id)%%>" class="biblio_author-last_name"><%%VALUE(last_name)%%></td>
+		<td id="biblio_author-first_name-<%%VALUE(id)%%>" class="biblio_author-first_name"><%%VALUE(first_name)%%></td>
+		<td id="biblio_author-other_name-<%%VALUE(id)%%>" class="biblio_author-other_name"><%%VALUE(other_name)%%></td>
+		<td id="biblio_author-birthday-<%%VALUE(id)%%>" class="biblio_author-birthday"><%%VALUE(birthday)%%></td>
+		<td id="biblio_author-birth_location-<%%VALUE(id)%%>" class="biblio_author-birth_location"><%%VALUE(birth_location)%%></td>
+		<td id="biblio_author-birth_location_map-<%%VALUE(id)%%>" class="biblio_author-birth_location_map"><img src="<%%GOOGLEMAPTHUMB(birth_location_map)%%>" style="max-width: 50px; max-height: 50px; " ></td>
+		<td id="biblio_author-deathday-<%%VALUE(id)%%>" class="biblio_author-deathday"><%%VALUE(deathday)%%></td>
+		<td id="biblio_author-death_location-<%%VALUE(id)%%>" class="biblio_author-death_location"><%%VALUE(death_location)%%></td>
+		<td id="biblio_author-workplace-<%%VALUE(id)%%>" class="biblio_author-workplace"><%%VALUE(workplace)%%></td>
+		<td id="biblio_author-knows-<%%VALUE(id)%%>" class="biblio_author-knows"><%%VALUE(knows)%%></td>
+		<td id="biblio_author-data_evaluation-<%%VALUE(id)%%>" class="biblio_author-data_evaluation"><%%VALUE(data_evaluation)%%></td>
+		<td id="biblio_author-authority_record-<%%VALUE(id)%%>" class="biblio_author-authority_record"><%%VALUE(authority_record)%%></td>
+		<td id="biblio_author-authority_organization-<%%VALUE(id)%%>" class="biblio_author-authority_organization text-right"><%%VALUE(authority_organization)%%></td>

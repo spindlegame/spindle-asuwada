@@ -1,0 +1,25 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the storystatic_init() hook (in hooks/storystatic.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="storystatic-id-<%%VALUE(id)%%>" class="storystatic-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="storystatic-story-<%%VALUE(id)%%>" class="storystatic-story text-right"><%%SELECT%%><%%VALUE(story)%%><%%ENDSELECT%%></td>
+		<td id="storystatic-throughline-<%%VALUE(id)%%>" class="storystatic-throughline text-right"><%%SELECT%%><%%VALUE(throughline)%%><%%ENDSELECT%%></td>
+		<td id="storystatic-story_character_mc-<%%VALUE(id)%%>" class="storystatic-story_character_mc"><%%SELECT%%><%%VALUE(story_character_mc)%%><%%ENDSELECT%%></td>
+		<td id="storystatic-throughline_domain-<%%VALUE(id)%%>" class="storystatic-throughline_domain text-right"><%%SELECT%%><%%VALUE(throughline_domain)%%><%%ENDSELECT%%></td>
+		<td id="storystatic-concern-<%%VALUE(id)%%>" class="storystatic-concern text-right"><%%SELECT%%><%%VALUE(concern)%%><%%ENDSELECT%%></td>
+		<td id="storystatic-issue-<%%VALUE(id)%%>" class="storystatic-issue text-right"><%%SELECT%%><%%VALUE(issue)%%><%%ENDSELECT%%></td>
+		<td id="storystatic-problem-<%%VALUE(id)%%>" class="storystatic-problem text-right"><%%SELECT%%><%%VALUE(problem)%%><%%ENDSELECT%%></td>
+		<td id="storystatic-solution-<%%VALUE(id)%%>" class="storystatic-solution text-right"><%%SELECT%%><%%VALUE(solution)%%><%%ENDSELECT%%></td>
+		<td id="storystatic-symptom-<%%VALUE(id)%%>" class="storystatic-symptom text-right"><%%SELECT%%><%%VALUE(symptom)%%><%%ENDSELECT%%></td>
+		<td id="storystatic-response-<%%VALUE(id)%%>" class="storystatic-response text-right"><%%SELECT%%><%%VALUE(response)%%><%%ENDSELECT%%></td>
+		<td id="storystatic-catalyst-<%%VALUE(id)%%>" class="storystatic-catalyst text-right"><%%SELECT%%><%%VALUE(catalyst)%%><%%ENDSELECT%%></td>
+		<td id="storystatic-inhibitor-<%%VALUE(id)%%>" class="storystatic-inhibitor text-right"><%%SELECT%%><%%VALUE(inhibitor)%%><%%ENDSELECT%%></td>
+		<td id="storystatic-benchmark-<%%VALUE(id)%%>" class="storystatic-benchmark text-right"><%%SELECT%%><%%VALUE(benchmark)%%><%%ENDSELECT%%></td>
+		<td id="storystatic-signpost1-<%%VALUE(id)%%>" class="storystatic-signpost1"><%%SELECT%%><%%VALUE(signpost1)%%><%%ENDSELECT%%></td>
+		<td id="storystatic-signpost2-<%%VALUE(id)%%>" class="storystatic-signpost2"><%%SELECT%%><%%VALUE(signpost2)%%><%%ENDSELECT%%></td>
+		<td id="storystatic-signpost3-<%%VALUE(id)%%>" class="storystatic-signpost3"><%%SELECT%%><%%VALUE(signpost3)%%><%%ENDSELECT%%></td>
+		<td id="storystatic-signpost4-<%%VALUE(id)%%>" class="storystatic-signpost4"><%%SELECT%%><%%VALUE(signpost4)%%><%%ENDSELECT%%></td>

@@ -1,0 +1,19 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the character_illustration_init() hook (in hooks/character_illustration.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="character_illustration-id-<%%VALUE(id)%%>" class="character_illustration-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="character_illustration-author-<%%VALUE(id)%%>" class="character_illustration-author text-right"><%%SELECT%%><%%VALUE(author)%%><%%ENDSELECT%%></td>
+		<td id="character_illustration-bibliography-<%%VALUE(id)%%>" class="character_illustration-bibliography text-right"><%%SELECT%%><%%VALUE(bibliography)%%><%%ENDSELECT%%></td>
+		<td id="character_illustration-transcript-<%%VALUE(id)%%>" class="character_illustration-transcript text-right"><%%SELECT%%><%%VALUE(transcript)%%><%%ENDSELECT%%></td>
+		<td id="character_illustration-token_sequence-<%%VALUE(id)%%>" class="character_illustration-token_sequence text-right"><%%SELECT%%><%%VALUE(token_sequence)%%><%%ENDSELECT%%></td>
+		<td id="character_illustration-token-<%%VALUE(id)%%>" class="character_illustration-token text-right"><%%SELECT%%><%%VALUE(token)%%><%%ENDSELECT%%></td>
+		<td id="character_illustration-code-<%%VALUE(id)%%>" class="character_illustration-code"><%%SELECT%%><%%VALUE(code)%%><%%ENDSELECT%%></td>
+		<td id="character_illustration-illustration-<%%VALUE(id)%%>" class="character_illustration-illustration"><%%SELECT%%><%%VALUE(illustration)%%><%%ENDSELECT%%></td>
+		<td id="character_illustration-comment-<%%VALUE(id)%%>" class="character_illustration-comment"><%%SELECT%%><%%VALUE(comment)%%><%%ENDSELECT%%></td>
+		<td id="character_illustration-character_element-<%%VALUE(id)%%>" class="character_illustration-character_element text-right"><%%SELECT%%><%%VALUE(character_element)%%><%%ENDSELECT%%></td>
+		<td id="character_illustration-character_elem_value-<%%VALUE(id)%%>" class="character_illustration-character_elem_value text-right"><%%SELECT%%><%%VALUE(character_elem_value)%%><%%ENDSELECT%%></td>
+		<td id="character_illustration-archetype-<%%VALUE(id)%%>" class="character_illustration-archetype"><%%SELECT%%><%%VALUE(archetype)%%><%%ENDSELECT%%></td>

@@ -1,0 +1,149 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Author</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="author<%%RND1%%>"><%%COMBOTEXT(author)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Bibliography</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="bibliography<%%RND1%%>"><%%COMBOTEXT(bibliography)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Transcript</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="transcript<%%RND1%%>"><%%COMBOTEXT(transcript)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Token_sequence</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="token_sequence<%%RND1%%>"><%%COMBOTEXT(token_sequence)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Token</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="token<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Invivo_code</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="invivo_code<%%RND1%%>"><%%COMBOTEXT(invivo_code)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Startdate</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="startdate<%%RND1%%>"><%%COMBOTEXT(startdate)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">End_date</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="enddate<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Person</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="person<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Place</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="place<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Herme_code</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="herme_code<%%RND1%%>"><%%COMBOTEXT(herme_code)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Impression</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="impression<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Noetictension</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="noetictension<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Pc</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="pc<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Comment</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(comment)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Scene</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(scene)%%></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!-- child records -->
+<div class="panel-body">
+	<div id="character_scenes-children"></div>
+</div>
+
+<script>
+	$j(function(){
+		/* prevent loading child records in multiple DVP */
+		if($j('[id=character_scenes-children]').length > 1) return;
+
+		post(
+			'parent-children.php', {
+				ParentTable: 'character_scenes',
+				SelectedID: '<%%VALUE(id)%%>',
+				Operation: 'show-children-printable'
+			},
+			'character_scenes-children',
+			'disable-element',
+			'loading-element',
+			apply_persisting_children
+		);
+
+		$j('form').on('click', '#children-tabs button[data-target]', function(){
+			$j(this).toggleClass('active');
+			persist_expanded_child($j(this).attr('id'));
+		});
+	})
+</script>
+

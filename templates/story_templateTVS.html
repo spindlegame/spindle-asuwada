@@ -1,0 +1,15 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the  and  formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the story_init() hook (in hooks/story.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="story-id-<%%VALUE(id)%%>" class="story-id text-right"><%%VALUE(id)%%></td>
+		<td id="story-com_name-<%%VALUE(id)%%>" class="story-com_name"><%%VALUE(com_name)%%></td>
+		<td id="story-project_leader-<%%VALUE(id)%%>" class="story-project_leader"><%%VALUE(project_leader)%%></td>
+		<td id="story-subject-<%%VALUE(id)%%>" class="story-subject"><%%VALUE(subject)%%></td>
+		<td id="story-story-<%%VALUE(id)%%>" class="story-story"><%%VALUE(story)%%></td>
+		<td id="story-approach-<%%VALUE(id)%%>" class="story-approach"><%%VALUE(approach)%%></td>
+		<td id="story-tags-<%%VALUE(id)%%>" class="story-tags"><%%VALUE(tags)%%></td>
+		<td id="story-collaboration_status-<%%VALUE(id)%%>" class="story-collaboration_status"><%%VALUE(collaboration_status)%%></td>

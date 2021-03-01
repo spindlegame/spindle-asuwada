@@ -1,0 +1,439 @@
+"code_id","code_name","subcat4_name","subcat3_name","subcat2_name","subcat1_name","catcode_name","code_item","code_description"
+1,"invivo",,,,"invivo","invivo",,"invivo coding"
+2,"chronology",,,,"invivo","invivo",,"data related to chronology; dates, days; daytimes, etc."
+3,"persons",,,,"invivo","invivo",,"persons, names, nicknames"
+4,"places",,,,"invivo","invivo",,"places, locations in general"
+5,"comments",,,,"invivo","invivo",,"free comments for further evaluation"
+6,"Protagonist","Characters","Storyforming",,"Story Forming","dramatica",,
+7,"Antagonist","Characters","Storyforming",,"Story Forming","dramatica",,
+8,"Sidekick","Characters","Storyforming",,"Story Forming","dramatica",,
+9,"Skeptic","Characters","Storyforming",,"Story Forming","dramatica",,
+10,"Emotion","Characters","Storyforming",,"Story Forming","dramatica",,
+11,"Reason","Characters","Storyforming",,"Story Forming","dramatica",,
+12,"Guardian","Characters","Storyforming",,"Story Forming","dramatica",,
+13,"Contagonist","Characters","Storyforming",,"Story Forming","dramatica",,
+14,"Resolve","MC Choices","Plot",,"Story Forming","dramatica",,
+15,"Growth","MC Choices","Plot",,"Story Forming","dramatica",,
+16,"Approach","MC Choices","Plot",,"Story Forming","dramatica",,
+17,"Problem-Solving","MC Choices","Plot",,"Story Forming","dramatica",,
+18,"Driver","Plot Choices","Plot",,"Story Forming","dramatica",,
+19,"Limit","Plot Choices","Plot",,"Story Forming","dramatica",,
+20,"Outcome","Plot Choices","Plot",,"Story Forming","dramatica",,
+21,"Judgement","Plot Choices","Plot",,"Story Forming","dramatica",,
+22,"OS Throughline","Theme Choices","Plot",,"Story Forming","dramatica",,
+23,"OS Concern","Theme Choices","Plot",,"Story Forming","dramatica",,
+24,"OS Issue","Theme Choices","Plot",,"Story Forming","dramatica",,
+25,"OS Problem","Theme Choices","Plot",,"Story Forming","dramatica",,
+26,"Throughline Illustration","Illustrating","Plot",,"Story Forming","dramatica",,
+27,"Character Illustration","Illustrating","Plot",,"Story Forming","dramatica",,
+28,"Plot Illustration","Illustrating","Plot",,"Story Forming","dramatica",,
+29,"OS Theme","Theme Development","Plot",,"Story Forming","dramatica",,
+30,"MC Theme","Theme Development","Plot",,"Story Forming","dramatica",,
+31,"IC Theme","Theme Development","Plot",,"Story Forming","dramatica",,
+32,"M/I Theme","Theme Development","Plot",,"Story Forming","dramatica",,
+33,"Backstory","Theme Development","Plot",,"Story Forming","dramatica",,
+34,"Resolve","Dynamics","Genre Points",,"Story Points","dramatica",,"the ultimate disposition of the Main Character to Change or Remain Steadfast"
+35,"Growth","Dynamics","Genre Points",,"Story Points","dramatica",,"the Main Character's growth toward an ending or beginning"
+36,"Approach","Dynamics","Genre Points",,"Story Points","dramatica",,"the Main Character's preference for external or internal problem solving techniques"
+37,"Problem-Solving Style","Dynamics","Genre Points",,"Story Points","dramatica",,"the Main Character's tendency toward linear or holistic problem solving"
+38,"Driver","Dynamics","Genre Points",,"Story Points","dramatica",,"the kind of activity that pushes the overall story forward"
+39,"Limit","Dynamics","Genre Points",,"Story Points","dramatica",,"the constraint of time or otpions that, by running out, forces the story to a climax"
+40,"Outcome","Dynamics","Genre Points",,"Story Points","dramatica",,"a logistic assessment of how things ended up"
+41,"Judgement","Dynamics","Genre Points",,"Story Points","dramatica",,"the story assessment of whether or not the Main Character ultimately resolves her personal problem"
+42,"OS Throughline","Overall Story Throughline","Thematic Points",,"Story Points","dramatica",,"the general area in which the Overal Story's problem resides"
+43,"OS Concern","Overall Story Throughline","Thematic Points",,"Story Points","dramatica",,"the area of shared concern in Overal Story"
+44,"OS Issue","Overall Story Throughline","Thematic Points",,"Story Points","dramatica",,"the Overall Story's thematic focus"
+45,"OS Counterpoint","Overall Story Throughline","Thematic Points",,"Story Points","dramatica",,"the Overall Story's thematic rebuttal"
+46,"OS Thematic Conflict","Overall Story Throughline","Thematic Points",,"Story Points","dramatica",,"the Overall Story's thematic comparison as it balances an unchosen item against an unchosen item"
+47,"OS Problem  ","Overall Story Throughline","Thematic Points",,"Story Points","dramatica",,"the source of the Overall Story's difficulties"
+48,"OS Solution","Overall Story Throughline","Thematic Points",,"Story Points","dramatica",,"the actual remedy for the Overal Story's problem(s)"
+49,"OS Symptom","Overall Story Throughline","Thematic Points",,"Story Points","dramatica",,"the principal symptome of the Overal Story's problem(s)"
+50,"OS Response","Overall Story Throughline","Thematic Points",,"Story Points","dramatica",,"the apparent remedy for the principal symptom of the Overall Story's problem(s)"
+51,"OS Benchmark","Overall Story Throughline","Thematic Points",,"Story Points","dramatica",,"the standard by which progress is measured in the Overall Story"
+52,"OS Catalyst","Overall Story Throughline","Thematic Points",,"Story Points","dramatica",,"the kind of item which serves to push the Overall Story forward"
+53,"OS Inihibitor","Overall Story Throughline","Thematic Points",,"Story Points","dramatica",,"the kind of item which serves to impede the Overall Story's progress"
+54,"MC Throughlign","Main Character","Thematic Points",,"Story Points","dramatica",,"the realm of the Main Character0s personal journey and growth"
+55,"MC Concern","Main Character","Thematic Points",,"Story Points","dramatica",,"the issue or issues held in greatest importance by the Main Character"
+56,"MC Issue","Main Character","Thematic Points",,"Story Points","dramatica",,"the Main Character's personal thematic focus, topic, or value standard"
+57,"MC Counterpoint","Main Character","Thematic Points",,"Story Points","dramatica",,"the thematic opposite to the area of the Main Character's greatest sensitivity"
+58,"MC Thematic Conflict","Main Character","Thematic Points",,"Story Points","dramatica",,"the thematic comparison within the Main Character as it balances an unchosen item against an unchosen item"
+59,"MC Problem","Main Character","Thematic Points",,"Story Points","dramatica",,"the source of the Main Character's drive; the source of the Main Character's problems"
+60,"MC Solution","Main Character","Thematic Points",,"Story Points","dramatica",,"what is needed to truly satisfy the Main Character's drive; teh solution to the Main Character's problems"
+61,"MC Symptome","Main Character","Thematic Points",,"Story Points","dramatica",,"the area or item the Main Character believes the problem to be"
+62,"MC Response","Main Character","Thematic Points",,"Story Points","dramatica",,"the response of the Main Character to her apparent problems"
+63,"MC Benchmark","Main Character","Thematic Points",,"Story Points","dramatica",,"the standard by which progress is measured in the Main Character's degree of growth is indicated"
+64,"MC Unique Ability","Main Character","Thematic Points",,"Story Points","dramatica",,"the quelity that makes the Main Character unigquely qualified to resolve the story's problem"
+65,"MC Critical Flaw","Main Character","Thematic Points",,"Story Points","dramatica",,"the quality that inhibits or undermines the Main Character's effectiveness, specificall her Unique Ability"
+66,"IC Throughlign","Impact Character","Thematic Points",,"Story Points","dramatica",,"the general area in which the Impact Character operates"
+67,"IC Concern","Impact Character","Thematic Points",,"Story Points","dramatica",,"the Impact Character's primary objective or purpose"
+68,"IC Issue","Impact Character","Thematic Points",,"Story Points","dramatica",,"the area of the Impact Character's greatest impact"
+69,"IC Counterpoint","Impact Character","Thematic Points",,"Story Points","dramatica",,"the thematic comparison of the Impact Character's impact"
+70,"IC Thematic Conflict","Impact Character","Thematic Points",,"Story Points","dramatica",,"the thematic comparison of the Impact Character's impact as it balances an unchosen item against an unchosen item"
+71,"IC Problem","Impact Character","Thematic Points",,"Story Points","dramatica",,"the nature of the Impact Character's drive"
+72,"IC Solution","Impact Character","Thematic Points",,"Story Points","dramatica",,"the item, event, or process needed to truly satisfy the Impact Character's drive"
+73,"IC Symptom","Impact Character","Thematic Points",,"Story Points","dramatica",,"the area in which the Impact Character believes the problem can be"
+74,"IC Response","Impact Character","Thematic Points",,"Story Points","dramatica",,"the Impact Character's point of attack"
+75,"IC Benchmark","Impact Character","Thematic Points",,"Story Points","dramatica",,"the standard by which the Impact Character's impact is measured"
+76,"IC Unique Ability","Impact Character","Thematic Points",,"Story Points","dramatica",,"the quality that makes the Impact Character uniquely qualified to pressure the Main Character to change her nature"
+77,"IC Critical Flaw","Impact Character","Thematic Points",,"Story Points","dramatica",,"the quality that inhibits or undermines the Impact Character's impact"
+78,"M/I  Throughlign","Main vs. Impact Story Throughline","Thematic Points",,"Story Points","dramatica",,"the general area of difficulty between the Main Character and the Impact Character"
+79,"M/I Concern","Main vs. Impact Story Throughline","Thematic Points",,"Story Points","dramatica",,"the topic of contention between the Main Character and the Impact Character"
+80,"M/I Issue","Main vs. Impact Story Throughline","Thematic Points",,"Story Points","dramatica",,"the Main vs. Impact Story's thematic focus"
+81,"M/I Counterpoint","Main vs. Impact Story Throughline","Thematic Points",,"Story Points","dramatica",,"the Main vs. Impact Story's thematic comparison"
+82,"M/I Thematic Conflict","Main vs. Impact Story Throughline","Thematic Points",,"Story Points","dramatica",,"the Main vs. Impact Story's thematic comparison as it balances an unchosen item against an unchosen item"
+83,"M/I Problem","Main vs. Impact Story Throughline","Thematic Points",,"Story Points","dramatica",,"the underlying cause of the difficulties between the Main Character and the Impact Character"
+84,"M/I Solution","Main vs. Impact Story Throughline","Thematic Points",,"Story Points","dramatica",,"the specific element that can resolve the difficulties between the Main Character and the Impact Character"
+85,"M/I Symptom","Main vs. Impact Story Throughline","Thematic Points",,"Story Points","dramatica",,"the area in whic the Main Character and the Impact Character's attention is concentrated"
+86,"M/I Response","Main vs. Impact Story Throughline","Thematic Points",,"Story Points","dramatica",,"the nature of growth in the relationship between the Main Character and the Impact Character"
+87,"M/I Benchmark","Main vs. Impact Story Throughline","Thematic Points",,"Story Points","dramatica",,"the standard by which growth between the Main Character and the Impact Character is measured"
+88,"M/I Catalyst","Main vs. Impact Story Throughline","Thematic Points",,"Story Points","dramatica",,"the type of interaction that increases conflict between the Main Character and the Impact Character"
+89,"M/I Inhibitor","Main vs. Impact Story Throughline","Thematic Points",,"Story Points","dramatica",,"the type of interaction that decreases conflict between the Main Character and the Impact Character"
+90,"Goal","Central Plot Points","Plot Points",,"Story Points","dramatica",,"the central ""objecive"" of the Overall Story"
+91,"Consequences","Central Plot Points","Plot Points",,"Story Points","dramatica",,"the result of failing to achieve the goal"
+92,"Cost","Central Plot Points","Plot Points",,"Story Points","dramatica",,"the prices that must be paid on the way to the goal"
+93,"Dividend","Central Plot Points","Plot Points",,"Story Points","dramatica",,"the benefits enjoyed on the way to the goal"
+94,"Requirements","Central Plot Points","Plot Points",,"Story Points","dramatica",,"the necessary precursos to achieving the goal"
+95,"Prerequisites","Central Plot Points","Plot Points",,"Story Points","dramatica",,"the steps or items needed to meet the requirements"
+96,"Preconditions","Central Plot Points","Plot Points",,"Story Points","dramatica",,"restrtictions imposed on the effort to reach the goal"
+97,"Forewarnings","Central Plot Points","Plot Points",,"Story Points","dramatica",,"the foreshadowing events that indicate the approach of the consequences"
+98,"OS Signpost 1","Overall Story Type Order","Plot Points",,"Story Points","dramatica",,"the kind of activities or concerns dominating Act 1"
+99,"OS Journey 1","Overall Story Type Order","Plot Points",,"Story Points","dramatica",,"as the Overall Story continues through Act 1 it grows from a concern with an unchosen item into a concer with an unchosen item"
+100,"OS Signpost 2","Overall Story Type Order","Plot Points",,"Story Points","dramatica",,"the kind of activities or concerns dominating Act 2"
+101,"OS Journey 2","Overall Story Type Order","Plot Points",,"Story Points","dramatica",,"as the Overall Story continues through Act 2 it grows from a concern with an unchosen item into a concer with an unchosen item"
+102,"OS Signpost 3","Overall Story Type Order","Plot Points",,"Story Points","dramatica",,"the kind of activities or concerns dominating Act 3"
+103,"OS Journey 3","Overall Story Type Order","Plot Points",,"Story Points","dramatica",,"as the Overall Story continues through Act 3 it grows from a concern with an unchosen item into a concer with an unchosen item"
+104,"OS Signpost 4","Overall Story Type Order","Plot Points",,"Story Points","dramatica",,"the kind of activities or concerns dominating Act 4"
+105,"OS Journey 4","Overall Story Type Order","Plot Points",,"Story Points","dramatica",,"as the Overall Story continues through Act 4 it grows from a concern with an unchosen item into a concer with an unchosen item"
+106,"MC Signpost 1","Main Character Type Order","Plot Points",,"Story Points","dramatica",,"the kind of activities or concerns occupying the Main Character in Act 1"
+107,"MC Journey 1","Main Character Type Order","Plot Points",,"Story Points","dramatica",,"as the Main Character continues through Act 1 she grows from a concern with an unchosen item into a concer with an unchosen item"
+108,"MC Signpost 2","Main Character Type Order","Plot Points",,"Story Points","dramatica",,"the kind of activities or concerns occupying the Main Character in Act 2"
+109,"MC Journey 2","Main Character Type Order","Plot Points",,"Story Points","dramatica",,"as the Main Character continues through Act 2 she grows from a concern with an unchosen item into a concer with an unchosen item"
+110,"MC Signpost 3","Main Character Type Order","Plot Points",,"Story Points","dramatica",,"the kind of activities or concerns occupying the Main Character in Act 3"
+111,"MC Journey 3","Main Character Type Order","Plot Points",,"Story Points","dramatica",,"as the Main Character continues through Act 3 she grows from a concern with an unchosen item into a concer with an unchosen item"
+112,"MC Signpost 4","Main Character Type Order","Plot Points",,"Story Points","dramatica",,"the kind of activities or concerns occupying the Main Character in Act 4"
+113,"MC Journey 4","Main Character Type Order","Plot Points",,"Story Points","dramatica",,"as the Main Character continues through Act 4 she grows from a concern with an unchosen item into a concer with an unchosen item"
+114,"IC Signpost 1","Impact Character Type Order","Plot Points",,"Story Points","dramatica",,"the kind of activities or concerns occupying the Impact Character in Act 1"
+115,"IC Journey 1","Impact Character Type Order","Plot Points",,"Story Points","dramatica",,"as the Impact Character continues through Act 1 she grows from a concern with an unchosen item into a concer with an unchosen item"
+116,"IC Signpost 2","Impact Character Type Order","Plot Points",,"Story Points","dramatica",,"the kind of activities or concerns occupying the Impact Character in Act 2"
+117,"IC Journey 2","Impact Character Type Order","Plot Points",,"Story Points","dramatica",,"as the Impact Character continues through Act 2 she grows from a concern with an unchosen item into a concer with an unchosen item"
+118,"IC Signpost 3","Impact Character Type Order","Plot Points",,"Story Points","dramatica",,"the kind of activities or concerns occupying the Impact Character in Act 3"
+119,"IC Journey 3","Impact Character Type Order","Plot Points",,"Story Points","dramatica",,"as the Impact Character continues through Act 3 she grows from a concern with an unchosen item into a concer with an unchosen item"
+120,"IC Signpost 4","Impact Character Type Order","Plot Points",,"Story Points","dramatica",,"the kind of activities or concerns occupying the Impact Character in Act 4"
+121,"IC Journey 4","Impact Character Type Order","Plot Points",,"Story Points","dramatica",,"as the Impact Character continues through Act 4 she grows from a concern with an unchosen item into a concer with an unchosen item"
+122,"M/I Signpost 1","Main vs. Impact Story Type Order","Plot Points",,"Story Points","dramatica",,"the kind of concerns or activities dominating Act 1"
+123,"M/I Journey 1","Main vs. Impact Story Type Order","Plot Points",,"Story Points","dramatica",,"as the relationship between the Main Character and the Impact Character develops through Act 1 it grows from a concern with an unchosen item into a concern with an unchosen item"
+124,"M/I Signpost 2","Main vs. Impact Story Type Order","Plot Points",,"Story Points","dramatica",,"the kind of concerns or activities dominating Act 2"
+125,"M/I Journey 2","Main vs. Impact Story Type Order","Plot Points",,"Story Points","dramatica",,"as the relationship between the Main Character and the Impact Character develops through Act 2 it grows from a concern with an unchosen item into a concern with an unchosen item"
+126,"M/I Signpost 3","Main vs. Impact Story Type Order","Plot Points",,"Story Points","dramatica",,"the kind of concerns or activities dominating Act 3"
+127,"M/I Journey 3","Main vs. Impact Story Type Order","Plot Points",,"Story Points","dramatica",,"as the relationship between the Main Character and the Impact Character develops through Act 3 it grows from a concern with an unchosen item into a concern with an unchosen item"
+128,"M/I Signpost 4","Main vs. Impact Story Type Order","Plot Points",,"Story Points","dramatica",,"the kind of concerns or activities dominating Act 4"
+129,"M/I Journey 4","Main vs. Impact Story Type Order","Plot Points",,"Story Points","dramatica",,"as the relationship between the Main Character and the Impact Character develops through Act 4 it grows from a concern with an unchosen item into a concern with an unchosen item"
+130,"MC Backstory","Background","Overview Story Points",,"Story Points","dramatica",,"the occurences from the Main Character's past which account for the personal problems with which she begins the story"
+131,"IC Backstory","Background","Overview Story Points",,"Story Points","dramatica",,"the occurences from the Impact Character's past wich account for the motivations with which he begins the story"
+132,"M/I Backstory","Background","Overview Story Points",,"Story Points","dramatica",,"the history of the Main Character's and the Impact Character's opposing points of view which accounts for the conflict with which they begin the story"
+133,"OS Backstory","Background","Overview Story Points",,"Story Points","dramatica",,"the analytical reasons for how things have come to be as they are for all the story which involves all of your characters"
+134,"Master Character Synopsis","Background","Overview Story Points",,"Story Points","dramatica",,"a description of your story as it would appear when seen purely from the perspective of character"
+135,"Master Plot Synopsis","Background","Overview Story Points",,"Story Points","dramatica",,"a description of the events of your story as they would appear when seen purely from the perspective of plot"
+136,"Master Theme Synopsis","Background","Overview Story Points",,"Story Points","dramatica",,"a description of your story as it would appear when seen purely from the perspective of ist thematic comparison"
+137,"Nature","Audience Appreciations","Overview Story Points",,"Story Points","dramatica",,"the seminal dramatic framework of a story's message which indicates if the Main Character makes a proper decidions to Change or Remain Steadfast"
+138,"Essence","Audience Appreciations","Overview Story Points",,"Story Points","dramatica",,"the primary dramatic feel of a story"
+139,"Tendency","Audience Appreciations","Overview Story Points",,"Story Points","dramatica",,"the degree to which teh Main Character feels compelled to embrace the quest"
+140,"Reach","Audience Appreciations","Overview Story Points",,"Story Points","dramatica",,"the manner in which the audience identitfies whit the Main Character"
+141,"Knowledge","Fate","The Past","Situation","dramatica classes","dramatica",,"that which one holds to be true."
+142,"Order","Fate","The Past","Situation","dramatica classes","dramatica",,"a patterned arrangement. [Element]. The character containing the Order characteristic is concerned with keeping thins organized. Change is not a problem as long as it is orderly. However, sometimes you can't get there from here and the whole system has to be blown apart to rebuilt from the ground up."
+143,"Chaos","Fate","The Past","Situation","dramatica classes","dramatica",,
+144,"Though","Fate","The Past","Situation","dramatica classes","dramatica",,
+145,"Actuality","Prediction","The Past","Situation","dramatica classes","dramatica",,
+146,"Inertia","Prediction","The Past","Situation","dramatica classes","dramatica",,
+147,"Change","Prediction","The Past","Situation","dramatica classes","dramatica",,
+148,"Perception","Prediction","The Past","Situation","dramatica classes","dramatica",,
+149,"Ability","Interdiction","The Past","Situation","dramatica classes","dramatica",,
+150,"Equity","Interdiction","The Past","Situation","dramatica classes","dramatica",,
+151,"Inequity","Interdiction","The Past","Situation","dramatica classes","dramatica",,
+152,"Desire","Interdiction","The Past","Situation","dramatica classes","dramatica",,
+153,"Aware","Destiny","The Past","Situation","dramatica classes","dramatica",,
+154,"Projection","Destiny","The Past","Situation","dramatica classes","dramatica",,
+155,"Speculation","Destiny","The Past","Situation","dramatica classes","dramatica",,
+156,"Self Aware","Destiny","The Past","Situation","dramatica classes","dramatica",,
+157,"Proven","Fact","How Thins are changing","Situation","dramatica classes","dramatica",,
+158,"Accurate","Fact","How Thins are changing","Situation","dramatica classes","dramatica",,
+159,"Non-Accurate","Fact","How Thins are changing","Situation","dramatica classes","dramatica",,
+160,"Unproven","Fact","How Thins are changing","Situation","dramatica classes","dramatica",,
+161,"Effect","Security","How Thins are changing","Situation","dramatica classes","dramatica",,
+162,"Result","Security","How Thins are changing","Situation","dramatica classes","dramatica",,
+163,"Process","Security","How Thins are changing","Situation","dramatica classes","dramatica",,
+164,"Cause","Security","How Thins are changing","Situation","dramatica classes","dramatica",,
+165,"Theory","Threat","How Thins are changing","Situation","dramatica classes","dramatica",,
+166,"Expectation","Threat","How Thins are changing","Situation","dramatica classes","dramatica",,
+167,"Determination","Threat","How Thins are changing","Situation","dramatica classes","dramatica",,
+168,"Hunch","Threat","How Thins are changing","Situation","dramatica classes","dramatica",,
+169,"Trust","Fantasy","How Thins are changing","Situation","dramatica classes","dramatica",,
+170,"Ending","Fantasy","How Thins are changing","Situation","dramatica classes","dramatica",,
+171,"Unending","Fantasy","How Thins are changing","Situation","dramatica classes","dramatica",,
+172,"Test","Fantasy","How Thins are changing","Situation","dramatica classes","dramatica",,
+173,"Consider","Openess","The Future","Situation","dramatica classes","dramatica",,
+174,"Faith","Openess","The Future","Situation","dramatica classes","dramatica",,
+175,"Disbelief","Openess","The Future","Situation","dramatica classes","dramatica",,
+176,"Reconsider","Openess","The Future","Situation","dramatica classes","dramatica",,
+177,"Pursuit","Delay","The Future","Situation","dramatica classes","dramatica",,
+178,"Support","Delay","The Future","Situation","dramatica classes","dramatica",,
+179,"Oppose","Delay","The Future","Situation","dramatica classes","dramatica",,
+180,"Avoidance","Delay","The Future","Situation","dramatica classes","dramatica",,
+181,"Logic","Choice","The Future","Situation","dramatica classes","dramatica",,
+182,"Conscience","Choice","The Future","Situation","dramatica classes","dramatica",,
+183,"Temptation","Choice","The Future","Situation","dramatica classes","dramatica",,
+184,"Feeling","Choice","The Future","Situation","dramatica classes","dramatica",,
+185,"Control","Preconception","The Future","Situation","dramatica classes","dramatica",,
+186,"Help","Preconception","The Future","Situation","dramatica classes","dramatica",,
+187,"Hinder","Preconception","The Future","Situation","dramatica classes","dramatica",,
+188,"Uncontrolled","Preconception","The Future","Situation","dramatica classes","dramatica",,
+189,"Certainty","Work","The Present","Situation","dramatica classes","dramatica",,
+190,"Deduction","Work","The Present","Situation","dramatica classes","dramatica",,
+191,"Induction","Work","The Present","Situation","dramatica classes","dramatica",,
+192,"Potentiality","Work","The Present","Situation","dramatica classes","dramatica",,
+193,"Proaction","Attraction","The Present","Situation","dramatica classes","dramatica",,
+194,"Acceptance","Attraction","The Present","Situation","dramatica classes","dramatica",,
+195,"Nonacceptance","Attraction","The Present","Situation","dramatica classes","dramatica",,
+196,"Reaction","Attraction","The Present","Situation","dramatica classes","dramatica",,
+197,"Probability","Repulsion","The Present","Situation","dramatica classes","dramatica",,
+198,"Reduction","Repulsion","The Present","Situation","dramatica classes","dramatica",,
+199,"Production","Repulsion","The Present","Situation","dramatica classes","dramatica",,
+200,"Possibility","Repulsion","The Present","Situation","dramatica classes","dramatica",,
+201,"Inaction","Attempt","The Present","Situation","dramatica classes","dramatica",,
+202,"Evaluation","Attempt","The Present","Situation","dramatica classes","dramatica",,
+203,"Reevalation","Attempt","The Present","Situation","dramatica classes","dramatica",,
+204,"Protection","Attempt","The Present","Situation","dramatica classes","dramatica",,
+205,"Knowledge","Instinct","Understanding","Activity","dramatica classes","dramatica",,
+206,"Ability","Instinct","Understanding","Activity","dramatica classes","dramatica",,
+207,"Desire","Instinct","Understanding","Activity","dramatica classes","dramatica",,
+208,"Thought","Instinct","Understanding","Activity","dramatica classes","dramatica",,
+209,"Actuality","Senses","Understanding","Activity","dramatica classes","dramatica",,
+210,"Aware","Senses","Understanding","Activity","dramatica classes","dramatica",,
+211,"Self Aware","Senses","Understanding","Activity","dramatica classes","dramatica",,
+212,"Perception","Senses","Understanding","Activity","dramatica classes","dramatica",,
+213,"Order","Interpretation","Understanding","Activity","dramatica classes","dramatica",,
+214,"Equity","Interpretation","Understanding","Activity","dramatica classes","dramatica",,
+215,"Inequity","Interpretation","Understanding","Activity","dramatica classes","dramatica",,
+216,"Chaos","Interpretation","Understanding","Activity","dramatica classes","dramatica",,
+217,"Inertia","Conditioning","Understanding","Activity","dramatica classes","dramatica",,
+218,"Projection","Conditioning","Understanding","Activity","dramatica classes","dramatica",,
+219,"Speculation","Conditioning","Understanding","Activity","dramatica classes","dramatica",,
+220,"Change","Conditioning","Understanding","Activity","dramatica classes","dramatica",,
+221,"Proven","Wisdom","Doing","Activity","dramatica classes","dramatica",,
+222,"Theory","Wisdom","Doing","Activity","dramatica classes","dramatica",,
+223,"Hunch","Wisdom","Doing","Activity","dramatica classes","dramatica",,
+224,"Unproven","Wisdom","Doing","Activity","dramatica classes","dramatica",,
+225,"Effect","Skill","Doing","Activity","dramatica classes","dramatica",,
+226,"Trust","Skill","Doing","Activity","dramatica classes","dramatica",,
+227,"Test","Skill","Doing","Activity","dramatica classes","dramatica",,
+228,"Cause","Skill","Doing","Activity","dramatica classes","dramatica",,
+229,"Accurate","Experience","Doing","Activity","dramatica classes","dramatica",,
+230,"Expectation","Experience","Doing","Activity","dramatica classes","dramatica",,
+231,"Determination","Experience","Doing","Activity","dramatica classes","dramatica",,
+232,"Non-Accurate","Experience","Doing","Activity","dramatica classes","dramatica",,
+233,"Result","Enlightment","Doing","Activity","dramatica classes","dramatica",,
+234,"Ending","Enlightment","Doing","Activity","dramatica classes","dramatica",,
+235,"Unending","Enlightment","Doing","Activity","dramatica classes","dramatica",,
+236,"Process","Enlightment","Doing","Activity","dramatica classes","dramatica",,
+237,"Consider","Approach","Obtaining","Activity","dramatica classes","dramatica",,
+238,"Logic","Approach","Obtaining","Activity","dramatica classes","dramatica",,
+239,"Feeling","Approach","Obtaining","Activity","dramatica classes","dramatica",,
+240,"Reconsider","Approach","Obtaining","Activity","dramatica classes","dramatica",,
+241,"Pursuit","Self Interest","Obtaining","Activity","dramatica classes","dramatica",,
+242,"Control","Self Interest","Obtaining","Activity","dramatica classes","dramatica",,
+243,"Uncontrolled","Self Interest","Obtaining","Activity","dramatica classes","dramatica",,
+244,"Avoidance","Self Interest","Obtaining","Activity","dramatica classes","dramatica",,
+245,"Faith","Morality","Obtaining","Activity","dramatica classes","dramatica",,
+246,"Conscience","Morality","Obtaining","Activity","dramatica classes","dramatica",,
+247,"Temptation","Morality","Obtaining","Activity","dramatica classes","dramatica",,
+248,"Disbelief","Morality","Obtaining","Activity","dramatica classes","dramatica",,
+249,"Support","Attitude","Obtaining","Activity","dramatica classes","dramatica",,
+250,"Help","Attitude","Obtaining","Activity","dramatica classes","dramatica",,
+251,"Hinder","Attitude","Obtaining","Activity","dramatica classes","dramatica",,
+252,"Oppose","Attitude","Obtaining","Activity","dramatica classes","dramatica",,
+253,"Certainty","Prerequisites","Gathering Information","Activity","dramatica classes","dramatica",,
+254,"Probability","Prerequisites","Gathering Information","Activity","dramatica classes","dramatica",,
+255,"Possibility","Prerequisites","Gathering Information","Activity","dramatica classes","dramatica",,
+256,"Potentiality","Prerequisites","Gathering Information","Activity","dramatica classes","dramatica",,
+257,"Proaction","Strategy","Gathering Information","Activity","dramatica classes","dramatica",,
+258,"Inaction","Strategy","Gathering Information","Activity","dramatica classes","dramatica",,
+259,"Protection","Strategy","Gathering Information","Activity","dramatica classes","dramatica",,
+260,"Reaction","Strategy","Gathering Information","Activity","dramatica classes","dramatica",,
+261,"Deduction","Analysis","Gathering Information","Activity","dramatica classes","dramatica",,
+262,"Reduction","Analysis","Gathering Information","Activity","dramatica classes","dramatica",,
+263,"Production","Analysis","Gathering Information","Activity","dramatica classes","dramatica",,
+264,"Induction","Analysis","Gathering Information","Activity","dramatica classes","dramatica",,
+265,"Acceptance","Preconditions","Gathering Information","Activity","dramatica classes","dramatica",,
+266,"Evaluation","Preconditions","Gathering Information","Activity","dramatica classes","dramatica",,
+267,"Reevalation","Preconditions","Gathering Information","Activity","dramatica classes","dramatica",,
+268,"Nonacceptance","Preconditions","Gathering Information","Activity","dramatica classes","dramatica",,
+269,"Knowledge","State of Being","Developing a Plan","Manipulation","dramatica classes","dramatica",,
+270,"Inertia","State of Being","Developing a Plan","Manipulation","dramatica classes","dramatica",,
+271,"Change","State of Being","Developing a Plan","Manipulation","dramatica classes","dramatica",,
+272,"Thought","State of Being","Developing a Plan","Manipulation","dramatica classes","dramatica",,
+273,"Actuality","Situation","Developing a Plan","Manipulation","dramatica classes","dramatica",,
+274,"Order","Situation","Developing a Plan","Manipulation","dramatica classes","dramatica",,
+275,"Chaos","Situation","Developing a Plan","Manipulation","dramatica classes","dramatica",,
+276,"Perception","Situation","Developing a Plan","Manipulation","dramatica classes","dramatica",,
+277,"Aware","Circumstances","Developing a Plan","Manipulation","dramatica classes","dramatica",,
+278,"Equity","Circumstances","Developing a Plan","Manipulation","dramatica classes","dramatica",,
+279,"Inequity","Circumstances","Developing a Plan","Manipulation","dramatica classes","dramatica",,
+280,"Self Aware","Circumstances","Developing a Plan","Manipulation","dramatica classes","dramatica",,
+281,"Ability","Sense of Self","Developing a Plan","Manipulation","dramatica classes","dramatica",,
+282,"Projection","Sense of Self","Developing a Plan","Manipulation","dramatica classes","dramatica",,
+283,"Speculation","Sense of Self","Developing a Plan","Manipulation","dramatica classes","dramatica",,
+284,"Desire","Sense of Self","Developing a Plan","Manipulation","dramatica classes","dramatica",,
+285,"Proven","Knowledge","Palying a Role","Manipulation","dramatica classes","dramatica",,
+286,"Result","Knowledge","Palying a Role","Manipulation","dramatica classes","dramatica",,
+287,"Process","Knowledge","Palying a Role","Manipulation","dramatica classes","dramatica",,
+288,"Unproven","Knowledge","Palying a Role","Manipulation","dramatica classes","dramatica",,
+289,"Effect","Ability","Palying a Role","Manipulation","dramatica classes","dramatica",,
+290,"Accurate","Ability","Palying a Role","Manipulation","dramatica classes","dramatica",,
+291,"Non-Accurate","Ability","Palying a Role","Manipulation","dramatica classes","dramatica",,
+292,"Cause","Ability","Palying a Role","Manipulation","dramatica classes","dramatica",,
+293,"Trust","Desire","Palying a Role","Manipulation","dramatica classes","dramatica",,
+294,"Expectation","Desire","Palying a Role","Manipulation","dramatica classes","dramatica",,
+295,"Determination","Desire","Palying a Role","Manipulation","dramatica classes","dramatica",,
+296,"Test","Desire","Palying a Role","Manipulation","dramatica classes","dramatica",,
+297,"Theory","Thought","Palying a Role","Manipulation","dramatica classes","dramatica",,
+298,"Ending","Thought","Palying a Role","Manipulation","dramatica classes","dramatica",,
+299,"Unending","Thought","Palying a Role","Manipulation","dramatica classes","dramatica",,
+300,"Hunch","Thought","Palying a Role","Manipulation","dramatica classes","dramatica",,
+301,"Consider","Rationalization","Changing One's Nature","Manipulation","dramatica classes","dramatica",,
+302,"Support","Rationalization","Changing One's Nature","Manipulation","dramatica classes","dramatica",,
+303,"Oppose","Rationalization","Changing One's Nature","Manipulation","dramatica classes","dramatica",,
+304,"Reconsider","Rationalization","Changing One's Nature","Manipulation","dramatica classes","dramatica",,
+305,"Pursuit","Commitment","Changing One's Nature","Manipulation","dramatica classes","dramatica",,
+306,"Faith","Commitment","Changing One's Nature","Manipulation","dramatica classes","dramatica",,
+307,"Disbelief","Commitment","Changing One's Nature","Manipulation","dramatica classes","dramatica",,
+308,"Avoidance","Commitment","Changing One's Nature","Manipulation","dramatica classes","dramatica",,
+309,"Control","Responsiblity","Changing One's Nature","Manipulation","dramatica classes","dramatica",,
+310,"Conscience","Responsiblity","Changing One's Nature","Manipulation","dramatica classes","dramatica",,
+311,"Temptation","Responsiblity","Changing One's Nature","Manipulation","dramatica classes","dramatica",,
+312,"Uncontrolled","Responsiblity","Changing One's Nature","Manipulation","dramatica classes","dramatica",,
+313,"Logic","Obligation","Changing One's Nature","Manipulation","dramatica classes","dramatica",,
+314,"Help","Obligation","Changing One's Nature","Manipulation","dramatica classes","dramatica",,
+315,"Hinder","Obligation","Changing One's Nature","Manipulation","dramatica classes","dramatica",,
+316,"Feeling","Obligation","Changing One's Nature","Manipulation","dramatica classes","dramatica",,
+317,"Certainty","Permission","Conceiving an Idea","Manipulation","dramatica classes","dramatica",,
+318,"Acceptance","Permission","Conceiving an Idea","Manipulation","dramatica classes","dramatica",,
+319,"Nonacceptance","Permission","Conceiving an Idea","Manipulation","dramatica classes","dramatica",,
+320,"Potentiality","Permission","Conceiving an Idea","Manipulation","dramatica classes","dramatica",,
+321,"Proaction","Need","Conceiving an Idea","Manipulation","dramatica classes","dramatica",,
+322,"Deduction","Need","Conceiving an Idea","Manipulation","dramatica classes","dramatica",,
+323,"Induction","Need","Conceiving an Idea","Manipulation","dramatica classes","dramatica",,
+324,"Reaction","Need","Conceiving an Idea","Manipulation","dramatica classes","dramatica",,
+325,"Inaction","Expediency","Conceiving an Idea","Manipulation","dramatica classes","dramatica",,
+326,"Reduction","Expediency","Conceiving an Idea","Manipulation","dramatica classes","dramatica",,
+327,"Production","Expediency","Conceiving an Idea","Manipulation","dramatica classes","dramatica",,
+328,"Protection","Expediency","Conceiving an Idea","Manipulation","dramatica classes","dramatica",,
+329,"Probability","Deficiency","Conceiving an Idea","Manipulation","dramatica classes","dramatica",,
+330,"Evaluation","Deficiency","Conceiving an Idea","Manipulation","dramatica classes","dramatica",,
+331,"Reevalation","Deficiency","Conceiving an Idea","Manipulation","dramatica classes","dramatica",,
+332,"Possibility","Deficiency","Conceiving an Idea","Manipulation","dramatica classes","dramatica",,
+333,"Knowledge","Truth","Memories","Fixed Attitude","dramatica classes","dramatica",,
+334,"Actuality","Truth","Memories","Fixed Attitude","dramatica classes","dramatica",,
+335,"Perception","Truth","Memories","Fixed Attitude","dramatica classes","dramatica",,
+336,"Thought","Truth","Memories","Fixed Attitude","dramatica classes","dramatica",,
+337,"Ability","Evidence","Memories","Fixed Attitude","dramatica classes","dramatica",,
+338,"Aware","Evidence","Memories","Fixed Attitude","dramatica classes","dramatica",,
+339,"Self Aware","Evidence","Memories","Fixed Attitude","dramatica classes","dramatica",,
+340,"Desire","Evidence","Memories","Fixed Attitude","dramatica classes","dramatica",,
+341,"Order","Suspicion","Memories","Fixed Attitude","dramatica classes","dramatica",,
+342,"Inertia","Suspicion","Memories","Fixed Attitude","dramatica classes","dramatica",,
+343,"Change","Suspicion","Memories","Fixed Attitude","dramatica classes","dramatica",,
+344,"Chaos","Suspicion","Memories","Fixed Attitude","dramatica classes","dramatica",,
+345,"Equity","Falsehood","Memories","Fixed Attitude","dramatica classes","dramatica",,
+346,"Projection","Falsehood","Memories","Fixed Attitude","dramatica classes","dramatica",,
+347,"Speculation","Falsehood","Memories","Fixed Attitude","dramatica classes","dramatica",,
+348,"Inequity","Falsehood","Memories","Fixed Attitude","dramatica classes","dramatica",,
+349,"Proven","Value","Impulsive Response","Fixed Attitude","dramatica classes","dramatica",,
+350,"Effect","Value","Impulsive R","Fixed Attitude","dramatica classes","dramatica",,
+351,"Cause","Value","Impulsive R","Fixed Attitude","dramatica classes","dramatica",,
+352,"Unproven","Value","Impulsive R","Fixed Attitude","dramatica classes","dramatica",,
+353,"Theory","Confidence","Impulsive R","Fixed Attitude","dramatica classes","dramatica",,
+354,"Trust","Confidence","Impulsive R","Fixed Attitude","dramatica classes","dramatica",,
+355,"Test","Confidence","Impulsive R","Fixed Attitude","dramatica classes","dramatica",,
+356,"Hunch","Confidence","Impulsive R","Fixed Attitude","dramatica classes","dramatica",,
+357,"Accurate","Worry","Impulsive R","Fixed Attitude","dramatica classes","dramatica",,
+358,"Result","Worry","Impulsive R","Fixed Attitude","dramatica classes","dramatica",,
+359,"Process","Worry","Impulsive R","Fixed Attitude","dramatica classes","dramatica",,
+360,"Non-Accurate","Worry","Impulsive R","Fixed Attitude","dramatica classes","dramatica",,
+361,"Expectation","Worth","Impulsive R","Fixed Attitude","dramatica classes","dramatica",,
+362,"Ending","Worth","Impulsive R","Fixed Attitude","dramatica classes","dramatica",,
+363,"Unending","Worth","Impulsive R","Fixed Attitude","dramatica classes","dramatica",,
+364,"Determination","Worth","Impulsive R","Fixed Attitude","dramatica classes","dramatica",,
+365,"Consider","Closure","Innermost Desire","Fixed Attitude","dramatica classes","dramatica",,
+366,"Pursuit","Closure","Innermost Desire","Fixed Attitude","dramatica classes","dramatica",,
+367,"Avoidance","Closure","Innermost Desire","Fixed Attitude","dramatica classes","dramatica",,
+368,"Reconsider","Closure","Innermost Desire","Fixed Attitude","dramatica classes","dramatica",,
+369,"Logic","Hope","Innermost Desire","Fixed Attitude","dramatica classes","dramatica",,
+370,"Control","Hope","Innermost Desire","Fixed Attitude","dramatica classes","dramatica",,
+371,"Uncontrolled","Hope","Innermost Desire","Fixed Attitude","dramatica classes","dramatica",,
+372,"Feeling","Hope","Innermost Desire","Fixed Attitude","dramatica classes","dramatica",,
+373,"Faith","Dream","Innermost Desire","Fixed Attitude","dramatica classes","dramatica",,
+374,"Support","Dream","Innermost Desire","Fixed Attitude","dramatica classes","dramatica",,
+375,"Oppose","Dream","Innermost Desire","Fixed Attitude","dramatica classes","dramatica",,
+376,"Disbelief","Dream","Innermost Desire","Fixed Attitude","dramatica classes","dramatica",,
+377,"Conscience","Denial","Innermost Desire","Fixed Attitude","dramatica classes","dramatica",,
+378,"Help","Denial","Innermost Desire","Fixed Attitude","dramatica classes","dramatica",,
+379,"Hinder","Denial","Innermost Desire","Fixed Attitude","dramatica classes","dramatica",,
+380,"Temptation","Denial","Innermost Desire","Fixed Attitude","dramatica classes","dramatica",,
+381,"Certainty","Investigation","Contemplation","Fixed Attitude","dramatica classes","dramatica",,
+382,"Proaction","Investigation","Contemplation","Fixed Attitude","dramatica classes","dramatica",,
+383,"Reaction","Investigation","Contemplation","Fixed Attitude","dramatica classes","dramatica",,
+384,"Potentiality","Investigation","Contemplation","Fixed Attitude","dramatica classes","dramatica",,
+385,"Probability","Appraisal","Contemplation","Fixed Attitude","dramatica classes","dramatica",,
+386,"Inaction","Appraisal","Contemplation","Fixed Attitude","dramatica classes","dramatica",,
+387,"Protection","Appraisal","Contemplation","Fixed Attitude","dramatica classes","dramatica",,
+388,"Possibility","Appraisal","Contemplation","Fixed Attitude","dramatica classes","dramatica",,
+389,"Deduction","Reappraisal","Contemplation","Fixed Attitude","dramatica classes","dramatica",,
+390,"Acceptance","Reappraisal","Contemplation","Fixed Attitude","dramatica classes","dramatica",,
+391,"Nonacceptance","Reappraisal","Contemplation","Fixed Attitude","dramatica classes","dramatica",,
+392,"Induction","Reappraisal","Contemplation","Fixed Attitude","dramatica classes","dramatica",,
+393,"Reduction","Doubt","Contemplation","Fixed Attitude","dramatica classes","dramatica",,
+394,"Evaluation","Doubt","Contemplation","Fixed Attitude","dramatica classes","dramatica",,
+395,"Reevalation","Doubt","Contemplation","Fixed Attitude","dramatica classes","dramatica",,
+396,"Production","Doubt","Contemplation","Fixed Attitude","dramatica classes","dramatica",,
+397,"A.1 Favor-doing","A) Aquisitive/direct impression management tactics","Image Management (IM)",,"Goffman","hermeneutic",,"Doing favors for others to invoke the norm of reciprocity"
+398,"A.2 Self-enhancement/promotion","A) Aquisitive/direct impression management tactics","Image Management (IM)",,"Goffman","hermeneutic",,"Emphasizing one’s best characteristics"
+399,"A.3 Entitlement/acclaiming","A) Aquisitive/direct impression management tactics","Image Management (IM)",,"Goffman","hermeneutic",,"Taking responsibility for positive occurrences"
+400,"A.4 Charm","A) Aquisitive/direct impression management tactics","Image Management (IM)",,"Goffman","hermeneutic",,"Using charm to increase compliance of others"
+401,"A.5 Modesty","A) Aquisitive/direct impression management tactics","Image Management (IM)",,"Goffman","hermeneutic",,"De-emphasizing one’s characteristics after a performance"
+402,"A.6 Opinion conformity","A) Aquisitive/direct impression management tactics","Image Management (IM)",,"Goffman","hermeneutic",,"Expressing opinions or behavior similar to others"
+403,"A.7 Flattery/compliments","A) Aquisitive/direct impression management tactics","Image Management (IM)",,"Goffman","hermeneutic",,"Praising other individuals"
+404,"A.8 Ingratiation","A) Aquisitive/direct impression management tactics","Image Management (IM)",,"Goffman","hermeneutic",,"Attempting to induce liking in others"
+405,"A. 9 Exemplification","A) Aquisitive/direct impression management tactics","Image Management (IM)",,"Goffman","hermeneutic",," To act self-sacrificing, moral, worthy"
+406,"A.10 Other-enhancement","A) Aquisitive/direct impression management tactics","Image Management (IM)",,"Goffman","hermeneutic",,"Saying nice things about others, especially through third parties"
+407,"B.1 Association/basking","B) Acquisitive/indirect impression management tactics","Image Management (IM)",,"Goffman","hermeneutic",,"Enhancing positivity of clearly associated object"
+408,"B.2 Physical appearance","B) Acquisitive/indirect impression management tactics","Image Management (IM)",,"Goffman","hermeneutic",,"Altering one’s physical appearance"
+409,"B.3 Boosting","B) Acquisitive/indirect impression management tactics","Image Management (IM)",,"Goffman","hermeneutic",,"Reducing unfavorable features of a positively linked other"
+410,"B.4 Burnishing","B) Acquisitive/indirect impression management tactics","Image Management (IM)",,"Goffman","hermeneutic",,"Enhancing the favorable features of a positively linked other"
+411,"B.5 Blurring","B) Acquisitive/indirect impression management tactics","Image Management (IM)",,"Goffman","hermeneutic",,"Disclaiming negative link with a favorable other"
+412,"B.6 Belittling","B) Acquisitive/indirect impression management tactics","Image Management (IM)",,"Goffman","hermeneutic",,"Reducing favorable traits of negatively linked other"
+413,"C.1 Sandbagging","C) Protective/direct impression management tactics.
+","Image Management (IM)",,"Goffman","hermeneutic",,"False claims of inability to create low expectations for performance"
+414,"C.2 Self-handicapping","C) Protective/direct impression management tactics.
+","Image Management (IM)",,"Goffman","hermeneutic",,"Setting up obstacles that make it difficult to accomplish a task"
+415,"C.3 Excuses","C) Protective/direct impression management tactics.
+","Image Management (IM)",,"Goffman","hermeneutic",,"Admitting an action was wrong while denying responsibility"
+416,"C.4 Hedging","C) Protective/direct impression management tactics.
+","Image Management (IM)",,"Goffman","hermeneutic",,"Verbal strategies that imply uncertainty and lack of commitment"
+417,"C. 5 Apologies","C) Protective/direct impression management tactics.
+","Image Management (IM)",,"Goffman","hermeneutic",,"Admitting blame, responsibility, or regret"
+418,"C.7 Justifications","C) Protective/direct impression management tactics.
+","Image Management (IM)",,"Goffman","hermeneutic",,"Accepting responsibility for an action while denying it was wrong"
+419,"C.8 Accounts","C) Protective/direct impression management tactics.
+","Image Management (IM)",,"Goffman","hermeneutic",,"Verbal damage control"
+420,"C.9 Disclaimers","C) Protective/direct impression management tactics.
+","Image Management (IM)",,"Goffman","hermeneutic",,"Making an excuse before an incident occurs"
+421,"C.10 Remedial","C) Protective/direct impression management tactics.
+","Image Management (IM)",,"Goffman","hermeneutic",,"Attempts to repair damaged image after a negative event"
+422,"D.1 Self-reported","C) Protective/direct impression management tactics.
+","Image Management (IM)",,"Goffman","hermeneutic",,"handicap Making purported obstacles known"
+423,"D.2 Blasting","D) Protective/indirect impression management tactics","Image Management (IM)",,"Goffman","hermeneutic",,"Derogating a negatively linked other"
+424,"D.3 Dissociation","D) Protective/indirect impression management tactics","Image Management (IM)",,"Goffman","hermeneutic",,"Distancing from others after negative event"
+425,"D.4 Blaring","D) Protective/indirect impression management tactics","Image Management (IM)",,"Goffman","hermeneutic",,"Proclaiming a negative link to an unfavorable other"
+426,"D.5 Burying","D) Protective/indirect impression management tactics","Image Management (IM)",,"Goffman","hermeneutic",,"Disclaiming positive link to unfavorable other"
+427,"E.1 Intimidation/coercion","E) Negative/direct impression management tactics.","Image Management (IM)",,"Goffman","hermeneutic",,"Using threat/warnings to gain compliance"
+428,"E.2 Supplication","E) Negative/direct impression management tactics.","Image Management (IM)",,"Goffman","hermeneutic",,"Acting as if in need of help/playing dumb"

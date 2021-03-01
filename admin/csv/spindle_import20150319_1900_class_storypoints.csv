@@ -1,0 +1,116 @@
+point_value_id,point_value,point_id,point_term,class2_id,class2,class1_id,class1,Story Points,catcode_name,Description
+1,Change,1,Resolve,1,Dynamics,2,Genre Points,Story Points,dramatica,the ultimate disposition of the Main Character to Change or Remain Steadfast
+2,Steadfeast,1,Resolve,1,Dynamics,2,Genre Points,Story Points,dramatica,the ultimate disposition of the Main Character to Change or Remain Steadfast
+3,Stop,2,Growth,1,Dynamics,2,Genre Points,Story Points,dramatica,the Main Character's growth toward an ending or beginning
+4,Start,2,Growth,1,Dynamics,2,Genre Points,Story Points,dramatica,the Main Character's growth toward an ending or beginning
+5,Do-er,3,Approach,1,Dynamics,2,Genre Points,Story Points,dramatica,the Main Character's preference for external or internal problem solving techniques
+6,Be-er,3,Approach,1,Dynamics,2,Genre Points,Story Points,dramatica,the Main Character's preference for external or internal problem solving techniques
+7,Logical,4,Problem-Solving Style,1,Dynamics,2,Genre Points,Story Points,dramatica,the Main Character's tendency toward linear or holistic problem solving
+8,Intuitive,4,Problem-Solving Style,1,Dynamics,2,Genre Points,Story Points,dramatica,the Main Character's tendency toward linear or holistic problem solving
+9,Action,5,Driver,1,Dynamics,2,Genre Points,Story Points,dramatica,the kind of activity that pushes the overall story forward
+10,Decision,5,Driver,1,Dynamics,2,Genre Points,Story Points,dramatica,the kind of activity that pushes the overall story forward
+11,Timelock,6,Limit,1,Dynamics,2,Genre Points,Story Points,dramatica,"the constraint of time or otpions that, by running out, forces the story to a climax"
+12,Optionlock,6,Limit,1,Dynamics,2,Genre Points,Story Points,dramatica,"the constraint of time or otpions that, by running out, forces the story to a climax"
+13,Success,7,Outcome,1,Dynamics,2,Genre Points,Story Points,dramatica,a logistic assessment of how things ended up
+14,Failure,7,Outcome,1,Dynamics,2,Genre Points,Story Points,dramatica,a logistic assessment of how things ended up
+15,Good,8,Judgement,1,Dynamics,2,Genre Points,Story Points,dramatica,the story assessment of whether or not the Main Character ultimately resolves her personal problem
+16,Bad,8,Judgement,1,Dynamics,2,Genre Points,Story Points,dramatica,the story assessment of whether or not the Main Character ultimately resolves her personal problem
+,,9,OS Throughline,1,Overall Story Throughline,3,Thematic Points,Story Points,dramatica,the general area in which the Overal Story's problem resides
+,,10,OS Concern,1,Overall Story Throughline,3,Thematic Points,Story Points,dramatica,the area of shared concern in Overal Story
+,,11,OS Issue,1,Overall Story Throughline,3,Thematic Points,Story Points,dramatica,the Overall Story's thematic focus
+,,12,OS Counterpoint,1,Overall Story Throughline,3,Thematic Points,Story Points,dramatica,the Overall Story's thematic rebuttal
+,,13,OS Thematic Conflict,1,Overall Story Throughline,3,Thematic Points,Story Points,dramatica,the Overall Story's thematic comparison as it balances an unchosen item against an unchosen item
+,,14,OS Problem  ,1,Overall Story Throughline,3,Thematic Points,Story Points,dramatica,the source of the Overall Story's difficulties
+,,15,OS Solution,1,Overall Story Throughline,3,Thematic Points,Story Points,dramatica,the actual remedy for the Overal Story's problem(s)
+,,16,OS Symptom,1,Overall Story Throughline,3,Thematic Points,Story Points,dramatica,the principal symptome of the Overal Story's problem(s)
+,,17,OS Response,1,Overall Story Throughline,3,Thematic Points,Story Points,dramatica,the apparent remedy for the principal symptom of the Overall Story's problem(s)
+,,18,OS Benchmark,1,Overall Story Throughline,3,Thematic Points,Story Points,dramatica,the standard by which progress is measured in the Overall Story
+,,19,OS Catalyst,1,Overall Story Throughline,3,Thematic Points,Story Points,dramatica,the kind of item which serves to push the Overall Story forward
+,,20,OS Inihibitor,1,Overall Story Throughline,3,Thematic Points,Story Points,dramatica,the kind of item which serves to impede the Overall Story's progress
+,,21,MC Throughlign,2,Main Character,3,Thematic Points,Story Points,dramatica,the realm of the Main Character0s personal journey and growth
+,,22,MC Concern,2,Main Character,3,Thematic Points,Story Points,dramatica,the issue or issues held in greatest importance by the Main Character
+,,23,MC Issue,2,Main Character,3,Thematic Points,Story Points,dramatica,"the Main Character's personal thematic focus, topic, or value standard"
+,,24,MC Counterpoint,2,Main Character,3,Thematic Points,Story Points,dramatica,the thematic opposite to the area of the Main Character's greatest sensitivity
+,,25,MC Thematic Conflict,2,Main Character,3,Thematic Points,Story Points,dramatica,the thematic comparison within the Main Character as it balances an unchosen item against an unchosen item
+,,26,MC Problem,2,Main Character,3,Thematic Points,Story Points,dramatica,the source of the Main Character's drive; the source of the Main Character's problems
+,,27,MC Solution,2,Main Character,3,Thematic Points,Story Points,dramatica,what is needed to truly satisfy the Main Character's drive; teh solution to the Main Character's problems
+,,28,MC Symptome,2,Main Character,3,Thematic Points,Story Points,dramatica,the area or item the Main Character believes the problem to be
+,,29,MC Response,2,Main Character,3,Thematic Points,Story Points,dramatica,the response of the Main Character to her apparent problems
+,,30,MC Benchmark,2,Main Character,3,Thematic Points,Story Points,dramatica,the standard by which progress is measured in the Main Character's degree of growth is indicated
+,,31,MC Unique Ability,2,Main Character,3,Thematic Points,Story Points,dramatica,the quelity that makes the Main Character unigquely qualified to resolve the story's problem
+,,32,MC Critical Flaw,2,Main Character,3,Thematic Points,Story Points,dramatica,"the quality that inhibits or undermines the Main Character's effectiveness, specificall her Unique Ability"
+,,33,IC Throughlign,3,Impact Character,3,Thematic Points,Story Points,dramatica,the general area in which the Impact Character operates
+,,34,IC Concern,3,Impact Character,3,Thematic Points,Story Points,dramatica,the Impact Character's primary objective or purpose
+,,35,IC Issue,3,Impact Character,3,Thematic Points,Story Points,dramatica,the area of the Impact Character's greatest impact
+,,36,IC Counterpoint,3,Impact Character,3,Thematic Points,Story Points,dramatica,the thematic comparison of the Impact Character's impact
+,,37,IC Thematic Conflict,3,Impact Character,3,Thematic Points,Story Points,dramatica,the thematic comparison of the Impact Character's impact as it balances an unchosen item against an unchosen item
+,,38,IC Problem,3,Impact Character,3,Thematic Points,Story Points,dramatica,the nature of the Impact Character's drive
+,,39,IC Solution,3,Impact Character,3,Thematic Points,Story Points,dramatica,"the item, event, or process needed to truly satisfy the Impact Character's drive"
+,,40,IC Symptom,3,Impact Character,3,Thematic Points,Story Points,dramatica,the area in which the Impact Character believes the problem can be
+,,41,IC Response,3,Impact Character,3,Thematic Points,Story Points,dramatica,the Impact Character's point of attack
+,,42,IC Benchmark,3,Impact Character,3,Thematic Points,Story Points,dramatica,the standard by which the Impact Character's impact is measured
+,,43,IC Unique Ability,3,Impact Character,3,Thematic Points,Story Points,dramatica,the quality that makes the Impact Character uniquely qualified to pressure the Main Character to change her nature
+,,44,IC Critical Flaw,3,Impact Character,3,Thematic Points,Story Points,dramatica,the quality that inhibits or undermines the Impact Character's impact
+,,45,M/I  Throughlign,4,Main vs. Impact Story Throughline,3,Thematic Points,Story Points,dramatica,the general area of difficulty between the Main Character and the Impact Character
+,,46,M/I Concern,4,Main vs. Impact Story Throughline,3,Thematic Points,Story Points,dramatica,the topic of contention between the Main Character and the Impact Character
+,,47,M/I Issue,4,Main vs. Impact Story Throughline,3,Thematic Points,Story Points,dramatica,the Main vs. Impact Story's thematic focus
+,,48,M/I Counterpoint,4,Main vs. Impact Story Throughline,3,Thematic Points,Story Points,dramatica,the Main vs. Impact Story's thematic comparison
+,,49,M/I Thematic Conflict,4,Main vs. Impact Story Throughline,3,Thematic Points,Story Points,dramatica,the Main vs. Impact Story's thematic comparison as it balances an unchosen item against an unchosen item
+,,50,M/I Problem,4,Main vs. Impact Story Throughline,3,Thematic Points,Story Points,dramatica,the underlying cause of the difficulties between the Main Character and the Impact Character
+,,51,M/I Solution,4,Main vs. Impact Story Throughline,3,Thematic Points,Story Points,dramatica,the specific element that can resolve the difficulties between the Main Character and the Impact Character
+,,52,M/I Symptom,4,Main vs. Impact Story Throughline,3,Thematic Points,Story Points,dramatica,the area in whic the Main Character and the Impact Character's attention is concentrated
+,,53,M/I Response,4,Main vs. Impact Story Throughline,3,Thematic Points,Story Points,dramatica,the nature of growth in the relationship between the Main Character and the Impact Character
+,,54,M/I Benchmark,4,Main vs. Impact Story Throughline,3,Thematic Points,Story Points,dramatica,the standard by which growth between the Main Character and the Impact Character is measured
+,,55,M/I Catalyst,4,Main vs. Impact Story Throughline,3,Thematic Points,Story Points,dramatica,the type of interaction that increases conflict between the Main Character and the Impact Character
+,,56,M/I Inhibitor,4,Main vs. Impact Story Throughline,3,Thematic Points,Story Points,dramatica,the type of interaction that decreases conflict between the Main Character and the Impact Character
+,,57,Goal,1,Central Plot Points,1,Plot Points,Story Points,dramatica,"the central ""objecive"" of the Overall Story"
+,,58,Consequences,1,Central Plot Points,1,Plot Points,Story Points,dramatica,the result of failing to achieve the goal
+,,59,Cost,1,Central Plot Points,1,Plot Points,Story Points,dramatica,the prices that must be paid on the way to the goal
+,,60,Dividend,1,Central Plot Points,1,Plot Points,Story Points,dramatica,the benefits enjoyed on the way to the goal
+,,61,Requirements,1,Central Plot Points,1,Plot Points,Story Points,dramatica,the necessary precursos to achieving the goal
+,,62,Prerequisites,1,Central Plot Points,1,Plot Points,Story Points,dramatica,the steps or items needed to meet the requirements
+,,63,Preconditions,1,Central Plot Points,1,Plot Points,Story Points,dramatica,restrtictions imposed on the effort to reach the goal
+,,64,Forewarnings,1,Central Plot Points,1,Plot Points,Story Points,dramatica,the foreshadowing events that indicate the approach of the consequences
+,,65,OS Signpost 1,2,Overall Story Type Order,1,Plot Points,Story Points,dramatica,the kind of activities or concerns dominating Act 1
+,,66,OS Journey 1,2,Overall Story Type Order,1,Plot Points,Story Points,dramatica,as the Overall Story continues through Act 1 it grows from a concern with an unchosen item into a concer with an unchosen item
+,,67,OS Signpost 2,2,Overall Story Type Order,1,Plot Points,Story Points,dramatica,the kind of activities or concerns dominating Act 2
+,,68,OS Journey 2,2,Overall Story Type Order,1,Plot Points,Story Points,dramatica,as the Overall Story continues through Act 2 it grows from a concern with an unchosen item into a concer with an unchosen item
+,,69,OS Signpost 3,2,Overall Story Type Order,1,Plot Points,Story Points,dramatica,the kind of activities or concerns dominating Act 3
+,,70,OS Journey 3,2,Overall Story Type Order,1,Plot Points,Story Points,dramatica,as the Overall Story continues through Act 3 it grows from a concern with an unchosen item into a concer with an unchosen item
+,,71,OS Signpost 4,2,Overall Story Type Order,1,Plot Points,Story Points,dramatica,the kind of activities or concerns dominating Act 4
+,,72,OS Journey 4,2,Overall Story Type Order,1,Plot Points,Story Points,dramatica,as the Overall Story continues through Act 4 it grows from a concern with an unchosen item into a concer with an unchosen item
+,,73,MC Signpost 1,3,Main Character Type Order,1,Plot Points,Story Points,dramatica,the kind of activities or concerns occupying the Main Character in Act 1
+,,74,MC Journey 1,3,Main Character Type Order,1,Plot Points,Story Points,dramatica,as the Main Character continues through Act 1 she grows from a concern with an unchosen item into a concer with an unchosen item
+,,75,MC Signpost 2,3,Main Character Type Order,1,Plot Points,Story Points,dramatica,the kind of activities or concerns occupying the Main Character in Act 2
+,,76,MC Journey 2,3,Main Character Type Order,1,Plot Points,Story Points,dramatica,as the Main Character continues through Act 2 she grows from a concern with an unchosen item into a concer with an unchosen item
+,,77,MC Signpost 3,3,Main Character Type Order,1,Plot Points,Story Points,dramatica,the kind of activities or concerns occupying the Main Character in Act 3
+,,78,MC Journey 3,3,Main Character Type Order,1,Plot Points,Story Points,dramatica,as the Main Character continues through Act 3 she grows from a concern with an unchosen item into a concer with an unchosen item
+,,79,MC Signpost 4,3,Main Character Type Order,1,Plot Points,Story Points,dramatica,the kind of activities or concerns occupying the Main Character in Act 4
+,,80,MC Journey 4,3,Main Character Type Order,1,Plot Points,Story Points,dramatica,as the Main Character continues through Act 4 she grows from a concern with an unchosen item into a concer with an unchosen item
+,,81,IC Signpost 1,4,Impact Character Type Order,1,Plot Points,Story Points,dramatica,the kind of activities or concerns occupying the Impact Character in Act 1
+,,82,IC Journey 1,4,Impact Character Type Order,1,Plot Points,Story Points,dramatica,as the Impact Character continues through Act 1 she grows from a concern with an unchosen item into a concer with an unchosen item
+,,83,IC Signpost 2,4,Impact Character Type Order,1,Plot Points,Story Points,dramatica,the kind of activities or concerns occupying the Impact Character in Act 2
+,,84,IC Journey 2,4,Impact Character Type Order,1,Plot Points,Story Points,dramatica,as the Impact Character continues through Act 2 she grows from a concern with an unchosen item into a concer with an unchosen item
+,,85,IC Signpost 3,4,Impact Character Type Order,1,Plot Points,Story Points,dramatica,the kind of activities or concerns occupying the Impact Character in Act 3
+,,86,IC Journey 3,4,Impact Character Type Order,1,Plot Points,Story Points,dramatica,as the Impact Character continues through Act 3 she grows from a concern with an unchosen item into a concer with an unchosen item
+,,87,IC Signpost 4,4,Impact Character Type Order,1,Plot Points,Story Points,dramatica,the kind of activities or concerns occupying the Impact Character in Act 4
+,,88,IC Journey 4,4,Impact Character Type Order,1,Plot Points,Story Points,dramatica,as the Impact Character continues through Act 4 she grows from a concern with an unchosen item into a concer with an unchosen item
+,,89,M/I Signpost 1,5,Main vs. Impact Story Type Order,1,Plot Points,Story Points,dramatica,the kind of concerns or activities dominating Act 1
+,,90,M/I Journey 1,5,Main vs. Impact Story Type Order,1,Plot Points,Story Points,dramatica,as the relationship between the Main Character and the Impact Character develops through Act 1 it grows from a concern with an unchosen item into a concern with an unchosen item
+,,91,M/I Signpost 2,5,Main vs. Impact Story Type Order,1,Plot Points,Story Points,dramatica,the kind of concerns or activities dominating Act 2
+,,92,M/I Journey 2,5,Main vs. Impact Story Type Order,1,Plot Points,Story Points,dramatica,as the relationship between the Main Character and the Impact Character develops through Act 2 it grows from a concern with an unchosen item into a concern with an unchosen item
+,,93,M/I Signpost 3,5,Main vs. Impact Story Type Order,1,Plot Points,Story Points,dramatica,the kind of concerns or activities dominating Act 3
+,,94,M/I Journey 3,5,Main vs. Impact Story Type Order,1,Plot Points,Story Points,dramatica,as the relationship between the Main Character and the Impact Character develops through Act 3 it grows from a concern with an unchosen item into a concern with an unchosen item
+,,95,M/I Signpost 4,5,Main vs. Impact Story Type Order,1,Plot Points,Story Points,dramatica,the kind of concerns or activities dominating Act 4
+,,96,M/I Journey 4,5,Main vs. Impact Story Type Order,1,Plot Points,Story Points,dramatica,as the relationship between the Main Character and the Impact Character develops through Act 4 it grows from a concern with an unchosen item into a concern with an unchosen item
+,,97,MC Backstory,1,Background,4,Overview Story Points,Story Points,dramatica,the occurences from the Main Character's past which account for the personal problems with which she begins the story
+,,98,IC Backstory,1,Background,4,Overview Story Points,Story Points,dramatica,the occurences from the Impact Character's past wich account for the motivations with which he begins the story
+,,99,M/I Backstory,1,Background,4,Overview Story Points,Story Points,dramatica,the history of the Main Character's and the Impact Character's opposing points of view which accounts for the conflict with which they begin the story
+,,100,OS Backstory,1,Background,4,Overview Story Points,Story Points,dramatica,the analytical reasons for how things have come to be as they are for all the story which involves all of your characters
+,,101,Master Character Synopsis,1,Background,4,Overview Story Points,Story Points,dramatica,a description of your story as it would appear when seen purely from the perspective of character
+,,102,Master Plot Synopsis,1,Background,4,Overview Story Points,Story Points,dramatica,a description of the events of your story as they would appear when seen purely from the perspective of plot
+,,103,Master Theme Synopsis,1,Background,4,Overview Story Points,Story Points,dramatica,a description of your story as it would appear when seen purely from the perspective of ist thematic comparison
+,,104,Nature,2,Audience Appreciations,4,Overview Story Points,Story Points,dramatica,the seminal dramatic framework of a story's message which indicates if the Main Character makes a proper decidions to Change or Remain Steadfast
+,,105,Essence,2,Audience Appreciations,4,Overview Story Points,Story Points,dramatica,the primary dramatic feel of a story
+,,106,Tendency,2,Audience Appreciations,4,Overview Story Points,Story Points,dramatica,the degree to which teh Main Character feels compelled to embrace the quest
+,,107,Reach,2,Audience Appreciations,4,Overview Story Points,Story Points,dramatica,the manner in which the audience identitfies whit the Main Character

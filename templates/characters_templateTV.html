@@ -1,0 +1,46 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the characters_init() hook (in hooks/characters.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="characters-id-<%%VALUE(id)%%>" class="characters-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="characters-agent_id-<%%VALUE(id)%%>" class="characters-agent_id text-right"><%%SELECT%%><%%VALUE(agent_id)%%><%%ENDSELECT%%></td>
+		<td id="characters-agent_name-<%%VALUE(id)%%>" class="characters-agent_name text-right"><%%SELECT%%><%%VALUE(agent_name)%%><%%ENDSELECT%%></td>
+		<td id="characters-cw_name-<%%VALUE(id)%%>" class="characters-cw_name"><%%SELECT%%><%%VALUE(cw_name)%%><%%ENDSELECT%%></td>
+		<td id="characters-img-<%%VALUE(id)%%>" class="characters-img"><a href="<%%TRANSLATION(ImageFolder)%%><%%VALUE(img)%%>" data-lightbox="characters-img"><img src="thumbnail.php?i=<%%VALUE(img)%%>&t=characters&f=img&v=tv" class="img-thumbnail"></a></td>
+		<td id="characters-mc_resolve-<%%VALUE(id)%%>" class="characters-mc_resolve text-right"><%%SELECT%%><%%VALUE(mc_resolve)%%><%%ENDSELECT%%></td>
+		<td id="characters-illust_resolve-<%%VALUE(id)%%>" class="characters-illust_resolve"><%%SELECT%%><%%VALUE(illust_resolve)%%><%%ENDSELECT%%></td>
+		<td id="characters-mc_growth-<%%VALUE(id)%%>" class="characters-mc_growth text-right"><%%SELECT%%><%%VALUE(mc_growth)%%><%%ENDSELECT%%></td>
+		<td id="characters-illust_growth-<%%VALUE(id)%%>" class="characters-illust_growth"><%%SELECT%%><%%VALUE(illust_growth)%%><%%ENDSELECT%%></td>
+		<td id="characters-mc_approach-<%%VALUE(id)%%>" class="characters-mc_approach text-right"><%%SELECT%%><%%VALUE(mc_approach)%%><%%ENDSELECT%%></td>
+		<td id="characters-illust_approach-<%%VALUE(id)%%>" class="characters-illust_approach"><%%SELECT%%><%%VALUE(illust_approach)%%><%%ENDSELECT%%></td>
+		<td id="characters-mc_ps_style-<%%VALUE(id)%%>" class="characters-mc_ps_style text-right"><%%SELECT%%><%%VALUE(mc_ps_style)%%><%%ENDSELECT%%></td>
+		<td id="characters-illust_ps_style-<%%VALUE(id)%%>" class="characters-illust_ps_style"><%%SELECT%%><%%VALUE(illust_ps_style)%%><%%ENDSELECT%%></td>
+		<td id="characters-cw_age-<%%VALUE(id)%%>" class="characters-cw_age"><%%SELECT%%><%%VALUE(cw_age)%%><%%ENDSELECT%%></td>
+		<td id="characters-cw_gender-<%%VALUE(id)%%>" class="characters-cw_gender text-right"><%%SELECT%%><%%VALUE(cw_gender)%%><%%ENDSELECT%%></td>
+		<td id="characters-cw_communication_style-<%%VALUE(id)%%>" class="characters-cw_communication_style"><%%SELECT%%><%%VALUE(cw_communication_style)%%><%%ENDSELECT%%></td>
+		<td id="characters-cw_background-<%%VALUE(id)%%>" class="characters-cw_background"><%%SELECT%%><%%VALUE(cw_background)%%><%%ENDSELECT%%></td>
+		<td id="characters-cw_appearance-<%%VALUE(id)%%>" class="characters-cw_appearance"><%%SELECT%%><%%VALUE(cw_appearance)%%><%%ENDSELECT%%></td>
+		<td id="characters-cw_relationships-<%%VALUE(id)%%>" class="characters-cw_relationships"><%%SELECT%%><%%VALUE(cw_relationships)%%><%%ENDSELECT%%></td>
+		<td id="characters-cw_ambition-<%%VALUE(id)%%>" class="characters-cw_ambition"><%%SELECT%%><%%VALUE(cw_ambition)%%><%%ENDSELECT%%></td>
+		<td id="characters-cw_defects-<%%VALUE(id)%%>" class="characters-cw_defects"><%%SELECT%%><%%VALUE(cw_defects)%%><%%ENDSELECT%%></td>
+		<td id="characters-cw_thoughts-<%%VALUE(id)%%>" class="characters-cw_thoughts"><%%SELECT%%><%%VALUE(cw_thoughts)%%><%%ENDSELECT%%></td>
+		<td id="characters-cw_relatedness-<%%VALUE(id)%%>" class="characters-cw_relatedness"><%%SELECT%%><%%VALUE(cw_relatedness)%%><%%ENDSELECT%%></td>
+		<td id="characters-cw_restrictions-<%%VALUE(id)%%>" class="characters-cw_restrictions"><%%SELECT%%><%%VALUE(cw_restrictions)%%><%%ENDSELECT%%></td>
+		<td id="characters-locations-<%%VALUE(id)%%>" class="characters-locations"><%%SELECT%%><%%VALUE(locations)%%><%%ENDSELECT%%></td>
+		<td id="characters-persons-<%%VALUE(id)%%>" class="characters-persons"><%%SELECT%%><%%VALUE(persons)%%><%%ENDSELECT%%></td>
+		<td id="characters-events-<%%VALUE(id)%%>" class="characters-events"><%%SELECT%%><%%VALUE(events)%%><%%ENDSELECT%%></td>
+		<td id="characters-noetictension-<%%VALUE(id)%%>" class="characters-noetictension text-right"><%%SELECT%%><%%VALUE(noetictension)%%><%%ENDSELECT%%></td>
+		<td id="characters-illust_nt-<%%VALUE(id)%%>" class="characters-illust_nt"><%%SELECT%%><%%VALUE(illust_nt)%%><%%ENDSELECT%%></td>
+		<td id="characters-impression-<%%VALUE(id)%%>" class="characters-impression text-right"><%%SELECT%%><%%VALUE(impression)%%><%%ENDSELECT%%></td>
+		<td id="characters-illust_im-<%%VALUE(id)%%>" class="characters-illust_im"><%%SELECT%%><%%VALUE(illust_im)%%><%%ENDSELECT%%></td>
+		<td id="characters-mcs_problem-<%%VALUE(id)%%>" class="characters-mcs_problem"><%%SELECT%%><%%VALUE(mcs_problem)%%><%%ENDSELECT%%></td>
+		<td id="characters-illust_mcs_problem-<%%VALUE(id)%%>" class="characters-illust_mcs_problem"><%%SELECT%%><%%VALUE(illust_mcs_problem)%%><%%ENDSELECT%%></td>
+		<td id="characters-mcs_solution-<%%VALUE(id)%%>" class="characters-mcs_solution"><%%SELECT%%><%%VALUE(mcs_solution)%%><%%ENDSELECT%%></td>
+		<td id="characters-illust_mcs_solution-<%%VALUE(id)%%>" class="characters-illust_mcs_solution"><%%SELECT%%><%%VALUE(illust_mcs_solution)%%><%%ENDSELECT%%></td>
+		<td id="characters-mcs_symptom-<%%VALUE(id)%%>" class="characters-mcs_symptom"><%%SELECT%%><%%VALUE(mcs_symptom)%%><%%ENDSELECT%%></td>
+		<td id="characters-illust_mcs_symptom-<%%VALUE(id)%%>" class="characters-illust_mcs_symptom"><%%SELECT%%><%%VALUE(illust_mcs_symptom)%%><%%ENDSELECT%%></td>
+		<td id="characters-mcs_response-<%%VALUE(id)%%>" class="characters-mcs_response"><%%SELECT%%><%%VALUE(mcs_response)%%><%%ENDSELECT%%></td>
+		<td id="characters-illust_mcs_response-<%%VALUE(id)%%>" class="characters-illust_mcs_response"><%%SELECT%%><%%VALUE(illust_mcs_response)%%><%%ENDSELECT%%></td>

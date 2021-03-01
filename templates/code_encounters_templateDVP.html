@@ -1,0 +1,162 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Id</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Author A</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="authorA<%%RND1%%>"><%%COMBOTEXT(authorA)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Author name A</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="author_nameA<%%RND1%%>"><%%COMBOTEXT(author_nameA)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Bibliography A</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="bibliographyA<%%RND1%%>"><%%COMBOTEXT(bibliographyA)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Transcript A</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="transcriptA<%%RND1%%>"><%%COMBOTEXT(transcriptA)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Token A</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="tokenA<%%RND1%%>"><%%COMBOTEXT(tokenA)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Scene A</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="sceneA<%%RND1%%>"><%%COMBOTEXT(sceneA)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Author B</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="authorB<%%RND1%%>"><%%COMBOTEXT(authorB)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Author name B</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="authornameB<%%RND1%%>"><%%COMBOTEXT(authornameB)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Bibliography B</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="bibliographyB<%%RND1%%>"><%%COMBOTEXT(bibliographyB)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Transcript B</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="transcriptB<%%RND1%%>"><%%COMBOTEXT(transcriptB)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Token B</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="tokenB<%%RND1%%>"><%%COMBOTEXT(tokenB)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Scene B</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="sceneB<%%RND1%%>"><%%COMBOTEXT(sceneB)%%></span></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Type</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(type)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Conflicttype</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(conflicttype)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Story_scene</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(story_scene)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Nd_color</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(nd_color)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Nd_width</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(nd_width)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Nd_style</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(nd_style)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Nd_opacity</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(nd_opacity)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Nd_visibility</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(nd_visibility)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Lbl_lable</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(lbl_lable)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Lbl_color</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(lbl_color)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Lbl_size</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(lbl_size)%%></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
