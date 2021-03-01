@@ -1,0 +1,20 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the biblio_transcript_init() hook (in hooks/biblio_transcript.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="biblio_transcript-id-<%%VALUE(id)%%>" class="biblio_transcript-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="biblio_transcript-author-<%%VALUE(id)%%>" class="biblio_transcript-author text-right"><%%SELECT%%><%%VALUE(author)%%><%%ENDSELECT%%></td>
+		<td id="biblio_transcript-author_memberID-<%%VALUE(id)%%>" class="biblio_transcript-author_memberID text-right"><%%SELECT%%><%%VALUE(author_memberID)%%><%%ENDSELECT%%></td>
+		<td id="biblio_transcript-bibliography_id-<%%VALUE(id)%%>" class="biblio_transcript-bibliography_id text-right"><%%SELECT%%><%%VALUE(bibliography_id)%%><%%ENDSELECT%%></td>
+		<td id="biblio_transcript-bibliography_title-<%%VALUE(id)%%>" class="biblio_transcript-bibliography_title text-right"><%%SELECT%%><%%VALUE(bibliography_title)%%><%%ENDSELECT%%></td>
+		<td id="biblio_transcript-trascriber_memberID-<%%VALUE(id)%%>" class="biblio_transcript-trascriber_memberID"><%%SELECT%%><%%VALUE(trascriber_memberID)%%><%%ENDSELECT%%></td>
+		<td id="biblio_transcript-transcript_title-<%%VALUE(id)%%>" class="biblio_transcript-transcript_title"><%%SELECT%%><%%VALUE(transcript_title)%%><%%ENDSELECT%%></td>
+		<td id="biblio_transcript-transcript-<%%VALUE(id)%%>" class="biblio_transcript-transcript"><a href="link.php?t=biblio_transcript&f=transcript&i=<%%VALUE(id)%%>" target="_blank" title="<%%VALUE(transcript)%%>" class="btn btn-default"><i class="glyphicon glyphicon-lg glyphicon-file text-info"></i></a></td>
+		<td id="biblio_transcript-credits-<%%VALUE(id)%%>" class="biblio_transcript-credits"><%%SELECT%%><%%VALUE(credits)%%><%%ENDSELECT%%></td>
+		<td id="biblio_transcript-ip_rights-<%%VALUE(id)%%>" class="biblio_transcript-ip_rights"><%%SELECT%%><%%VALUE(ip_rights)%%><%%ENDSELECT%%></td>
+		<script>$j(function() {
+			var e_transcript = '<%%VALUE(transcript)%%>'; if(e_transcript == '' || e_transcript == '&nbsp;') $j(/*<*/ '#biblio_transcript-transcript-<%%VALUE(id)%%>' /*>*/).html('');
+		});</script>

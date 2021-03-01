@@ -1,0 +1,40 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the biblio_doc_init() hook (in hooks/biblio_doc.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="biblio_doc-id-<%%VALUE(id)%%>" class="biblio_doc-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-img-<%%VALUE(id)%%>" class="biblio_doc-img"><a href="<%%BASE_UPLOAD_PATH%%><%%VALUE(img)%%>" data-lightbox="biblio_doc-img"><img src="thumbnail.php?i=<%%VALUE(img)%%>&t=biblio_doc&f=img&v=tv" class="img-thumbnail"></a></td>
+		<td id="biblio_doc-author_name-<%%VALUE(id)%%>" class="biblio_doc-author_name text-right"><%%SELECT%%><%%VALUE(author_name)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-author_id-<%%VALUE(id)%%>" class="biblio_doc-author_id text-right"><%%SELECT%%><%%VALUE(author_id)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-type-<%%VALUE(id)%%>" class="biblio_doc-type text-right"><%%SELECT%%><%%VALUE(type)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-genre-<%%VALUE(id)%%>" class="biblio_doc-genre text-right"><%%SELECT%%><%%VALUE(genre)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-created-<%%VALUE(id)%%>" class="biblio_doc-created"><%%SELECT%%><%%VALUE(created)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-published-<%%VALUE(id)%%>" class="biblio_doc-published"><%%SELECT%%><%%VALUE(published)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-title-<%%VALUE(id)%%>" class="biblio_doc-title"><%%SELECT%%><%%VALUE(title)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-subtitle-<%%VALUE(id)%%>" class="biblio_doc-subtitle"><%%SELECT%%><%%VALUE(subtitle)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-publisher-<%%VALUE(id)%%>" class="biblio_doc-publisher"><%%SELECT%%><%%VALUE(publisher)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-location-<%%VALUE(id)%%>" class="biblio_doc-location"><%%SELECT%%><%%VALUE(location)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-citation-<%%VALUE(id)%%>" class="biblio_doc-citation"><%%SELECT%%><%%VALUE(citation)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-description-<%%VALUE(id)%%>" class="biblio_doc-description"><%%SELECT%%><%%VALUE(description)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-source-<%%VALUE(id)%%>" class="biblio_doc-source"><%%SELECT%%><%%VALUE(source)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-medium-<%%VALUE(id)%%>" class="biblio_doc-medium"><%%SELECT%%><%%VALUE(medium)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-language-<%%VALUE(id)%%>" class="biblio_doc-language text-right"><%%SELECT%%><%%VALUE(language)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-format-<%%VALUE(id)%%>" class="biblio_doc-format"><%%SELECT%%><%%VALUE(format)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-subject-<%%VALUE(id)%%>" class="biblio_doc-subject"><%%SELECT%%><%%VALUE(subject)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-rights-<%%VALUE(id)%%>" class="biblio_doc-rights text-right"><%%SELECT%%><%%VALUE(rights)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-rights_holder-<%%VALUE(id)%%>" class="biblio_doc-rights_holder"><%%SELECT%%><%%VALUE(rights_holder)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-data_evaluation-<%%VALUE(id)%%>" class="biblio_doc-data_evaluation"><%%SELECT%%><%%VALUE(data_evaluation)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-world_cat_no-<%%VALUE(id)%%>" class="biblio_doc-world_cat_no"><%%SELECT%%><%%VALUE(world_cat_no)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-authority_record-<%%VALUE(id)%%>" class="biblio_doc-authority_record"><%%SELECT%%><%%VALUE(authority_record)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-authority_organization-<%%VALUE(id)%%>" class="biblio_doc-authority_organization text-right"><%%SELECT%%><%%VALUE(authority_organization)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-pdf_book-<%%VALUE(id)%%>" class="biblio_doc-pdf_book"><a href="link.php?t=biblio_doc&f=pdf_book&i=<%%VALUE(id)%%>" target="_blank" title="<%%VALUE(pdf_book)%%>" class="btn btn-default"><i class="glyphicon glyphicon-lg glyphicon-file text-info"></i></a></td>
+		<td id="biblio_doc-ext_source-<%%VALUE(id)%%>" class="biblio_doc-ext_source"><%%SELECT%%><%%VALUE(ext_source)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-tags-<%%VALUE(id)%%>" class="biblio_doc-tags"><%%SELECT%%><%%VALUE(tags)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-team-<%%VALUE(id)%%>" class="biblio_doc-team"><%%SELECT%%><%%VALUE(team)%%><%%ENDSELECT%%></td>
+		<td id="biblio_doc-biblio_lead-<%%VALUE(id)%%>" class="biblio_doc-biblio_lead"><%%SELECT%%><%%VALUE(biblio_lead)%%><%%ENDSELECT%%></td>
+		<script>$j(function() {
+			var e_pdf_book = '<%%VALUE(pdf_book)%%>'; if(e_pdf_book == '' || e_pdf_book == '&nbsp;') $j(/*<*/ '#biblio_doc-pdf_book-<%%VALUE(id)%%>' /*>*/).html('');
+		});</script>

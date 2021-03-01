@@ -1,0 +1,12 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the hist_authors_init() hook (in hooks/hist_authors.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="hist_authors-id-<%%VALUE(id)%%>" class="hist_authors-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="hist_authors-team-<%%VALUE(id)%%>" class="hist_authors-team"><%%SELECT%%><%%VALUE(team)%%><%%ENDSELECT%%></td>
+		<td id="hist_authors-agent_id-<%%VALUE(id)%%>" class="hist_authors-agent_id"><%%SELECT%%><%%VALUE(agent_id)%%><%%ENDSELECT%%></td>
+		<td id="hist_authors-last_name-<%%VALUE(id)%%>" class="hist_authors-last_name"><%%SELECT%%><%%VALUE(last_name)%%><%%ENDSELECT%%></td>
+		<td id="hist_authors-first_name-<%%VALUE(id)%%>" class="hist_authors-first_name"><%%SELECT%%><%%VALUE(first_name)%%><%%ENDSELECT%%></td>

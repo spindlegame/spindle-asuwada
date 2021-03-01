@@ -1,0 +1,43 @@
+"id","impression","description","category"
+"33","A.1 Favor-doing","Doing favors for others to invoke the norm of reciprocity","A) Aquisitive/direct impression management tactics"
+"34","A.2 Self-enhancement/promotion","Emphasizing one’s best characteristics","A) Aquisitive/direct impression management tactics"
+"35","A.3 Entitlement/acclaiming","Taking responsibility for positive occurrences","A) Aquisitive/direct impression management tactics"
+"36","A.4 Charm","Using charm to increase compliance of others","A) Aquisitive/direct impression management tactics"
+"37","A.5 Modesty","De-emphasizing one’s characteristics after a performance","A) Aquisitive/direct impression management tactics"
+"38","A.6 Opinion conformity","Expressing opinions or behavior similar to others","A) Aquisitive/direct impression management tactics"
+"39","A.7 Flattery/compliments","Praising other individuals","A) Aquisitive/direct impression management tactics"
+"40","A.8 Ingratiation","Attempting to induce liking in others","A) Aquisitive/direct impression management tactics"
+"41","A. 9 Exemplification"," To act self-sacrificing, moral, worthy","A) Aquisitive/direct impression management tactics"
+"42","A.10 Other-enhancement","Saying nice things about others, especially through third parties","A) Aquisitive/direct impression management tactics"
+"43","B.1 Association/basking","Enhancing positivity of clearly associated object","B) Acquisitive/indirect impression management tactics"
+"44","B.2 Physical appearance","Altering one’s physical appearance","B) Acquisitive/indirect impression management tactics"
+"45","B.3 Boosting","Reducing unfavorable features of a positively linked other","B) Acquisitive/indirect impression management tactics"
+"46","B.4 Burnishing","Enhancing the favorable features of a positively linked other","B) Acquisitive/indirect impression management tactics"
+"47","B.5 Blurring","Disclaiming negative link with a favorable other","B) Acquisitive/indirect impression management tactics"
+"48","B.6 Belittling","Reducing favorable traits of negatively linked other","B) Acquisitive/indirect impression management tactics"
+"49","C.1 Sandbagging","False claims of inability to create low expectations for performance","C) Protective/direct impression management tactics.
+"
+"50","C.2 Self-handicapping","Setting up obstacles that make it difficult to accomplish a task","C) Protective/direct impression management tactics.
+"
+"51","C.3 Excuses","Admitting an action was wrong while denying responsibility","C) Protective/direct impression management tactics.
+"
+"52","C.4 Hedging","Verbal strategies that imply uncertainty and lack of commitment","C) Protective/direct impression management tactics.
+"
+"53","C. 5 Apologies","Admitting blame, responsibility, or regret","C) Protective/direct impression management tactics.
+"
+"54","C.7 Justifications","Accepting responsibility for an action while denying it was wrong","C) Protective/direct impression management tactics.
+"
+"55","C.8 Accounts","Verbal damage control","C) Protective/direct impression management tactics.
+"
+"56","C.9 Disclaimers","Making an excuse before an incident occurs","C) Protective/direct impression management tactics.
+"
+"57","C.10 Remedial","Attempts to repair damaged image after a negative event","C) Protective/direct impression management tactics.
+"
+"58","D.1 Self-reported","handicap Making purported obstacles known","C) Protective/direct impression management tactics.
+"
+"59","D.2 Blasting","Derogating a negatively linked other","D) Protective/indirect impression management tactics"
+"60","D.3 Dissociation","Distancing from others after negative event","D) Protective/indirect impression management tactics"
+"61","D.4 Blaring","Proclaiming a negative link to an unfavorable other","D) Protective/indirect impression management tactics"
+"62","D.5 Burying","Disclaiming positive link to unfavorable other","D) Protective/indirect impression management tactics"
+"63","E.1 Intimidation/coercion","Using threat/warnings to gain compliance","E) Negative/direct impression management tactics."
+"64","E.2 Supplication","Acting as if in need of help/playing dumb","E) Negative/direct impression management tactics."

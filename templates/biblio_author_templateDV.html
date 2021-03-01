@@ -1,0 +1,470 @@
+<!-- To change the layout of the detail view form, we recommend using JS code in hooks/biblio_author-dv.js rather than editing this file -->
+
+<div id="detail-view"></div>
+<div class="panel-heading"><h3 class="panel-title"><strong><%%DETAIL_VIEW_TITLE%%></strong></h3></div>
+
+<div id="biblio_author_dv_container-loading" class="text-center text-info text-bold vspacer-lg"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+<div class="panel-body hidden" id="biblio_author_dv_container">
+	<!-- child links -->
+	<div class="row vspacer-md">
+		<div class="col-xs-12 children-links">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm vspacer-sm" href="biblio_doc_view.php?filterer_author_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="biblio_doc_link"><i class="glyphicon glyphicon-list-alt"></i> Corpus</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="biblio_doc_view.php?filterer_author_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="xs_biblio_doc_link"><i class="glyphicon glyphicon-list-alt"></i> Corpus</a>
+			<input type="hidden" id="biblio_doc_hclink" value="biblio_doc_view.php?filterer_author_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm vspacer-sm" href="biblio_transcript_view.php?filterer_author_memberID=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="biblio_transcript_link"><i class="glyphicon glyphicon-list-alt"></i> Transcripts</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="biblio_transcript_view.php?filterer_author_memberID=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="xs_biblio_transcript_link"><i class="glyphicon glyphicon-list-alt"></i> Transcripts</a>
+			<input type="hidden" id="biblio_transcript_hclink" value="biblio_transcript_view.php?filterer_author_memberID=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm vspacer-sm" href="biblio_token_view.php?filterer_author_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="biblio_token_link"><i class="glyphicon glyphicon-list-alt"></i> Tokens</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="biblio_token_view.php?filterer_author_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="xs_biblio_token_link"><i class="glyphicon glyphicon-list-alt"></i> Tokens</a>
+			<input type="hidden" id="biblio_token_hclink" value="biblio_token_view.php?filterer_author_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm vspacer-sm" href="biblio_code_invivo_view.php?filterer_author=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="biblio_code_invivo_link"><i class="glyphicon glyphicon-list-alt"></i> Invivo</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="biblio_code_invivo_view.php?filterer_author=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="xs_biblio_code_invivo_link"><i class="glyphicon glyphicon-list-alt"></i> Invivo</a>
+			<input type="hidden" id="biblio_code_invivo_hclink" value="biblio_code_invivo_view.php?filterer_author=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<input type="hidden" id="biblio_code_demo_hclink" value="biblio_code_demo_view.php?filterer_author=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<input type="hidden" id="biblio_analyst_hclink" value="biblio_analyst_view.php?filterer_author_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<input type="hidden" id="bio_author_hclink" value="bio_author_view.php?filterer_author_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<input type="hidden" id="bio_storyline_hclink" value="bio_storyline_view.php?filterer_author_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<input type="hidden" id="bio_chr_scene_hclink" value="bio_chr_scene_view.php?filterer_author_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<input type="hidden" id="bio_chr_dev_hclink" value="bio_chr_dev_view.php?filterer_agent_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<input type="hidden" id="bio_code_herme_hclink" value="bio_code_herme_view.php?filterer_author_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<input type="hidden" id="hist_chr_dev_hclink" value="hist_chr_dev_view.php?filterer_agent_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<hr class="hidden-xs hidden-sm">
+
+	<div class="row">
+		<!-- form inputs -->
+		<div class="col-md-8 col-lg-10" id="biblio_author_dv_form">
+			<fieldset class="form-horizontal">
+
+				<!-- Field: Game agent -->
+				<div class="form-group biblio_author-game_agent_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="game_agent_id" data-parent_link="view_parent_modal">Game agent</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(game_agent_id)%%><%%PLINK(game_agent_id)%%><%%ADDNEW(game_agent)%%><span id="game_agent_idLoading"></span></div>
+					</div>
+				</div>
+
+				<!-- Field: MemberID -->
+				<div class="form-group biblio_author-memberID">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="memberID">MemberID</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="memberID" id="memberID" value="<%%VALUE(memberID)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Agent name -->
+				<div class="form-group biblio_author-agent_name">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Agent name</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="agent_name"></div>
+					</div>
+				</div>
+
+				<!-- Field: ID -->
+				<div class="form-group biblio_author-id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="id">ID</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="id"><%%VALUE(id)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Img -->
+				<div class="form-group biblio_author-img">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Img <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#img-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="img-description"><div class="alert alert-info bspacer-xs">Maximum file size allowed: 100 KB.<br>Allowed file types: jpg, jpeg, gif, png</div></span>
+						<div class="form-control-static well well-sm">
+							<div class="pull-left"><a href="<%%BASE_UPLOAD_PATH%%><%%VALUE(img)%%>" data-lightbox="biblio_author_dv"><img src="thumbnail.php?i=<%%VALUE(img)%%>&t=biblio_author&f=img&v=dv" class="img-thumbnail" id="img-image"></a></div>
+							<div class="pull-right well upload-toolbox">
+								<div class="hidden-md hidden-lg vspacer-lg"></div>
+								<%%UPLOADFILE(img)%%>
+								<%%REMOVEFILE(img)%%>
+								<div class="text-bold text-danger file-type-error hidden"><%%TRANSLATION(invalid file type)%%></div>
+								<div class="text-bold text-danger file-size-error hidden"><%%TRANSLATION(file too large)%%></div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<script>/* disable links to empty images */ $j(function() { var e_img = '<%%VALUE(img)%%>'; if(e_img == '' || e_img == '&nbsp;' || e_img == 'blank.gif') { $j('#img-link').hide(); $j('#img-image').parents('a').attr('href', '').on('click', function(e) { e.preventDefault(); }); } });</script>
+					</div>
+				</div>
+
+				<!-- Field: Group -->
+				<div class="form-group biblio_author-groupID">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="groupID">Group <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#groupID-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="groupID-description"><div class="alert alert-info bspacer-xs">This column is for a group specifically defined for your game.</div></span>
+						<input maxlength="40" type="text" class="form-control" name="groupID" id="groupID" value="<%%VALUE(groupID)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Selection class -->
+				<div class="form-group biblio_author-selection_class">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="selection_class" data-parent_link="view_parent_modal">Selection class <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#selection_class-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="selection_class-description"><div class="alert alert-info bspacer-xs">This column is for a selection class, according to your sampling strategy and the collection phase.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(selection_class)%%><%%PLINK(selection_class)%%><%%ADDNEW(class_agent_selection)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Agent type 1 -->
+				<div class="form-group biblio_author-agenttype1">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="agenttype1" data-parent_link="view_parent_modal">Agent type 1 <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#agenttype1-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="agenttype1-description"><div class="alert alert-info bspacer-xs">Define agents as historical persons, fictional persons, automatons, etc.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(agenttype1)%%><%%PLINK(agenttype1)%%><%%ADDNEW(class_agent_type1)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Agent type 2 -->
+				<div class="form-group biblio_author-agenttype2">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="agenttype2" data-parent_link="view_parent_modal">Agent type 2 <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#agenttype2-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="agenttype2-description"><div class="alert alert-info bspacer-xs">Define autobiographical writers.<br>Chose a type according to the role an agent has in relation to the story (sample, contemporary, historiographer, biographer, undefined).</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(agenttype2)%%><%%PLINK(agenttype2)%%><%%ADDNEW(class_agent_type2)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Gender -->
+				<div class="form-group biblio_author-gender">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="gender" data-parent_link="view_parent_modal">Gender <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#gender-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="gender-description"><div class="alert alert-info bspacer-xs">Define the agent's gender.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(gender)%%><%%PLINK(gender)%%><%%ADDNEW(class_gender)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Last name(s) -->
+				<div class="form-group biblio_author-last_name">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="last_name">Last name(s)</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="last_name" id="last_name" value="<%%VALUE(last_name)%%>">
+					</div>
+				</div>
+
+				<!-- Field: First name(s) -->
+				<div class="form-group biblio_author-first_name">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="first_name">First name(s)</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="first_name" id="first_name" value="<%%VALUE(first_name)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Other name(s) -->
+				<div class="form-group biblio_author-other_name">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="other_name">Other name(s)</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="other_name" id="other_name" value="<%%VALUE(other_name)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Date of birth -->
+				<div class="form-group biblio_author-birthday">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="birthday">Date of birth</label>
+					<div class="col-lg-9">
+						<div class="input-group date datetimepicker"><input type="text" class="form-control" name="birthday" id="birthday" value="<%%VALUE(birthday)%%>"><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span></div>
+					</div>
+				</div>
+
+				<!-- Field: Location of birth -->
+				<div class="form-group biblio_author-birth_location">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="birth_location">Location of birth</label>
+					<div class="col-lg-9">
+						<input maxlength="250" type="text" class="form-control" name="birth_location" id="birth_location" value="<%%VALUE(birth_location)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Map -->
+				<div class="form-group biblio_author-birth_location_map">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="birth_location_map-edit-link">Map</label>
+					<div class="col-lg-9">
+						<div class="form-control-static"><div class="rspacer-lg"><%%GOOGLEMAP(birth_location_map)%%></div><label for="birth_location_map"><button type="button" id="birth_location_map-edit-link" class="btn btn-default vspacer-sm" data-toggle="collapse" data-target="#birth_location_map" title="<%%TRANSLATION(Edit)%%>"><i class="glyphicon glyphicon-pencil"></i></button></label><input maxlength="40" type="text" class="form-control collapse" name="birth_location_map" id="birth_location_map" value="<%%VALUE(birth_location_map)%%>"></div>
+					</div>
+				</div>
+
+				<!-- Field: Day of decease -->
+				<div class="form-group biblio_author-deathday">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="deathday">Day of decease</label>
+					<div class="col-lg-9">
+						<div class="input-group date datetimepicker"><input type="text" class="form-control" name="deathday" id="deathday" value="<%%VALUE(deathday)%%>"><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span></div>
+					</div>
+				</div>
+
+				<!-- Field: Location of death -->
+				<div class="form-group biblio_author-death_location">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="death_location">Location of death</label>
+					<div class="col-lg-9">
+						<input maxlength="250" type="text" class="form-control" name="death_location" id="death_location" value="<%%VALUE(death_location)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Workplace -->
+				<div class="form-group biblio_author-workplace">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="workplace">Workplace <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#workplace-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="workplace-description"><div class="alert alert-info bspacer-xs">Location of action.</div></span>
+						<input maxlength="250" type="text" class="form-control" name="workplace" id="workplace" value="<%%VALUE(workplace)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Knows -->
+				<div class="form-group biblio_author-knows">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="knows">Knows <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#knows-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="knows-description"><div class="alert alert-info bspacer-xs">Other people related.</div></span>
+						<input maxlength="250" type="text" class="form-control" name="knows" id="knows" value="<%%VALUE(knows)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Short biography -->
+				<div class="form-group biblio_author-shortbio">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="shortbio">Short biography</label>
+					<div class="col-lg-9">
+						<textarea class="form-control" name="shortbio" id="shortbio" rows=" 5"><%%VALUE(shortbio)%%></textarea>
+					</div>
+				</div>
+
+				<!-- Field: Data evaluation -->
+				<div class="form-group biblio_author-data_evaluation">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="data_evaluation" data-parent_link="view_parent_modal">Data evaluation <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#data_evaluation-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="data_evaluation-description"><div class="alert alert-info bspacer-xs">Define the evaluation process of the data.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(data_evaluation)%%><%%PLINK(data_evaluation)%%><%%ADDNEW(class_evaluation)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Authority code -->
+				<div class="form-group biblio_author-authority_record">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="authority_record">Authority code</label>
+					<div class="col-lg-9">
+						<input maxlength="255" type="text" class="form-control" name="authority_record" id="authority_record" value="<%%VALUE(authority_record)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Authority organization -->
+				<div class="form-group biblio_author-authority_organization">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="authority_organization" data-parent_link="view_parent_modal">Authority organization</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(authority_organization)%%><%%PLINK(authority_organization)%%><%%ADDNEW(class_authority_agent)%%></div>
+					</div>
+				</div>
+
+			</fieldset>
+		</div>
+
+		<!-- DV action buttons -->
+		<hr class="hidden-md hidden-lg">
+		<div class="col-md-4 col-lg-2" id="biblio_author_dv_action_buttons">
+			<div class="btn-toolbar">
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%UPDATE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%DESELECT_BUTTON%%>
+					<%%DVPRINT_BUTTON%%>
+					<%%DELETE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%INSERT_BUTTON%%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- child records -->
+	<hr>
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1">
+			<div id="biblio_author-children" class="children-tabs">
+				<div class="text-center"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+			</div>
+		</div>
+	</div>
+
+</div><!-- /div class="panel-body" -->
+	<script>
+		$j(function() {
+			var add_new_mode = (!$j('input[name=SelectedID]').val());
+			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			/* auto-close embedded page? */
+			var autoclose_mode = ($j('input[name=AutoClose]').val() == 1);
+			var record_added_ok = (location.search.split('record-added-ok=').length == 2);
+			var record_updated_ok = (location.search.split('record-updated-ok=').length == 2);
+			if((record_added_ok || record_updated_ok) && embedded_mode && autoclose_mode) {
+				setTimeout(AppGini.closeParentModal, 2000);
+			}
+
+			/* enable DV action buttons to float on scrolling down the form */
+			enable_dvab_floating();
+
+
+			setTimeout(function() {
+				$j('#biblio_author_dv_container-loading').addClass('hidden');
+				$j('#biblio_author_dv_container').removeClass('hidden');
+				AppGini.focusFormElement('biblio_author', 'game_agent_id');
+			}, 1100);
+
+			$j('form').eq(0).change(function() {
+				if($j(this).data('already_changed')) return;
+				if($j('#deselect').length) $j('#deselect').removeClass('btn-default').addClass('btn-warning').get(0).lastChild.data = " <%%TRANSLATION(Cancel)%%>";
+				$j(this).data('already_changed', true);
+			});
+
+			$j('a[href="<%%BASE_UPLOAD_PATH%%>"]').click(function() { return false; });
+
+			if(embedded_mode) {
+				/* hide links to children tables in embedded mode */
+				$j('.detail_view a[id$=_link]').remove();
+
+				/* append embedded mode to all links */
+				var append_embedded = function() {
+					$j('a[href]:not([href^="#"]):not([href^="javascript"]):not([href$="Embedded=1"]):not([href*="link.php?t="]):not([href^="mailto:"])').each(
+						function() {
+							$j(this).attr('href', $j(this).attr('href') + '&Embedded=1');
+						}
+					);
+				}
+				setTimeout(append_embedded, 500);
+				setTimeout(append_embedded, 1500);
+				setTimeout(append_embedded, 2500);
+				setTimeout(append_embedded, 3500);
+			}
+
+			/* when no record is selected ('add new' mode) */
+			if(add_new_mode) {
+				/* hide links to children tables */
+				$j('.detail_view a[id$=_link]').remove();
+			} else {
+				post(
+					'parent-children.php', {
+						ParentTable: 'biblio_author',
+						SelectedID: '<%%VALUE(id)%%>',
+						Operation: 'show-children'
+					},
+					'biblio_author-children'
+				);
+			}
+
+			if(!embedded_mode) {
+				/* add a horizontal spacer to [add new parent] buttons that don't have a spacered element before them */
+				$j('.add_new_parent').prev(':not(.hspacer-md)').next().addClass('hspacer-md');
+
+				$j('.add_new_parent').click(function() {
+					var pt = $j(this).attr('id').replace(/_add_new$/, '');
+					modal_window({
+						url: pt + '_view.php?addNew_x=1&Embedded=1',
+						close: function() {
+							var field_id = $j('#' + pt + '_add_new').prevAll('input:hidden').eq(0).attr('id');
+							$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+							/* if a new parent was added, select it */
+							var new_id = localStorage.getItem(pt + '_last_added_id');
+							if(new_id === null) return;
+
+							localStorage.clear(pt + '_last_added_id');
+							AppGini.lookupText({
+								id: new_id,
+								table: 'biblio_author',
+								field: field_id,
+								callback: function(data) {
+									$j('#' + field_id + '-container').select2('data', data, true);
+								}
+							});
+						},
+						size: 'full',
+						title: $j(this).attr('title')
+					});
+				});
+			}
+
+			AppGini.hideViewParentLinks();
+
+			$j('form').on('click', '.view_parent', function() {
+				var pt = $j(this).attr('id').replace(/_view_parent$/, '');
+				if($j(this).prevAll('input:hidden').length) {
+					var parent_id = $j(this).prevAll('input:hidden').eq(0).val();
+				} else {
+					var parent_id = $j(this).prevAll().children('input:hidden').eq(0).val();
+				}
+
+				/* handle radio lookups */
+				if($j(this).prevAll('[type=radio]').length) {
+					parent_id = $j(this).prevAll('[type=radio]').eq(0).val();
+				}
+
+				if(parent_id != '{empty_value}' && parent_id != undefined && parent_id != '') {
+					var parent_link = $j(this).parents('.form-group').children('label').data('parent_link');
+					switch(parent_link) {
+						case 'view_parent_hidden':
+							break;
+						case 'view_parent_modal':
+							modal_window({
+								url: pt + '_view.php?Embedded=1&SelectedID=' + encodeURIComponent(parent_id),
+								close: function() {
+									var field_id = $j('#' + pt + '_view_parent').prevAll('input:hidden').eq(0).attr('id');
+									$j('#' + field_id + '-container').select2('focus').select2('focus');
+								},
+								size: 'full',
+								title: $j(this).attr('title')
+							});
+							break;
+						case 'view_parent_same_window':
+							window.location = pt + '_view.php?Embedded=' + (embedded_mode ? '1' : '') + '&SelectedID=' + encodeURIComponent(parent_id);
+							break;
+						case 'view_parent_new_window':
+							window.open(pt + '_view.php?SelectedID=' + encodeURIComponent(parent_id));
+							break;
+					}
+
+				}
+			});
+
+
+			/* load admin tools for admin user */
+			if(!add_new_mode) {
+				$j('body').append('<div id="admin-tools-appendix"></div>');
+				$j('#admin-tools-appendix').load(
+					'ajax_admin_tools.php?table=biblio_author&id=<%%URLVALUE(id)%%>',
+					function(resp) {
+						if(!resp.length) return;
+						$j.ajax('ajax_admin_tools.php?action=get_admin_tools_js&table=biblio_author&id=<%%URLVALUE(id)%%>');
+					}
+				);
+			}
+
+			/* warn user if 'add new' clicked while unsaved changes exist */
+			$j('#addNew').click(function() {
+				if($j('#deselect.btn-warning').length) {
+					return confirm('<%%TRANSLATION(discard changes confirm)%%>');
+				}
+			});
+
+		});
+	</script>

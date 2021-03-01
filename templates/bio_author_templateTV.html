@@ -1,0 +1,13 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the bio_author_init() hook (in hooks/bio_author.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="bio_author-id-<%%VALUE(id)%%>" class="bio_author-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="bio_author-team-<%%VALUE(id)%%>" class="bio_author-team"><%%SELECT%%><%%VALUE(team)%%><%%ENDSELECT%%></td>
+		<td id="bio_author-author_id-<%%VALUE(id)%%>" class="bio_author-author_id"><%%SELECT%%><%%VALUE(author_id)%%><%%ENDSELECT%%></td>
+		<td id="bio_author-last_name-<%%VALUE(id)%%>" class="bio_author-last_name"><%%SELECT%%><%%VALUE(last_name)%%><%%ENDSELECT%%></td>
+		<td id="bio_author-first_name-<%%VALUE(id)%%>" class="bio_author-first_name"><%%SELECT%%><%%VALUE(first_name)%%><%%ENDSELECT%%></td>
+		<td id="bio_author-other_name-<%%VALUE(id)%%>" class="bio_author-other_name"><%%SELECT%%><%%VALUE(other_name)%%><%%ENDSELECT%%></td>

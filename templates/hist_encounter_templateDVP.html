@@ -1,0 +1,165 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: Id -->
+		<div class="form-group hist_encounter-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Id</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Author A -->
+		<div class="form-group hist_encounter-bio_chrA" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Author A</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="bio_chrA<%%RND1%%>"><%%COMBOTEXT(bio_chrA)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Bibliography A -->
+		<div class="form-group hist_encounter-bio_storyA" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Bibliography A</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="bio_storyA<%%RND1%%>"><%%COMBOTEXT(bio_storyA)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Transcript A -->
+		<div class="form-group hist_encounter-bio_storyline" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Transcript A</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="bio_storyline<%%RND1%%>"><%%COMBOTEXT(bio_storyline)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Token A -->
+		<div class="form-group hist_encounter-bio_storytext" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Token A</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="bio_storytext<%%RND1%%>"><%%COMBOTEXT(bio_storytext)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Scene A -->
+		<div class="form-group hist_encounter-sceneA" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Scene A</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="sceneA<%%RND1%%>"><%%COMBOTEXT(sceneA)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Author B -->
+		<div class="form-group hist_encounter-bio_chrB" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Author B</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="bio_chrB<%%RND1%%>"><%%COMBOTEXT(bio_chrB)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Author name B -->
+		<div class="form-group hist_encounter-bio_storyB" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Author name B</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="bio_storyB<%%RND1%%>"><%%COMBOTEXT(bio_storyB)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Bibliography B -->
+		<div class="form-group hist_encounter-bio_storylineB" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Bibliography B</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="bio_storylineB<%%RND1%%>"><%%COMBOTEXT(bio_storylineB)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Transcript B -->
+		<div class="form-group hist_encounter-bio_storytextB" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Transcript B</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="bio_storytextB<%%RND1%%>"><%%COMBOTEXT(bio_storytextB)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Type -->
+		<div class="form-group hist_encounter-type" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Type</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(type)%%></div>
+			</div>
+		</div>
+		<!-- Field: Conflicttype -->
+		<div class="form-group hist_encounter-conflicttype" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Conflicttype</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(conflicttype)%%></div>
+			</div>
+		</div>
+		<!-- Field: Story_scene -->
+		<div class="form-group hist_encounter-story_scene" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Story_scene</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(story_scene)%%></div>
+			</div>
+		</div>
+		<!-- Field: Nd_color -->
+		<div class="form-group hist_encounter-nd_color" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Nd_color</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(nd_color)%%></div>
+			</div>
+		</div>
+		<!-- Field: Nd_width -->
+		<div class="form-group hist_encounter-nd_width" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Nd_width</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(nd_width)%%></div>
+			</div>
+		</div>
+		<!-- Field: Nd_style -->
+		<div class="form-group hist_encounter-nd_style" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Nd_style</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(nd_style)%%></div>
+			</div>
+		</div>
+		<!-- Field: Nd_opacity -->
+		<div class="form-group hist_encounter-nd_opacity" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Nd_opacity</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(nd_opacity)%%></div>
+			</div>
+		</div>
+		<!-- Field: Nd_visibility -->
+		<div class="form-group hist_encounter-nd_visibility" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Nd_visibility</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(nd_visibility)%%></div>
+			</div>
+		</div>
+		<!-- Field: Lbl_lable -->
+		<div class="form-group hist_encounter-lbl_lable" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Lbl_lable</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(lbl_lable)%%></div>
+			</div>
+		</div>
+		<!-- Field: Lbl_color -->
+		<div class="form-group hist_encounter-lbl_color" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Lbl_color</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(lbl_color)%%></div>
+			</div>
+		</div>
+		<!-- Field: Lbl_size -->
+		<div class="form-group hist_encounter-lbl_size" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Lbl_size</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(lbl_size)%%></div>
+			</div>
+		</div>
+	</fieldset>
+</div>

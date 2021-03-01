@@ -1,0 +1,17 @@
+"id","domain","concern","description"
+"1","1","The Past",NULL
+"2","1","How Things are Changing",NULL
+"3","1","The Future",NULL
+"4","1","The Present",NULL
+"5","2","Understanding",NULL
+"6","2","Doing",NULL
+"7","2","Obtaining",NULL
+"8","2","Gathering Information",NULL
+"9","3","Developing a Plan",NULL
+"10","3","Playing a Role",NULL
+"11","3","Changing One's Nature",NULL
+"12","3","Conceiving an Idea",NULL
+"13","4","Memories",NULL
+"14","4","Impulsive Responses",NULL
+"15","4","Innermost Desire",NULL
+"16","4","Contemplation",NULL

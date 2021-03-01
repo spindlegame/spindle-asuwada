@@ -1,0 +1,138 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: ID -->
+		<div class="form-group biblio_code_invivo-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Author -->
+		<div class="form-group biblio_code_invivo-author" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Author</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="author<%%RND1%%>"><%%COMBOTEXT(author)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Bibliography -->
+		<div class="form-group biblio_code_invivo-bibliography" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Bibliography</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="bibliography<%%RND1%%>"><%%COMBOTEXT(bibliography)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Transcript -->
+		<div class="form-group biblio_code_invivo-transcript" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Transcript</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="transcript<%%RND1%%>"><%%COMBOTEXT(transcript)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Token_sequence -->
+		<div class="form-group biblio_code_invivo-token_sequence" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Token_sequence</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="token_sequence<%%RND1%%>"><%%COMBOTEXT(token_sequence)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Token -->
+		<div class="form-group biblio_code_invivo-token" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Token</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="token<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Invivo -->
+		<div class="form-group biblio_code_invivo-invivo" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Invivo</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(invivo)%%></div>
+			</div>
+		</div>
+		<!-- Field: Start date -->
+		<div class="form-group biblio_code_invivo-start_date" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Start date</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(start_date)%%></div>
+			</div>
+		</div>
+		<!-- Field: End date -->
+		<div class="form-group biblio_code_invivo-end_date" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">End date</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(end_date)%%></div>
+			</div>
+		</div>
+		<!-- Field: Person -->
+		<div class="form-group biblio_code_invivo-person" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Person</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(person)%%></div>
+			</div>
+		</div>
+		<!-- Field: Place -->
+		<div class="form-group biblio_code_invivo-place" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Place</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(place)%%></div>
+			</div>
+		</div>
+		<!-- Field: Freecode -->
+		<div class="form-group biblio_code_invivo-freecode" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Freecode</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(freecode)%%></div>
+			</div>
+		</div>
+		<!-- Field: Tags -->
+		<div class="form-group biblio_code_invivo-tags" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Tags</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(tags)%%></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!-- child records -->
+<div class="panel-body">
+	<div id="biblio_code_invivo-children"></div>
+</div>
+
+<script>
+	$j(function() {
+		/* prevent loading child records in multiple DVP */
+		if($j('[id=biblio_code_invivo-children]').length > 1) return;
+
+		post(
+			'parent-children.php', {
+				ParentTable: 'biblio_code_invivo',
+				SelectedID: '<%%VALUE(id)%%>',
+				Operation: 'show-children-printable'
+			},
+			'biblio_code_invivo-children',
+			'disable-element',
+			'loading-element',
+			apply_persisting_children
+		);
+
+		$j('form').on('click', '#children-tabs button[data-target]', function() {
+			$j(this).toggleClass('active');
+			persist_expanded_child($j(this).attr('id'));
+		});
+	})
+</script>
+

@@ -1,0 +1,13 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the  and  formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the bio_author_init() hook (in hooks/bio_author.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="bio_author-id-<%%VALUE(id)%%>" class="bio_author-id text-right"><%%VALUE(id)%%></td>
+		<td id="bio_author-team-<%%VALUE(id)%%>" class="bio_author-team"><%%VALUE(team)%%></td>
+		<td id="bio_author-author_id-<%%VALUE(id)%%>" class="bio_author-author_id"><%%VALUE(author_id)%%></td>
+		<td id="bio_author-last_name-<%%VALUE(id)%%>" class="bio_author-last_name"><%%VALUE(last_name)%%></td>
+		<td id="bio_author-first_name-<%%VALUE(id)%%>" class="bio_author-first_name"><%%VALUE(first_name)%%></td>
+		<td id="bio_author-other_name-<%%VALUE(id)%%>" class="bio_author-other_name"><%%VALUE(other_name)%%></td>

@@ -1,0 +1,131 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: Id -->
+		<div class="form-group hist_story-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Id</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Team -->
+		<div class="form-group hist_story-team" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Team</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="team<%%RND1%%>"><%%COMBOTEXT(team)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Project leader -->
+		<div class="form-group hist_story-hist_lead_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Project leader</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="hist_lead_id<%%RND1%%>"><%%COMBOTEXT(hist_lead_id)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Proj. leader name -->
+		<div class="form-group hist_story-hist_lead_name" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Proj. leader name</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="hist_lead_name<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Community name -->
+		<div class="form-group hist_story-community_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Community name</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="community_id<%%RND1%%>"><%%COMBOTEXT(community_id)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Story title -->
+		<div class="form-group hist_story-story_title" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Story title</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(story_title)%%></div>
+			</div>
+		</div>
+		<!-- Field: Genre -->
+		<div class="form-group hist_story-genre" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Genre</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="genre<%%RND1%%>"><%%COMBOTEXT(genre)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Approach -->
+		<div class="form-group hist_story-approach" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Approach</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(approach)%%></div>
+			</div>
+		</div>
+		<!-- Field: Description -->
+		<div class="form-group hist_story-description" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Description</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(description)%%></div>
+			</div>
+		</div>
+		<!-- Field: Tags -->
+		<div class="form-group hist_story-tags" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Tags</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(tags)%%></div>
+			</div>
+		</div>
+		<!-- Field: Collaboration status -->
+		<div class="form-group hist_story-collaboration_status" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Collaboration status</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="collaboration_status<%%RND1%%>"><%%COMBOTEXT(collaboration_status)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Language -->
+		<div class="form-group hist_story-language" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Language</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="language<%%RND1%%>"><%%COMBOTEXT(language)%%></span></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!-- child records -->
+<div class="panel-body">
+	<div id="hist_story-children"></div>
+</div>
+
+<script>
+	$j(function() {
+		/* prevent loading child records in multiple DVP */
+		if($j('[id=hist_story-children]').length > 1) return;
+
+		post(
+			'parent-children.php', {
+				ParentTable: 'hist_story',
+				SelectedID: '<%%VALUE(id)%%>',
+				Operation: 'show-children-printable'
+			},
+			'hist_story-children',
+			'disable-element',
+			'loading-element',
+			apply_persisting_children
+		);
+
+		$j('form').on('click', '#children-tabs button[data-target]', function() {
+			$j(this).toggleClass('active');
+			persist_expanded_child($j(this).attr('id'));
+		});
+	})
+</script>
+

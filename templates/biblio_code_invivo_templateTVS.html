@@ -1,0 +1,20 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the  and  formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the biblio_code_invivo_init() hook (in hooks/biblio_code_invivo.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="biblio_code_invivo-id-<%%VALUE(id)%%>" class="biblio_code_invivo-id text-right"><%%VALUE(id)%%></td>
+		<td id="biblio_code_invivo-author-<%%VALUE(id)%%>" class="biblio_code_invivo-author text-right"><%%VALUE(author)%%></td>
+		<td id="biblio_code_invivo-bibliography-<%%VALUE(id)%%>" class="biblio_code_invivo-bibliography text-right"><%%VALUE(bibliography)%%></td>
+		<td id="biblio_code_invivo-transcript-<%%VALUE(id)%%>" class="biblio_code_invivo-transcript text-right"><%%VALUE(transcript)%%></td>
+		<td id="biblio_code_invivo-token_sequence-<%%VALUE(id)%%>" class="biblio_code_invivo-token_sequence text-right"><%%VALUE(token_sequence)%%></td>
+		<td id="biblio_code_invivo-token-<%%VALUE(id)%%>" class="biblio_code_invivo-token text-right"><%%VALUE(token)%%></td>
+		<td id="biblio_code_invivo-invivo-<%%VALUE(id)%%>" class="biblio_code_invivo-invivo"><%%VALUE(invivo)%%></td>
+		<td id="biblio_code_invivo-start_date-<%%VALUE(id)%%>" class="biblio_code_invivo-start_date"><%%VALUE(start_date)%%></td>
+		<td id="biblio_code_invivo-end_date-<%%VALUE(id)%%>" class="biblio_code_invivo-end_date"><%%VALUE(end_date)%%></td>
+		<td id="biblio_code_invivo-person-<%%VALUE(id)%%>" class="biblio_code_invivo-person"><%%VALUE(person)%%></td>
+		<td id="biblio_code_invivo-place-<%%VALUE(id)%%>" class="biblio_code_invivo-place"><%%VALUE(place)%%></td>
+		<td id="biblio_code_invivo-freecode-<%%VALUE(id)%%>" class="biblio_code_invivo-freecode"><%%VALUE(freecode)%%></td>
+		<td id="biblio_code_invivo-tags-<%%VALUE(id)%%>" class="biblio_code_invivo-tags"><%%VALUE(tags)%%></td>

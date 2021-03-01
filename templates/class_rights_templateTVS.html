@@ -1,0 +1,11 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the  and  formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the class_rights_init() hook (in hooks/class_rights.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="class_rights-id-<%%VALUE(id)%%>" class="class_rights-id text-right"><%%VALUE(id)%%></td>
+		<td id="class_rights-right-<%%VALUE(id)%%>" class="class_rights-right"><%%VALUE(right)%%></td>
+		<td id="class_rights-description-<%%VALUE(id)%%>" class="class_rights-description"><%%VALUE(description)%%></td>
+		<td id="class_rights-certification-<%%VALUE(id)%%>" class="class_rights-certification"><%%VALUE(certification)%%></td>

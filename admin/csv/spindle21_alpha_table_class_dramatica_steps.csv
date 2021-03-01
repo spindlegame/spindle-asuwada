@@ -1,0 +1,8 @@
+"id","step","type","act"
+"1","SP1","Signpost","1"
+"2","T1","Transition","1"
+"3","SP2","Signpost","2"
+"4","T2","Transition","2"
+"5","SP3","Signpost","3"
+"6","T3","Transition","3"
+"7","SP4","Signpost","4"

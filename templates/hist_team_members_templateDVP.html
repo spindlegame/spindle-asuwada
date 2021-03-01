@@ -1,0 +1,53 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: ID -->
+		<div class="form-group hist_team_members-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Team -->
+		<div class="form-group hist_team_members-team" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Team</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="team<%%RND1%%>"><%%COMBOTEXT(team)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Author ID -->
+		<div class="form-group hist_team_members-agent_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Author ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="agent_id<%%RND1%%>"><%%COMBOTEXT(agent_id)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Last name(s) -->
+		<div class="form-group hist_team_members-last_name" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Last name(s)</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="last_name<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Other name(s) -->
+		<div class="form-group hist_team_members-first_name" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Other name(s)</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="first_name<%%RND1%%>"></span></div>
+			</div>
+		</div>
+	</fieldset>
+</div>

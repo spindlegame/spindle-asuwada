@@ -1,0 +1,361 @@
+<!-- To change the layout of the detail view form, we recommend using JS code in hooks/hist_encounters-dv.js rather than editing this file -->
+
+<div id="detail-view"></div>
+<div class="panel-heading"><h3 class="panel-title"><strong><%%DETAIL_VIEW_TITLE%%></strong></h3></div>
+
+<div id="hist_encounters_dv_container-loading" class="text-center text-info text-bold vspacer-lg"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+<div class="panel-body hidden" id="hist_encounters_dv_container">
+	<!-- child links -->
+	<div class="row vspacer-md">
+		<div class="col-xs-12 children-links">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<hr class="hidden-xs hidden-sm">
+
+	<div class="row">
+		<!-- form inputs -->
+		<div class="col-md-8 col-lg-10" id="hist_encounters_dv_form">
+			<fieldset class="form-horizontal">
+
+				<!-- Field: Id -->
+				<div class="form-group hist_encounters-id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="id">Id</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="id"><%%VALUE(id)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Author A -->
+				<div class="form-group hist_encounters-bio_chrA">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bio_chrA" data-parent_link="view_parent_modal">Author A</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bio_chrA)%%><%%PLINK(bio_chrA)%%><%%ADDNEW(bio_chrs)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Bibliography A -->
+				<div class="form-group hist_encounters-bio_storyA">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bio_storyA" data-parent_link="view_parent_modal">Bibliography A</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bio_storyA)%%><%%PLINK(bio_storyA)%%><%%ADDNEW(bio_story)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Transcript A -->
+				<div class="form-group hist_encounters-bio_storyline">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bio_storyline" data-parent_link="view_parent_modal">Transcript A</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bio_storyline)%%><%%PLINK(bio_storyline)%%><%%ADDNEW(bio_storylines)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Token A -->
+				<div class="form-group hist_encounters-bio_storytext">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bio_storytext" data-parent_link="view_parent_modal">Token A</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bio_storytext)%%><%%PLINK(bio_storytext)%%><%%ADDNEW(bio_storylines)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Scene A -->
+				<div class="form-group hist_encounters-sceneA">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="sceneA" data-parent_link="view_parent_modal">Scene A</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(sceneA)%%><%%PLINK(sceneA)%%><%%ADDNEW(hist_chr_scenes)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Author B -->
+				<div class="form-group hist_encounters-bio_chrB">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bio_chrB" data-parent_link="view_parent_modal">Author B</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bio_chrB)%%><%%PLINK(bio_chrB)%%><%%ADDNEW(bio_chrs)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Author name B -->
+				<div class="form-group hist_encounters-bio_storyB">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bio_storyB" data-parent_link="view_parent_modal">Author name B</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bio_storyB)%%><%%PLINK(bio_storyB)%%><%%ADDNEW(bio_story)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Bibliography B -->
+				<div class="form-group hist_encounters-bio_storylineB">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bio_storylineB" data-parent_link="view_parent_modal">Bibliography B</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bio_storylineB)%%><%%PLINK(bio_storylineB)%%><%%ADDNEW(bio_storylines)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Transcript B -->
+				<div class="form-group hist_encounters-bio_storytextB">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bio_storytextB" data-parent_link="view_parent_modal">Transcript B</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bio_storytextB)%%><%%PLINK(bio_storytextB)%%><%%ADDNEW(bio_storylines)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Type -->
+				<div class="form-group hist_encounters-type">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="type">Type</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="type" id="type" value="<%%VALUE(type)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Conflicttype -->
+				<div class="form-group hist_encounters-conflicttype">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="conflicttype">Conflicttype</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="conflicttype" id="conflicttype" value="<%%VALUE(conflicttype)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Story_scene -->
+				<div class="form-group hist_encounters-story_scene">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="story_scene">Story_scene</label>
+					<div class="col-lg-9">
+						<input maxlength="10" type="text" class="form-control" name="story_scene" id="story_scene" value="<%%VALUE(story_scene)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Nd_color -->
+				<div class="form-group hist_encounters-nd_color">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="nd_color">Nd_color</label>
+					<div class="col-lg-9">
+						<input maxlength="10" type="text" class="form-control" name="nd_color" id="nd_color" value="<%%VALUE(nd_color)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Nd_width -->
+				<div class="form-group hist_encounters-nd_width">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="nd_width">Nd_width</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="nd_width" id="nd_width" value="<%%VALUE(nd_width)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Nd_style -->
+				<div class="form-group hist_encounters-nd_style">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="nd_style">Nd_style</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="nd_style" id="nd_style" value="<%%VALUE(nd_style)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Nd_opacity -->
+				<div class="form-group hist_encounters-nd_opacity">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="nd_opacity">Nd_opacity</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="nd_opacity" id="nd_opacity" value="<%%VALUE(nd_opacity)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Nd_visibility -->
+				<div class="form-group hist_encounters-nd_visibility">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="nd_visibility">Nd_visibility</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="nd_visibility" id="nd_visibility" value="<%%VALUE(nd_visibility)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Lbl_lable -->
+				<div class="form-group hist_encounters-lbl_lable">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="lbl_lable">Lbl_lable</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="lbl_lable" id="lbl_lable" value="<%%VALUE(lbl_lable)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Lbl_color -->
+				<div class="form-group hist_encounters-lbl_color">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="lbl_color">Lbl_color</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="lbl_color" id="lbl_color" value="<%%VALUE(lbl_color)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Lbl_size -->
+				<div class="form-group hist_encounters-lbl_size">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="lbl_size">Lbl_size</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="lbl_size" id="lbl_size" value="<%%VALUE(lbl_size)%%>">
+					</div>
+				</div>
+
+			</fieldset>
+		</div>
+
+		<!-- DV action buttons -->
+		<hr class="hidden-md hidden-lg">
+		<div class="col-md-4 col-lg-2" id="hist_encounters_dv_action_buttons">
+			<div class="btn-toolbar">
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%UPDATE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%DESELECT_BUTTON%%>
+					<%%DVPRINT_BUTTON%%>
+					<%%DELETE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%INSERT_BUTTON%%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div><!-- /div class="panel-body" -->
+	<script>
+		$j(function() {
+			var add_new_mode = (!$j('input[name=SelectedID]').val());
+			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			/* auto-close embedded page? */
+			var autoclose_mode = ($j('input[name=AutoClose]').val() == 1);
+			var record_added_ok = (location.search.split('record-added-ok=').length == 2);
+			var record_updated_ok = (location.search.split('record-updated-ok=').length == 2);
+			if((record_added_ok || record_updated_ok) && embedded_mode && autoclose_mode) {
+				setTimeout(AppGini.closeParentModal, 2000);
+			}
+
+			/* enable DV action buttons to float on scrolling down the form */
+			enable_dvab_floating();
+
+
+			setTimeout(function() {
+				$j('#hist_encounters_dv_container-loading').addClass('hidden');
+				$j('#hist_encounters_dv_container').removeClass('hidden');
+				AppGini.focusFormElement('hist_encounters', 'bio_chrA');
+			}, 1100);
+
+			$j('form').eq(0).change(function() {
+				if($j(this).data('already_changed')) return;
+				if($j('#deselect').length) $j('#deselect').removeClass('btn-default').addClass('btn-warning').get(0).lastChild.data = " <%%TRANSLATION(Cancel)%%>";
+				$j(this).data('already_changed', true);
+			});
+
+			$j('a[href="<%%BASE_UPLOAD_PATH%%>"]').click(function() { return false; });
+
+
+			if(!embedded_mode) {
+				/* add a horizontal spacer to [add new parent] buttons that don't have a spacered element before them */
+				$j('.add_new_parent').prev(':not(.hspacer-md)').next().addClass('hspacer-md');
+
+				$j('.add_new_parent').click(function() {
+					var pt = $j(this).attr('id').replace(/_add_new$/, '');
+					modal_window({
+						url: pt + '_view.php?addNew_x=1&Embedded=1',
+						close: function() {
+							var field_id = $j('#' + pt + '_add_new').prevAll('input:hidden').eq(0).attr('id');
+							$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+							/* if a new parent was added, select it */
+							var new_id = localStorage.getItem(pt + '_last_added_id');
+							if(new_id === null) return;
+
+							localStorage.clear(pt + '_last_added_id');
+							AppGini.lookupText({
+								id: new_id,
+								table: 'hist_encounters',
+								field: field_id,
+								callback: function(data) {
+									$j('#' + field_id + '-container').select2('data', data, true);
+								}
+							});
+						},
+						size: 'full',
+						title: $j(this).attr('title')
+					});
+				});
+			}
+
+			AppGini.hideViewParentLinks();
+
+			$j('form').on('click', '.view_parent', function() {
+				var pt = $j(this).attr('id').replace(/_view_parent$/, '');
+				if($j(this).prevAll('input:hidden').length) {
+					var parent_id = $j(this).prevAll('input:hidden').eq(0).val();
+				} else {
+					var parent_id = $j(this).prevAll().children('input:hidden').eq(0).val();
+				}
+
+				/* handle radio lookups */
+				if($j(this).prevAll('[type=radio]').length) {
+					parent_id = $j(this).prevAll('[type=radio]').eq(0).val();
+				}
+
+				if(parent_id != '{empty_value}' && parent_id != undefined && parent_id != '') {
+					var parent_link = $j(this).parents('.form-group').children('label').data('parent_link');
+					switch(parent_link) {
+						case 'view_parent_hidden':
+							break;
+						case 'view_parent_modal':
+							modal_window({
+								url: pt + '_view.php?Embedded=1&SelectedID=' + encodeURIComponent(parent_id),
+								close: function() {
+									var field_id = $j('#' + pt + '_view_parent').prevAll('input:hidden').eq(0).attr('id');
+									$j('#' + field_id + '-container').select2('focus').select2('focus');
+								},
+								size: 'full',
+								title: $j(this).attr('title')
+							});
+							break;
+						case 'view_parent_same_window':
+							window.location = pt + '_view.php?Embedded=' + (embedded_mode ? '1' : '') + '&SelectedID=' + encodeURIComponent(parent_id);
+							break;
+						case 'view_parent_new_window':
+							window.open(pt + '_view.php?SelectedID=' + encodeURIComponent(parent_id));
+							break;
+					}
+
+				}
+			});
+
+
+			/* load admin tools for admin user */
+			if(!add_new_mode) {
+				$j('body').append('<div id="admin-tools-appendix"></div>');
+				$j('#admin-tools-appendix').load(
+					'ajax_admin_tools.php?table=hist_encounters&id=<%%URLVALUE(id)%%>',
+					function(resp) {
+						if(!resp.length) return;
+						$j.ajax('ajax_admin_tools.php?action=get_admin_tools_js&table=hist_encounters&id=<%%URLVALUE(id)%%>');
+					}
+				);
+			}
+
+			/* warn user if 'add new' clicked while unsaved changes exist */
+			$j('#addNew').click(function() {
+				if($j('#deselect.btn-warning').length) {
+					return confirm('<%%TRANSLATION(discard changes confirm)%%>');
+				}
+			});
+
+		});
+	</script>

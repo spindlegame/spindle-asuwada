@@ -1,0 +1,23 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the hist_storylines_init() hook (in hooks/hist_storylines.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="hist_storylines-id-<%%VALUE(id)%%>" class="hist_storylines-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="hist_storylines-story-<%%VALUE(id)%%>" class="hist_storylines-story text-right"><%%SELECT%%><%%VALUE(story)%%><%%ENDSELECT%%></td>
+		<td id="hist_storylines-story_act-<%%VALUE(id)%%>" class="hist_storylines-story_act"><%%SELECT%%><%%VALUE(story_act)%%><%%ENDSELECT%%></td>
+		<td id="hist_storylines-character-<%%VALUE(id)%%>" class="hist_storylines-character text-right"><%%SELECT%%><%%VALUE(character)%%><%%ENDSELECT%%></td>
+		<td id="hist_storylines-role-<%%VALUE(id)%%>" class="hist_storylines-role text-right"><%%SELECT%%><%%VALUE(role)%%><%%ENDSELECT%%></td>
+		<td id="hist_storylines-storyline_no-<%%VALUE(id)%%>" class="hist_storylines-storyline_no"><%%SELECT%%><%%VALUE(storyline_no)%%><%%ENDSELECT%%></td>
+		<td id="hist_storylines-parenthetic-<%%VALUE(id)%%>" class="hist_storylines-parenthetic"><%%SELECT%%><%%VALUE(parenthetic)%%><%%ENDSELECT%%></td>
+		<td id="hist_storylines-storyline_title-<%%VALUE(id)%%>" class="hist_storylines-storyline_title"><%%SELECT%%><%%VALUE(storyline_title)%%><%%ENDSELECT%%></td>
+		<td id="hist_storylines-storyline-<%%VALUE(id)%%>" class="hist_storylines-storyline"><%%SELECT%%><%%VALUE(storyline)%%><%%ENDSELECT%%></td>
+		<td id="hist_storylines-notes-<%%VALUE(id)%%>" class="hist_storylines-notes"><%%SELECT%%><%%VALUE(notes)%%><%%ENDSELECT%%></td>
+		<td id="hist_storylines-storyweaving_scene_no-<%%VALUE(id)%%>" class="hist_storylines-storyweaving_scene_no text-right"><%%SELECT%%><%%VALUE(storyweaving_scene_no)%%><%%ENDSELECT%%></td>
+		<td id="hist_storylines-storyweaving_scene-<%%VALUE(id)%%>" class="hist_storylines-storyweaving_scene text-right"><%%SELECT%%><%%VALUE(storyweaving_scene)%%><%%ENDSELECT%%></td>
+		<td id="hist_storylines-storyweaving_sequence-<%%VALUE(id)%%>" class="hist_storylines-storyweaving_sequence text-right"><%%SELECT%%><%%VALUE(storyweaving_sequence)%%><%%ENDSELECT%%></td>
+		<td id="hist_storylines-storyweaving_theme-<%%VALUE(id)%%>" class="hist_storylines-storyweaving_theme text-right"><%%SELECT%%><%%VALUE(storyweaving_theme)%%><%%ENDSELECT%%></td>
+		<td id="hist_storylines-characterevent_scene-<%%VALUE(id)%%>" class="hist_storylines-characterevent_scene text-right"><%%SELECT%%><%%VALUE(characterevent_scene)%%><%%ENDSELECT%%></td>
+		<td id="hist_storylines-character_event-<%%VALUE(id)%%>" class="hist_storylines-character_event text-right"><%%SELECT%%><%%VALUE(character_event)%%><%%ENDSELECT%%></td>

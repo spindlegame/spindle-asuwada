@@ -1,0 +1,597 @@
+<!-- To change the layout of the detail view form, we recommend using JS code in hooks/hist_chr_dev-dv.js rather than editing this file -->
+
+<div id="detail-view"></div>
+<div class="panel-heading"><h3 class="panel-title"><strong><%%DETAIL_VIEW_TITLE%%></strong></h3></div>
+
+<div id="hist_chr_dev_dv_container-loading" class="text-center text-info text-bold vspacer-lg"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+<div class="panel-body hidden" id="hist_chr_dev_dv_container">
+	<!-- child links -->
+	<div class="row vspacer-md">
+		<div class="col-xs-12 children-links">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<hr class="hidden-xs hidden-sm">
+
+	<div class="row">
+		<!-- form inputs -->
+		<div class="col-md-8 col-lg-10" id="hist_chr_dev_dv_form">
+			<fieldset class="form-horizontal">
+
+				<!-- Field: ID -->
+				<div class="form-group hist_chr_dev-id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="id">ID</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="id"><%%VALUE(id)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Hist story -->
+				<div class="form-group hist_chr_dev-hist_story">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="hist_story" data-parent_link="view_parent_modal">Hist story</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(hist_story)%%><%%PLINK(hist_story)%%><%%ADDNEW(hist_story)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Bio story -->
+				<div class="form-group hist_chr_dev-bio_story">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bio_story" data-parent_link="view_parent_modal">Bio story</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bio_story)%%><%%PLINK(bio_story)%%><%%ADDNEW(bio_story)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: MemberID -->
+				<div class="form-group hist_chr_dev-agent_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="agent_id" data-parent_link="view_parent_modal">MemberID</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(agent_id)%%><%%PLINK(agent_id)%%><%%ADDNEW(biblio_author)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Agent name -->
+				<div class="form-group hist_chr_dev-agent_name">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="agent_name" data-parent_link="view_parent_modal">Agent name <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#agent_name-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="agent_name-description"><div class="alert alert-info bspacer-xs">The author of biographical writings this character is based on.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(agent_name)%%><%%PLINK(agent_name)%%><%%ADDNEW(hist_chr)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Cw name -->
+				<div class="form-group hist_chr_dev-cw_name">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_name" data-parent_link="view_parent_modal">Cw name</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(cw_name)%%><%%PLINK(cw_name)%%><%%ADDNEW(hist_chr)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Dynamic point cat1 -->
+				<div class="form-group hist_chr_dev-dp1_resolve">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="dp1_resolve" data-parent_link="view_parent_modal">Dynamic point cat1 <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#dp1_resolve-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="dp1_resolve-description"><div class="alert alert-info bspacer-xs">This field should be hidden and calculated automatically.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(dp1_resolve)%%><%%PLINK(dp1_resolve)%%><%%ADDNEW(class_dramatica_storypoints1)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Dynamic point cat2 -->
+				<div class="form-group hist_chr_dev-dp2_resolve">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="dp2_resolve" data-parent_link="view_parent_modal">Dynamic point cat2 <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#dp2_resolve-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="dp2_resolve-description"><div class="alert alert-info bspacer-xs">This field should be hidden and calculated automatically.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(dp2_resolve)%%><%%PLINK(dp2_resolve)%%><%%ADDNEW(class_dramatica_storypoints2)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Dynamic point cat3 -->
+				<div class="form-group hist_chr_dev-dp3_resolve">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="dp3_resolve" data-parent_link="view_parent_modal">Dynamic point cat3 <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#dp3_resolve-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="dp3_resolve-description"><div class="alert alert-info bspacer-xs">This field should be hidden and calculated automatically.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(dp3_resolve)%%><%%PLINK(dp3_resolve)%%><%%ADDNEW(class_dramatica_storypoints3)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: MC resolve -->
+				<div class="form-group hist_chr_dev-mc_resolve">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="mc_resolve" data-parent_link="view_parent_modal">MC resolve</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(mc_resolve)%%><%%PLINK(mc_resolve)%%><%%ADDNEW(class_dynamicstorypoints4)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Illustration of MC Resolve -->
+				<div class="form-group hist_chr_dev-illust_resolve">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="illust_resolve" data-parent_link="view_parent_modal">Illustration of MC Resolve</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_resolve)%%><%%PLINK(illust_resolve)%%><%%ADDNEW(hist_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Dynamic point cat3 -->
+				<div class="form-group hist_chr_dev-dp3_growth">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="dp3_growth" data-parent_link="view_parent_modal">Dynamic point cat3 <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#dp3_growth-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="dp3_growth-description"><div class="alert alert-info bspacer-xs">This field should be hidden and calculated automatically.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(dp3_growth)%%><%%PLINK(dp3_growth)%%><%%ADDNEW(class_dramatica_storypoints3)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Growth -->
+				<div class="form-group hist_chr_dev-mc_growth">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="mc_growth" data-parent_link="view_parent_modal">Growth</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(mc_growth)%%><%%PLINK(mc_growth)%%><%%ADDNEW(class_dynamicstorypoints4)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Illustration of MC Growth -->
+				<div class="form-group hist_chr_dev-illust_growth">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="illust_growth" data-parent_link="view_parent_modal">Illustration of MC Growth</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_growth)%%><%%PLINK(illust_growth)%%><%%ADDNEW(hist_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Dynamic point cat3 -->
+				<div class="form-group hist_chr_dev-dp3_approach">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="dp3_approach" data-parent_link="view_parent_modal">Dynamic point cat3 <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#dp3_approach-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="dp3_approach-description"><div class="alert alert-info bspacer-xs">This field should be hidden and calculated automatically.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(dp3_approach)%%><%%PLINK(dp3_approach)%%><%%ADDNEW(class_dramatica_storypoints3)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Approach -->
+				<div class="form-group hist_chr_dev-mc_approach">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="mc_approach" data-parent_link="view_parent_modal">Approach</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(mc_approach)%%><%%PLINK(mc_approach)%%><%%ADDNEW(class_dynamicstorypoints4)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Illustration of MC Approach -->
+				<div class="form-group hist_chr_dev-illust_approach">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="illust_approach" data-parent_link="view_parent_modal">Illustration of MC Approach</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_approach)%%><%%PLINK(illust_approach)%%><%%ADDNEW(hist_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Dynamic point cat3 -->
+				<div class="form-group hist_chr_dev-dp3_psstyle">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="dp3_psstyle" data-parent_link="view_parent_modal">Dynamic point cat3 <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#dp3_psstyle-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="dp3_psstyle-description"><div class="alert alert-info bspacer-xs">This field should be hidden and calculated automatically.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(dp3_psstyle)%%><%%PLINK(dp3_psstyle)%%><%%ADDNEW(class_dramatica_storypoints3)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Problem Solving Style -->
+				<div class="form-group hist_chr_dev-mc_ps_style">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="mc_ps_style" data-parent_link="view_parent_modal">Problem Solving Style</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(mc_ps_style)%%><%%PLINK(mc_ps_style)%%><%%ADDNEW(class_dynamicstorypoints4)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Illustration of MC PS Style -->
+				<div class="form-group hist_chr_dev-illust_ps_style">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="illust_ps_style" data-parent_link="view_parent_modal">Illustration of MC PS Style</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_ps_style)%%><%%PLINK(illust_ps_style)%%><%%ADDNEW(hist_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Age -->
+				<div class="form-group hist_chr_dev-cw_age">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_age">Age</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="cw_age" id="cw_age" value="<%%VALUE(cw_age)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Gender -->
+				<div class="form-group hist_chr_dev-cw_gender">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_gender">Gender</label>
+					<div class="col-lg-9">
+						<input maxlength="10" type="text" class="form-control" name="cw_gender" id="cw_gender" value="<%%VALUE(cw_gender)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Communication style -->
+				<div class="form-group hist_chr_dev-cw_communication_style">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_communication_style">Communication style</label>
+					<div class="col-lg-9">
+						<input type="text" class="form-control" name="cw_communication_style" id="cw_communication_style" value="<%%VALUE(cw_communication_style)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Background -->
+				<div class="form-group hist_chr_dev-cw_background">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_background">Background</label>
+					<div class="col-lg-9">
+						<input type="text" class="form-control" name="cw_background" id="cw_background" value="<%%VALUE(cw_background)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Appearance -->
+				<div class="form-group hist_chr_dev-cw_appearance">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_appearance">Appearance</label>
+					<div class="col-lg-9">
+						<input type="text" class="form-control" name="cw_appearance" id="cw_appearance" value="<%%VALUE(cw_appearance)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Relationships -->
+				<div class="form-group hist_chr_dev-cw_relationships">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_relationships">Relationships</label>
+					<div class="col-lg-9">
+						<input maxlength="255" type="text" class="form-control" name="cw_relationships" id="cw_relationships" value="<%%VALUE(cw_relationships)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Ambition -->
+				<div class="form-group hist_chr_dev-cw_ambition">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_ambition">Ambition</label>
+					<div class="col-lg-9">
+						<input type="text" class="form-control" name="cw_ambition" id="cw_ambition" value="<%%VALUE(cw_ambition)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Defects -->
+				<div class="form-group hist_chr_dev-cw_defects">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_defects">Defects</label>
+					<div class="col-lg-9">
+						<input type="text" class="form-control" name="cw_defects" id="cw_defects" value="<%%VALUE(cw_defects)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Thoughts -->
+				<div class="form-group hist_chr_dev-cw_thoughts">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_thoughts">Thoughts</label>
+					<div class="col-lg-9">
+						<input type="text" class="form-control" name="cw_thoughts" id="cw_thoughts" value="<%%VALUE(cw_thoughts)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Relatedness -->
+				<div class="form-group hist_chr_dev-cw_relatedness">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_relatedness">Relatedness</label>
+					<div class="col-lg-9">
+						<input maxlength="255" type="text" class="form-control" name="cw_relatedness" id="cw_relatedness" value="<%%VALUE(cw_relatedness)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Restrictions -->
+				<div class="form-group hist_chr_dev-cw_restrictions">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_restrictions">Restrictions</label>
+					<div class="col-lg-9">
+						<input type="text" class="form-control" name="cw_restrictions" id="cw_restrictions" value="<%%VALUE(cw_restrictions)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Locations -->
+				<div class="form-group hist_chr_dev-locations">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="locations">Locations</label>
+					<div class="col-lg-9">
+						<input maxlength="255" type="text" class="form-control" name="locations" id="locations" value="<%%VALUE(locations)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Persons -->
+				<div class="form-group hist_chr_dev-persons">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="persons">Persons</label>
+					<div class="col-lg-9">
+						<input maxlength="255" type="text" class="form-control" name="persons" id="persons" value="<%%VALUE(persons)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Events -->
+				<div class="form-group hist_chr_dev-events">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="events">Events</label>
+					<div class="col-lg-9">
+						<input type="text" class="form-control" name="events" id="events" value="<%%VALUE(events)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Noetic tension -->
+				<div class="form-group hist_chr_dev-noetictension">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="noetictension" data-parent_link="view_parent_modal">Noetic tension</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(noetictension)%%><%%PLINK(noetictension)%%><%%ADDNEW(class_nt)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Illustration of Noetic Tension -->
+				<div class="form-group hist_chr_dev-illust_nt">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="illust_nt" data-parent_link="view_parent_modal">Illustration of Noetic Tension</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_nt)%%><%%PLINK(illust_nt)%%><%%ADDNEW(hist_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Overall Impression Management -->
+				<div class="form-group hist_chr_dev-impression">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="impression" data-parent_link="view_parent_modal">Overall Impression Management</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(impression)%%><%%PLINK(impression)%%><%%ADDNEW(class_im)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Illustration of Impression Mnmt. -->
+				<div class="form-group hist_chr_dev-illust_im">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="illust_im" data-parent_link="view_parent_modal">Illustration of Impression Mnmt.</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_im)%%><%%PLINK(illust_im)%%><%%ADDNEW(hist_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Problem -->
+				<div class="form-group hist_chr_dev-mcs_problem">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="mcs_problem" data-parent_link="view_parent_modal">Problem <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#mcs_problem-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="mcs_problem-description"><div class="alert alert-info bspacer-xs">This field is encoded in the Static Story Points of Dramatica.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(mcs_problem)%%><%%PLINK(mcs_problem)%%><%%ADDNEW(hist_storystatic)%%><span id="mcs_problemLoading"></span></div>
+					</div>
+				</div>
+
+				<!-- Field: Illustration of MCS Problem -->
+				<div class="form-group hist_chr_dev-illust_mcs_problem">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="illust_mcs_problem" data-parent_link="view_parent_modal">Illustration of MCS Problem</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_mcs_problem)%%><%%PLINK(illust_mcs_problem)%%><%%ADDNEW(hist_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Solution -->
+				<div class="form-group hist_chr_dev-mcs_solution">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Solution <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#mcs_solution-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="mcs_solution-description"><div class="alert alert-info bspacer-xs">This field is encoded in the Static Story Points of Dramatica.</div></span>
+						<div class="form-control-static" id="mcs_solution"></div>
+					</div>
+				</div>
+
+				<!-- Field: Illustration of MCS Solution -->
+				<div class="form-group hist_chr_dev-illust_mcs_solution">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="illust_mcs_solution" data-parent_link="view_parent_modal">Illustration of MCS Solution</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_mcs_solution)%%><%%PLINK(illust_mcs_solution)%%><%%ADDNEW(hist_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Symptom -->
+				<div class="form-group hist_chr_dev-mcs_symptom">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Symptom <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#mcs_symptom-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="mcs_symptom-description"><div class="alert alert-info bspacer-xs">This field is encoded in the Static Story Points of Dramatica.</div></span>
+						<div class="form-control-static" id="mcs_symptom"></div>
+					</div>
+				</div>
+
+				<!-- Field: Illustration of MCS Symptome -->
+				<div class="form-group hist_chr_dev-illust_mcs_symptom">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="illust_mcs_symptom" data-parent_link="view_parent_modal">Illustration of MCS Symptome</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_mcs_symptom)%%><%%PLINK(illust_mcs_symptom)%%><%%ADDNEW(hist_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Response -->
+				<div class="form-group hist_chr_dev-mcs_response">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Response <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#mcs_response-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="mcs_response-description"><div class="alert alert-info bspacer-xs">This field is encoded in the Static Story Points of Dramatica.</div></span>
+						<div class="form-control-static" id="mcs_response"></div>
+					</div>
+				</div>
+
+				<!-- Field: Illustration of MCS Response -->
+				<div class="form-group hist_chr_dev-illust_mcs_response">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="illust_mcs_response" data-parent_link="view_parent_modal">Illustration of MCS Response</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_mcs_response)%%><%%PLINK(illust_mcs_response)%%><%%ADDNEW(hist_chr_scene)%%></div>
+					</div>
+				</div>
+
+			</fieldset>
+		</div>
+
+		<!-- DV action buttons -->
+		<hr class="hidden-md hidden-lg">
+		<div class="col-md-4 col-lg-2" id="hist_chr_dev_dv_action_buttons">
+			<div class="btn-toolbar">
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%UPDATE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%DESELECT_BUTTON%%>
+					<%%DVPRINT_BUTTON%%>
+					<%%DELETE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%INSERT_BUTTON%%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div><!-- /div class="panel-body" -->
+	<script>
+		$j(function() {
+			var add_new_mode = (!$j('input[name=SelectedID]').val());
+			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			/* auto-close embedded page? */
+			var autoclose_mode = ($j('input[name=AutoClose]').val() == 1);
+			var record_added_ok = (location.search.split('record-added-ok=').length == 2);
+			var record_updated_ok = (location.search.split('record-updated-ok=').length == 2);
+			if((record_added_ok || record_updated_ok) && embedded_mode && autoclose_mode) {
+				setTimeout(AppGini.closeParentModal, 2000);
+			}
+
+			/* enable DV action buttons to float on scrolling down the form */
+			enable_dvab_floating();
+
+
+			setTimeout(function() {
+				$j('#hist_chr_dev_dv_container-loading').addClass('hidden');
+				$j('#hist_chr_dev_dv_container').removeClass('hidden');
+				AppGini.focusFormElement('hist_chr_dev', 'hist_story');
+			}, 1100);
+
+			$j('form').eq(0).change(function() {
+				if($j(this).data('already_changed')) return;
+				if($j('#deselect').length) $j('#deselect').removeClass('btn-default').addClass('btn-warning').get(0).lastChild.data = " <%%TRANSLATION(Cancel)%%>";
+				$j(this).data('already_changed', true);
+			});
+
+			$j('a[href="<%%BASE_UPLOAD_PATH%%>"]').click(function() { return false; });
+
+
+			if(!embedded_mode) {
+				/* add a horizontal spacer to [add new parent] buttons that don't have a spacered element before them */
+				$j('.add_new_parent').prev(':not(.hspacer-md)').next().addClass('hspacer-md');
+
+				$j('.add_new_parent').click(function() {
+					var pt = $j(this).attr('id').replace(/_add_new$/, '');
+					modal_window({
+						url: pt + '_view.php?addNew_x=1&Embedded=1',
+						close: function() {
+							var field_id = $j('#' + pt + '_add_new').prevAll('input:hidden').eq(0).attr('id');
+							$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+							/* if a new parent was added, select it */
+							var new_id = localStorage.getItem(pt + '_last_added_id');
+							if(new_id === null) return;
+
+							localStorage.clear(pt + '_last_added_id');
+							AppGini.lookupText({
+								id: new_id,
+								table: 'hist_chr_dev',
+								field: field_id,
+								callback: function(data) {
+									$j('#' + field_id + '-container').select2('data', data, true);
+								}
+							});
+						},
+						size: 'full',
+						title: $j(this).attr('title')
+					});
+				});
+			}
+
+			AppGini.hideViewParentLinks();
+
+			$j('form').on('click', '.view_parent', function() {
+				var pt = $j(this).attr('id').replace(/_view_parent$/, '');
+				if($j(this).prevAll('input:hidden').length) {
+					var parent_id = $j(this).prevAll('input:hidden').eq(0).val();
+				} else {
+					var parent_id = $j(this).prevAll().children('input:hidden').eq(0).val();
+				}
+
+				/* handle radio lookups */
+				if($j(this).prevAll('[type=radio]').length) {
+					parent_id = $j(this).prevAll('[type=radio]').eq(0).val();
+				}
+
+				if(parent_id != '{empty_value}' && parent_id != undefined && parent_id != '') {
+					var parent_link = $j(this).parents('.form-group').children('label').data('parent_link');
+					switch(parent_link) {
+						case 'view_parent_hidden':
+							break;
+						case 'view_parent_modal':
+							modal_window({
+								url: pt + '_view.php?Embedded=1&SelectedID=' + encodeURIComponent(parent_id),
+								close: function() {
+									var field_id = $j('#' + pt + '_view_parent').prevAll('input:hidden').eq(0).attr('id');
+									$j('#' + field_id + '-container').select2('focus').select2('focus');
+								},
+								size: 'full',
+								title: $j(this).attr('title')
+							});
+							break;
+						case 'view_parent_same_window':
+							window.location = pt + '_view.php?Embedded=' + (embedded_mode ? '1' : '') + '&SelectedID=' + encodeURIComponent(parent_id);
+							break;
+						case 'view_parent_new_window':
+							window.open(pt + '_view.php?SelectedID=' + encodeURIComponent(parent_id));
+							break;
+					}
+
+				}
+			});
+
+
+			/* load admin tools for admin user */
+			if(!add_new_mode) {
+				$j('body').append('<div id="admin-tools-appendix"></div>');
+				$j('#admin-tools-appendix').load(
+					'ajax_admin_tools.php?table=hist_chr_dev&id=<%%URLVALUE(id)%%>',
+					function(resp) {
+						if(!resp.length) return;
+						$j.ajax('ajax_admin_tools.php?action=get_admin_tools_js&table=hist_chr_dev&id=<%%URLVALUE(id)%%>');
+					}
+				);
+			}
+
+			/* warn user if 'add new' clicked while unsaved changes exist */
+			$j('#addNew').click(function() {
+				if($j('#deselect.btn-warning').length) {
+					return confirm('<%%TRANSLATION(discard changes confirm)%%>');
+				}
+			});
+
+		});
+	</script>
