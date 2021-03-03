@@ -13,20 +13,20 @@ sass:
 
 # Resume settings
 resume_avatar:                  "true"
-resume_name:                    "Lisa M. Simpson"
-resume_title:                   "VP of Global Communications"
+resume_name:                    "Dr. Tabea Hirzel"
+resume_title:                   "Spindle - Asuwada Mode"
 
 # used for the contact button in _layouts/resume.html
-resume_contact_email:           "lisasimpson@youremailaddress.com"
+resume_contact_email:           "spindle.game@gmail.com"
 
 # the next two items are used for schema itemprops in _layouts/resume.html
-resume_contact_telephone:       "555-7334"
-resume_contact_address:         "742 Evergreen Terrace, Springfield"
+resume_contact_telephone:       "663 093 944"
+resume_contact_address:         "Tomelloso - Spain"
 
-resume_header_contact_info:     "742 Evergreen Terrace, Springfield • 555-7334 • lisasimpson@youremailaddress.com"
+resume_header_contact_info:     "Spain, Tomelloso • 13700 • spindle.game@gmail.com"
 display_header_contact_info:    "false"
 
-resume_header_intro: "<p>This is the executive summary. You should write a few brief, concise, and meaningful sentences about yourself from a professional context, and your immediate career goals. Make the length appropriate for your needs, but keep it brief and concise</p>"
+resume_header_intro: "<p>The Spindle is a PHP MYSQL application that serves to play collaborative networked storytelling games based on historiographic data. It was originally developed as a prototype in the course of the research Principles of Liberty by Dr. Tabea Hirzel. There are different modes of playing this game, all included in the diferent releases of Spindle.</p>"
 
 # use "yes" to display the email contact button,
 # "no" to display an "I'm not looking for work" message,
@@ -48,14 +48,14 @@ resume_section_associations:    true
 # Resume social links
 # uncomment the options you wish to display, and add your own URL
 resume_social_links:
-  resume_github_url:            "https://github.com/jglovier/resume-template"
-  resume_twitter_url:           "http://twitter.com/jglovier"
-  resume_dribbble_url:          "https://dribbble.com/jag"
+  resume_github_url:            "https://github.com/spindle-asuwada/"
+  resume_twitter_url:           "http://twitter.com/spindle-asuwada"
+  resume_dribbble_url:          "https://dribbble.com/spindle-asuwada"
   # resume_facebook_url:          "insert Facebook URL here"
-  resume_linkedin_url:          "https://www.linkedin.com/in/joelglovier"
+  resume_linkedin_url:          "https://www.linkedin.com/in/spindle-asuwada"
   # resume_instagram_url:         "insert your Instagram URL here"
-  resume_website_url:           "http://joelglovier.com"
-  resume_medium_url:            "https://medium.com/@jglovier"
+  resume_website_url:           "http://spindlegames.blogspot.com"
+  resume_medium_url:            "https://medium.com/@spindle-asuwada"
 resume_print_social_links:      true
 
 # Design settings
