@@ -5,4 +5,4 @@
  
  [Official Website](https://spindlegames.blogspot.com/)
  [Asuwada Games](https://asuwada.blogspot.com/)
- <a id="raw-url" href="https://raw.githubusercontent.com/github-username/project/master/filename">Download FILE</a>
+ <a id="raw-url" href="https://github.com/spindlegame/spindle-asuwada/archive/main.zip">Download FILE</a>
