@@ -1,0 +1,362 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: ID -->
+		<div class="form-group bio_chr_dev-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: ID de agente -->
+		<div class="form-group bio_chr_dev-agent_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID de agente</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="agent_id<%%RND1%%>"><%%COMBOTEXT(agent_id)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Nombre de autor -->
+		<div class="form-group bio_chr_dev-agent_name" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Nombre de autor</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="agent_name<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Biograf&#237;a -->
+		<div class="form-group bio_chr_dev-bio_story" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Biograf&#237;a</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="bio_story<%%RND1%%>"><%%COMBOTEXT(bio_story)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Nombre de personaje -->
+		<div class="form-group bio_chr_dev-cw_name" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Nombre de personaje</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="cw_name<%%RND1%%>"><%%COMBOTEXT(cw_name)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Punto din&#225;mico categor&#237;a 1 -->
+		<div class="form-group bio_chr_dev-dp1_resolve" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Punto din&#225;mico categor&#237;a 1</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="dp1_resolve<%%RND1%%>"><%%COMBOTEXT(dp1_resolve)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Punto din&#225;mico categor&#237;a 2 -->
+		<div class="form-group bio_chr_dev-dp2_resolve" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Punto din&#225;mico categor&#237;a 2</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="dp2_resolve<%%RND1%%>"><%%COMBOTEXT(dp2_resolve)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Punto din&#225;mico Resoluci&#243;n -->
+		<div class="form-group bio_chr_dev-dp3_resolve" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Punto din&#225;mico Resoluci&#243;n</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="dp3_resolve<%%RND1%%>"><%%COMBOTEXT(dp3_resolve)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Resoluci&#243;n de personaje principal -->
+		<div class="form-group bio_chr_dev-mc_resolve" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Resoluci&#243;n de personaje principal</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mc_resolve<%%RND1%%>"><%%COMBOTEXT(mc_resolve)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Ilustraci&#243;n de la resoluci&#243;n -->
+		<div class="form-group bio_chr_dev-illust_resolve" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Ilustraci&#243;n de la resoluci&#243;n</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="illust_resolve<%%RND1%%>"><%%COMBOTEXT(illust_resolve)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Punto din&#225;mico Crecimiento -->
+		<div class="form-group bio_chr_dev-dp3_growth" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Punto din&#225;mico Crecimiento</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="dp3_growth<%%RND1%%>"><%%COMBOTEXT(dp3_growth)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Crecimiento de personaje principal -->
+		<div class="form-group bio_chr_dev-mc_growth" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Crecimiento de personaje principal</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mc_growth<%%RND1%%>"><%%COMBOTEXT(mc_growth)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Ilustraci&#243;n del crecimiento -->
+		<div class="form-group bio_chr_dev-illust_growth" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Ilustraci&#243;n del crecimiento</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="illust_growth<%%RND1%%>"><%%COMBOTEXT(illust_growth)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Punto din&#225;mico Enfoque -->
+		<div class="form-group bio_chr_dev-dp3_approach" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Punto din&#225;mico Enfoque</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="dp3_approach<%%RND1%%>"><%%COMBOTEXT(dp3_approach)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Enfoque de personaje principal -->
+		<div class="form-group bio_chr_dev-mc_approach" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Enfoque de personaje principal</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mc_approach<%%RND1%%>"><%%COMBOTEXT(mc_approach)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Ilustraci&#243;n del enfoque -->
+		<div class="form-group bio_chr_dev-illust_approach" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Ilustraci&#243;n del enfoque</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="illust_approach<%%RND1%%>"><%%COMBOTEXT(illust_approach)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Punto din&#225;mico estilo de soluci&#243;n de problemas -->
+		<div class="form-group bio_chr_dev-dp3_psstyle" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Punto din&#225;mico estilo de soluci&#243;n de problemas</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="dp3_psstyle<%%RND1%%>"><%%COMBOTEXT(dp3_psstyle)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Estilo de resoluci&#243;n de problemas del P.P. -->
+		<div class="form-group bio_chr_dev-mc_ps_style" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Estilo de resoluci&#243;n de problemas del P.P.</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mc_ps_style<%%RND1%%>"><%%COMBOTEXT(mc_ps_style)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Ilustraci&#243;n del estilo de resoluci&#243;n de problemas -->
+		<div class="form-group bio_chr_dev-illust_ps_style" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Ilustraci&#243;n del estilo de resoluci&#243;n de problemas</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="illust_ps_style<%%RND1%%>"><%%COMBOTEXT(illust_ps_style)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Edad de personaje -->
+		<div class="form-group bio_chr_dev-cw_age" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Edad de personaje</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cw_age)%%></div>
+			</div>
+		</div>
+		<!-- Field: G&#233;nero -->
+		<div class="form-group bio_chr_dev-cw_gender" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">G&#233;nero</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="cw_gender<%%RND1%%>"><%%COMBOTEXT(cw_gender)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Estilo de comunicaci&#243;n -->
+		<div class="form-group bio_chr_dev-cw_communication_style" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Estilo de comunicaci&#243;n</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cw_communication_style)%%></div>
+			</div>
+		</div>
+		<!-- Field: Antecendents -->
+		<div class="form-group bio_chr_dev-cw_background" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Antecendents</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cw_background)%%></div>
+			</div>
+		</div>
+		<!-- Field: Aspecto f&#237;sico -->
+		<div class="form-group bio_chr_dev-cw_appearance" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Aspecto f&#237;sico</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cw_appearance)%%></div>
+			</div>
+		</div>
+		<!-- Field: Relaciones -->
+		<div class="form-group bio_chr_dev-cw_relationships" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Relaciones</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cw_relationships)%%></div>
+			</div>
+		</div>
+		<!-- Field: Ambiciones -->
+		<div class="form-group bio_chr_dev-cw_ambition" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Ambiciones</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cw_ambition)%%></div>
+			</div>
+		</div>
+		<!-- Field: Defectos -->
+		<div class="form-group bio_chr_dev-cw_defects" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Defectos</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cw_defects)%%></div>
+			</div>
+		</div>
+		<!-- Field: Ideas -->
+		<div class="form-group bio_chr_dev-cw_thoughts" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Ideas</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cw_thoughts)%%></div>
+			</div>
+		</div>
+		<!-- Field: Apego -->
+		<div class="form-group bio_chr_dev-cw_relatedness" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Apego</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cw_relatedness)%%></div>
+			</div>
+		</div>
+		<!-- Field: Restricciones -->
+		<div class="form-group bio_chr_dev-cw_restrictions" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Restricciones</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cw_restrictions)%%></div>
+			</div>
+		</div>
+		<!-- Field: Lugares -->
+		<div class="form-group bio_chr_dev-locations" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Lugares</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(locations)%%></div>
+			</div>
+		</div>
+		<!-- Field: Personas -->
+		<div class="form-group bio_chr_dev-persons" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Personas</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(persons)%%></div>
+			</div>
+		</div>
+		<!-- Field: Events -->
+		<div class="form-group bio_chr_dev-events" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Events</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(events)%%></div>
+			</div>
+		</div>
+		<!-- Field: Tensi&#243;n no&#233;tica -->
+		<div class="form-group bio_chr_dev-noetictension" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Tensi&#243;n no&#233;tica</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="noetictension<%%RND1%%>"><%%COMBOTEXT(noetictension)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Ilustraci&#243;n de la tensi&#243;n no&#233;tica -->
+		<div class="form-group bio_chr_dev-illust_nt" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Ilustraci&#243;n de la tensi&#243;n no&#233;tica</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="illust_nt<%%RND1%%>"><%%COMBOTEXT(illust_nt)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Gesti&#243;n general de impresiones -->
+		<div class="form-group bio_chr_dev-impression" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Gesti&#243;n general de impresiones</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="impression<%%RND1%%>"><%%COMBOTEXT(impression)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Ilustraci&#243;n de la impresi&#243;n -->
+		<div class="form-group bio_chr_dev-illust_im" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Ilustraci&#243;n de la impresi&#243;n</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="illust_im<%%RND1%%>"><%%COMBOTEXT(illust_im)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Problema -->
+		<div class="form-group bio_chr_dev-mcs_problem" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Problema</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mcs_problem<%%RND1%%>"><%%COMBOTEXT(mcs_problem)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Ilustraci&#243;n del problema -->
+		<div class="form-group bio_chr_dev-illust_mcs_problem" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Ilustraci&#243;n del problema</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="illust_mcs_problem<%%RND1%%>"><%%COMBOTEXT(illust_mcs_problem)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Soluci&#243;n -->
+		<div class="form-group bio_chr_dev-mcs_solution" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Soluci&#243;n</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mcs_solution<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Ilustraci&#243;n de la soluci&#243;n -->
+		<div class="form-group bio_chr_dev-illust_mcs_solution" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Ilustraci&#243;n de la soluci&#243;n</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="illust_mcs_solution<%%RND1%%>"><%%COMBOTEXT(illust_mcs_solution)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: S&#237;ntoma -->
+		<div class="form-group bio_chr_dev-mcs_symptom" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">S&#237;ntoma</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mcs_symptom<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Ilustraci&#243;n del s&#237;ntoma -->
+		<div class="form-group bio_chr_dev-illust_mcs_symptom" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Ilustraci&#243;n del s&#237;ntoma</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="illust_mcs_symptom<%%RND1%%>"><%%COMBOTEXT(illust_mcs_symptom)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Respuesta -->
+		<div class="form-group bio_chr_dev-mcs_response" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Respuesta</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mcs_response<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Ilustraci&#243;n de la respuesta -->
+		<div class="form-group bio_chr_dev-illust_mcs_response" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Ilustraci&#243;n de la respuesta</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="illust_mcs_response<%%RND1%%>"><%%COMBOTEXT(illust_mcs_response)%%></span></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!-- child records -->
+<div class="panel-body">
+	<div id="bio_chr_dev-children"></div>
+</div>
+
+<script>
+	$j(function() {
+		/* prevent loading child records in multiple DVP */
+		if($j('[id=bio_chr_dev-children]').length > 1) return;
+
+		post(
+			'parent-children.php', {
+				ParentTable: 'bio_chr_dev',
+				SelectedID: '<%%VALUE(id)%%>',
+				Operation: 'show-children-printable'
+			},
+			'bio_chr_dev-children',
+			'disable-element',
+			'loading-element',
+			apply_persisting_children
+		);
+
+		$j('form').on('click', '#children-tabs button[data-target]', function() {
+			$j(this).toggleClass('active');
+			persist_expanded_child($j(this).attr('id'));
+		});
+	})
+</script>
+

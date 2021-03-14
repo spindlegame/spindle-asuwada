@@ -1,0 +1,10 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the  and  formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the gallery_authors_init() hook (in hooks/gallery_authors.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="gallery_authors-name-<%%VALUE(id)%%>" class="gallery_authors-name"><%%VALUE(name)%%></td>
+		<td id="gallery_authors-img-<%%VALUE(id)%%>" class="gallery_authors-img"><a href="<%%BASE_UPLOAD_PATH%%><%%VALUE(img)%%>" data-lightbox="gallery_authors-img"><img src="thumbnail.php?i=<%%VALUE(img)%%>&t=gallery_authors&f=img&v=tv" class="img-thumbnail"></a></td>
+		<td id="gallery_authors-select-<%%VALUE(id)%%>" class="gallery_authors-select"><%%VALUE(select)%%></td>

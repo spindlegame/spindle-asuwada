@@ -1,0 +1,158 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: ID -->
+		<div class="form-group hist_storyline-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Historia -->
+		<div class="form-group hist_storyline-story" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Historia</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="story<%%RND1%%>"><%%COMBOTEXT(story)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Acto -->
+		<div class="form-group hist_storyline-story_act" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Acto</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="story_act<%%RND1%%>"><%%COMBOTEXT(story_act)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Personaje -->
+		<div class="form-group hist_storyline-character" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Personaje</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="character<%%RND1%%>"><%%COMBOTEXT(character)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Rol -->
+		<div class="form-group hist_storyline-role" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Rol</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="role<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Escena -->
+		<div class="form-group hist_storyline-scene" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Escena</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(scene)%%></div>
+			</div>
+		</div>
+		<!-- Field: Secuencia -->
+		<div class="form-group hist_storyline-sequence" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Secuencia</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(sequence)%%></div>
+			</div>
+		</div>
+		<!-- Field: L&#237;nea de trama n&#186; -->
+		<div class="form-group hist_storyline-storyline_no" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">L&#237;nea de trama n&#186;</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(storyline_no)%%></div>
+			</div>
+		</div>
+		<!-- Field: Parent&#233;tesis -->
+		<div class="form-group hist_storyline-parenthetic" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Parent&#233;tesis</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(parenthetic)%%></div>
+			</div>
+		</div>
+		<!-- Field: T&#237;tulo de la l&#237;nea -->
+		<div class="form-group hist_storyline-storyline_title" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">T&#237;tulo de la l&#237;nea</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(storyline_title)%%></div>
+			</div>
+		</div>
+		<!-- Field: L&#237;nea de trama (Storyline) -->
+		<div class="form-group hist_storyline-storyline" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">L&#237;nea de trama (Storyline)</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(storyline)%%></div>
+			</div>
+		</div>
+		<!-- Field: Notas -->
+		<div class="form-group hist_storyline-notes" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Notas</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(notes)%%></div>
+			</div>
+		</div>
+		<!-- Field: N&#186; escena Storyweaving -->
+		<div class="form-group hist_storyline-storyweaving_scene_no" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">N&#186; escena Storyweaving</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="storyweaving_scene_no<%%RND1%%>"><%%COMBOTEXT(storyweaving_scene_no)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Escena Storyweaving -->
+		<div class="form-group hist_storyline-storyweaving_scene" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Escena Storyweaving</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="storyweaving_scene<%%RND1%%>"><%%COMBOTEXT(storyweaving_scene)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Secuencia Storyweaving -->
+		<div class="form-group hist_storyline-storyweaving_sequence" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Secuencia Storyweaving</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="storyweaving_sequence<%%RND1%%>"><%%COMBOTEXT(storyweaving_sequence)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Tema Storyweaving -->
+		<div class="form-group hist_storyline-storyweaving_theme" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Tema Storyweaving</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="storyweaving_theme<%%RND1%%>"><%%COMBOTEXT(storyweaving_theme)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Escena de de personaje -->
+		<div class="form-group hist_storyline-characterevent_scene" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Escena de de personaje</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="characterevent_scene<%%RND1%%>"><%%COMBOTEXT(characterevent_scene)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Evento de personaje -->
+		<div class="form-group hist_storyline-character_event" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Evento de personaje</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="character_event<%%RND1%%>"><%%COMBOTEXT(character_event)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Fecha inicio -->
+		<div class="form-group hist_storyline-startdate" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Fecha inicio</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="startdate<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Fecha fin -->
+		<div class="form-group hist_storyline-enddate" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Fecha fin</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="enddate<%%RND1%%>"></span></div>
+			</div>
+		</div>
+	</fieldset>
+</div>

@@ -1,0 +1,109 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: ID -->
+		<div class="form-group assignments-Id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(Id)%%></div>
+			</div>
+		</div>
+		<!-- Field: ProjectId -->
+		<div class="form-group assignments-ProjectId" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ProjectId</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="ProjectId<%%RND1%%>"><%%COMBOTEXT(ProjectId)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: ProjectDuration -->
+		<div class="form-group assignments-ProjectDuration" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ProjectDuration</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="ProjectDuration<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: RessourceId -->
+		<div class="form-group assignments-RessourceId" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">RessourceId</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="RessourceId<%%RND1%%>"><%%COMBOTEXT(RessourceId)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Committment -->
+		<div class="form-group assignments-Commitment" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Committment</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(Commitment)%%></div>
+			</div>
+		</div>
+		<!-- Field: Author -->
+		<div class="form-group assignments-author_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Author</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="author_id<%%RND1%%>"><%%COMBOTEXT(author_id)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Author name -->
+		<div class="form-group assignments-author_name" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Author name</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="author_name<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Biblio doc -->
+		<div class="form-group assignments-biblio_doc" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Biblio doc</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="biblio_doc<%%RND1%%>"><%%COMBOTEXT(biblio_doc)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Biblio trascript -->
+		<div class="form-group assignments-biblio_trascript" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Biblio trascript</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="biblio_trascript<%%RND1%%>"><%%COMBOTEXT(biblio_trascript)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Biblio token -->
+		<div class="form-group assignments-biblio_token" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Biblio token</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="biblio_token<%%RND1%%>"><%%COMBOTEXT(biblio_token)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Invivio code -->
+		<div class="form-group assignments-invivio_code" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Invivio code</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="invivio_code<%%RND1%%>"><%%COMBOTEXT(invivio_code)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: StartDate -->
+		<div class="form-group assignments-StartDate" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">StartDate</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="StartDate<%%RND1%%>"><%%COMBOTEXT(StartDate)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: EndDate -->
+		<div class="form-group assignments-EndDate" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">EndDate</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="EndDate<%%RND1%%>"></span></div>
+			</div>
+		</div>
+	</fieldset>
+</div>

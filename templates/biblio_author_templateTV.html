@@ -1,0 +1,19 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the biblio_author_init() hook (in hooks/biblio_author.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="biblio_author-id-<%%VALUE(id)%%>" class="biblio_author-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="biblio_author-team-<%%VALUE(id)%%>" class="biblio_author-team"><%%SELECT%%><%%VALUE(team)%%><%%ENDSELECT%%></td>
+		<td id="biblio_author-author_id-<%%VALUE(id)%%>" class="biblio_author-author_id"><%%SELECT%%><%%VALUE(author_id)%%><%%ENDSELECT%%></td>
+		<td id="biblio_author-author_memberid-<%%VALUE(id)%%>" class="biblio_author-author_memberid"><%%SELECT%%><%%VALUE(author_memberid)%%><%%ENDSELECT%%></td>
+		<td id="biblio_author-last_name-<%%VALUE(id)%%>" class="biblio_author-last_name"><%%SELECT%%><%%VALUE(last_name)%%><%%ENDSELECT%%></td>
+		<td id="biblio_author-first_name-<%%VALUE(id)%%>" class="biblio_author-first_name"><%%SELECT%%><%%VALUE(first_name)%%><%%ENDSELECT%%></td>
+		<td id="biblio_author-other_name-<%%VALUE(id)%%>" class="biblio_author-other_name"><%%SELECT%%><%%VALUE(other_name)%%><%%ENDSELECT%%></td>
+		<td id="biblio_author-viaf_no-<%%VALUE(id)%%>" class="biblio_author-viaf_no"><%%SELECT%%><%%VALUE(viaf_no)%%><%%ENDSELECT%%></td>
+		<td id="biblio_author-authority_organization-<%%VALUE(id)%%>" class="biblio_author-authority_organization"><%%SELECT%%><%%VALUE(authority_organization)%%><%%ENDSELECT%%></td>
+		<td id="biblio_author-authority_code-<%%VALUE(id)%%>" class="biblio_author-authority_code"><%%SELECT%%><%%VALUE(authority_code)%%><%%ENDSELECT%%></td>
+		<td id="biblio_author-authority_link-<%%VALUE(id)%%>" class="biblio_author-authority_link"><%%SELECT%%><%%VALUE(authority_link)%%><%%ENDSELECT%%></td>
+		<td id="biblio_author-data_evaluation-<%%VALUE(id)%%>" class="biblio_author-data_evaluation"><%%SELECT%%><%%VALUE(data_evaluation)%%><%%ENDSELECT%%></td>

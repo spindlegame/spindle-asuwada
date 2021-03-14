@@ -1,0 +1,82 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: ID -->
+		<div class="form-group hist_author-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Equipo -->
+		<div class="form-group hist_author-team" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Equipo</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="team<%%RND1%%>"><%%COMBOTEXT(team)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: ID Agente -->
+		<div class="form-group hist_author-agent_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID Agente</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="agent_id<%%RND1%%>"><%%COMBOTEXT(agent_id)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Apellido(s) -->
+		<div class="form-group hist_author-last_name" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Apellido(s)</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="last_name<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Other name(s) -->
+		<div class="form-group hist_author-first_name" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Other name(s)</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="first_name<%%RND1%%>"></span></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!-- child records -->
+<div class="panel-body">
+	<div id="hist_author-children"></div>
+</div>
+
+<script>
+	$j(function() {
+		/* prevent loading child records in multiple DVP */
+		if($j('[id=hist_author-children]').length > 1) return;
+
+		post(
+			'parent-children.php', {
+				ParentTable: 'hist_author',
+				SelectedID: '<%%VALUE(id)%%>',
+				Operation: 'show-children-printable'
+			},
+			'hist_author-children',
+			'disable-element',
+			'loading-element',
+			apply_persisting_children
+		);
+
+		$j('form').on('click', '#children-tabs button[data-target]', function() {
+			$j(this).toggleClass('active');
+			persist_expanded_child($j(this).attr('id'));
+		});
+	})
+</script>
+

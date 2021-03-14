@@ -1,0 +1,117 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: ID -->
+		<div class="form-group biblio_token-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: ID Autor -->
+		<div class="form-group biblio_token-author_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID Autor</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="author_id<%%RND1%%>"><%%COMBOTEXT(author_id)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Autor -->
+		<div class="form-group biblio_token-author_name" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Autor</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="author_name<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Bibliograf&#237;a -->
+		<div class="form-group biblio_token-bibliography" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Bibliograf&#237;a</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="bibliography<%%RND1%%>"><%%COMBOTEXT(bibliography)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Transcripci&#243;n -->
+		<div class="form-group biblio_token-transcript" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Transcripci&#243;n</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="transcript<%%RND1%%>"><%%COMBOTEXT(transcript)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Sequencia de token -->
+		<div class="form-group biblio_token-token_sequence" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Sequencia de token</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(token_sequence)%%></div>
+			</div>
+		</div>
+		<!-- Field: Token -->
+		<div class="form-group biblio_token-token" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Token</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(token)%%></div>
+			</div>
+		</div>
+		<!-- Field: Equipo bibliogr&#225;fico -->
+		<div class="form-group biblio_token-team" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Equipo bibliogr&#225;fico</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="team<%%RND1%%>"><%%COMBOTEXT(team)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Transcriptora principal -->
+		<div class="form-group biblio_token-biblio_lead" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Transcriptora principal</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="biblio_lead<%%RND1%%>"><%%COMBOTEXT(biblio_lead)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Evaluaci&#243;n de datos -->
+		<div class="form-group biblio_token-data_evaluation" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Evaluaci&#243;n de datos</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="data_evaluation<%%RND1%%>"><%%COMBOTEXT(data_evaluation)%%></span></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!-- child records -->
+<div class="panel-body">
+	<div id="biblio_token-children"></div>
+</div>
+
+<script>
+	$j(function() {
+		/* prevent loading child records in multiple DVP */
+		if($j('[id=biblio_token-children]').length > 1) return;
+
+		post(
+			'parent-children.php', {
+				ParentTable: 'biblio_token',
+				SelectedID: '<%%VALUE(id)%%>',
+				Operation: 'show-children-printable'
+			},
+			'biblio_token-children',
+			'disable-element',
+			'loading-element',
+			apply_persisting_children
+		);
+
+		$j('form').on('click', '#children-tabs button[data-target]', function() {
+			$j(this).toggleClass('active');
+			persist_expanded_child($j(this).attr('id'));
+		});
+	})
+</script>
+

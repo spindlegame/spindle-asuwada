@@ -1,0 +1,222 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: ID -->
+		<div class="form-group bio_storyline-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Biograf&#237;a -->
+		<div class="form-group bio_storyline-biography" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Biograf&#237;a</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="biography<%%RND1%%>"><%%COMBOTEXT(biography)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: ID autor -->
+		<div class="form-group bio_storyline-author_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID autor</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="author_id<%%RND1%%>"><%%COMBOTEXT(author_id)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Nombre de autor -->
+		<div class="form-group bio_storyline-author_name" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Nombre de autor</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="author_name<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Bibliograf&#237;a -->
+		<div class="form-group bio_storyline-bibliography" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Bibliograf&#237;a</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="bibliography<%%RND1%%>"><%%COMBOTEXT(bibliography)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Transcripci&#243;n -->
+		<div class="form-group bio_storyline-transcript" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Transcripci&#243;n</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="transcript<%%RND1%%>"><%%COMBOTEXT(transcript)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Secuencia de token -->
+		<div class="form-group bio_storyline-token_sequence" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Secuencia de token</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="token_sequence<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Token -->
+		<div class="form-group bio_storyline-token" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Token</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="token<%%RND1%%>"><%%COMBOTEXT(token)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Acto -->
+		<div class="form-group bio_storyline-story_act" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Acto</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="story_act<%%RND1%%>"><%%COMBOTEXT(story_act)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Secuencia -->
+		<div class="form-group bio_storyline-sequence" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Secuencia</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(sequence)%%></div>
+			</div>
+		</div>
+		<!-- Field: Personaje -->
+		<div class="form-group bio_storyline-character" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Personaje</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="character<%%RND1%%>"><%%COMBOTEXT(character)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Rol -->
+		<div class="form-group bio_storyline-role" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Rol</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="role<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: L&#237;nea de trama n&#186; -->
+		<div class="form-group bio_storyline-storyline_no" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">L&#237;nea de trama n&#186;</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(storyline_no)%%></div>
+			</div>
+		</div>
+		<!-- Field: Parent&#233;tesis -->
+		<div class="form-group bio_storyline-parenthetic" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Parent&#233;tesis</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(parenthetic)%%></div>
+			</div>
+		</div>
+		<!-- Field: T&#237;tulo de la l&#237;nea -->
+		<div class="form-group bio_storyline-storyline_title" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">T&#237;tulo de la l&#237;nea</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(storyline_title)%%></div>
+			</div>
+		</div>
+		<!-- Field: L&#237;nea de trama (Storyline) -->
+		<div class="form-group bio_storyline-storyline" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">L&#237;nea de trama (Storyline)</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(storyline)%%></div>
+			</div>
+		</div>
+		<!-- Field: Notas -->
+		<div class="form-group bio_storyline-notes" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Notas</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(notes)%%></div>
+			</div>
+		</div>
+		<!-- Field: N&#186; escena Storyweaving -->
+		<div class="form-group bio_storyline-storyweaving_scene_no" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">N&#186; escena Storyweaving</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="storyweaving_scene_no<%%RND1%%>"><%%COMBOTEXT(storyweaving_scene_no)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Escena Storyweaving -->
+		<div class="form-group bio_storyline-storyweaving_scene" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Escena Storyweaving</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="storyweaving_scene<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Secuencia Storyweaving -->
+		<div class="form-group bio_storyline-storyweaving_sequence" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Secuencia Storyweaving</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="storyweaving_sequence<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Tema Storyweaving -->
+		<div class="form-group bio_storyline-storyweaving_theme" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Tema Storyweaving</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="storyweaving_theme<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Escena de de personaje -->
+		<div class="form-group bio_storyline-character_scene" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Escena de de personaje</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="character_scene<%%RND1%%>"><%%COMBOTEXT(character_scene)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Evento de personaje -->
+		<div class="form-group bio_storyline-character_event" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Evento de personaje</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="character_event<%%RND1%%>"><%%COMBOTEXT(character_event)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Fecha inicio -->
+		<div class="form-group bio_storyline-startdate" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Fecha inicio</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="startdate<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Fecha final -->
+		<div class="form-group bio_storyline-enddate" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Fecha final</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="enddate<%%RND1%%>"></span></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!-- child records -->
+<div class="panel-body">
+	<div id="bio_storyline-children"></div>
+</div>
+
+<script>
+	$j(function() {
+		/* prevent loading child records in multiple DVP */
+		if($j('[id=bio_storyline-children]').length > 1) return;
+
+		post(
+			'parent-children.php', {
+				ParentTable: 'bio_storyline',
+				SelectedID: '<%%VALUE(id)%%>',
+				Operation: 'show-children-printable'
+			},
+			'bio_storyline-children',
+			'disable-element',
+			'loading-element',
+			apply_persisting_children
+		);
+
+		$j('form').on('click', '#children-tabs button[data-target]', function() {
+			$j(this).toggleClass('active');
+			persist_expanded_child($j(this).attr('id'));
+		});
+	})
+</script>
+

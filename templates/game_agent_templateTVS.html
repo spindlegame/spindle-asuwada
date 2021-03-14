@@ -1,0 +1,34 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the  and  formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the game_agent_init() hook (in hooks/game_agent.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="game_agent-id-<%%VALUE(id)%%>" class="game_agent-id text-right"><%%VALUE(id)%%></td>
+		<td id="game_agent-memberID-<%%VALUE(id)%%>" class="game_agent-memberID"><%%VALUE(memberID)%%></td>
+		<td id="game_agent-img-<%%VALUE(id)%%>" class="game_agent-img"><a href="<%%BASE_UPLOAD_PATH%%><%%VALUE(img)%%>" data-lightbox="game_agent-img"><img src="thumbnail.php?i=<%%VALUE(img)%%>&t=game_agent&f=img&v=tv" class="img-thumbnail"></a></td>
+		<td id="game_agent-groupID-<%%VALUE(id)%%>" class="game_agent-groupID"><%%VALUE(groupID)%%></td>
+		<td id="game_agent-selection_class-<%%VALUE(id)%%>" class="game_agent-selection_class"><%%VALUE(selection_class)%%></td>
+		<td id="game_agent-agenttype1-<%%VALUE(id)%%>" class="game_agent-agenttype1 text-right"><%%VALUE(agenttype1)%%></td>
+		<td id="game_agent-agenttype2-<%%VALUE(id)%%>" class="game_agent-agenttype2 text-right"><%%VALUE(agenttype2)%%></td>
+		<td id="game_agent-gender-<%%VALUE(id)%%>" class="game_agent-gender"><%%VALUE(gender)%%></td>
+		<td id="game_agent-last_name-<%%VALUE(id)%%>" class="game_agent-last_name"><%%VALUE(last_name)%%></td>
+		<td id="game_agent-first_name-<%%VALUE(id)%%>" class="game_agent-first_name"><%%VALUE(first_name)%%></td>
+		<td id="game_agent-other_name-<%%VALUE(id)%%>" class="game_agent-other_name"><%%VALUE(other_name)%%></td>
+		<td id="game_agent-titles-<%%VALUE(id)%%>" class="game_agent-titles"><%%VALUE(titles)%%></td>
+		<td id="game_agent-titles_academic-<%%VALUE(id)%%>" class="game_agent-titles_academic"><%%VALUE(titles_academic)%%></td>
+		<td id="game_agent-titles_nobility-<%%VALUE(id)%%>" class="game_agent-titles_nobility"><%%VALUE(titles_nobility)%%></td>
+		<td id="game_agent-birthday-<%%VALUE(id)%%>" class="game_agent-birthday"><%%VALUE(birthday)%%></td>
+		<td id="game_agent-birth_location-<%%VALUE(id)%%>" class="game_agent-birth_location"><%%VALUE(birth_location)%%></td>
+		<td id="game_agent-birth_location_map-<%%VALUE(id)%%>" class="game_agent-birth_location_map"><img src="<%%GOOGLEMAPTHUMB(birth_location_map)%%>" style="max-width: 50px; max-height: 50px; " ></td>
+		<td id="game_agent-deathday-<%%VALUE(id)%%>" class="game_agent-deathday"><%%VALUE(deathday)%%></td>
+		<td id="game_agent-death_location-<%%VALUE(id)%%>" class="game_agent-death_location"><%%VALUE(death_location)%%></td>
+		<td id="game_agent-life_span-<%%VALUE(id)%%>" class="game_agent-life_span"><%%VALUE(life_span)%%></td>
+		<td id="game_agent-workplace-<%%VALUE(id)%%>" class="game_agent-workplace"><%%VALUE(workplace)%%></td>
+		<td id="game_agent-knows-<%%VALUE(id)%%>" class="game_agent-knows"><%%VALUE(knows)%%></td>
+		<td id="game_agent-img_gallery-<%%VALUE(id)%%>" class="game_agent-img_gallery"><a href="link.php?t=game_agent&f=img_gallery&i=<%%VALUE(id)%%>" target="_blank" title="<%%VALUE(img_gallery)%%>" class="btn btn-default"><i class="glyphicon glyphicon-lg glyphicon-globe text-info"></i></a></td>
+		<td id="game_agent-data_evaluation-<%%VALUE(id)%%>" class="game_agent-data_evaluation"><%%VALUE(data_evaluation)%%></td>
+		<script>$j(function() {
+			var e_img_gallery = '<%%VALUE(img_gallery)%%>'; if(e_img_gallery == '' || e_img_gallery == '&nbsp;') $j(/*<*/ '#game_agent-img_gallery-<%%VALUE(id)%%>' /*>*/).html('');
+		});</script>

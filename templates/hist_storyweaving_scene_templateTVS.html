@@ -1,0 +1,17 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the  and  formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the hist_storyweaving_scene_init() hook (in hooks/hist_storyweaving_scene.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="hist_storyweaving_scene-id-<%%VALUE(id)%%>" class="hist_storyweaving_scene-id text-right"><%%VALUE(id)%%></td>
+		<td id="hist_storyweaving_scene-story-<%%VALUE(id)%%>" class="hist_storyweaving_scene-story text-right"><%%VALUE(story)%%></td>
+		<td id="hist_storyweaving_scene-step-<%%VALUE(id)%%>" class="hist_storyweaving_scene-step"><%%VALUE(step)%%></td>
+		<td id="hist_storyweaving_scene-throughline-<%%VALUE(id)%%>" class="hist_storyweaving_scene-throughline text-right"><%%VALUE(throughline)%%></td>
+		<td id="hist_storyweaving_scene-domain-<%%VALUE(id)%%>" class="hist_storyweaving_scene-domain text-right"><%%VALUE(domain)%%></td>
+		<td id="hist_storyweaving_scene-concern-<%%VALUE(id)%%>" class="hist_storyweaving_scene-concern text-right"><%%VALUE(concern)%%></td>
+		<td id="hist_storyweaving_scene-issue-<%%VALUE(id)%%>" class="hist_storyweaving_scene-issue text-right"><%%VALUE(issue)%%></td>
+		<td id="hist_storyweaving_scene-theme-<%%VALUE(id)%%>" class="hist_storyweaving_scene-theme text-right"><%%VALUE(theme)%%></td>
+		<td id="hist_storyweaving_scene-sequence-<%%VALUE(id)%%>" class="hist_storyweaving_scene-sequence"><%%VALUE(sequence)%%></td>
+		<td id="hist_storyweaving_scene-encoding-<%%VALUE(id)%%>" class="hist_storyweaving_scene-encoding"><%%VALUE(encoding)%%></td>

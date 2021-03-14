@@ -1,0 +1,22 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the  and  formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the biblio_transcript_init() hook (in hooks/biblio_transcript.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="biblio_transcript-id-<%%VALUE(id)%%>" class="biblio_transcript-id text-right"><%%VALUE(id)%%></td>
+		<td id="biblio_transcript-author-<%%VALUE(id)%%>" class="biblio_transcript-author text-right"><%%VALUE(author)%%></td>
+		<td id="biblio_transcript-author_memberID-<%%VALUE(id)%%>" class="biblio_transcript-author_memberID text-right"><%%VALUE(author_memberID)%%></td>
+		<td id="biblio_transcript-bibliography_id-<%%VALUE(id)%%>" class="biblio_transcript-bibliography_id text-right"><%%VALUE(bibliography_id)%%></td>
+		<td id="biblio_transcript-bibliography_title-<%%VALUE(id)%%>" class="biblio_transcript-bibliography_title text-right"><%%VALUE(bibliography_title)%%></td>
+		<td id="biblio_transcript-transcript_title-<%%VALUE(id)%%>" class="biblio_transcript-transcript_title"><%%VALUE(transcript_title)%%></td>
+		<td id="biblio_transcript-transcript-<%%VALUE(id)%%>" class="biblio_transcript-transcript"><a href="link.php?t=biblio_transcript&f=transcript&i=<%%VALUE(id)%%>" target="_blank" title="<%%VALUE(transcript)%%>" class="btn btn-default"><i class="glyphicon glyphicon-lg glyphicon-file text-info"></i></a></td>
+		<td id="biblio_transcript-credits-<%%VALUE(id)%%>" class="biblio_transcript-credits"><%%VALUE(credits)%%></td>
+		<td id="biblio_transcript-ip_rights-<%%VALUE(id)%%>" class="biblio_transcript-ip_rights"><%%VALUE(ip_rights)%%></td>
+		<td id="biblio_transcript-team-<%%VALUE(id)%%>" class="biblio_transcript-team"><%%VALUE(team)%%></td>
+		<td id="biblio_transcript-biblio_lead-<%%VALUE(id)%%>" class="biblio_transcript-biblio_lead"><%%VALUE(biblio_lead)%%></td>
+		<td id="biblio_transcript-data_evaluation-<%%VALUE(id)%%>" class="biblio_transcript-data_evaluation"><%%VALUE(data_evaluation)%%></td>
+		<script>$j(function() {
+			var e_transcript = '<%%VALUE(transcript)%%>'; if(e_transcript == '' || e_transcript == '&nbsp;') $j(/*<*/ '#biblio_transcript-transcript-<%%VALUE(id)%%>' /*>*/).html('');
+		});</script>

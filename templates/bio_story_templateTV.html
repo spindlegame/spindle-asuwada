@@ -1,0 +1,19 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the bio_story_init() hook (in hooks/bio_story.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="bio_story-id-<%%VALUE(id)%%>" class="bio_story-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="bio_story-bio_team-<%%VALUE(id)%%>" class="bio_story-bio_team"><%%SELECT%%><%%VALUE(bio_team)%%><%%ENDSELECT%%></td>
+		<td id="bio_story-author_id-<%%VALUE(id)%%>" class="bio_story-author_id"><%%SELECT%%><%%VALUE(author_id)%%><%%ENDSELECT%%></td>
+		<td id="bio_story-author_name-<%%VALUE(id)%%>" class="bio_story-author_name"><%%SELECT%%><%%VALUE(author_name)%%><%%ENDSELECT%%></td>
+		<td id="bio_story-type-<%%VALUE(id)%%>" class="bio_story-type"><%%SELECT%%><%%VALUE(type)%%><%%ENDSELECT%%></td>
+		<td id="bio_story-agent_id-<%%VALUE(id)%%>" class="bio_story-agent_id"><%%SELECT%%><%%VALUE(agent_id)%%><%%ENDSELECT%%></td>
+		<td id="bio_story-agent_name-<%%VALUE(id)%%>" class="bio_story-agent_name"><%%SELECT%%><%%VALUE(agent_name)%%><%%ENDSELECT%%></td>
+		<td id="bio_story-story_title-<%%VALUE(id)%%>" class="bio_story-story_title"><%%SELECT%%><%%VALUE(story_title)%%><%%ENDSELECT%%></td>
+		<td id="bio_story-approach-<%%VALUE(id)%%>" class="bio_story-approach"><%%SELECT%%><%%VALUE(approach)%%><%%ENDSELECT%%></td>
+		<td id="bio_story-tags-<%%VALUE(id)%%>" class="bio_story-tags"><%%SELECT%%><%%VALUE(tags)%%><%%ENDSELECT%%></td>
+		<td id="bio_story-citation-<%%VALUE(id)%%>" class="bio_story-citation"><%%SELECT%%><%%VALUE(citation)%%><%%ENDSELECT%%></td>
+		<td id="bio_story-collaboration_status-<%%VALUE(id)%%>" class="bio_story-collaboration_status"><%%SELECT%%><%%VALUE(collaboration_status)%%><%%ENDSELECT%%></td>

@@ -1,0 +1,459 @@
+<!-- To change the layout of the detail view form, we recommend using JS code in hooks/bio_storyline-dv.js rather than editing this file -->
+
+<div id="detail-view"></div>
+<div class="panel-heading"><h3 class="panel-title"><strong><%%DETAIL_VIEW_TITLE%%></strong></h3></div>
+
+<div id="bio_storyline_dv_container-loading" class="text-center text-info text-bold vspacer-lg"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+<div class="panel-body hidden" id="bio_storyline_dv_container">
+	<!-- child links -->
+	<div class="row vspacer-md">
+		<div class="col-xs-12 children-links">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm vspacer-sm" href="hist_chr_scene_view.php?filterer_bio_storyline_no=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="hist_chr_scene_link"><i class="glyphicon glyphicon-list-alt"></i> Escenas de personajes de la Historia</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="hist_chr_scene_view.php?filterer_bio_storyline_no=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="xs_hist_chr_scene_link"><i class="glyphicon glyphicon-list-alt"></i> Escenas de personajes de la Historia</a>
+			<input type="hidden" id="hist_chr_scene_hclink" value="hist_chr_scene_view.php?filterer_bio_storyline_no=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<hr class="hidden-xs hidden-sm">
+
+	<div class="row">
+		<!-- form inputs -->
+		<div class="col-md-8 col-lg-10" id="bio_storyline_dv_form">
+			<fieldset class="form-horizontal">
+
+				<!-- Field: ID -->
+				<div class="form-group bio_storyline-id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="id">ID</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="id"><%%VALUE(id)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Biograf&#237;a -->
+				<div class="form-group bio_storyline-biography">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="biography" data-parent_link="view_parent_modal">Biograf&#237;a</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(biography)%%><%%PLINK(biography)%%><%%ADDNEW(bio_story)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: ID autor -->
+				<div class="form-group bio_storyline-author_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="author_id" data-parent_link="view_parent_modal">ID autor</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(author_id)%%><%%PLINK(author_id)%%><%%ADDNEW(biblio_author)%%><span id="author_idLoading"></span></div>
+					</div>
+				</div>
+
+				<!-- Field: Nombre de autor -->
+				<div class="form-group bio_storyline-author_name">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Nombre de autor</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="author_name"></div>
+					</div>
+				</div>
+
+				<!-- Field: Bibliograf&#237;a -->
+				<div class="form-group bio_storyline-bibliography">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bibliography" data-parent_link="view_parent_modal">Bibliograf&#237;a</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bibliography)%%><%%PLINK(bibliography)%%><%%ADDNEW(biblio_doc)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Transcripci&#243;n -->
+				<div class="form-group bio_storyline-transcript">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="transcript" data-parent_link="view_parent_modal">Transcripci&#243;n</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(transcript)%%><%%PLINK(transcript)%%><%%ADDNEW(biblio_transcript)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Secuencia de token -->
+				<div class="form-group bio_storyline-token_sequence">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Secuencia de token</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="token_sequence"></div>
+					</div>
+				</div>
+
+				<!-- Field: Token -->
+				<div class="form-group bio_storyline-token">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="token" data-parent_link="view_parent_modal">Token <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#token-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="token-description"><div class="alert alert-info bspacer-xs">Para el an&#225;lisis de una biograf&#237;a ya publicada, sus tokens se pueden copiar uno a uno como historias.
+Para la creaci&#243;n de una nueva biograf&#237;a, basada en diferentes trabajos, conecte su historia con el token de origen aqu&#237;.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(token)%%><%%PLINK(token)%%><%%ADDNEW(biblio_token)%%><span id="tokenLoading"></span></div>
+					</div>
+				</div>
+
+				<!-- Field: Acto -->
+				<div class="form-group bio_storyline-story_act">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="story_act" data-parent_link="view_parent_modal">Acto</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(story_act)%%><%%PLINK(story_act)%%><%%ADDNEW(class_story_acts)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Secuencia -->
+				<div class="form-group bio_storyline-sequence">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="sequence">Secuencia <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#sequence-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="sequence-description"><div class="alert alert-info bspacer-xs">Secuencia o cap&#237;tulo dentro de la trama.</div></span>
+						<input maxlength="40" type="text" class="form-control" name="sequence" id="sequence" value="<%%VALUE(sequence)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Personaje -->
+				<div class="form-group bio_storyline-character">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="character" data-parent_link="view_parent_modal">Personaje</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(character)%%><%%PLINK(character)%%><%%ADDNEW(bio_chr)%%><span id="characterLoading"></span></div>
+					</div>
+				</div>
+
+				<!-- Field: Rol -->
+				<div class="form-group bio_storyline-role">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Rol</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="role"></div>
+					</div>
+				</div>
+
+				<!-- Field: L&#237;nea de trama n&#186; -->
+				<div class="form-group bio_storyline-storyline_no">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="storyline_no">L&#237;nea de trama n&#186;</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="storyline_no" id="storyline_no" value="<%%VALUE(storyline_no)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Parent&#233;tesis -->
+				<div class="form-group bio_storyline-parenthetic">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="parenthetic">Parent&#233;tesis <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#parenthetic-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="parenthetic-description"><div class="alert alert-info bspacer-xs">Los par&#233;ntesis son palabras escritas bajo el nombre de un personaje en un di&#225;logo. <br>A menudo se les llama "bocetos" porque son adjetivos que se usan para describir c&#243;mo alguien dice una l&#237;nea o son verbos que le dan a un actor o actriz alg&#250;n tipo de acci&#243;n para hacer mientras dice la l&#237;nea.<br><br><br>Estas palabras aparecen en medio del par&#233;ntesis.</div></span>
+						<input maxlength="40" type="text" class="form-control" name="parenthetic" id="parenthetic" value="<%%VALUE(parenthetic)%%>">
+					</div>
+				</div>
+
+				<!-- Field: T&#237;tulo de la l&#237;nea -->
+				<div class="form-group bio_storyline-storyline_title">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="storyline_title">T&#237;tulo de la l&#237;nea</label>
+					<div class="col-lg-9">
+						<input maxlength="250" type="text" class="form-control" name="storyline_title" id="storyline_title" value="<%%VALUE(storyline_title)%%>">
+					</div>
+				</div>
+
+				<!-- Field: L&#237;nea de trama (Storyline) -->
+				<div class="form-group bio_storyline-storyline">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="storyline">L&#237;nea de trama (Storyline)</label>
+					<div class="col-lg-9">
+						<textarea class="form-control" name="storyline" id="storyline" rows=" 5"><%%VALUE(storyline)%%></textarea>
+					</div>
+				</div>
+
+				<!-- Field: Notas -->
+				<div class="form-group bio_storyline-notes">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="notes">Notas</label>
+					<div class="col-lg-9 has-nicedit">
+						<%%HTMLAREA(notes)%%>
+					</div>
+				</div>
+
+				<!-- Field: N&#186; escena Storyweaving -->
+				<div class="form-group bio_storyline-storyweaving_scene_no">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="storyweaving_scene_no" data-parent_link="view_parent_modal">N&#186; escena Storyweaving <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#storyweaving_scene_no-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="storyweaving_scene_no-description"><div class="alert alert-info bspacer-xs">El Storyweaving es un t&#233;rmino de Dram&#225;tica y se debe codificar en base de su teor&#237;a, y si posible con la ayuda de su software.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(storyweaving_scene_no)%%><%%PLINK(storyweaving_scene_no)%%><%%ADDNEW(bio_storyweaving_scene)%%><span id="storyweaving_scene_noLoading"></span></div>
+					</div>
+				</div>
+
+				<!-- Field: Escena Storyweaving -->
+				<div class="form-group bio_storyline-storyweaving_scene">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Escena Storyweaving <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#storyweaving_scene-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="storyweaving_scene-description"><div class="alert alert-info bspacer-xs">El Storyweaving es un t&#233;rmino de Dram&#225;tica y se debe codificar en base de su teor&#237;a, y si posible con la ayuda de su software.</div></span>
+						<div class="form-control-static" id="storyweaving_scene"></div>
+					</div>
+				</div>
+
+				<!-- Field: Secuencia Storyweaving -->
+				<div class="form-group bio_storyline-storyweaving_sequence">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Secuencia Storyweaving <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#storyweaving_sequence-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="storyweaving_sequence-description"><div class="alert alert-info bspacer-xs">El Storyweaving es un t&#233;rmino de Dram&#225;tica y se debe codificar en base de su teor&#237;a, y si posible con la ayuda de su software.</div></span>
+						<div class="form-control-static" id="storyweaving_sequence"></div>
+					</div>
+				</div>
+
+				<!-- Field: Tema Storyweaving -->
+				<div class="form-group bio_storyline-storyweaving_theme">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Tema Storyweaving <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#storyweaving_theme-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="storyweaving_theme-description"><div class="alert alert-info bspacer-xs">El Storyweaving es un t&#233;rmino de Dram&#225;tica y se debe codificar en base de su teor&#237;a, y si posible con la ayuda de su software.</div></span>
+						<div class="form-control-static" id="storyweaving_theme"></div>
+					</div>
+				</div>
+
+				<!-- Field: Escena de de personaje -->
+				<div class="form-group bio_storyline-character_scene">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="character_scene" data-parent_link="view_parent_modal">Escena de de personaje</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(character_scene)%%><%%PLINK(character_scene)%%><%%ADDNEW(bio_chr_scene)%%><span id="character_sceneLoading"></span></div>
+					</div>
+				</div>
+
+				<!-- Field: Evento de personaje -->
+				<div class="form-group bio_storyline-character_event">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="character_event" data-parent_link="view_parent_modal">Evento de personaje</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(character_event)%%><%%PLINK(character_event)%%><%%ADDNEW(bio_encounter_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Fecha inicio -->
+				<div class="form-group bio_storyline-startdate">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Fecha inicio</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="startdate"></div>
+					</div>
+				</div>
+
+				<!-- Field: Fecha final -->
+				<div class="form-group bio_storyline-enddate">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Fecha final</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="enddate"></div>
+					</div>
+				</div>
+
+			</fieldset>
+		</div>
+
+		<!-- DV action buttons -->
+		<hr class="hidden-md hidden-lg">
+		<div class="col-md-4 col-lg-2" id="bio_storyline_dv_action_buttons">
+			<div class="btn-toolbar">
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%UPDATE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%DESELECT_BUTTON%%>
+					<%%DVPRINT_BUTTON%%>
+					<%%DELETE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%INSERT_BUTTON%%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- child records -->
+	<hr>
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1">
+			<div id="bio_storyline-children" class="children-tabs">
+				<div class="text-center"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+			</div>
+		</div>
+	</div>
+
+</div><!-- /div class="panel-body" -->
+	<script>
+		$j(function() {
+			var add_new_mode = (!$j('input[name=SelectedID]').val());
+			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			/* auto-close embedded page? */
+			var autoclose_mode = ($j('input[name=AutoClose]').val() == 1);
+			var record_added_ok = (location.search.split('record-added-ok=').length == 2);
+			var record_updated_ok = (location.search.split('record-updated-ok=').length == 2);
+			if((record_added_ok || record_updated_ok) && embedded_mode && autoclose_mode) {
+				setTimeout(AppGini.closeParentModal, 2000);
+			}
+
+			AppGini.once({
+				condition: function() { return bkLib != undefined; },
+				action: function() {
+					if($j('textarea#notes').length) new nicEditor({ fullPanel : true }).panelInstance('notes');
+				}
+			});
+			/* enable DV action buttons to float on scrolling down the form */
+			enable_dvab_floating();
+
+
+			setTimeout(function() {
+				$j('#bio_storyline_dv_container-loading').addClass('hidden');
+				$j('#bio_storyline_dv_container').removeClass('hidden');
+				AppGini.focusFormElement('bio_storyline', 'biography');
+			}, 1100);
+
+			$j('form').eq(0).change(function() {
+				if($j(this).data('already_changed')) return;
+				if($j('#deselect').length) $j('#deselect').removeClass('btn-default').addClass('btn-warning').get(0).lastChild.data = " <%%TRANSLATION(Cancel)%%>";
+				$j(this).data('already_changed', true);
+			});
+
+			// try to detect rich text changes by adding 'input' handler after nicedit is loaded ...
+			AppGini.detectContentEditableChanges();
+
+			$j('a[href="<%%BASE_UPLOAD_PATH%%>"]').click(function() { return false; });
+
+			if(embedded_mode) {
+				/* hide links to children tables in embedded mode */
+				$j('.detail_view a[id$=_link]').remove();
+
+				/* append embedded mode to all links */
+				var append_embedded = function() {
+					$j('a[href]:not([href^="#"]):not([href^="javascript"]):not([href$="Embedded=1"]):not([href*="link.php?t="]):not([href^="mailto:"])').each(
+						function() {
+							$j(this).attr('href', $j(this).attr('href') + '&Embedded=1');
+						}
+					);
+				}
+				setTimeout(append_embedded, 500);
+				setTimeout(append_embedded, 1500);
+				setTimeout(append_embedded, 2500);
+				setTimeout(append_embedded, 3500);
+			}
+
+			/* when no record is selected ('add new' mode) */
+			if(add_new_mode) {
+				/* hide links to children tables */
+				$j('.detail_view a[id$=_link]').remove();
+			} else {
+				post(
+					'parent-children.php', {
+						ParentTable: 'bio_storyline',
+						SelectedID: '<%%VALUE(id)%%>',
+						Operation: 'show-children'
+					},
+					'bio_storyline-children'
+				);
+			}
+
+			if(!embedded_mode) {
+				/* add a horizontal spacer to [add new parent] buttons that don't have a spacered element before them */
+				$j('.add_new_parent').prev(':not(.hspacer-md)').next().addClass('hspacer-md');
+
+				$j('.add_new_parent').click(function() {
+					var pt = $j(this).attr('id').replace(/_add_new$/, '');
+					modal_window({
+						url: pt + '_view.php?addNew_x=1&Embedded=1',
+						close: function() {
+							var field_id = $j('#' + pt + '_add_new').prevAll('input:hidden').eq(0).attr('id');
+							$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+							/* if a new parent was added, select it */
+							var new_id = localStorage.getItem(pt + '_last_added_id');
+							if(new_id === null) return;
+
+							localStorage.clear(pt + '_last_added_id');
+							AppGini.lookupText({
+								id: new_id,
+								table: 'bio_storyline',
+								field: field_id,
+								callback: function(data) {
+									$j('#' + field_id + '-container').select2('data', data, true);
+								}
+							});
+						},
+						size: 'full',
+						title: $j(this).attr('title')
+					});
+				});
+			}
+
+			AppGini.hideViewParentLinks();
+
+			$j('form').on('click', '.view_parent', function() {
+				var pt = $j(this).attr('id').replace(/_view_parent$/, '');
+				if($j(this).prevAll('input:hidden').length) {
+					var parent_id = $j(this).prevAll('input:hidden').eq(0).val();
+				} else {
+					var parent_id = $j(this).prevAll().children('input:hidden').eq(0).val();
+				}
+
+				/* handle radio lookups */
+				if($j(this).prevAll('[type=radio]').length) {
+					parent_id = $j(this).prevAll('[type=radio]').eq(0).val();
+				}
+
+				if(parent_id != '{empty_value}' && parent_id != undefined && parent_id != '') {
+					var parent_link = $j(this).parents('.form-group').children('label').data('parent_link');
+					switch(parent_link) {
+						case 'view_parent_hidden':
+							break;
+						case 'view_parent_modal':
+							modal_window({
+								url: pt + '_view.php?Embedded=1&SelectedID=' + encodeURIComponent(parent_id),
+								close: function() {
+									var field_id = $j('#' + pt + '_view_parent').prevAll('input:hidden').eq(0).attr('id');
+									$j('#' + field_id + '-container').select2('focus').select2('focus');
+								},
+								size: 'full',
+								title: $j(this).attr('title')
+							});
+							break;
+						case 'view_parent_same_window':
+							window.location = pt + '_view.php?Embedded=' + (embedded_mode ? '1' : '') + '&SelectedID=' + encodeURIComponent(parent_id);
+							break;
+						case 'view_parent_new_window':
+							window.open(pt + '_view.php?SelectedID=' + encodeURIComponent(parent_id));
+							break;
+					}
+
+				}
+			});
+
+
+			/* load admin tools for admin user */
+			if(!add_new_mode) {
+				$j('body').append('<div id="admin-tools-appendix"></div>');
+				$j('#admin-tools-appendix').load(
+					'ajax_admin_tools.php?table=bio_storyline&id=<%%URLVALUE(id)%%>',
+					function(resp) {
+						if(!resp.length) return;
+						$j.ajax('ajax_admin_tools.php?action=get_admin_tools_js&table=bio_storyline&id=<%%URLVALUE(id)%%>');
+					}
+				);
+			}
+
+			/* warn user if 'add new' clicked while unsaved changes exist */
+			$j('#addNew').click(function() {
+				if($j('#deselect.btn-warning').length) {
+					return confirm('<%%TRANSLATION(discard changes confirm)%%>');
+				}
+			});
+
+		});
+	</script>

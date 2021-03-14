@@ -1,0 +1,499 @@
+<!-- To change the layout of the detail view form, we recommend using JS code in hooks/game_agent-dv.js rather than editing this file -->
+
+<div id="detail-view"></div>
+<div class="panel-heading"><h3 class="panel-title"><strong><%%DETAIL_VIEW_TITLE%%></strong></h3></div>
+
+<div id="game_agent_dv_container-loading" class="text-center text-info text-bold vspacer-lg"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+<div class="panel-body hidden" id="game_agent_dv_container">
+	<!-- child links -->
+	<div class="row vspacer-md">
+		<div class="col-xs-12 children-links">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm vspacer-sm" href="biblio_author_view.php?filterer_author_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="biblio_author_link"><i class="glyphicon glyphicon-list-alt"></i> Autores</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="biblio_author_view.php?filterer_author_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="xs_biblio_author_link"><i class="glyphicon glyphicon-list-alt"></i> Autores</a>
+			<input type="hidden" id="biblio_author_hclink" value="biblio_author_view.php?filterer_author_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm vspacer-sm" href="biblio_code_demo_view.php?filterer_game_agent=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="biblio_code_demo_link"><i class="glyphicon glyphicon-list-alt"></i> Datos demogr&#225;ficos</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="biblio_code_demo_view.php?filterer_game_agent=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="xs_biblio_code_demo_link"><i class="glyphicon glyphicon-list-alt"></i> Datos demogr&#225;ficos</a>
+			<input type="hidden" id="biblio_code_demo_hclink" value="biblio_code_demo_view.php?filterer_game_agent=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm vspacer-sm" href="biblio_analyst_view.php?filterer_author_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="biblio_analyst_link"><i class="glyphicon glyphicon-list-alt"></i> Bibli&#243;grafos</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="biblio_analyst_view.php?filterer_author_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="xs_biblio_analyst_link"><i class="glyphicon glyphicon-list-alt"></i> Bibli&#243;grafos</a>
+			<input type="hidden" id="biblio_analyst_hclink" value="biblio_analyst_view.php?filterer_author_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<input type="hidden" id="bio_author_hclink" value="bio_author_view.php?filterer_author_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm vspacer-sm" href="bio_story_view.php?filterer_agent_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="bio_story_link"><i class="glyphicon glyphicon-list-alt"></i> Biograf&#237;as</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="bio_story_view.php?filterer_agent_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="xs_bio_story_link"><i class="glyphicon glyphicon-list-alt"></i> Biograf&#237;as</a>
+			<input type="hidden" id="bio_story_hclink" value="bio_story_view.php?filterer_agent_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<input type="hidden" id="bio_chr_hclink" value="bio_chr_view.php?filterer_agent_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<input type="hidden" id="bio_encounter_hclink" value="bio_encounter_view.php?filterer_authorA=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<input type="hidden" id="bio_code_herme_hclink" value="bio_code_herme_view.php?filterer_agent_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm vspacer-sm" href="hist_author_view.php?filterer_agent_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="hist_author_link"><i class="glyphicon glyphicon-list-alt"></i> Histori&#243;grafos</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="hist_author_view.php?filterer_agent_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="xs_hist_author_link"><i class="glyphicon glyphicon-list-alt"></i> Histori&#243;grafos</a>
+			<input type="hidden" id="hist_author_hclink" value="hist_author_view.php?filterer_agent_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<input type="hidden" id="hist_chr_hclink" value="hist_chr_view.php?filterer_agent_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<input type="hidden" id="hist_chr_scene_hclink" value="hist_chr_scene_view.php?filterer_agent_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<input type="hidden" id="hist_encounter_hclink" value="hist_encounter_view.php?filterer_agentA=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<input type="hidden" id="ecounter_analyst_hclink" value="ecounter_analyst_view.php?filterer_agent_id=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<hr class="hidden-xs hidden-sm">
+
+	<div class="row">
+		<!-- form inputs -->
+		<div class="col-md-8 col-lg-10" id="game_agent_dv_form">
+			<fieldset class="form-horizontal">
+
+				<!-- Field: ID -->
+				<div class="form-group game_agent-id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="id">ID</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="id"><%%VALUE(id)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: ID jugador -->
+				<div class="form-group game_agent-memberID">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="memberID">ID jugador <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#memberID-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="memberID-description"><div class="alert alert-info bspacer-xs">Los jugadores del juego pueden crear esta identificaci&#243;n para facilitar la b&#250;squeda dentro del juego.<br>Propuesta de m&#233;todo: Las primeras dos letras del primer y segundo apellido, las primeras letras de los nombre y la fecha de nacimiento.<br>Ejemplo: Diego L&#243;pez Pacheco y Portocarrero = PaPoDL1447</div></span>
+						<input maxlength="40" type="text" class="form-control" name="memberID" id="memberID" value="<%%VALUE(memberID)%%>"><div class="text-danger vspacer-md" id="memberID-uniqueness-note" style="display: none;"><%%TRANSLATION(unique field error)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Foto de perfil -->
+				<div class="form-group game_agent-img">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Foto de perfil <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#img-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="img-description"><div class="alert alert-info bspacer-xs">Tama&#241;o m&#225;ximo de archivo permitido: 300 KB.
+Tipos de archivos permitidos: jpg, jpeg, gif, png</div></span>
+						<div class="form-control-static well well-sm">
+							<div class="pull-left"><a href="<%%BASE_UPLOAD_PATH%%><%%VALUE(img)%%>" data-lightbox="game_agent_dv"><img src="thumbnail.php?i=<%%VALUE(img)%%>&t=game_agent&f=img&v=dv" class="img-thumbnail" id="img-image"></a></div>
+							<div class="pull-right well upload-toolbox">
+								<div class="hidden-md hidden-lg vspacer-lg"></div>
+								<%%UPLOADFILE(img)%%>
+								<%%REMOVEFILE(img)%%>
+								<div class="text-bold text-danger file-type-error hidden"><%%TRANSLATION(invalid file type)%%></div>
+								<div class="text-bold text-danger file-size-error hidden"><%%TRANSLATION(file too large)%%></div>
+							</div>
+							<div class="clearfix"></div>
+						</div>
+						<script>/* disable links to empty images */ $j(function() { var e_img = '<%%VALUE(img)%%>'; if(e_img == '' || e_img == '&nbsp;' || e_img == 'blank.gif') { $j('#img-link').hide(); $j('#img-image').parents('a').attr('href', '').on('click', function(e) { e.preventDefault(); }); } });</script>
+					</div>
+				</div>
+
+				<!-- Field: Grupo -->
+				<div class="form-group game_agent-groupID">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="groupID">Grupo <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#groupID-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="groupID-description"><div class="alert alert-info bspacer-xs">Esta columna es para un grupo definido espec&#237;ficamente para su juego.</div></span>
+						<input maxlength="250" type="text" class="form-control" name="groupID" id="groupID" value="<%%VALUE(groupID)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Clase de selecci&#243;n -->
+				<div class="form-group game_agent-selection_class">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="selection_class" data-parent_link="view_parent_modal">Clase de selecci&#243;n <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#selection_class-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="selection_class-description"><div class="alert alert-info bspacer-xs">Esta columna es para una clase de selecci&#243;n, de acuerdo con su estrategia de muestreo y la fase de recolecci&#243;n.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(selection_class)%%><%%PLINK(selection_class)%%><%%ADDNEW(class_agent_selection)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Typo de agente 1 -->
+				<div class="form-group game_agent-agenttype1">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="agenttype1" data-parent_link="view_parent_modal">Typo de agente 1 <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#agenttype1-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="agenttype1-description"><div class="alert alert-info bspacer-xs">Definir agentes como personajes hist&#243;ricos, personajes de ficci&#243;n, aut&#243;matas, etc.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(agenttype1)%%><%%PLINK(agenttype1)%%><%%ADDNEW(class_agent_type1)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Tipo de agente 2 -->
+				<div class="form-group game_agent-agenttype2">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="agenttype2" data-parent_link="view_parent_modal">Tipo de agente 2 <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#agenttype2-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="agenttype2-description"><div class="alert alert-info bspacer-xs">Definir escritores autobiogr&#225;ficos.
+Elija un tipo de acuerdo con el papel que tiene un agente en relaci&#243;n con la historia (muestra, contempor&#225;neo, histori&#243;grafo, bi&#243;grafo, indefinido).</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(agenttype2)%%><%%PLINK(agenttype2)%%><%%ADDNEW(class_agent_type2)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: G&#233;nero -->
+				<div class="form-group game_agent-gender">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="gender" data-parent_link="view_parent_modal">G&#233;nero <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#gender-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="gender-description"><div class="alert alert-info bspacer-xs">Defina el g&#233;nero del agente.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(gender)%%><%%PLINK(gender)%%><%%ADDNEW(class_gender)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Apellido(s) -->
+				<div class="form-group game_agent-last_name">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="last_name">Apellido(s)</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="last_name" id="last_name" value="<%%VALUE(last_name)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Nombre(s) de pila -->
+				<div class="form-group game_agent-first_name">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="first_name">Nombre(s) de pila</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="first_name" id="first_name" value="<%%VALUE(first_name)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Otro(s) nombre(s) -->
+				<div class="form-group game_agent-other_name">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="other_name">Otro(s) nombre(s) <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#other_name-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="other_name-description"><div class="alert alert-info bspacer-xs">Ejemplo para Diego L&#243;pez Pacheco y Portocarrero: Diego Pacheco, Diego Fern&#225;ndez Pacheco</div></span>
+						<input maxlength="40" type="text" class="form-control" name="other_name" id="other_name" value="<%%VALUE(other_name)%%>">
+					</div>
+				</div>
+
+				<!-- Field: T&#237;tulos -->
+				<div class="form-group game_agent-titles">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="titles">T&#237;tulos <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#titles-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="titles-description"><div class="alert alert-info bspacer-xs">Ponga s&#243;lo el t&#237;tulo m&#225;s alto aqu&#237;, sea de grado acad&#233;mico o de grado nobiliario.<br>Ejemplo para Diego L&#243;pez Pacheco y Portocarrero: Conde</div></span>
+						<input maxlength="40" type="text" class="form-control" name="titles" id="titles" value="<%%VALUE(titles)%%>">
+					</div>
+				</div>
+
+				<!-- Field: T&#237;tulos acad&#233;micos -->
+				<div class="form-group game_agent-titles_academic">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="titles_academic">T&#237;tulos acad&#233;micos <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#titles_academic-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="titles_academic-description"><div class="alert alert-info bspacer-xs">Ponga todos los dem&#225;s t&#237;tulos acad&#233;micos aqu&#237;, especialmente si ayudan a diferenciar y encontrar a la persona.</div></span>
+						<input maxlength="40" type="text" class="form-control" name="titles_academic" id="titles_academic" value="<%%VALUE(titles_academic)%%>">
+					</div>
+				</div>
+
+				<!-- Field: T&#237;tulos nobiliarios -->
+				<div class="form-group game_agent-titles_nobility">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="titles_nobility">T&#237;tulos nobiliarios <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#titles_nobility-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="titles_nobility-description"><div class="alert alert-info bspacer-xs">Ponga todos los dem&#225;s t&#237;tulos nobiliarios aqu&#237;, especialmente si ayudan a diferenciar y encontrar a la persona.<br>Ejemplo para Diego L&#243;pez Pacheco y Portocarrero: Duque de Escalona,  Mayordomo Mayor de la corona de Castilla, se&#241;or de Ser&#243;n, T&#237;jola, Tolox y Monda, etc.</div></span>
+						<textarea class="form-control" name="titles_nobility" id="titles_nobility" rows=" 5"><%%VALUE(titles_nobility)%%></textarea>
+					</div>
+				</div>
+
+				<!-- Field: Fecha de nacimiento -->
+				<div class="form-group game_agent-birthday">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="birthday">Fecha de nacimiento</label>
+					<div class="col-lg-9">
+						<div class="input-group date datetimepicker"><input type="text" class="form-control" name="birthday" id="birthday" value="<%%VALUE(birthday)%%>"><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span></div>
+					</div>
+				</div>
+
+				<!-- Field: Lugar de nacimiento -->
+				<div class="form-group game_agent-birth_location">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="birth_location">Lugar de nacimiento <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#birth_location-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="birth_location-description"><div class="alert alert-info bspacer-xs">Escriba el lugar de nacimiento seg&#250;n su denominaci&#243;n actual y la ortograf&#237;a espa&#241;ola y en el siguiente orden: primero lugar, despu&#233;s regi&#243;n, como &#250;ltimo el pa&#237;s actual.<br>Ejemplo: Edimburgo, Edimburgo, Reino Unido.<br>Falso: Edinburgh, Escocia, United Kingdom.</div></span>
+						<input maxlength="250" type="text" class="form-control" name="birth_location" id="birth_location" value="<%%VALUE(birth_location)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Mapa -->
+				<div class="form-group game_agent-birth_location_map">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="birth_location_map-edit-link">Mapa <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#birth_location_map-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="birth_location_map-description"><div class="alert alert-info bspacer-xs">Copie aqu&#237; el enlace del mapa de Google Maps.</div></span>
+						<div class="form-control-static"><div class="rspacer-lg"><%%GOOGLEMAP(birth_location_map)%%></div><label for="birth_location_map"><button type="button" id="birth_location_map-edit-link" class="btn btn-default vspacer-sm" data-toggle="collapse" data-target="#birth_location_map" title="<%%TRANSLATION(Edit)%%>"><i class="glyphicon glyphicon-pencil"></i></button></label><input maxlength="40" type="text" class="form-control collapse" name="birth_location_map" id="birth_location_map" value="<%%VALUE(birth_location_map)%%>"></div>
+					</div>
+				</div>
+
+				<!-- Field: D&#237;a de defunci&#243;n -->
+				<div class="form-group game_agent-deathday">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="deathday">D&#237;a de defunci&#243;n</label>
+					<div class="col-lg-9">
+						<div class="input-group date datetimepicker"><input type="text" class="form-control" name="deathday" id="deathday" value="<%%VALUE(deathday)%%>"><span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span></div>
+					</div>
+				</div>
+
+				<!-- Field: Lugar de defunci&#243;n -->
+				<div class="form-group game_agent-death_location">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="death_location">Lugar de defunci&#243;n <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#death_location-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="death_location-description"><div class="alert alert-info bspacer-xs">Escriba el lugar seg&#250;n su denominaci&#243;n actual y la ortograf&#237;a espa&#241;ola y en el siguiente orden: primero lugar, despu&#233;s regi&#243;n, como &#250;ltimo el pa&#237;s actual.<br>Ejemplo: Edimburgo, Edimburgo, Reino Unido.<br>Falso: Edinburgh, Escocia, United Kingdom.</div></span>
+						<input maxlength="250" type="text" class="form-control" name="death_location" id="death_location" value="<%%VALUE(death_location)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Life span -->
+				<div class="form-group game_agent-life_span">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Life span</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="life_span"><%%VALUE(life_span)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Lugar principal de acci&#243;n -->
+				<div class="form-group game_agent-workplace">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="workplace">Lugar principal de acci&#243;n <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#workplace-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="workplace-description"><div class="alert alert-info bspacer-xs">Define el lugar de mayor acci&#243;n o acci&#243;n m&#225;s importante de esta persona.<br>Escriba el lugar seg&#250;n su denominaci&#243;n actual y la ortograf&#237;a espa&#241;ola y en el siguiente orden: primero lugar, despu&#233;s regi&#243;n, como &#250;ltimo el pa&#237;s actual.<br>Ejemplo: Edimburgo, Edimburgo, Reino Unido.<br>Falso: Edinburgh, Escocia, United Kingdom.</div></span>
+						<input maxlength="250" type="text" class="form-control" name="workplace" id="workplace" value="<%%VALUE(workplace)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Conc&#237;a -->
+				<div class="form-group game_agent-knows">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="knows">Conc&#237;a <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#knows-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="knows-description"><div class="alert alert-info bspacer-xs">Menciona algunas personas importantes con las que estuvo relacionados.<br>Este campo sirve para filtrar y buscar agentes.</div></span>
+						<input maxlength="250" type="text" class="form-control" name="knows" id="knows" value="<%%VALUE(knows)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Biograf&#237;a corta -->
+				<div class="form-group game_agent-shortbio">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="shortbio">Biograf&#237;a corta <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#shortbio-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="shortbio-description"><div class="alert alert-info bspacer-xs">Escriba o copie un breve resumen de la vida de esta persona.</div></span>
+						<textarea class="form-control" name="shortbio" id="shortbio" rows=" 5"><%%VALUE(shortbio)%%></textarea>
+					</div>
+				</div>
+
+				<!-- Field: Galer&#237;a de fotos -->
+				<div class="form-group game_agent-img_gallery">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="img_gallery-edit-link">Galer&#237;a de fotos <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#img_gallery-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="img_gallery-description"><div class="alert alert-info bspacer-xs">Ponga aqu&#237; un enlace a una galer&#237;a de fotos de esta persona. Puede ser una galer&#237;a p&#250;blica de alg&#250;n archivo, de Wikimedia, un Blog hist&#243;rico, o alguna que haya creado usted.</div></span>
+						<div>
+							<a id="img_gallery-link" href="link.php?t=game_agent&f=img_gallery&i=<%%VALUE(id)%%>" target="_blank" class="rspacer-lg"><i class="glyphicon glyphicon-lg glyphicon-globe" title="<%%VALUE(img_gallery)%%>"></i></a>
+							<label for="img_gallery"><button type="button" id="img_gallery-edit-link" class="btn btn-default vspacer-sm" data-toggle="collapse" data-target="#img_gallery" title="<%%TRANSLATION(Edit)%%>"><i class="glyphicon glyphicon-pencil"></i></button></label>
+							<input maxlength="40" type="text" class="form-control collapse" name="img_gallery" id="img_gallery" value="<%%VALUE(img_gallery)%%>">
+						</div><script>jQuery(function() { var e_img_gallery = '<%%VALUE(img_gallery)%%>'; if(e_img_gallery == '' || e_img_gallery == '&nbsp;' || e_img_gallery == 'blank.gif') jQuery('#img_gallery-link').hide(); });</script>
+					</div>
+				</div>
+
+				<!-- Field: Evaluaci&#243;n de datos -->
+				<div class="form-group game_agent-data_evaluation">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="data_evaluation" data-parent_link="view_parent_modal">Evaluaci&#243;n de datos <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#data_evaluation-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="data_evaluation-description"><div class="alert alert-info bspacer-xs">Defina el estado de evaluaci&#243;n de los datos.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(data_evaluation)%%><%%PLINK(data_evaluation)%%><%%ADDNEW(class_evaluation)%%></div>
+					</div>
+				</div>
+
+			</fieldset>
+		</div>
+
+		<!-- DV action buttons -->
+		<hr class="hidden-md hidden-lg">
+		<div class="col-md-4 col-lg-2" id="game_agent_dv_action_buttons">
+			<div class="btn-toolbar">
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%UPDATE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%DESELECT_BUTTON%%>
+					<%%DVPRINT_BUTTON%%>
+					<%%DELETE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%INSERT_BUTTON%%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- child records -->
+	<hr>
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1">
+			<div id="game_agent-children" class="children-tabs">
+				<div class="text-center"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+			</div>
+		</div>
+	</div>
+
+</div><!-- /div class="panel-body" -->
+	<script>
+		$j(function() {
+			var add_new_mode = (!$j('input[name=SelectedID]').val());
+			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			/* auto-close embedded page? */
+			var autoclose_mode = ($j('input[name=AutoClose]').val() == 1);
+			var record_added_ok = (location.search.split('record-added-ok=').length == 2);
+			var record_updated_ok = (location.search.split('record-updated-ok=').length == 2);
+			if((record_added_ok || record_updated_ok) && embedded_mode && autoclose_mode) {
+				setTimeout(AppGini.closeParentModal, 2000);
+			}
+
+			/* enable DV action buttons to float on scrolling down the form */
+			enable_dvab_floating();
+
+
+			setTimeout(function() {
+				$j('#game_agent_dv_container-loading').addClass('hidden');
+				$j('#game_agent_dv_container').removeClass('hidden');
+				AppGini.focusFormElement('game_agent', 'memberID');
+			}, 1100);
+
+			$j('form').eq(0).change(function() {
+				if($j(this).data('already_changed')) return;
+				if($j('#deselect').length) $j('#deselect').removeClass('btn-default').addClass('btn-warning').get(0).lastChild.data = " <%%TRANSLATION(Cancel)%%>";
+				$j(this).data('already_changed', true);
+			});
+
+			$j('a[href="<%%BASE_UPLOAD_PATH%%>"]').click(function() { return false; });
+
+			if(embedded_mode) {
+				/* hide links to children tables in embedded mode */
+				$j('.detail_view a[id$=_link]').remove();
+
+				/* append embedded mode to all links */
+				var append_embedded = function() {
+					$j('a[href]:not([href^="#"]):not([href^="javascript"]):not([href$="Embedded=1"]):not([href*="link.php?t="]):not([href^="mailto:"])').each(
+						function() {
+							$j(this).attr('href', $j(this).attr('href') + '&Embedded=1');
+						}
+					);
+				}
+				setTimeout(append_embedded, 500);
+				setTimeout(append_embedded, 1500);
+				setTimeout(append_embedded, 2500);
+				setTimeout(append_embedded, 3500);
+			}
+
+			/* when no record is selected ('add new' mode) */
+			if(add_new_mode) {
+				/* hide links to children tables */
+				$j('.detail_view a[id$=_link]').remove();
+			} else {
+				post(
+					'parent-children.php', {
+						ParentTable: 'game_agent',
+						SelectedID: '<%%VALUE(id)%%>',
+						Operation: 'show-children'
+					},
+					'game_agent-children'
+				);
+			}
+
+			if(!embedded_mode) {
+				/* add a horizontal spacer to [add new parent] buttons that don't have a spacered element before them */
+				$j('.add_new_parent').prev(':not(.hspacer-md)').next().addClass('hspacer-md');
+
+				$j('.add_new_parent').click(function() {
+					var pt = $j(this).attr('id').replace(/_add_new$/, '');
+					modal_window({
+						url: pt + '_view.php?addNew_x=1&Embedded=1',
+						close: function() {
+							var field_id = $j('#' + pt + '_add_new').prevAll('input:hidden').eq(0).attr('id');
+							$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+							/* if a new parent was added, select it */
+							var new_id = localStorage.getItem(pt + '_last_added_id');
+							if(new_id === null) return;
+
+							localStorage.clear(pt + '_last_added_id');
+							AppGini.lookupText({
+								id: new_id,
+								table: 'game_agent',
+								field: field_id,
+								callback: function(data) {
+									$j('#' + field_id + '-container').select2('data', data, true);
+								}
+							});
+						},
+						size: 'full',
+						title: $j(this).attr('title')
+					});
+				});
+			}
+
+			AppGini.hideViewParentLinks();
+
+			$j('form').on('click', '.view_parent', function() {
+				var pt = $j(this).attr('id').replace(/_view_parent$/, '');
+				if($j(this).prevAll('input:hidden').length) {
+					var parent_id = $j(this).prevAll('input:hidden').eq(0).val();
+				} else {
+					var parent_id = $j(this).prevAll().children('input:hidden').eq(0).val();
+				}
+
+				/* handle radio lookups */
+				if($j(this).prevAll('[type=radio]').length) {
+					parent_id = $j(this).prevAll('[type=radio]').eq(0).val();
+				}
+
+				if(parent_id != '{empty_value}' && parent_id != undefined && parent_id != '') {
+					var parent_link = $j(this).parents('.form-group').children('label').data('parent_link');
+					switch(parent_link) {
+						case 'view_parent_hidden':
+							break;
+						case 'view_parent_modal':
+							modal_window({
+								url: pt + '_view.php?Embedded=1&SelectedID=' + encodeURIComponent(parent_id),
+								close: function() {
+									var field_id = $j('#' + pt + '_view_parent').prevAll('input:hidden').eq(0).attr('id');
+									$j('#' + field_id + '-container').select2('focus').select2('focus');
+								},
+								size: 'full',
+								title: $j(this).attr('title')
+							});
+							break;
+						case 'view_parent_same_window':
+							window.location = pt + '_view.php?Embedded=' + (embedded_mode ? '1' : '') + '&SelectedID=' + encodeURIComponent(parent_id);
+							break;
+						case 'view_parent_new_window':
+							window.open(pt + '_view.php?SelectedID=' + encodeURIComponent(parent_id));
+							break;
+					}
+
+				}
+			});
+
+			enforce_uniqueness('game_agent', 'memberID');
+
+			/* load admin tools for admin user */
+			if(!add_new_mode) {
+				$j('body').append('<div id="admin-tools-appendix"></div>');
+				$j('#admin-tools-appendix').load(
+					'ajax_admin_tools.php?table=game_agent&id=<%%URLVALUE(id)%%>',
+					function(resp) {
+						if(!resp.length) return;
+						$j.ajax('ajax_admin_tools.php?action=get_admin_tools_js&table=game_agent&id=<%%URLVALUE(id)%%>');
+					}
+				);
+			}
+
+			/* warn user if 'add new' clicked while unsaved changes exist */
+			$j('#addNew').click(function() {
+				if($j('#deselect.btn-warning').length) {
+					return confirm('<%%TRANSLATION(discard changes confirm)%%>');
+				}
+			});
+
+		});
+	</script>

@@ -1,0 +1,116 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: ID -->
+		<div class="form-group biblio_code_demo-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Game agent -->
+		<div class="form-group biblio_code_demo-game_agent" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Game agent</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="game_agent<%%RND1%%>"><%%COMBOTEXT(game_agent)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Autor -->
+		<div class="form-group biblio_code_demo-author" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Autor</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="author<%%RND1%%>"><%%COMBOTEXT(author)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Bibliograf&#237;a -->
+		<div class="form-group biblio_code_demo-bibliography" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Bibliograf&#237;a</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="bibliography<%%RND1%%>"><%%COMBOTEXT(bibliography)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Transcripci&#243;n -->
+		<div class="form-group biblio_code_demo-transcript" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Transcripci&#243;n</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="transcript<%%RND1%%>"><%%COMBOTEXT(transcript)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Token -->
+		<div class="form-group biblio_code_demo-token_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Token</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="token_id<%%RND1%%>"><%%COMBOTEXT(token_id)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Token -->
+		<div class="form-group biblio_code_demo-token" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Token</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="token<%%RND1%%>"><%%COMBOTEXT(token)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: G&#233;nero -->
+		<div class="form-group biblio_code_demo-sex" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">G&#233;nero</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="sex<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Etnicidad -->
+		<div class="form-group biblio_code_demo-race" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Etnicidad</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="race<%%RND1%%>"><%%COMBOTEXT(race)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Edad -->
+		<div class="form-group biblio_code_demo-age" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Edad</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(age)%%></div>
+			</div>
+		</div>
+		<!-- Field: Religi&#243;n -->
+		<div class="form-group biblio_code_demo-religion" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Religi&#243;n</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="religion<%%RND1%%>"><%%COMBOTEXT(religion)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Orientaci&#243;n pol&#237;tica -->
+		<div class="form-group biblio_code_demo-party" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Orientaci&#243;n pol&#237;tica</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="party<%%RND1%%>"><%%COMBOTEXT(party)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Oficio -->
+		<div class="form-group biblio_code_demo-job" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Oficio</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="job<%%RND1%%>"><%%COMBOTEXT(job)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Estus o clase -->
+		<div class="form-group biblio_code_demo-status" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Estus o clase</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="status<%%RND1%%>"><%%COMBOTEXT(status)%%></span></div>
+			</div>
+		</div>
+	</fieldset>
+</div>

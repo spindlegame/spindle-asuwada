@@ -1,0 +1,226 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: ID -->
+		<div class="form-group game_agent-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: ID jugador -->
+		<div class="form-group game_agent-memberID" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID jugador</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(memberID)%%></div>
+			</div>
+		</div>
+		<!-- Field: Foto de perfil -->
+		<div class="form-group game_agent-img" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Foto de perfil</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><script>
+				var imgSrc1<%%RND1%%>='<%%BASE_UPLOAD_PATH%%><%%VALUE(img)%%>';
+				var imgSrc2<%%RND1%%>='thumbnail.php?t=game_agent&f=img&i=<%%VALUE(img)%%>&v=dv'
+			</script>
+			<a href="#" onclick="$('imgImg<%%RND1%%>').src=($('imgImg<%%RND1%%>').src.search(/thumbnail\.php/) != -1 && imgSrc1<%%RND1%%> != '<%%BASE_UPLOAD_PATH%%>' ? imgSrc1<%%RND1%%> : imgSrc2<%%RND1%%>); return false;"><img id="imgImg<%%RND1%%>" src="thumbnail.php?t=game_agent&f=img&i=<%%VALUE(img)%%>&v=dv" class="img-thumbnail"></a></div>
+			</div>
+		</div>
+		<!-- Field: Grupo -->
+		<div class="form-group game_agent-groupID" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Grupo</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(groupID)%%></div>
+			</div>
+		</div>
+		<!-- Field: Clase de selecci&#243;n -->
+		<div class="form-group game_agent-selection_class" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Clase de selecci&#243;n</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="selection_class<%%RND1%%>"><%%COMBOTEXT(selection_class)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Typo de agente 1 -->
+		<div class="form-group game_agent-agenttype1" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Typo de agente 1</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="agenttype1<%%RND1%%>"><%%COMBOTEXT(agenttype1)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Tipo de agente 2 -->
+		<div class="form-group game_agent-agenttype2" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Tipo de agente 2</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="agenttype2<%%RND1%%>"><%%COMBOTEXT(agenttype2)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: G&#233;nero -->
+		<div class="form-group game_agent-gender" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">G&#233;nero</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="gender<%%RND1%%>"><%%COMBOTEXT(gender)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Apellido(s) -->
+		<div class="form-group game_agent-last_name" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Apellido(s)</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(last_name)%%></div>
+			</div>
+		</div>
+		<!-- Field: Nombre(s) de pila -->
+		<div class="form-group game_agent-first_name" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Nombre(s) de pila</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(first_name)%%></div>
+			</div>
+		</div>
+		<!-- Field: Otro(s) nombre(s) -->
+		<div class="form-group game_agent-other_name" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Otro(s) nombre(s)</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(other_name)%%></div>
+			</div>
+		</div>
+		<!-- Field: T&#237;tulos -->
+		<div class="form-group game_agent-titles" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">T&#237;tulos</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(titles)%%></div>
+			</div>
+		</div>
+		<!-- Field: T&#237;tulos acad&#233;micos -->
+		<div class="form-group game_agent-titles_academic" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">T&#237;tulos acad&#233;micos</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(titles_academic)%%></div>
+			</div>
+		</div>
+		<!-- Field: T&#237;tulos nobiliarios -->
+		<div class="form-group game_agent-titles_nobility" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">T&#237;tulos nobiliarios</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(titles_nobility)%%></div>
+			</div>
+		</div>
+		<!-- Field: Fecha de nacimiento -->
+		<div class="form-group game_agent-birthday" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Fecha de nacimiento</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(birthday)%%></div>
+			</div>
+		</div>
+		<!-- Field: Lugar de nacimiento -->
+		<div class="form-group game_agent-birth_location" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Lugar de nacimiento</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(birth_location)%%></div>
+			</div>
+		</div>
+		<!-- Field: Mapa -->
+		<div class="form-group game_agent-birth_location_map" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Mapa</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><img src="<%%GOOGLEMAPTHUMB(birth_location_map)%%>" style="max-width: 480px;  max-height: 360px; "></div>
+			</div>
+		</div>
+		<!-- Field: D&#237;a de defunci&#243;n -->
+		<div class="form-group game_agent-deathday" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">D&#237;a de defunci&#243;n</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(deathday)%%></div>
+			</div>
+		</div>
+		<!-- Field: Lugar de defunci&#243;n -->
+		<div class="form-group game_agent-death_location" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Lugar de defunci&#243;n</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(death_location)%%></div>
+			</div>
+		</div>
+		<!-- Field: Life span -->
+		<div class="form-group game_agent-life_span" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Life span</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(life_span)%%></div>
+			</div>
+		</div>
+		<!-- Field: Lugar principal de acci&#243;n -->
+		<div class="form-group game_agent-workplace" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Lugar principal de acci&#243;n</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(workplace)%%></div>
+			</div>
+		</div>
+		<!-- Field: Conc&#237;a -->
+		<div class="form-group game_agent-knows" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Conc&#237;a</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(knows)%%></div>
+			</div>
+		</div>
+		<!-- Field: Biograf&#237;a corta -->
+		<div class="form-group game_agent-shortbio" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Biograf&#237;a corta</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(shortbio)%%></div>
+			</div>
+		</div>
+		<!-- Field: Galer&#237;a de fotos -->
+		<div class="form-group game_agent-img_gallery" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Galer&#237;a de fotos</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><a id="img_gallery-link" href="link.php?t=game_agent&f=img_gallery&i=<%%VALUE(id)%%>" target="_blank"><i class="glyphicon glyphicon-lg glyphicon-globe" title="<%%VALUE(img_gallery)%%>"></i></a><script>jQuery(function() { var e_img_gallery = '<%%VALUE(img_gallery)%%>'; if(e_img_gallery == '' || e_img_gallery == '&nbsp;' || e_img_gallery == 'blank.gif') jQuery('#img_gallery-link').hide(); });</script></div>
+			</div>
+		</div>
+		<!-- Field: Evaluaci&#243;n de datos -->
+		<div class="form-group game_agent-data_evaluation" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Evaluaci&#243;n de datos</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="data_evaluation<%%RND1%%>"><%%COMBOTEXT(data_evaluation)%%></span></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!-- child records -->
+<div class="panel-body">
+	<div id="game_agent-children"></div>
+</div>
+
+<script>
+	$j(function() {
+		/* prevent loading child records in multiple DVP */
+		if($j('[id=game_agent-children]').length > 1) return;
+
+		post(
+			'parent-children.php', {
+				ParentTable: 'game_agent',
+				SelectedID: '<%%VALUE(id)%%>',
+				Operation: 'show-children-printable'
+			},
+			'game_agent-children',
+			'disable-element',
+			'loading-element',
+			apply_persisting_children
+		);
+
+		$j('form').on('click', '#children-tabs button[data-target]', function() {
+			$j(this).toggleClass('active');
+			persist_expanded_child($j(this).attr('id'));
+		});
+	})
+</script>
+

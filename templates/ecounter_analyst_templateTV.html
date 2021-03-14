@@ -1,0 +1,11 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the ecounter_analyst_init() hook (in hooks/ecounter_analyst.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="ecounter_analyst-team-<%%VALUE(id)%%>" class="ecounter_analyst-team"><%%SELECT%%><%%VALUE(team)%%><%%ENDSELECT%%></td>
+		<td id="ecounter_analyst-agent_id-<%%VALUE(id)%%>" class="ecounter_analyst-agent_id"><%%SELECT%%><%%VALUE(agent_id)%%><%%ENDSELECT%%></td>
+		<td id="ecounter_analyst-last_name-<%%VALUE(id)%%>" class="ecounter_analyst-last_name"><%%SELECT%%><%%VALUE(last_name)%%><%%ENDSELECT%%></td>
+		<td id="ecounter_analyst-first_name-<%%VALUE(id)%%>" class="ecounter_analyst-first_name"><%%SELECT%%><%%VALUE(first_name)%%><%%ENDSELECT%%></td>

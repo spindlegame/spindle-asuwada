@@ -1,0 +1,107 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: ID -->
+		<div class="form-group class_sdg-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: No -->
+		<div class="form-group class_sdg-no" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">No</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(no)%%></div>
+			</div>
+		</div>
+		<!-- Field: Ods -->
+		<div class="form-group class_sdg-sdg_topic" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Ods</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(sdg_topic)%%></div>
+			</div>
+		</div>
+		<!-- Field: Description -->
+		<div class="form-group class_sdg-description" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Description</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(description)%%></div>
+			</div>
+		</div>
+		<!-- Field: Rank -->
+		<div class="form-group class_sdg-rank" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Rank</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(rank)%%></div>
+			</div>
+		</div>
+		<!-- Field: Average rank -->
+		<div class="form-group class_sdg-av_rank" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Average rank</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(av_rank)%%></div>
+			</div>
+		</div>
+		<!-- Field: Mentions -->
+		<div class="form-group class_sdg-mentions" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Mentions</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(mentions)%%></div>
+			</div>
+		</div>
+		<!-- Field: Icon -->
+		<div class="form-group class_sdg-icon" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Icon</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><script>
+				var iconSrc1<%%RND1%%>='<%%BASE_UPLOAD_PATH%%><%%VALUE(icon)%%>';
+				var iconSrc2<%%RND1%%>='thumbnail.php?t=class_sdg&f=icon&i=<%%VALUE(icon)%%>&v=dv'
+			</script>
+			<a href="#" onclick="$('iconImg<%%RND1%%>').src=($('iconImg<%%RND1%%>').src.search(/thumbnail\.php/) != -1 && iconSrc1<%%RND1%%> != '<%%BASE_UPLOAD_PATH%%>' ? iconSrc1<%%RND1%%> : iconSrc2<%%RND1%%>); return false;"><img id="iconImg<%%RND1%%>" src="thumbnail.php?t=class_sdg&f=icon&i=<%%VALUE(icon)%%>&v=dv" class="img-thumbnail"></a></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!-- child records -->
+<div class="panel-body">
+	<div id="class_sdg-children"></div>
+</div>
+
+<script>
+	$j(function() {
+		/* prevent loading child records in multiple DVP */
+		if($j('[id=class_sdg-children]').length > 1) return;
+
+		post(
+			'parent-children.php', {
+				ParentTable: 'class_sdg',
+				SelectedID: '<%%VALUE(id)%%>',
+				Operation: 'show-children-printable'
+			},
+			'class_sdg-children',
+			'disable-element',
+			'loading-element',
+			apply_persisting_children
+		);
+
+		$j('form').on('click', '#children-tabs button[data-target]', function() {
+			$j(this).toggleClass('active');
+			persist_expanded_child($j(this).attr('id'));
+		});
+	})
+</script>
+

@@ -1,0 +1,19 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the hist_story_init() hook (in hooks/hist_story.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="hist_story-id-<%%VALUE(id)%%>" class="hist_story-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="hist_story-team-<%%VALUE(id)%%>" class="hist_story-team"><%%SELECT%%><%%VALUE(team)%%><%%ENDSELECT%%></td>
+		<td id="hist_story-hist_author_id-<%%VALUE(id)%%>" class="hist_story-hist_author_id"><%%SELECT%%><%%VALUE(hist_author_id)%%><%%ENDSELECT%%></td>
+		<td id="hist_story-hist_author_name-<%%VALUE(id)%%>" class="hist_story-hist_author_name"><%%SELECT%%><%%VALUE(hist_author_name)%%><%%ENDSELECT%%></td>
+		<td id="hist_story-community_id-<%%VALUE(id)%%>" class="hist_story-community_id"><%%SELECT%%><%%VALUE(community_id)%%><%%ENDSELECT%%></td>
+		<td id="hist_story-story_title-<%%VALUE(id)%%>" class="hist_story-story_title"><%%SELECT%%><%%VALUE(story_title)%%><%%ENDSELECT%%></td>
+		<td id="hist_story-genre-<%%VALUE(id)%%>" class="hist_story-genre"><%%SELECT%%><%%VALUE(genre)%%><%%ENDSELECT%%></td>
+		<td id="hist_story-approach-<%%VALUE(id)%%>" class="hist_story-approach"><%%SELECT%%><%%VALUE(approach)%%><%%ENDSELECT%%></td>
+		<td id="hist_story-description-<%%VALUE(id)%%>" class="hist_story-description"><%%SELECT%%><%%VALUE(description)%%><%%ENDSELECT%%></td>
+		<td id="hist_story-tags-<%%VALUE(id)%%>" class="hist_story-tags text-right"><%%SELECT%%><%%VALUE(tags)%%><%%ENDSELECT%%></td>
+		<td id="hist_story-collaboration_status-<%%VALUE(id)%%>" class="hist_story-collaboration_status"><%%SELECT%%><%%VALUE(collaboration_status)%%><%%ENDSELECT%%></td>
+		<td id="hist_story-language-<%%VALUE(id)%%>" class="hist_story-language"><%%SELECT%%><%%VALUE(language)%%><%%ENDSELECT%%></td>

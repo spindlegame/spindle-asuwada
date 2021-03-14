@@ -1,0 +1,131 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: ID -->
+		<div class="form-group bio_story-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Equipo biogr&#225;fico -->
+		<div class="form-group bio_story-bio_team" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Equipo biogr&#225;fico</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="bio_team<%%RND1%%>"><%%COMBOTEXT(bio_team)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: ID de bi&#243;grafo -->
+		<div class="form-group bio_story-author_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID de bi&#243;grafo</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="author_id<%%RND1%%>"><%%COMBOTEXT(author_id)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Nombre del autor -->
+		<div class="form-group bio_story-author_name" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Nombre del autor</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="author_name<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Tipo de bibliograf&#237;a -->
+		<div class="form-group bio_story-type" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Tipo de bibliograf&#237;a</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="type<%%RND1%%>"><%%COMBOTEXT(type)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Sujeto -->
+		<div class="form-group bio_story-agent_id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Sujeto</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="agent_id<%%RND1%%>"><%%COMBOTEXT(agent_id)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Nombre del sujeto -->
+		<div class="form-group bio_story-agent_name" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Nombre del sujeto</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="agent_name<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: T&#237;tulo de la biograf&#237;a -->
+		<div class="form-group bio_story-story_title" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">T&#237;tulo de la biograf&#237;a</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(story_title)%%></div>
+			</div>
+		</div>
+		<!-- Field: Enfoque -->
+		<div class="form-group bio_story-approach" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Enfoque</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(approach)%%></div>
+			</div>
+		</div>
+		<!-- Field: Etiquetas -->
+		<div class="form-group bio_story-tags" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Etiquetas</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(tags)%%></div>
+			</div>
+		</div>
+		<!-- Field: Referencia -->
+		<div class="form-group bio_story-citation" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Referencia</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(citation)%%></div>
+			</div>
+		</div>
+		<!-- Field: Nivel de colaboraci&#243;n -->
+		<div class="form-group bio_story-collaboration_status" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Nivel de colaboraci&#243;n</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="collaboration_status<%%RND1%%>"><%%COMBOTEXT(collaboration_status)%%></span></div>
+			</div>
+		</div>
+	</fieldset>
+</div>
+<!-- child records -->
+<div class="panel-body">
+	<div id="bio_story-children"></div>
+</div>
+
+<script>
+	$j(function() {
+		/* prevent loading child records in multiple DVP */
+		if($j('[id=bio_story-children]').length > 1) return;
+
+		post(
+			'parent-children.php', {
+				ParentTable: 'bio_story',
+				SelectedID: '<%%VALUE(id)%%>',
+				Operation: 'show-children-printable'
+			},
+			'bio_story-children',
+			'disable-element',
+			'loading-element',
+			apply_persisting_children
+		);
+
+		$j('form').on('click', '#children-tabs button[data-target]', function() {
+			$j(this).toggleClass('active');
+			persist_expanded_child($j(this).attr('id'));
+		});
+	})
+</script>
+

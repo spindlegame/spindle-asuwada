@@ -1,0 +1,277 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<!-- Field: ID -->
+		<div class="form-group bio_storydynamic-id" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ID</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(id)%%></div>
+			</div>
+		</div>
+		<!-- Field: Biograf&#237;a -->
+		<div class="form-group bio_storydynamic-story" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Biograf&#237;a</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="story<%%RND1%%>"><%%COMBOTEXT(story)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Punto est&#225;tico del MC -->
+		<div class="form-group bio_storydynamic-storystatic_mc" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Punto est&#225;tico del MC</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="storystatic_mc<%%RND1%%>"><%%COMBOTEXT(storystatic_mc)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Personaje principal -->
+		<div class="form-group bio_storydynamic-story_chr_mc" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Personaje principal</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="story_chr_mc<%%RND1%%>"><%%COMBOTEXT(story_chr_mc)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Problema MC -->
+		<div class="form-group bio_storydynamic-mc_problem" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Problema MC</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mc_problem<%%RND1%%>"><%%COMBOTEXT(mc_problem)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Resoluci&#243;n MC -->
+		<div class="form-group bio_storydynamic-mc_resolve" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Resoluci&#243;n MC</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mc_resolve<%%RND1%%>"><%%COMBOTEXT(mc_resolve)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Crecimiento MC -->
+		<div class="form-group bio_storydynamic-mc_growth" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Crecimiento MC</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mc_growth<%%RND1%%>"><%%COMBOTEXT(mc_growth)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Enfoque MC -->
+		<div class="form-group bio_storydynamic-mc_approach" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Enfoque MC</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mc_approach<%%RND1%%>"><%%COMBOTEXT(mc_approach)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Estilo de soluci&#243;n de problemas del MC -->
+		<div class="form-group bio_storydynamic-mc_ps_style" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Estilo de soluci&#243;n de problemas del MC</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="mc_ps_style<%%RND1%%>"><%%COMBOTEXT(mc_ps_style)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Desarrollo de personaje del personaje de obst&#225;culo (IC) -->
+		<div class="form-group bio_storydynamic-story_chr_ic" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Desarrollo de personaje del personaje de obst&#225;culo (IC)</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="story_chr_ic<%%RND1%%>"><%%COMBOTEXT(story_chr_ic)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Resoluci&#243;n IC -->
+		<div class="form-group bio_storydynamic-ic_resolve" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Resoluci&#243;n IC</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="ic_resolve<%%RND1%%>"><%%COMBOTEXT(ic_resolve)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Punto din&#225;mico clase 1 -->
+		<div class="form-group bio_storydynamic-dp_cat1" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Punto din&#225;mico clase 1</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="dp_cat1<%%RND1%%>"><%%COMBOTEXT(dp_cat1)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Punto din&#225;mico clase 2 -->
+		<div class="form-group bio_storydynamic-dp_cat2" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Punto din&#225;mico clase 2</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="dp_cat2<%%RND1%%>"><%%COMBOTEXT(dp_cat2)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Valor de punto din&#225;mico Conductor (Driver) -->
+		<div class="form-group bio_storydynamic-dp_cat3_driver" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Valor de punto din&#225;mico Conductor (Driver)</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="dp_cat3_driver<%%RND1%%>"><%%COMBOTEXT(dp_cat3_driver)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Conductor (Driver) OS -->
+		<div class="form-group bio_storydynamic-os_driver" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Conductor (Driver) OS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_driver<%%RND1%%>"><%%COMBOTEXT(os_driver)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Valor de punto din&#225;mico L&#237;mite -->
+		<div class="form-group bio_storydynamic-dp_cat3_limit" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Valor de punto din&#225;mico L&#237;mite</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="dp_cat3_limit<%%RND1%%>"><%%COMBOTEXT(dp_cat3_limit)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: L&#237;mite OS -->
+		<div class="form-group bio_storydynamic-os_limit" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">L&#237;mite OS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_limit<%%RND1%%>"><%%COMBOTEXT(os_limit)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Valor de punto din&#225;mico Desenlace (Outcome) -->
+		<div class="form-group bio_storydynamic-dp_cat3_outcome" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Valor de punto din&#225;mico Desenlace (Outcome)</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="dp_cat3_outcome<%%RND1%%>"><%%COMBOTEXT(dp_cat3_outcome)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Desenlace OS -->
+		<div class="form-group bio_storydynamic-os_outcome" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Desenlace OS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_outcome<%%RND1%%>"><%%COMBOTEXT(os_outcome)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Valor de punto din&#225;mico Sentencia (Judgement) -->
+		<div class="form-group bio_storydynamic-dp_cat3_judgement" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Valor de punto din&#225;mico Sentencia (Judgement)</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="dp_cat3_judgement<%%RND1%%>"><%%COMBOTEXT(dp_cat3_judgement)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Sentencia OS -->
+		<div class="form-group bio_storydynamic-os_judgement" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Sentencia OS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_judgement<%%RND1%%>"><%%COMBOTEXT(os_judgement)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Dominio de objetivo OS -->
+		<div class="form-group bio_storydynamic-os_goal_domain" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Dominio de objetivo OS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_goal_domain<%%RND1%%>"><%%COMBOTEXT(os_goal_domain)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Aspecto (Concern) OS -->
+		<div class="form-group bio_storydynamic-os_goal_concern" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Aspecto (Concern) OS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_goal_concern<%%RND1%%>"></span></div>
+			</div>
+		</div>
+		<!-- Field: Dominio de consecuencia OS -->
+		<div class="form-group bio_storydynamic-os_consequence_domain" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Dominio de consecuencia OS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_consequence_domain<%%RND1%%>"><%%COMBOTEXT(os_consequence_domain)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Aspecto de consecuencia OS -->
+		<div class="form-group bio_storydynamic-os_consequence_concern" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Aspecto de consecuencia OS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_consequence_concern<%%RND1%%>"><%%COMBOTEXT(os_consequence_concern)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Dominio de coste OS -->
+		<div class="form-group bio_storydynamic-os_cost_domain" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Dominio de coste OS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_cost_domain<%%RND1%%>"><%%COMBOTEXT(os_cost_domain)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Aspecto de coste OS -->
+		<div class="form-group bio_storydynamic-os_cost_concern" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Aspecto de coste OS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_cost_concern<%%RND1%%>"><%%COMBOTEXT(os_cost_concern)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Dominio de dividendo OS -->
+		<div class="form-group bio_storydynamic-os_dividend_domain" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Dominio de dividendo OS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_dividend_domain<%%RND1%%>"><%%COMBOTEXT(os_dividend_domain)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Aspecto de dividendo OS -->
+		<div class="form-group bio_storydynamic-os_dividend_concern" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Aspecto de dividendo OS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_dividend_concern<%%RND1%%>"><%%COMBOTEXT(os_dividend_concern)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Dominio de requisitos OS -->
+		<div class="form-group bio_storydynamic-os_requirements_domain" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Dominio de requisitos OS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_requirements_domain<%%RND1%%>"><%%COMBOTEXT(os_requirements_domain)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Aspecto de requisitos OS -->
+		<div class="form-group bio_storydynamic-os_requirements_concern" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Aspecto de requisitos OS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_requirements_concern<%%RND1%%>"><%%COMBOTEXT(os_requirements_concern)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Dominio de prerequisitos OS -->
+		<div class="form-group bio_storydynamic-os_prerequesites_domain" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Dominio de prerequisitos OS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_prerequesites_domain<%%RND1%%>"><%%COMBOTEXT(os_prerequesites_domain)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Aspecto de prerequisitos OS -->
+		<div class="form-group bio_storydynamic-os_prerequesites_concern" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Aspecto de prerequisitos OS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_prerequesites_concern<%%RND1%%>"><%%COMBOTEXT(os_prerequesites_concern)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Dominio de la precondici&#243;n OS -->
+		<div class="form-group bio_storydynamic-os_preconditions_domain" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Dominio de la precondici&#243;n OS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_preconditions_domain<%%RND1%%>"><%%COMBOTEXT(os_preconditions_domain)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Aspecto de la precondici&#243;n OS -->
+		<div class="form-group bio_storydynamic-os_preconditions_concern" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Aspecto de la precondici&#243;n OS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_preconditions_concern<%%RND1%%>"><%%COMBOTEXT(os_preconditions_concern)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Dominio de la preaviso OS -->
+		<div class="form-group bio_storydynamic-os_forewarnings_domain" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Dominio de la preaviso OS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_forewarnings_domain<%%RND1%%>"><%%COMBOTEXT(os_forewarnings_domain)%%></span></div>
+			</div>
+		</div>
+		<!-- Field: Aspecto de la preaviso OS -->
+		<div class="form-group bio_storydynamic-os_forewarnings_concern" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">Aspecto de la preaviso OS</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><span id="os_forewarnings_concern<%%RND1%%>"><%%COMBOTEXT(os_forewarnings_concern)%%></span></div>
+			</div>
+		</div>
+	</fieldset>
+</div>

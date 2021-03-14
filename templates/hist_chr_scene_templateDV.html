@@ -1,0 +1,463 @@
+<!-- To change the layout of the detail view form, we recommend using JS code in hooks/hist_chr_scene-dv.js rather than editing this file -->
+
+<div id="detail-view"></div>
+<div class="panel-heading"><h3 class="panel-title"><strong><%%DETAIL_VIEW_TITLE%%></strong></h3></div>
+
+<div id="hist_chr_scene_dv_container-loading" class="text-center text-info text-bold vspacer-lg"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+<div class="panel-body hidden" id="hist_chr_scene_dv_container">
+	<!-- child links -->
+	<div class="row vspacer-md">
+		<div class="col-xs-12 children-links">
+			<input type="hidden" id="hist_chr_dev_hclink" value="hist_chr_dev_view.php?filterer_illust_resolve=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm vspacer-sm" href="hist_storyline_view.php?filterer_characterevent_scene=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="hist_storyline_link"><i class="glyphicon glyphicon-list-alt"></i> L&#237;neas de la trama (Storyline)</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="hist_storyline_view.php?filterer_characterevent_scene=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="xs_hist_storyline_link"><i class="glyphicon glyphicon-list-alt"></i> L&#237;neas de la trama (Storyline)</a>
+			<input type="hidden" id="hist_storyline_hclink" value="hist_storyline_view.php?filterer_characterevent_scene=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<hr class="hidden-xs hidden-sm">
+
+	<div class="row">
+		<!-- form inputs -->
+		<div class="col-md-8 col-lg-10" id="hist_chr_scene_dv_form">
+			<fieldset class="form-horizontal">
+
+				<!-- Field: ID -->
+				<div class="form-group hist_chr_scene-id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="id">ID</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="id"><%%VALUE(id)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Equipo -->
+				<div class="form-group hist_chr_scene-team">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="team" data-parent_link="view_parent_modal">Equipo</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(team)%%><%%PLINK(team)%%><%%ADDNEW(hist_team)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: ID autor -->
+				<div class="form-group hist_chr_scene-author_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="author_id" data-parent_link="view_parent_modal">ID autor</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(author_id)%%><%%PLINK(author_id)%%><%%ADDNEW(hist_author)%%><span id="author_idLoading"></span></div>
+					</div>
+				</div>
+
+				<!-- Field: Nombre de autor -->
+				<div class="form-group hist_chr_scene-author_name">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Nombre de autor</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="author_name"></div>
+					</div>
+				</div>
+
+				<!-- Field: Historia -->
+				<div class="form-group hist_chr_scene-hist_story">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="hist_story" data-parent_link="view_parent_modal">Historia</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(hist_story)%%><%%PLINK(hist_story)%%><%%ADDNEW(hist_story)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: ID agente -->
+				<div class="form-group hist_chr_scene-agent_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="agent_id" data-parent_link="view_parent_modal">ID agente</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(agent_id)%%><%%PLINK(agent_id)%%><%%ADDNEW(game_agent)%%><span id="agent_idLoading"></span></div>
+					</div>
+				</div>
+
+				<!-- Field: Nombre agente -->
+				<div class="form-group hist_chr_scene-agent_name">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Nombre agente</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="agent_name"></div>
+					</div>
+				</div>
+
+				<!-- Field: Bibliograf&#237;a -->
+				<div class="form-group hist_chr_scene-bio_story">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bio_story" data-parent_link="view_parent_modal">Bibliograf&#237;a</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bio_story)%%><%%PLINK(bio_story)%%><%%ADDNEW(bio_story)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Personaje -->
+				<div class="form-group hist_chr_scene-hist_chr">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="hist_chr" data-parent_link="view_parent_modal">Personaje</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(hist_chr)%%><%%PLINK(hist_chr)%%><%%ADDNEW(hist_chr)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: N&#186; de l&#237;nea de la narrativa -->
+				<div class="form-group hist_chr_scene-bio_storyline_no">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bio_storyline_no" data-parent_link="view_parent_modal">N&#186; de l&#237;nea de la narrativa</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bio_storyline_no)%%><%%PLINK(bio_storyline_no)%%><%%ADDNEW(bio_storyline)%%><span id="bio_storyline_noLoading"></span></div>
+					</div>
+				</div>
+
+				<!-- Field: Secuencia de la narrativa -->
+				<div class="form-group hist_chr_scene-bio_storyline_text">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Secuencia de la narrativa</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="bio_storyline_text"></div>
+					</div>
+				</div>
+
+				<!-- Field: Elemento de c&#225;racter -->
+				<div class="form-group hist_chr_scene-chr_element">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="chr_element" data-parent_link="view_parent_modal">Elemento de c&#225;racter <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#chr_element-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="chr_element-description"><div class="alert alert-info bspacer-xs">Elemento de c&#225;racter seg&#250;n Dram&#225;tica.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(chr_element)%%><%%PLINK(chr_element)%%><%%ADDNEW(class_character_element)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Escena personal de la biograf&#237;a -->
+				<div class="form-group hist_chr_scene-bio_chr_scene">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bio_chr_scene" data-parent_link="view_parent_modal">Escena personal de la biograf&#237;a</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bio_chr_scene)%%><%%PLINK(bio_chr_scene)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: C&#243;digo invivo -->
+				<div class="form-group hist_chr_scene-invivo_code">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="invivo_code" data-parent_link="view_parent_modal">C&#243;digo invivo</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(invivo_code)%%><%%PLINK(invivo_code)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Fecha inicio -->
+				<div class="form-group hist_chr_scene-startdate">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="startdate" data-parent_link="view_parent_modal">Fecha inicio</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(startdate)%%><%%PLINK(startdate)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Fecha fin -->
+				<div class="form-group hist_chr_scene-enddate">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="enddate" data-parent_link="view_parent_modal">Fecha fin</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(enddate)%%><%%PLINK(enddate)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Persona(s) -->
+				<div class="form-group hist_chr_scene-person">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="person" data-parent_link="view_parent_modal">Persona(s)</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(person)%%><%%PLINK(person)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Lugar(es) -->
+				<div class="form-group hist_chr_scene-place">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="place" data-parent_link="view_parent_modal">Lugar(es)</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(place)%%><%%PLINK(place)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: C&#243;digo hermen&#233;utico -->
+				<div class="form-group hist_chr_scene-herme_code">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="herme_code" data-parent_link="view_parent_modal">C&#243;digo hermen&#233;utico</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(herme_code)%%><%%PLINK(herme_code)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Impresi&#243;n -->
+				<div class="form-group hist_chr_scene-impression">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="impression" data-parent_link="view_parent_modal">Impresi&#243;n</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(impression)%%><%%PLINK(impression)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Tensi&#243;n no&#233;tica -->
+				<div class="form-group hist_chr_scene-noetictension">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="noetictension" data-parent_link="view_parent_modal">Tensi&#243;n no&#233;tica</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(noetictension)%%><%%PLINK(noetictension)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Contradicci&#243;n performativa -->
+				<div class="form-group hist_chr_scene-pc">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="pc" data-parent_link="view_parent_modal">Contradicci&#243;n performativa</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(pc)%%><%%PLINK(pc)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Contrafactuales -->
+				<div class="form-group hist_chr_scene-counterfactual">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="counterfactual" data-parent_link="view_parent_modal">Contrafactuales</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(counterfactual)%%><%%PLINK(counterfactual)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Dilema -->
+				<div class="form-group hist_chr_scene-dilemma">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="dilemma" data-parent_link="view_parent_modal">Dilema</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(dilemma)%%><%%PLINK(dilemma)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Comentarios -->
+				<div class="form-group hist_chr_scene-comment">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="comment">Comentarios</label>
+					<div class="col-lg-9">
+						<textarea class="form-control" name="comment" id="comment" rows=" 5"><%%VALUE(comment)%%></textarea>
+					</div>
+				</div>
+
+				<!-- Field: Ilustraci&#243;n -->
+				<div class="form-group hist_chr_scene-illustration">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="illustration">Ilustraci&#243;n</label>
+					<div class="col-lg-9">
+						<textarea class="form-control" name="illustration" id="illustration" rows=" 5"><%%VALUE(illustration)%%></textarea>
+					</div>
+				</div>
+
+				<!-- Field: Escena -->
+				<div class="form-group hist_chr_scene-scene">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="scene">Escena <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#scene-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="scene-description"><div class="alert alert-info bspacer-xs">Convierta el texto ahora en una escena dram&#225;tica aqu&#237;.</div></span>
+						<textarea class="form-control" name="scene" id="scene" rows=" 5"><%%VALUE(scene)%%></textarea>
+					</div>
+				</div>
+
+			</fieldset>
+		</div>
+
+		<!-- DV action buttons -->
+		<hr class="hidden-md hidden-lg">
+		<div class="col-md-4 col-lg-2" id="hist_chr_scene_dv_action_buttons">
+			<div class="btn-toolbar">
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%UPDATE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%DESELECT_BUTTON%%>
+					<%%DVPRINT_BUTTON%%>
+					<%%DELETE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%INSERT_BUTTON%%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- child records -->
+	<hr>
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1">
+			<div id="hist_chr_scene-children" class="children-tabs">
+				<div class="text-center"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+			</div>
+		</div>
+	</div>
+
+</div><!-- /div class="panel-body" -->
+	<script>
+		$j(function() {
+			var add_new_mode = (!$j('input[name=SelectedID]').val());
+			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			/* auto-close embedded page? */
+			var autoclose_mode = ($j('input[name=AutoClose]').val() == 1);
+			var record_added_ok = (location.search.split('record-added-ok=').length == 2);
+			var record_updated_ok = (location.search.split('record-updated-ok=').length == 2);
+			if((record_added_ok || record_updated_ok) && embedded_mode && autoclose_mode) {
+				setTimeout(AppGini.closeParentModal, 2000);
+			}
+
+			/* enable DV action buttons to float on scrolling down the form */
+			enable_dvab_floating();
+
+
+			setTimeout(function() {
+				$j('#hist_chr_scene_dv_container-loading').addClass('hidden');
+				$j('#hist_chr_scene_dv_container').removeClass('hidden');
+				AppGini.focusFormElement('hist_chr_scene', 'team');
+			}, 1100);
+
+			$j('form').eq(0).change(function() {
+				if($j(this).data('already_changed')) return;
+				if($j('#deselect').length) $j('#deselect').removeClass('btn-default').addClass('btn-warning').get(0).lastChild.data = " <%%TRANSLATION(Cancel)%%>";
+				$j(this).data('already_changed', true);
+			});
+
+			$j('a[href="<%%BASE_UPLOAD_PATH%%>"]').click(function() { return false; });
+
+			if(embedded_mode) {
+				/* hide links to children tables in embedded mode */
+				$j('.detail_view a[id$=_link]').remove();
+
+				/* append embedded mode to all links */
+				var append_embedded = function() {
+					$j('a[href]:not([href^="#"]):not([href^="javascript"]):not([href$="Embedded=1"]):not([href*="link.php?t="]):not([href^="mailto:"])').each(
+						function() {
+							$j(this).attr('href', $j(this).attr('href') + '&Embedded=1');
+						}
+					);
+				}
+				setTimeout(append_embedded, 500);
+				setTimeout(append_embedded, 1500);
+				setTimeout(append_embedded, 2500);
+				setTimeout(append_embedded, 3500);
+			}
+
+			/* when no record is selected ('add new' mode) */
+			if(add_new_mode) {
+				/* hide links to children tables */
+				$j('.detail_view a[id$=_link]').remove();
+			} else {
+				post(
+					'parent-children.php', {
+						ParentTable: 'hist_chr_scene',
+						SelectedID: '<%%VALUE(id)%%>',
+						Operation: 'show-children'
+					},
+					'hist_chr_scene-children'
+				);
+			}
+
+			if(!embedded_mode) {
+				/* add a horizontal spacer to [add new parent] buttons that don't have a spacered element before them */
+				$j('.add_new_parent').prev(':not(.hspacer-md)').next().addClass('hspacer-md');
+
+				$j('.add_new_parent').click(function() {
+					var pt = $j(this).attr('id').replace(/_add_new$/, '');
+					modal_window({
+						url: pt + '_view.php?addNew_x=1&Embedded=1',
+						close: function() {
+							var field_id = $j('#' + pt + '_add_new').prevAll('input:hidden').eq(0).attr('id');
+							$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+							/* if a new parent was added, select it */
+							var new_id = localStorage.getItem(pt + '_last_added_id');
+							if(new_id === null) return;
+
+							localStorage.clear(pt + '_last_added_id');
+							AppGini.lookupText({
+								id: new_id,
+								table: 'hist_chr_scene',
+								field: field_id,
+								callback: function(data) {
+									$j('#' + field_id + '-container').select2('data', data, true);
+								}
+							});
+						},
+						size: 'full',
+						title: $j(this).attr('title')
+					});
+				});
+			}
+
+			AppGini.hideViewParentLinks();
+
+			$j('form').on('click', '.view_parent', function() {
+				var pt = $j(this).attr('id').replace(/_view_parent$/, '');
+				if($j(this).prevAll('input:hidden').length) {
+					var parent_id = $j(this).prevAll('input:hidden').eq(0).val();
+				} else {
+					var parent_id = $j(this).prevAll().children('input:hidden').eq(0).val();
+				}
+
+				/* handle radio lookups */
+				if($j(this).prevAll('[type=radio]').length) {
+					parent_id = $j(this).prevAll('[type=radio]').eq(0).val();
+				}
+
+				if(parent_id != '{empty_value}' && parent_id != undefined && parent_id != '') {
+					var parent_link = $j(this).parents('.form-group').children('label').data('parent_link');
+					switch(parent_link) {
+						case 'view_parent_hidden':
+							break;
+						case 'view_parent_modal':
+							modal_window({
+								url: pt + '_view.php?Embedded=1&SelectedID=' + encodeURIComponent(parent_id),
+								close: function() {
+									var field_id = $j('#' + pt + '_view_parent').prevAll('input:hidden').eq(0).attr('id');
+									$j('#' + field_id + '-container').select2('focus').select2('focus');
+								},
+								size: 'full',
+								title: $j(this).attr('title')
+							});
+							break;
+						case 'view_parent_same_window':
+							window.location = pt + '_view.php?Embedded=' + (embedded_mode ? '1' : '') + '&SelectedID=' + encodeURIComponent(parent_id);
+							break;
+						case 'view_parent_new_window':
+							window.open(pt + '_view.php?SelectedID=' + encodeURIComponent(parent_id));
+							break;
+					}
+
+				}
+			});
+
+
+			/* load admin tools for admin user */
+			if(!add_new_mode) {
+				$j('body').append('<div id="admin-tools-appendix"></div>');
+				$j('#admin-tools-appendix').load(
+					'ajax_admin_tools.php?table=hist_chr_scene&id=<%%URLVALUE(id)%%>',
+					function(resp) {
+						if(!resp.length) return;
+						$j.ajax('ajax_admin_tools.php?action=get_admin_tools_js&table=hist_chr_scene&id=<%%URLVALUE(id)%%>');
+					}
+				);
+			}
+
+			/* warn user if 'add new' clicked while unsaved changes exist */
+			$j('#addNew').click(function() {
+				if($j('#deselect.btn-warning').length) {
+					return confirm('<%%TRANSLATION(discard changes confirm)%%>');
+				}
+			});
+
+		});
+	</script>

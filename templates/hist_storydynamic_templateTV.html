@@ -1,0 +1,46 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%SELECT%%> and <%%ENDSELECT%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- add the following to the hist_storydynamic_init() hook (in hooks/hist_storydynamic.php file) -->
+<!--     $options->ShowTableHeader = 0;     -->
+
+		<td id="hist_storydynamic-id-<%%VALUE(id)%%>" class="hist_storydynamic-id text-right"><%%SELECT%%><%%VALUE(id)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-hist_story-<%%VALUE(id)%%>" class="hist_storydynamic-hist_story"><%%SELECT%%><%%VALUE(hist_story)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-bio_story_mc-<%%VALUE(id)%%>" class="hist_storydynamic-bio_story_mc text-right"><%%SELECT%%><%%VALUE(bio_story_mc)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-hist_chr_mc-<%%VALUE(id)%%>" class="hist_storydynamic-hist_chr_mc"><%%SELECT%%><%%VALUE(hist_chr_mc)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-storystatic_mc-<%%VALUE(id)%%>" class="hist_storydynamic-storystatic_mc"><%%SELECT%%><%%VALUE(storystatic_mc)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-story_chr_mc-<%%VALUE(id)%%>" class="hist_storydynamic-story_chr_mc"><%%SELECT%%><%%VALUE(story_chr_mc)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-mc_problem-<%%VALUE(id)%%>" class="hist_storydynamic-mc_problem"><%%SELECT%%><%%VALUE(mc_problem)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-mc_resolve-<%%VALUE(id)%%>" class="hist_storydynamic-mc_resolve"><%%SELECT%%><%%VALUE(mc_resolve)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-mc_growth-<%%VALUE(id)%%>" class="hist_storydynamic-mc_growth"><%%SELECT%%><%%VALUE(mc_growth)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-mc_approach-<%%VALUE(id)%%>" class="hist_storydynamic-mc_approach"><%%SELECT%%><%%VALUE(mc_approach)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-mc_ps_style-<%%VALUE(id)%%>" class="hist_storydynamic-mc_ps_style"><%%SELECT%%><%%VALUE(mc_ps_style)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-story_chr_ic-<%%VALUE(id)%%>" class="hist_storydynamic-story_chr_ic"><%%SELECT%%><%%VALUE(story_chr_ic)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-ic_resolve-<%%VALUE(id)%%>" class="hist_storydynamic-ic_resolve"><%%SELECT%%><%%VALUE(ic_resolve)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-dp_cat1-<%%VALUE(id)%%>" class="hist_storydynamic-dp_cat1"><%%SELECT%%><%%VALUE(dp_cat1)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-dp_cat2-<%%VALUE(id)%%>" class="hist_storydynamic-dp_cat2"><%%SELECT%%><%%VALUE(dp_cat2)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-dp_cat3_driver-<%%VALUE(id)%%>" class="hist_storydynamic-dp_cat3_driver"><%%SELECT%%><%%VALUE(dp_cat3_driver)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-os_driver-<%%VALUE(id)%%>" class="hist_storydynamic-os_driver"><%%SELECT%%><%%VALUE(os_driver)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-dp_cat3_limit-<%%VALUE(id)%%>" class="hist_storydynamic-dp_cat3_limit"><%%SELECT%%><%%VALUE(dp_cat3_limit)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-os_limit-<%%VALUE(id)%%>" class="hist_storydynamic-os_limit"><%%SELECT%%><%%VALUE(os_limit)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-dp_cat3_outcome-<%%VALUE(id)%%>" class="hist_storydynamic-dp_cat3_outcome"><%%SELECT%%><%%VALUE(dp_cat3_outcome)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-os_outcome-<%%VALUE(id)%%>" class="hist_storydynamic-os_outcome"><%%SELECT%%><%%VALUE(os_outcome)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-dp_cat3_judgement-<%%VALUE(id)%%>" class="hist_storydynamic-dp_cat3_judgement"><%%SELECT%%><%%VALUE(dp_cat3_judgement)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-os_judgement-<%%VALUE(id)%%>" class="hist_storydynamic-os_judgement"><%%SELECT%%><%%VALUE(os_judgement)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-os_goal_domain-<%%VALUE(id)%%>" class="hist_storydynamic-os_goal_domain text-right"><%%SELECT%%><%%VALUE(os_goal_domain)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-os_goal_concern-<%%VALUE(id)%%>" class="hist_storydynamic-os_goal_concern text-right"><%%SELECT%%><%%VALUE(os_goal_concern)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-os_consequence_domain-<%%VALUE(id)%%>" class="hist_storydynamic-os_consequence_domain text-right"><%%SELECT%%><%%VALUE(os_consequence_domain)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-os_consequence_concern-<%%VALUE(id)%%>" class="hist_storydynamic-os_consequence_concern text-right"><%%SELECT%%><%%VALUE(os_consequence_concern)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-os_cost_domain-<%%VALUE(id)%%>" class="hist_storydynamic-os_cost_domain text-right"><%%SELECT%%><%%VALUE(os_cost_domain)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-os_cost_concern-<%%VALUE(id)%%>" class="hist_storydynamic-os_cost_concern text-right"><%%SELECT%%><%%VALUE(os_cost_concern)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-os_dividend_domain-<%%VALUE(id)%%>" class="hist_storydynamic-os_dividend_domain text-right"><%%SELECT%%><%%VALUE(os_dividend_domain)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-os_dividend_concern-<%%VALUE(id)%%>" class="hist_storydynamic-os_dividend_concern text-right"><%%SELECT%%><%%VALUE(os_dividend_concern)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-os_requirements_domain-<%%VALUE(id)%%>" class="hist_storydynamic-os_requirements_domain text-right"><%%SELECT%%><%%VALUE(os_requirements_domain)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-os_requirements_concern-<%%VALUE(id)%%>" class="hist_storydynamic-os_requirements_concern text-right"><%%SELECT%%><%%VALUE(os_requirements_concern)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-os_prerequesites_domain-<%%VALUE(id)%%>" class="hist_storydynamic-os_prerequesites_domain text-right"><%%SELECT%%><%%VALUE(os_prerequesites_domain)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-os_prerequesites_concern-<%%VALUE(id)%%>" class="hist_storydynamic-os_prerequesites_concern text-right"><%%SELECT%%><%%VALUE(os_prerequesites_concern)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-os_preconditions_domain-<%%VALUE(id)%%>" class="hist_storydynamic-os_preconditions_domain text-right"><%%SELECT%%><%%VALUE(os_preconditions_domain)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-os_preconditions_concern-<%%VALUE(id)%%>" class="hist_storydynamic-os_preconditions_concern text-right"><%%SELECT%%><%%VALUE(os_preconditions_concern)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-os_forewarnings_domain-<%%VALUE(id)%%>" class="hist_storydynamic-os_forewarnings_domain text-right"><%%SELECT%%><%%VALUE(os_forewarnings_domain)%%><%%ENDSELECT%%></td>
+		<td id="hist_storydynamic-os_forewarnings_concern-<%%VALUE(id)%%>" class="hist_storydynamic-os_forewarnings_concern text-right"><%%SELECT%%><%%VALUE(os_forewarnings_concern)%%><%%ENDSELECT%%></td>

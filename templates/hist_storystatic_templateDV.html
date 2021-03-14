@@ -1,0 +1,391 @@
+<!-- To change the layout of the detail view form, we recommend using JS code in hooks/hist_storystatic-dv.js rather than editing this file -->
+
+<div id="detail-view"></div>
+<div class="panel-heading"><h3 class="panel-title"><strong><%%DETAIL_VIEW_TITLE%%></strong></h3></div>
+
+<div id="hist_storystatic_dv_container-loading" class="text-center text-info text-bold vspacer-lg"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+<div class="panel-body hidden" id="hist_storystatic_dv_container">
+	<!-- child links -->
+	<div class="row vspacer-md">
+		<div class="col-xs-12 children-links">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm vspacer-sm" href="hist_chr_dev_view.php?filterer_mcs_problem=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="hist_chr_dev_link"><i class="glyphicon glyphicon-list-alt"></i> Desarrollo de personaje de hist&#243;ria</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="hist_chr_dev_view.php?filterer_mcs_problem=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="xs_hist_chr_dev_link"><i class="glyphicon glyphicon-list-alt"></i> Desarrollo de personaje de hist&#243;ria</a>
+			<input type="hidden" id="hist_chr_dev_hclink" value="hist_chr_dev_view.php?filterer_mcs_problem=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<hr class="hidden-xs hidden-sm">
+
+	<div class="row">
+		<!-- form inputs -->
+		<div class="col-md-8 col-lg-10" id="hist_storystatic_dv_form">
+			<fieldset class="form-horizontal">
+
+				<!-- Field: ID -->
+				<div class="form-group hist_storystatic-id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="id">ID</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="id"><%%VALUE(id)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Historia -->
+				<div class="form-group hist_storystatic-story">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="story" data-parent_link="view_parent_modal">Historia</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(story)%%><%%PLINK(story)%%><%%ADDNEW(hist_story)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: L&#237;nea de paso (Throughline) -->
+				<div class="form-group hist_storystatic-throughline">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="throughline" data-parent_link="view_parent_modal">L&#237;nea de paso (Throughline) <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#throughline-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="throughline-description"><div class="alert alert-info bspacer-xs">T&#233;rmino de Dramatica<br>Es una secuencia de puntos de la historia dentro de una sola perspectiva
+La historia general, la historia de la relaci&#243;n, el personaje principal y las l&#237;neas maestras del personaje de impacto representan una perspectiva diferente sobre los problemas de una historia. Cada secuencia propia de puntos de la historia debe ser coherente tanto dentro de la perspectiva como en conjunci&#243;n con las otras perspectivas en la historia como un todo.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(throughline)%%><%%PLINK(throughline)%%><%%ADDNEW(class_dramatica_throughline)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Personaje principal -->
+				<div class="form-group hist_storystatic-story_character_mc">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="story_character_mc" data-parent_link="view_parent_modal">Personaje principal</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(story_character_mc)%%><%%PLINK(story_character_mc)%%><%%ADDNEW(hist_chr)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Dominio de la l&#237;nea de paso -->
+				<div class="form-group hist_storystatic-throughline_domain">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="throughline_domain" data-parent_link="view_parent_modal">Dominio de la l&#237;nea de paso <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#throughline_domain-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="throughline_domain-description"><div class="alert alert-info bspacer-xs">T&#233;rmino de Dramatica<br>Un elemento que describe el &#225;rea en la que ocurre cualquiera de las cuatro l&#237;neas pasantes.<br>Hay cuatro Throughlines en cada historia completa, cada uno representa una perspectiva diferente en la estructura de esa historia. Uno se asigna a la l&#237;nea general de la historia y contiene los puntos de la historia atribuidos al argumento desapasionado de la historia y, al mismo tiempo, describe el &#225;rea en la que ocurre la historia general. Otro es para la l&#237;nea de la historia de la relaci&#243;n y contiene los puntos de la historia que se refieren al apasionante argumento de la historia y describen la relaci&#243;n entre los personajes principales y de impacto. Al personaje principal y de impacto se les asignan tambi&#233;n l&#237;neas de paso, que contienen los puntos de la historia atribuidos a sus personajes y describen las &#225;reas en las que cada uno opera. Cada l&#237;nea transversal es la combinaci&#243;n de una clase particular (ya sea situaci&#243;n (universo), actividad (f&#237;sica), manipulaci&#243;n (psicolog&#237;a) o actitud fija (mente)) con una l&#237;nea transversal particular (ya sea historia general, personaje principal, personaje de impacto o relaci&#243;n Historia). Cada Dominio describe el &#225;rea general en la que se ubicar&#225;n los problemas de su l&#237;nea directa y desde qu&#233; perspectiva se dirigir&#225; a la audiencia para ver esos problemas. Los dominios determinan posiciones amplias y similares a los g&#233;neros en la relaci&#243;n de la audiencia con la historia.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(throughline_domain)%%><%%PLINK(throughline_domain)%%><%%ADDNEW(class_dramatica_domain)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Aspecto (Concern) -->
+				<div class="form-group hist_storystatic-concern">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="concern" data-parent_link="view_parent_modal">Aspecto (Concern) <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#concern-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="concern-description"><div class="alert alert-info bspacer-xs">Tipo de Dramatica<br>El &#225;rea principal de preocupaci&#243;n en una l&#237;nea de paso.<br><br>La categor&#237;a o naturaleza de aquello por lo que los personajes de una determinada l&#237;nea est&#225;n m&#225;s ansiosos, ansiosos o que esperan proteger o afectar.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(concern)%%><%%PLINK(concern)%%><%%ADDNEW(class_dramatica_concern)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Asunto (Issue) -->
+				<div class="form-group hist_storystatic-issue">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="issue" data-parent_link="view_parent_modal">Asunto (Issue) <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#issue-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="issue-description"><div class="alert alert-info bspacer-xs">Variaci&#243;n de Dramatica<br>El enfoque tem&#225;tico o el tema del Throughline que se est&#225; explorando<br>Cada una de las cuatro l&#237;neas generales: historia general, historia de relaci&#243;n, personaje principal y personaje de impacto, tiene un tema tem&#225;tico que se describe por su problema. El problema general de la historia, por ejemplo, proporciona un est&#225;ndar de valor para juzgar los esfuerzos de los personajes generales de la historia en una historia. Se puede decir que cualquier tipo de cosas que hagan los Personajes generales de la historia en relaci&#243;n con el Objetivo de la historia est&#225;n vinculadas tem&#225;ticamente por este elemento en particular.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(issue)%%><%%PLINK(issue)%%><%%ADDNEW(class_dramatica_issue)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Problema -->
+				<div class="form-group hist_storystatic-problem">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="problem" data-parent_link="view_parent_modal">Problema <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#problem-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="problem-description"><div class="alert alert-info bspacer-xs">Elemento de Dramatica<br>La causa subyacente de las dificultades de la historia.<br>De todos los Elementos, hay uno que describe la esencia del problema de la historia. La inclusi&#243;n de este elemento en un personaje de la historia general lo identifica como el personaje principal o de impacto. Esto se debe a que hace que ese personaje sea el &#250;nico que puede resolver tanto el problema general como el principal frente a los problemas de impacto de un solo golpe al abordar el problema (cambiar).</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(problem)%%><%%PLINK(problem)%%><%%ADDNEW(class_dramatica_themes)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Soluci&#243;n -->
+				<div class="form-group hist_storystatic-solution">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="solution" data-parent_link="view_parent_modal">Soluci&#243;n <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#solution-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="solution-description"><div class="alert alert-info bspacer-xs">La soluci&#243;n debe ser el Elemento que sea din&#225;mico (transversalmente opuesto) al problema, dentro del mismo Quad de Elementos.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(solution)%%><%%PLINK(solution)%%><%%ADDNEW(class_dramatica_themes)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: S&#237;ntoma / Enfoque -->
+				<div class="form-group hist_storystatic-symptom">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="symptom" data-parent_link="view_parent_modal">S&#237;ntoma / Enfoque <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#symptom-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="symptom-description"><div class="alert alert-info bspacer-xs">Este es uno de los otros elementos dentro de la misma Clase y Tipo pero no dentro de la misma Variaci&#243;n.<br><br>Para una codificaci&#243;n exacta, utilice Dramatica Pro.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(symptom)%%><%%PLINK(symptom)%%><%%ADDNEW(class_dramatica_themes)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Respuesta / Direcci&#243;n -->
+				<div class="form-group hist_storystatic-response">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="response" data-parent_link="view_parent_modal">Respuesta / Direcci&#243;n <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#response-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="response-description"><div class="alert alert-info bspacer-xs">La respuesta debe ser el Elemento que es din&#225;mico (transversalmente opuesto) al s&#237;ntoma dentro del mismo Quad de Elementos.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(response)%%><%%PLINK(response)%%><%%ADDNEW(class_dramatica_themes)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Catalizador / Habilidad &#218;nica -->
+				<div class="form-group hist_storystatic-catalyst">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="catalyst" data-parent_link="view_parent_modal">Catalizador / Habilidad &#218;nica <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#catalyst-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="catalyst-description"><div class="alert alert-info bspacer-xs">Variaci&#243;n<br>El elemento cuya presencia siempre empuja la historia hacia el cl&#237;max.<br>El catalizador crea avances y acelera el conflicto, o la resoluci&#243;n del conflicto, de la l&#237;nea de paso en la que se encuentra. Tanto en la historia general como en la principal frente a las de impacto se producen dram&#225;ticos "atascos" cuando las cosas parecen acercarse a un alto. Aqu&#237; es cuando el Catalyst es necesario, ya que su introducci&#243;n resolver&#225; el rompecabezas que est&#225; reteniendo las cosas o har&#225; que el rompecabezas parezca de repente sin importancia para que la historia pueda continuar.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(catalyst)%%><%%PLINK(catalyst)%%><%%ADDNEW(class_dramatica_themes)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Inhibidor / Defecto cr&#237;tico -->
+				<div class="form-group hist_storystatic-inhibitor">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="inhibitor" data-parent_link="view_parent_modal">Inhibidor / Defecto cr&#237;tico <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#inhibitor-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="inhibitor-description"><div class="alert alert-info bspacer-xs">Variaci&#243;n<br>el tipo de elemento que sirve para impedir el progreso de la l&#237;nea transversal (ya sea la historia general o la historia de la relaci&#243;n)<br>El inhibidor de la l&#237;nea de paso es lo que evita que la l&#237;nea de paso se apresure a toda velocidad hacia la soluci&#243;n. Es como un mecanismo de freno que se puede aplicar a voluntad del autor. La introducci&#243;n de este elemento siempre ralentiza el progreso de la l&#237;nea. Funciona como ant&#237;doto para el catalizador de la l&#237;nea de paso.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(inhibitor)%%><%%PLINK(inhibitor)%%><%%ADDNEW(class_dramatica_themes)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Punto de referencia (Benchmark) -->
+				<div class="form-group hist_storystatic-benchmark">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="benchmark" data-parent_link="view_parent_modal">Punto de referencia (Benchmark) <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#benchmark-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="benchmark-description"><div class="alert alert-info bspacer-xs">Tipo de Dramatica<br>El indicador de crecimiento, progreso o grado o preocupaci&#243;n.<br>El Benchmark es una vara de medir que se usa para juzgar el progreso en cualquier l&#237;nea de avance en la que est&#233; operando. En la Historia general, se usa para ver qu&#233; tan cerca los Personajes de la Historia general creen que est&#225;n para resolver sus problemas. Describe d&#243;nde aplican sus esfuerzos y, por lo tanto, es donde miran para ver c&#243;mo va todo.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(benchmark)%%><%%PLINK(benchmark)%%><%%ADDNEW(class_dramatica_themes)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Punto clave (Signpost) 1 -->
+				<div class="form-group hist_storystatic-signpost1">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="signpost1" data-parent_link="view_parent_modal">Punto clave (Signpost) 1</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(signpost1)%%><%%PLINK(signpost1)%%><%%ADDNEW(class_dramatica_concern)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Punto clave (Signpost) 2 -->
+				<div class="form-group hist_storystatic-signpost2">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="signpost2" data-parent_link="view_parent_modal">Punto clave (Signpost) 2</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(signpost2)%%><%%PLINK(signpost2)%%><%%ADDNEW(class_dramatica_concern)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Punto clave (Signpost) 3 -->
+				<div class="form-group hist_storystatic-signpost3">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="signpost3" data-parent_link="view_parent_modal">Punto clave (Signpost) 3</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(signpost3)%%><%%PLINK(signpost3)%%><%%ADDNEW(class_dramatica_concern)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Punto clave (Signpost) 4 -->
+				<div class="form-group hist_storystatic-signpost4">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="signpost4" data-parent_link="view_parent_modal">Punto clave (Signpost) 4</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(signpost4)%%><%%PLINK(signpost4)%%><%%ADDNEW(class_dramatica_concern)%%></div>
+					</div>
+				</div>
+
+			</fieldset>
+		</div>
+
+		<!-- DV action buttons -->
+		<hr class="hidden-md hidden-lg">
+		<div class="col-md-4 col-lg-2" id="hist_storystatic_dv_action_buttons">
+			<div class="btn-toolbar">
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%UPDATE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%DESELECT_BUTTON%%>
+					<%%DVPRINT_BUTTON%%>
+					<%%DELETE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%INSERT_BUTTON%%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- child records -->
+	<hr>
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1">
+			<div id="hist_storystatic-children" class="children-tabs">
+				<div class="text-center"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+			</div>
+		</div>
+	</div>
+
+</div><!-- /div class="panel-body" -->
+	<script>
+		$j(function() {
+			var add_new_mode = (!$j('input[name=SelectedID]').val());
+			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			/* auto-close embedded page? */
+			var autoclose_mode = ($j('input[name=AutoClose]').val() == 1);
+			var record_added_ok = (location.search.split('record-added-ok=').length == 2);
+			var record_updated_ok = (location.search.split('record-updated-ok=').length == 2);
+			if((record_added_ok || record_updated_ok) && embedded_mode && autoclose_mode) {
+				setTimeout(AppGini.closeParentModal, 2000);
+			}
+
+			/* enable DV action buttons to float on scrolling down the form */
+			enable_dvab_floating();
+
+
+			setTimeout(function() {
+				$j('#hist_storystatic_dv_container-loading').addClass('hidden');
+				$j('#hist_storystatic_dv_container').removeClass('hidden');
+				AppGini.focusFormElement('hist_storystatic', 'story');
+			}, 1100);
+
+			$j('form').eq(0).change(function() {
+				if($j(this).data('already_changed')) return;
+				if($j('#deselect').length) $j('#deselect').removeClass('btn-default').addClass('btn-warning').get(0).lastChild.data = " <%%TRANSLATION(Cancel)%%>";
+				$j(this).data('already_changed', true);
+			});
+
+			$j('a[href="<%%BASE_UPLOAD_PATH%%>"]').click(function() { return false; });
+
+			if(embedded_mode) {
+				/* hide links to children tables in embedded mode */
+				$j('.detail_view a[id$=_link]').remove();
+
+				/* append embedded mode to all links */
+				var append_embedded = function() {
+					$j('a[href]:not([href^="#"]):not([href^="javascript"]):not([href$="Embedded=1"]):not([href*="link.php?t="]):not([href^="mailto:"])').each(
+						function() {
+							$j(this).attr('href', $j(this).attr('href') + '&Embedded=1');
+						}
+					);
+				}
+				setTimeout(append_embedded, 500);
+				setTimeout(append_embedded, 1500);
+				setTimeout(append_embedded, 2500);
+				setTimeout(append_embedded, 3500);
+			}
+
+			/* when no record is selected ('add new' mode) */
+			if(add_new_mode) {
+				/* hide links to children tables */
+				$j('.detail_view a[id$=_link]').remove();
+			} else {
+				post(
+					'parent-children.php', {
+						ParentTable: 'hist_storystatic',
+						SelectedID: '<%%VALUE(id)%%>',
+						Operation: 'show-children'
+					},
+					'hist_storystatic-children'
+				);
+			}
+
+			if(!embedded_mode) {
+				/* add a horizontal spacer to [add new parent] buttons that don't have a spacered element before them */
+				$j('.add_new_parent').prev(':not(.hspacer-md)').next().addClass('hspacer-md');
+
+				$j('.add_new_parent').click(function() {
+					var pt = $j(this).attr('id').replace(/_add_new$/, '');
+					modal_window({
+						url: pt + '_view.php?addNew_x=1&Embedded=1',
+						close: function() {
+							var field_id = $j('#' + pt + '_add_new').prevAll('input:hidden').eq(0).attr('id');
+							$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+							/* if a new parent was added, select it */
+							var new_id = localStorage.getItem(pt + '_last_added_id');
+							if(new_id === null) return;
+
+							localStorage.clear(pt + '_last_added_id');
+							AppGini.lookupText({
+								id: new_id,
+								table: 'hist_storystatic',
+								field: field_id,
+								callback: function(data) {
+									$j('#' + field_id + '-container').select2('data', data, true);
+								}
+							});
+						},
+						size: 'full',
+						title: $j(this).attr('title')
+					});
+				});
+			}
+
+			AppGini.hideViewParentLinks();
+
+			$j('form').on('click', '.view_parent', function() {
+				var pt = $j(this).attr('id').replace(/_view_parent$/, '');
+				if($j(this).prevAll('input:hidden').length) {
+					var parent_id = $j(this).prevAll('input:hidden').eq(0).val();
+				} else {
+					var parent_id = $j(this).prevAll().children('input:hidden').eq(0).val();
+				}
+
+				/* handle radio lookups */
+				if($j(this).prevAll('[type=radio]').length) {
+					parent_id = $j(this).prevAll('[type=radio]').eq(0).val();
+				}
+
+				if(parent_id != '{empty_value}' && parent_id != undefined && parent_id != '') {
+					var parent_link = $j(this).parents('.form-group').children('label').data('parent_link');
+					switch(parent_link) {
+						case 'view_parent_hidden':
+							break;
+						case 'view_parent_modal':
+							modal_window({
+								url: pt + '_view.php?Embedded=1&SelectedID=' + encodeURIComponent(parent_id),
+								close: function() {
+									var field_id = $j('#' + pt + '_view_parent').prevAll('input:hidden').eq(0).attr('id');
+									$j('#' + field_id + '-container').select2('focus').select2('focus');
+								},
+								size: 'full',
+								title: $j(this).attr('title')
+							});
+							break;
+						case 'view_parent_same_window':
+							window.location = pt + '_view.php?Embedded=' + (embedded_mode ? '1' : '') + '&SelectedID=' + encodeURIComponent(parent_id);
+							break;
+						case 'view_parent_new_window':
+							window.open(pt + '_view.php?SelectedID=' + encodeURIComponent(parent_id));
+							break;
+					}
+
+				}
+			});
+
+
+			/* load admin tools for admin user */
+			if(!add_new_mode) {
+				$j('body').append('<div id="admin-tools-appendix"></div>');
+				$j('#admin-tools-appendix').load(
+					'ajax_admin_tools.php?table=hist_storystatic&id=<%%URLVALUE(id)%%>',
+					function(resp) {
+						if(!resp.length) return;
+						$j.ajax('ajax_admin_tools.php?action=get_admin_tools_js&table=hist_storystatic&id=<%%URLVALUE(id)%%>');
+					}
+				);
+			}
+
+			/* warn user if 'add new' clicked while unsaved changes exist */
+			$j('#addNew').click(function() {
+				if($j('#deselect.btn-warning').length) {
+					return confirm('<%%TRANSLATION(discard changes confirm)%%>');
+				}
+			});
+
+		});
+	</script>

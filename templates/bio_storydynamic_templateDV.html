@@ -1,0 +1,518 @@
+<!-- To change the layout of the detail view form, we recommend using JS code in hooks/bio_storydynamic-dv.js rather than editing this file -->
+
+<div id="detail-view"></div>
+<div class="panel-heading"><h3 class="panel-title"><strong><%%DETAIL_VIEW_TITLE%%></strong></h3></div>
+
+<div id="bio_storydynamic_dv_container-loading" class="text-center text-info text-bold vspacer-lg"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+<div class="panel-body hidden" id="bio_storydynamic_dv_container">
+	<!-- child links -->
+	<div class="row vspacer-md">
+		<div class="col-xs-12 children-links">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<hr class="hidden-xs hidden-sm">
+
+	<div class="row">
+		<!-- form inputs -->
+		<div class="col-md-8 col-lg-10" id="bio_storydynamic_dv_form">
+			<fieldset class="form-horizontal">
+
+				<!-- Field: ID -->
+				<div class="form-group bio_storydynamic-id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="id">ID</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="id"><%%VALUE(id)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Biograf&#237;a -->
+				<div class="form-group bio_storydynamic-story">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="story" data-parent_link="view_parent_modal">Biograf&#237;a</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(story)%%><%%PLINK(story)%%><%%ADDNEW(bio_story)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Punto est&#225;tico del MC -->
+				<div class="form-group bio_storydynamic-storystatic_mc">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="storystatic_mc" data-parent_link="view_parent_modal">Punto est&#225;tico del MC</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(storystatic_mc)%%><%%PLINK(storystatic_mc)%%><%%ADDNEW(bio_storystatic)%%><span id="storystatic_mcLoading"></span></div>
+					</div>
+				</div>
+
+				<!-- Field: Personaje principal -->
+				<div class="form-group bio_storydynamic-story_chr_mc">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="story_chr_mc" data-parent_link="view_parent_modal">Personaje principal <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#story_chr_mc-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="story_chr_mc-description"><div class="alert alert-info bspacer-xs">El personaje debe estar asignado como personaje historiogr&#225;fico y debe tener una biograf&#237;a.<br>Este personaje no necesita ser el protagonista, pero es el personaje que representa la perspectiva con la que se identifica la audiencia.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(story_chr_mc)%%><%%PLINK(story_chr_mc)%%><%%ADDNEW(bio_chr)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Problema MC -->
+				<div class="form-group bio_storydynamic-mc_problem">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="mc_problem" data-parent_link="view_parent_modal">Problema MC</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(mc_problem)%%><%%PLINK(mc_problem)%%><%%ADDNEW(bio_storystatic)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Resoluci&#243;n MC -->
+				<div class="form-group bio_storydynamic-mc_resolve">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="mc_resolve" data-parent_link="view_parent_modal">Resoluci&#243;n MC <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#mc_resolve-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="mc_resolve-description"><div class="alert alert-info bspacer-xs">Para este campo el desarrollo de personaje principal de la biograf&#237;a debe estar codificado.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(mc_resolve)%%><%%PLINK(mc_resolve)%%><%%ADDNEW(bio_chr_dev)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Crecimiento MC -->
+				<div class="form-group bio_storydynamic-mc_growth">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="mc_growth" data-parent_link="view_parent_modal">Crecimiento MC</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(mc_growth)%%><%%PLINK(mc_growth)%%><%%ADDNEW(bio_chr_dev)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Enfoque MC -->
+				<div class="form-group bio_storydynamic-mc_approach">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="mc_approach" data-parent_link="view_parent_modal">Enfoque MC</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(mc_approach)%%><%%PLINK(mc_approach)%%><%%ADDNEW(bio_chr_dev)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Estilo de soluci&#243;n de problemas del MC -->
+				<div class="form-group bio_storydynamic-mc_ps_style">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="mc_ps_style" data-parent_link="view_parent_modal">Estilo de soluci&#243;n de problemas del MC</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(mc_ps_style)%%><%%PLINK(mc_ps_style)%%><%%ADDNEW(bio_chr_dev)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Desarrollo de personaje del personaje de obst&#225;culo (IC) -->
+				<div class="form-group bio_storydynamic-story_chr_ic">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="story_chr_ic" data-parent_link="view_parent_modal">Desarrollo de personaje del personaje de obst&#225;culo (IC) <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#story_chr_ic-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="story_chr_ic-description"><div class="alert alert-info bspacer-xs">El personaje debe ser un personaje de impacto.<br>Seleccione aqu&#237; IC si no lo hace autom&#225;ticamente.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(story_chr_ic)%%><%%PLINK(story_chr_ic)%%><%%ADDNEW(bio_chr)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Resoluci&#243;n IC -->
+				<div class="form-group bio_storydynamic-ic_resolve">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="ic_resolve" data-parent_link="view_parent_modal">Resoluci&#243;n IC</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(ic_resolve)%%><%%PLINK(ic_resolve)%%><%%ADDNEW(bio_chr_dev)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Punto din&#225;mico clase 1 -->
+				<div class="form-group bio_storydynamic-dp_cat1">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="dp_cat1" data-parent_link="view_parent_modal">Punto din&#225;mico clase 1 <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#dp_cat1-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="dp_cat1-description"><div class="alert alert-info bspacer-xs">Este campo debe ocultarse y calcularse autom&#225;ticamente.<br>Este debe ser Genre.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(dp_cat1)%%><%%PLINK(dp_cat1)%%><%%ADDNEW(class_dynamicstorypoints1)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Punto din&#225;mico clase 2 -->
+				<div class="form-group bio_storydynamic-dp_cat2">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="dp_cat2" data-parent_link="view_parent_modal">Punto din&#225;mico clase 2 <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#dp_cat2-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="dp_cat2-description"><div class="alert alert-info bspacer-xs">Este campo debe ocultarse y calcularse autom&#225;ticamente.<br>Este debe ser Dynamic.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(dp_cat2)%%><%%PLINK(dp_cat2)%%><%%ADDNEW(class_dynamicstorypoints2)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Valor de punto din&#225;mico Conductor (Driver) -->
+				<div class="form-group bio_storydynamic-dp_cat3_driver">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="dp_cat3_driver" data-parent_link="view_parent_modal">Valor de punto din&#225;mico Conductor (Driver) <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#dp_cat3_driver-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="dp_cat3_driver-description"><div class="alert alert-info bspacer-xs">Este campo debe ocultarse y calcularse autom&#225;ticamente.<br>Este debe ser Driver.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(dp_cat3_driver)%%><%%PLINK(dp_cat3_driver)%%><%%ADDNEW(class_dynamicstorypoints3)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Conductor (Driver) OS -->
+				<div class="form-group bio_storydynamic-os_driver">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="os_driver" data-parent_link="view_parent_modal">Conductor (Driver) OS</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(os_driver)%%><%%PLINK(os_driver)%%><%%ADDNEW(class_dynamicstorypoints4)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Valor de punto din&#225;mico L&#237;mite -->
+				<div class="form-group bio_storydynamic-dp_cat3_limit">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="dp_cat3_limit" data-parent_link="view_parent_modal">Valor de punto din&#225;mico L&#237;mite <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#dp_cat3_limit-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="dp_cat3_limit-description"><div class="alert alert-info bspacer-xs">Este campo debe ocultarse y calcularse autom&#225;ticamente.<br>Este debe ser L&#237;mite.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(dp_cat3_limit)%%><%%PLINK(dp_cat3_limit)%%><%%ADDNEW(class_dynamicstorypoints3)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: L&#237;mite OS -->
+				<div class="form-group bio_storydynamic-os_limit">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="os_limit" data-parent_link="view_parent_modal">L&#237;mite OS</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(os_limit)%%><%%PLINK(os_limit)%%><%%ADDNEW(class_dynamicstorypoints4)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Valor de punto din&#225;mico Desenlace (Outcome) -->
+				<div class="form-group bio_storydynamic-dp_cat3_outcome">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="dp_cat3_outcome" data-parent_link="view_parent_modal">Valor de punto din&#225;mico Desenlace (Outcome) <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#dp_cat3_outcome-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="dp_cat3_outcome-description"><div class="alert alert-info bspacer-xs">Este campo debe ocultarse y calcularse autom&#225;ticamente.
+<br>Este debe ser Outcome</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(dp_cat3_outcome)%%><%%PLINK(dp_cat3_outcome)%%><%%ADDNEW(class_dynamicstorypoints3)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Desenlace OS -->
+				<div class="form-group bio_storydynamic-os_outcome">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="os_outcome" data-parent_link="view_parent_modal">Desenlace OS</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(os_outcome)%%><%%PLINK(os_outcome)%%><%%ADDNEW(class_dynamicstorypoints4)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Valor de punto din&#225;mico Sentencia (Judgement) -->
+				<div class="form-group bio_storydynamic-dp_cat3_judgement">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="dp_cat3_judgement" data-parent_link="view_parent_modal">Valor de punto din&#225;mico Sentencia (Judgement) <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#dp_cat3_judgement-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="dp_cat3_judgement-description"><div class="alert alert-info bspacer-xs">Este campo debe ocultarse y calcularse autom&#225;ticamente.
+<br>Este debe ser Judgement</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(dp_cat3_judgement)%%><%%PLINK(dp_cat3_judgement)%%><%%ADDNEW(class_dynamicstorypoints3)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Sentencia OS -->
+				<div class="form-group bio_storydynamic-os_judgement">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="os_judgement" data-parent_link="view_parent_modal">Sentencia OS</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(os_judgement)%%><%%PLINK(os_judgement)%%><%%ADDNEW(class_dynamicstorypoints4)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Dominio de objetivo OS -->
+				<div class="form-group bio_storydynamic-os_goal_domain">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="os_goal_domain" data-parent_link="view_parent_modal">Dominio de objetivo OS <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#os_goal_domain-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="os_goal_domain-description"><div class="alert alert-info bspacer-xs">Este campo requiere los puntos est&#225;ticos de personaje historiogr&#225;fico codificados.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(os_goal_domain)%%><%%PLINK(os_goal_domain)%%><%%ADDNEW(bio_storystatic)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Aspecto (Concern) OS -->
+				<div class="form-group bio_storydynamic-os_goal_concern">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Aspecto (Concern) OS</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="os_goal_concern"></div>
+					</div>
+				</div>
+
+				<!-- Field: Dominio de consecuencia OS -->
+				<div class="form-group bio_storydynamic-os_consequence_domain">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="os_consequence_domain" data-parent_link="view_parent_modal">Dominio de consecuencia OS <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#os_consequence_domain-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="os_consequence_domain-description"><div class="alert alert-info bspacer-xs">Este es el Type Quad en la misma posici&#243;n que Story Goal pero dentro de la clase din&#225;micamente opuesta.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(os_consequence_domain)%%><%%PLINK(os_consequence_domain)%%><%%ADDNEW(class_dramatica_domain)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Aspecto de consecuencia OS -->
+				<div class="form-group bio_storydynamic-os_consequence_concern">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="os_consequence_concern" data-parent_link="view_parent_modal">Aspecto de consecuencia OS</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(os_consequence_concern)%%><%%PLINK(os_consequence_concern)%%><%%ADDNEW(class_dramatica_concern)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Dominio de coste OS -->
+				<div class="form-group bio_storydynamic-os_cost_domain">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="os_cost_domain" data-parent_link="view_parent_modal">Dominio de coste OS</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(os_cost_domain)%%><%%PLINK(os_cost_domain)%%><%%ADDNEW(class_dramatica_domain)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Aspecto de coste OS -->
+				<div class="form-group bio_storydynamic-os_cost_concern">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="os_cost_concern" data-parent_link="view_parent_modal">Aspecto de coste OS</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(os_cost_concern)%%><%%PLINK(os_cost_concern)%%><%%ADDNEW(class_dramatica_concern)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Dominio de dividendo OS -->
+				<div class="form-group bio_storydynamic-os_dividend_domain">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="os_dividend_domain" data-parent_link="view_parent_modal">Dominio de dividendo OS</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(os_dividend_domain)%%><%%PLINK(os_dividend_domain)%%><%%ADDNEW(class_dramatica_domain)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Aspecto de dividendo OS -->
+				<div class="form-group bio_storydynamic-os_dividend_concern">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="os_dividend_concern" data-parent_link="view_parent_modal">Aspecto de dividendo OS</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(os_dividend_concern)%%><%%PLINK(os_dividend_concern)%%><%%ADDNEW(class_dramatica_concern)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Dominio de requisitos OS -->
+				<div class="form-group bio_storydynamic-os_requirements_domain">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="os_requirements_domain" data-parent_link="view_parent_modal">Dominio de requisitos OS</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(os_requirements_domain)%%><%%PLINK(os_requirements_domain)%%><%%ADDNEW(class_dramatica_domain)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Aspecto de requisitos OS -->
+				<div class="form-group bio_storydynamic-os_requirements_concern">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="os_requirements_concern" data-parent_link="view_parent_modal">Aspecto de requisitos OS</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(os_requirements_concern)%%><%%PLINK(os_requirements_concern)%%><%%ADDNEW(class_dramatica_concern)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Dominio de prerequisitos OS -->
+				<div class="form-group bio_storydynamic-os_prerequesites_domain">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="os_prerequesites_domain" data-parent_link="view_parent_modal">Dominio de prerequisitos OS</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(os_prerequesites_domain)%%><%%PLINK(os_prerequesites_domain)%%><%%ADDNEW(class_dramatica_domain)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Aspecto de prerequisitos OS -->
+				<div class="form-group bio_storydynamic-os_prerequesites_concern">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="os_prerequesites_concern" data-parent_link="view_parent_modal">Aspecto de prerequisitos OS</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(os_prerequesites_concern)%%><%%PLINK(os_prerequesites_concern)%%><%%ADDNEW(class_dramatica_concern)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Dominio de la precondici&#243;n OS -->
+				<div class="form-group bio_storydynamic-os_preconditions_domain">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="os_preconditions_domain" data-parent_link="view_parent_modal">Dominio de la precondici&#243;n OS</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(os_preconditions_domain)%%><%%PLINK(os_preconditions_domain)%%><%%ADDNEW(class_dramatica_domain)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Aspecto de la precondici&#243;n OS -->
+				<div class="form-group bio_storydynamic-os_preconditions_concern">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="os_preconditions_concern" data-parent_link="view_parent_modal">Aspecto de la precondici&#243;n OS</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(os_preconditions_concern)%%><%%PLINK(os_preconditions_concern)%%><%%ADDNEW(class_dramatica_concern)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Dominio de la preaviso OS -->
+				<div class="form-group bio_storydynamic-os_forewarnings_domain">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="os_forewarnings_domain" data-parent_link="view_parent_modal">Dominio de la preaviso OS</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(os_forewarnings_domain)%%><%%PLINK(os_forewarnings_domain)%%><%%ADDNEW(class_dramatica_domain)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Aspecto de la preaviso OS -->
+				<div class="form-group bio_storydynamic-os_forewarnings_concern">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="os_forewarnings_concern" data-parent_link="view_parent_modal">Aspecto de la preaviso OS</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(os_forewarnings_concern)%%><%%PLINK(os_forewarnings_concern)%%><%%ADDNEW(class_dramatica_concern)%%></div>
+					</div>
+				</div>
+
+			</fieldset>
+		</div>
+
+		<!-- DV action buttons -->
+		<hr class="hidden-md hidden-lg">
+		<div class="col-md-4 col-lg-2" id="bio_storydynamic_dv_action_buttons">
+			<div class="btn-toolbar">
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%UPDATE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%DESELECT_BUTTON%%>
+					<%%DVPRINT_BUTTON%%>
+					<%%DELETE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%INSERT_BUTTON%%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div><!-- /div class="panel-body" -->
+	<script>
+		$j(function() {
+			var add_new_mode = (!$j('input[name=SelectedID]').val());
+			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			/* auto-close embedded page? */
+			var autoclose_mode = ($j('input[name=AutoClose]').val() == 1);
+			var record_added_ok = (location.search.split('record-added-ok=').length == 2);
+			var record_updated_ok = (location.search.split('record-updated-ok=').length == 2);
+			if((record_added_ok || record_updated_ok) && embedded_mode && autoclose_mode) {
+				setTimeout(AppGini.closeParentModal, 2000);
+			}
+
+			/* enable DV action buttons to float on scrolling down the form */
+			enable_dvab_floating();
+
+
+			setTimeout(function() {
+				$j('#bio_storydynamic_dv_container-loading').addClass('hidden');
+				$j('#bio_storydynamic_dv_container').removeClass('hidden');
+				AppGini.focusFormElement('bio_storydynamic', 'story');
+			}, 1100);
+
+			$j('form').eq(0).change(function() {
+				if($j(this).data('already_changed')) return;
+				if($j('#deselect').length) $j('#deselect').removeClass('btn-default').addClass('btn-warning').get(0).lastChild.data = " <%%TRANSLATION(Cancel)%%>";
+				$j(this).data('already_changed', true);
+			});
+
+			$j('a[href="<%%BASE_UPLOAD_PATH%%>"]').click(function() { return false; });
+
+
+			if(!embedded_mode) {
+				/* add a horizontal spacer to [add new parent] buttons that don't have a spacered element before them */
+				$j('.add_new_parent').prev(':not(.hspacer-md)').next().addClass('hspacer-md');
+
+				$j('.add_new_parent').click(function() {
+					var pt = $j(this).attr('id').replace(/_add_new$/, '');
+					modal_window({
+						url: pt + '_view.php?addNew_x=1&Embedded=1',
+						close: function() {
+							var field_id = $j('#' + pt + '_add_new').prevAll('input:hidden').eq(0).attr('id');
+							$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+							/* if a new parent was added, select it */
+							var new_id = localStorage.getItem(pt + '_last_added_id');
+							if(new_id === null) return;
+
+							localStorage.clear(pt + '_last_added_id');
+							AppGini.lookupText({
+								id: new_id,
+								table: 'bio_storydynamic',
+								field: field_id,
+								callback: function(data) {
+									$j('#' + field_id + '-container').select2('data', data, true);
+								}
+							});
+						},
+						size: 'full',
+						title: $j(this).attr('title')
+					});
+				});
+			}
+
+			AppGini.hideViewParentLinks();
+
+			$j('form').on('click', '.view_parent', function() {
+				var pt = $j(this).attr('id').replace(/_view_parent$/, '');
+				if($j(this).prevAll('input:hidden').length) {
+					var parent_id = $j(this).prevAll('input:hidden').eq(0).val();
+				} else {
+					var parent_id = $j(this).prevAll().children('input:hidden').eq(0).val();
+				}
+
+				/* handle radio lookups */
+				if($j(this).prevAll('[type=radio]').length) {
+					parent_id = $j(this).prevAll('[type=radio]').eq(0).val();
+				}
+
+				if(parent_id != '{empty_value}' && parent_id != undefined && parent_id != '') {
+					var parent_link = $j(this).parents('.form-group').children('label').data('parent_link');
+					switch(parent_link) {
+						case 'view_parent_hidden':
+							break;
+						case 'view_parent_modal':
+							modal_window({
+								url: pt + '_view.php?Embedded=1&SelectedID=' + encodeURIComponent(parent_id),
+								close: function() {
+									var field_id = $j('#' + pt + '_view_parent').prevAll('input:hidden').eq(0).attr('id');
+									$j('#' + field_id + '-container').select2('focus').select2('focus');
+								},
+								size: 'full',
+								title: $j(this).attr('title')
+							});
+							break;
+						case 'view_parent_same_window':
+							window.location = pt + '_view.php?Embedded=' + (embedded_mode ? '1' : '') + '&SelectedID=' + encodeURIComponent(parent_id);
+							break;
+						case 'view_parent_new_window':
+							window.open(pt + '_view.php?SelectedID=' + encodeURIComponent(parent_id));
+							break;
+					}
+
+				}
+			});
+
+
+			/* load admin tools for admin user */
+			if(!add_new_mode) {
+				$j('body').append('<div id="admin-tools-appendix"></div>');
+				$j('#admin-tools-appendix').load(
+					'ajax_admin_tools.php?table=bio_storydynamic&id=<%%URLVALUE(id)%%>',
+					function(resp) {
+						if(!resp.length) return;
+						$j.ajax('ajax_admin_tools.php?action=get_admin_tools_js&table=bio_storydynamic&id=<%%URLVALUE(id)%%>');
+					}
+				);
+			}
+
+			/* warn user if 'add new' clicked while unsaved changes exist */
+			$j('#addNew').click(function() {
+				if($j('#deselect.btn-warning').length) {
+					return confirm('<%%TRANSLATION(discard changes confirm)%%>');
+				}
+			});
+
+		});
+	</script>

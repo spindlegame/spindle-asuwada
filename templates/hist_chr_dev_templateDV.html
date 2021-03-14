@@ -1,0 +1,601 @@
+<!-- To change the layout of the detail view form, we recommend using JS code in hooks/hist_chr_dev-dv.js rather than editing this file -->
+
+<div id="detail-view"></div>
+<div class="panel-heading"><h3 class="panel-title"><strong><%%DETAIL_VIEW_TITLE%%></strong></h3></div>
+
+<div id="hist_chr_dev_dv_container-loading" class="text-center text-info text-bold vspacer-lg"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+<div class="panel-body hidden" id="hist_chr_dev_dv_container">
+	<!-- child links -->
+	<div class="row vspacer-md">
+		<div class="col-xs-12 children-links">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<hr class="hidden-xs hidden-sm">
+
+	<div class="row">
+		<!-- form inputs -->
+		<div class="col-md-8 col-lg-10" id="hist_chr_dev_dv_form">
+			<fieldset class="form-horizontal">
+
+				<!-- Field: ID -->
+				<div class="form-group hist_chr_dev-id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="id">ID</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="id"><%%VALUE(id)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Historia -->
+				<div class="form-group hist_chr_dev-hist_story">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="hist_story" data-parent_link="view_parent_modal">Historia</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(hist_story)%%><%%PLINK(hist_story)%%><%%ADDNEW(hist_story)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Biograf&#237;a -->
+				<div class="form-group hist_chr_dev-bio_story">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bio_story" data-parent_link="view_parent_modal">Biograf&#237;a</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bio_story)%%><%%PLINK(bio_story)%%><%%ADDNEW(bio_story)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: ID autor -->
+				<div class="form-group hist_chr_dev-agent_id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="agent_id" data-parent_link="view_parent_modal">ID autor</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(agent_id)%%><%%PLINK(agent_id)%%><%%ADDNEW(biblio_author)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Nombre de autor -->
+				<div class="form-group hist_chr_dev-agent_name">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="agent_name" data-parent_link="view_parent_modal">Nombre de autor <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#agent_name-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="agent_name-description"><div class="alert alert-info bspacer-xs">El autor de los escritos biogr&#225;ficos en los que se basa este personaje.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(agent_name)%%><%%PLINK(agent_name)%%><%%ADDNEW(hist_chr)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Nombre de personaje -->
+				<div class="form-group hist_chr_dev-cw_name">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_name" data-parent_link="view_parent_modal">Nombre de personaje</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(cw_name)%%><%%PLINK(cw_name)%%><%%ADDNEW(hist_chr)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Punto din&#225;mico categor&#237;a 1 -->
+				<div class="form-group hist_chr_dev-dp1_resolve">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="dp1_resolve" data-parent_link="view_parent_modal">Punto din&#225;mico categor&#237;a 1 <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#dp1_resolve-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="dp1_resolve-description"><div class="alert alert-info bspacer-xs">Este campo debe ocultarse y calcularse autom&#225;ticamente.<br>De momento se debe codificar mediante el uso del Software Dram&#225;tica.<br>Pide ayuda al gestor o administrador del juego.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(dp1_resolve)%%><%%PLINK(dp1_resolve)%%><%%ADDNEW(class_dynamicstorypoints1)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Punto din&#225;mico categor&#237;a 2 -->
+				<div class="form-group hist_chr_dev-dp2_resolve">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="dp2_resolve" data-parent_link="view_parent_modal">Punto din&#225;mico categor&#237;a 2 <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#dp2_resolve-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="dp2_resolve-description"><div class="alert alert-info bspacer-xs">Este campo debe ocultarse y calcularse autom&#225;ticamente.<br>De momento se debe codificar mediante el uso del Software Dram&#225;tica.<br>Pide ayuda al gestor o administrador del juego.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(dp2_resolve)%%><%%PLINK(dp2_resolve)%%><%%ADDNEW(class_dynamicstorypoints2)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Punto din&#225;mico categor&#237;a 3 -->
+				<div class="form-group hist_chr_dev-dp3_resolve">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="dp3_resolve" data-parent_link="view_parent_modal">Punto din&#225;mico categor&#237;a 3 <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#dp3_resolve-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="dp3_resolve-description"><div class="alert alert-info bspacer-xs">Este campo debe ocultarse y calcularse autom&#225;ticamente.<br>De momento se debe codificar mediante el uso del Software Dram&#225;tica.<br>Pide ayuda al gestor o administrador del juego.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(dp3_resolve)%%><%%PLINK(dp3_resolve)%%><%%ADDNEW(class_dynamicstorypoints3)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Resoluci&#243;n de personaje principal -->
+				<div class="form-group hist_chr_dev-mc_resolve">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="mc_resolve" data-parent_link="view_parent_modal">Resoluci&#243;n de personaje principal <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#mc_resolve-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="mc_resolve-description"><div class="alert alert-info bspacer-xs">Resoluci&#243;n de personaje principal.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(mc_resolve)%%><%%PLINK(mc_resolve)%%><%%ADDNEW(class_dynamicstorypoints4)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Ilustraci&#243;n de la resoluci&#243;n -->
+				<div class="form-group hist_chr_dev-illust_resolve">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="illust_resolve" data-parent_link="view_parent_modal">Ilustraci&#243;n de la resoluci&#243;n</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_resolve)%%><%%PLINK(illust_resolve)%%><%%ADDNEW(hist_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Punto din&#225;mico Crecimiento -->
+				<div class="form-group hist_chr_dev-dp3_growth">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="dp3_growth" data-parent_link="view_parent_modal">Punto din&#225;mico Crecimiento <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#dp3_growth-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="dp3_growth-description"><div class="alert alert-info bspacer-xs">Este campo debe ocultarse y calcularse autom&#225;ticamente.<br>De momento se debe codificar mediante el uso del Software Dram&#225;tica.<br>Pide ayuda al gestor o administrador del juego.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(dp3_growth)%%><%%PLINK(dp3_growth)%%><%%ADDNEW(class_dynamicstorypoints3)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Crecimiento de personaje principal -->
+				<div class="form-group hist_chr_dev-mc_growth">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="mc_growth" data-parent_link="view_parent_modal">Crecimiento de personaje principal</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(mc_growth)%%><%%PLINK(mc_growth)%%><%%ADDNEW(class_dynamicstorypoints4)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Ilustraci&#243;n del crecimiento -->
+				<div class="form-group hist_chr_dev-illust_growth">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="illust_growth" data-parent_link="view_parent_modal">Ilustraci&#243;n del crecimiento</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_growth)%%><%%PLINK(illust_growth)%%><%%ADDNEW(hist_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Punto din&#225;mico Enfoque -->
+				<div class="form-group hist_chr_dev-dp3_approach">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="dp3_approach" data-parent_link="view_parent_modal">Punto din&#225;mico Enfoque <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#dp3_approach-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="dp3_approach-description"><div class="alert alert-info bspacer-xs">Este campo debe ocultarse y calcularse autom&#225;ticamente.<br>De momento se debe codificar mediante el uso del Software Dram&#225;tica.<br>Pide ayuda al gestor o administrador del juego.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(dp3_approach)%%><%%PLINK(dp3_approach)%%><%%ADDNEW(class_dynamicstorypoints3)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Enfoque de personaje principal -->
+				<div class="form-group hist_chr_dev-mc_approach">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="mc_approach" data-parent_link="view_parent_modal">Enfoque de personaje principal</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(mc_approach)%%><%%PLINK(mc_approach)%%><%%ADDNEW(class_dynamicstorypoints4)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Ilustraci&#243;n del enfoque -->
+				<div class="form-group hist_chr_dev-illust_approach">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="illust_approach" data-parent_link="view_parent_modal">Ilustraci&#243;n del enfoque</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_approach)%%><%%PLINK(illust_approach)%%><%%ADDNEW(hist_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Punto din&#225;mico estilo de resolver problemas -->
+				<div class="form-group hist_chr_dev-dp3_psstyle">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="dp3_psstyle" data-parent_link="view_parent_modal">Punto din&#225;mico estilo de resolver problemas <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#dp3_psstyle-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="dp3_psstyle-description"><div class="alert alert-info bspacer-xs">Este campo debe ocultarse y calcularse autom&#225;ticamente.<br>De momento se debe codificar mediante el uso del Software Dram&#225;tica.<br>Pide ayuda al gestor o administrador del juego.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(dp3_psstyle)%%><%%PLINK(dp3_psstyle)%%><%%ADDNEW(class_dynamicstorypoints3)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Estilo de resolver problemas de personaje principal -->
+				<div class="form-group hist_chr_dev-mc_ps_style">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="mc_ps_style" data-parent_link="view_parent_modal">Estilo de resolver problemas de personaje principal</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(mc_ps_style)%%><%%PLINK(mc_ps_style)%%><%%ADDNEW(class_dynamicstorypoints4)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Ilustraci&#243;n del estilo de resolver problemas -->
+				<div class="form-group hist_chr_dev-illust_ps_style">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="illust_ps_style" data-parent_link="view_parent_modal">Ilustraci&#243;n del estilo de resolver problemas</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_ps_style)%%><%%PLINK(illust_ps_style)%%><%%ADDNEW(hist_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Edad de personaje -->
+				<div class="form-group hist_chr_dev-cw_age">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_age">Edad de personaje <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#cw_age-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="cw_age-description"><div class="alert alert-info bspacer-xs">En a&#241;os o lapso de a&#241;os.<br>Ejemplos: 42, 50-68</div></span>
+						<input maxlength="40" type="text" class="form-control" name="cw_age" id="cw_age" value="<%%VALUE(cw_age)%%>">
+					</div>
+				</div>
+
+				<!-- Field: G&#233;nero del personaje -->
+				<div class="form-group hist_chr_dev-cw_gender">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_gender" data-parent_link="view_parent_modal">G&#233;nero del personaje</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(cw_gender)%%><%%PLINK(cw_gender)%%><%%ADDNEW(class_gender)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Estilo de comunicaci&#243;n -->
+				<div class="form-group hist_chr_dev-cw_communication_style">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_communication_style">Estilo de comunicaci&#243;n</label>
+					<div class="col-lg-9">
+						<input type="text" class="form-control" name="cw_communication_style" id="cw_communication_style" value="<%%VALUE(cw_communication_style)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Antecendents -->
+				<div class="form-group hist_chr_dev-cw_background">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_background">Antecendents</label>
+					<div class="col-lg-9">
+						<input type="text" class="form-control" name="cw_background" id="cw_background" value="<%%VALUE(cw_background)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Aspecto f&#237;sico -->
+				<div class="form-group hist_chr_dev-cw_appearance">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_appearance">Aspecto f&#237;sico</label>
+					<div class="col-lg-9">
+						<input type="text" class="form-control" name="cw_appearance" id="cw_appearance" value="<%%VALUE(cw_appearance)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Relaciones -->
+				<div class="form-group hist_chr_dev-cw_relationships">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_relationships">Relaciones</label>
+					<div class="col-lg-9">
+						<input maxlength="255" type="text" class="form-control" name="cw_relationships" id="cw_relationships" value="<%%VALUE(cw_relationships)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Ambiciones -->
+				<div class="form-group hist_chr_dev-cw_ambition">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_ambition">Ambiciones</label>
+					<div class="col-lg-9">
+						<input type="text" class="form-control" name="cw_ambition" id="cw_ambition" value="<%%VALUE(cw_ambition)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Defectos -->
+				<div class="form-group hist_chr_dev-cw_defects">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_defects">Defectos</label>
+					<div class="col-lg-9">
+						<input type="text" class="form-control" name="cw_defects" id="cw_defects" value="<%%VALUE(cw_defects)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Ideas -->
+				<div class="form-group hist_chr_dev-cw_thoughts">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_thoughts">Ideas</label>
+					<div class="col-lg-9">
+						<input type="text" class="form-control" name="cw_thoughts" id="cw_thoughts" value="<%%VALUE(cw_thoughts)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Apego -->
+				<div class="form-group hist_chr_dev-cw_relatedness">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_relatedness">Apego</label>
+					<div class="col-lg-9">
+						<input maxlength="255" type="text" class="form-control" name="cw_relatedness" id="cw_relatedness" value="<%%VALUE(cw_relatedness)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Restricciones -->
+				<div class="form-group hist_chr_dev-cw_restrictions">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="cw_restrictions">Restricciones</label>
+					<div class="col-lg-9">
+						<input type="text" class="form-control" name="cw_restrictions" id="cw_restrictions" value="<%%VALUE(cw_restrictions)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Lugar(es) -->
+				<div class="form-group hist_chr_dev-locations">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="locations">Lugar(es)</label>
+					<div class="col-lg-9">
+						<input maxlength="255" type="text" class="form-control" name="locations" id="locations" value="<%%VALUE(locations)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Persona(s) -->
+				<div class="form-group hist_chr_dev-persons">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="persons">Persona(s)</label>
+					<div class="col-lg-9">
+						<input maxlength="255" type="text" class="form-control" name="persons" id="persons" value="<%%VALUE(persons)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Eventos -->
+				<div class="form-group hist_chr_dev-events">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="events">Eventos</label>
+					<div class="col-lg-9">
+						<input type="text" class="form-control" name="events" id="events" value="<%%VALUE(events)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Tensi&#243;n no&#233;tica principal -->
+				<div class="form-group hist_chr_dev-noetictension">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="noetictension" data-parent_link="view_parent_modal">Tensi&#243;n no&#233;tica principal <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#noetictension-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="noetictension-description"><div class="alert alert-info bspacer-xs">Tensi&#243;n no&#233;tica principal seg&#250;n la teor&#237;a de Viktor E. Frankl.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(noetictension)%%><%%PLINK(noetictension)%%><%%ADDNEW(class_nt)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Ilustraci&#243;n de la tens&#237;on no&#233;tica -->
+				<div class="form-group hist_chr_dev-illust_nt">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="illust_nt" data-parent_link="view_parent_modal">Ilustraci&#243;n de la tens&#237;on no&#233;tica</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_nt)%%><%%PLINK(illust_nt)%%><%%ADDNEW(hist_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Gesti&#243;n general de impresiones -->
+				<div class="form-group hist_chr_dev-impression">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="impression" data-parent_link="view_parent_modal">Gesti&#243;n general de impresiones <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#impression-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="impression-description"><div class="alert alert-info bspacer-xs">Gesti&#243;n general de impresiones seg&#250;n la teor&#237;a de Goffman.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(impression)%%><%%PLINK(impression)%%><%%ADDNEW(class_im)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Ilustraci&#243;n de la gesti&#243;n de impresi&#243;n -->
+				<div class="form-group hist_chr_dev-illust_im">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="illust_im" data-parent_link="view_parent_modal">Ilustraci&#243;n de la gesti&#243;n de impresi&#243;n</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_im)%%><%%PLINK(illust_im)%%><%%ADDNEW(hist_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Problema MCS -->
+				<div class="form-group hist_chr_dev-mcs_problem">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="mcs_problem" data-parent_link="view_parent_modal">Problema MCS <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#mcs_problem-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="mcs_problem-description"><div class="alert alert-info bspacer-xs">Este campo est&#225; codificado el problema del P.P. en los punto est&#225;ticos [Static Story Points] de Dramatica.</div></span>
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(mcs_problem)%%><%%PLINK(mcs_problem)%%><%%ADDNEW(hist_storystatic)%%><span id="mcs_problemLoading"></span></div>
+					</div>
+				</div>
+
+				<!-- Field: Ilustraci&#243;n de problema -->
+				<div class="form-group hist_chr_dev-illust_mcs_problem">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="illust_mcs_problem" data-parent_link="view_parent_modal">Ilustraci&#243;n de problema</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_mcs_problem)%%><%%PLINK(illust_mcs_problem)%%><%%ADDNEW(hist_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Soluci&#243;n MCS -->
+				<div class="form-group hist_chr_dev-mcs_solution">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Soluci&#243;n MCS <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#mcs_solution-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="mcs_solution-description"><div class="alert alert-info bspacer-xs">Este campo est&#225; codificado la soluci&#243;n del P.P. en los punto est&#225;ticos [Static Story Points] de Dramatica.</div></span>
+						<div class="form-control-static" id="mcs_solution"></div>
+					</div>
+				</div>
+
+				<!-- Field: Ilustraci&#243;n de soluci&#243;n -->
+				<div class="form-group hist_chr_dev-illust_mcs_solution">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="illust_mcs_solution" data-parent_link="view_parent_modal">Ilustraci&#243;n de soluci&#243;n</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_mcs_solution)%%><%%PLINK(illust_mcs_solution)%%><%%ADDNEW(hist_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: S&#237;ntoma -->
+				<div class="form-group hist_chr_dev-mcs_symptom">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">S&#237;ntoma <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#mcs_symptom-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="mcs_symptom-description"><div class="alert alert-info bspacer-xs">Este campo est&#225; codificado la soluci&#243;n del P.P. en los punto est&#225;ticos [Static Story Points] de Dramatica.</div></span>
+						<div class="form-control-static" id="mcs_symptom"></div>
+					</div>
+				</div>
+
+				<!-- Field: Ilustraci&#243;n de s&#237;ntoma -->
+				<div class="form-group hist_chr_dev-illust_mcs_symptom">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="illust_mcs_symptom" data-parent_link="view_parent_modal">Ilustraci&#243;n de s&#237;ntoma</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_mcs_symptom)%%><%%PLINK(illust_mcs_symptom)%%><%%ADDNEW(hist_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Respuesta -->
+				<div class="form-group hist_chr_dev-mcs_response">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Respuesta <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#mcs_response-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="mcs_response-description"><div class="alert alert-info bspacer-xs">Este campo est&#225; codificado la soluci&#243;n del P.P. en los punto est&#225;ticos [Static Story Points] de Dramatica.</div></span>
+						<div class="form-control-static" id="mcs_response"></div>
+					</div>
+				</div>
+
+				<!-- Field: Illustration of MCS Response -->
+				<div class="form-group hist_chr_dev-illust_mcs_response">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="illust_mcs_response" data-parent_link="view_parent_modal">Illustration of MCS Response</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(illust_mcs_response)%%><%%PLINK(illust_mcs_response)%%><%%ADDNEW(hist_chr_scene)%%></div>
+					</div>
+				</div>
+
+			</fieldset>
+		</div>
+
+		<!-- DV action buttons -->
+		<hr class="hidden-md hidden-lg">
+		<div class="col-md-4 col-lg-2" id="hist_chr_dev_dv_action_buttons">
+			<div class="btn-toolbar">
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%UPDATE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%DESELECT_BUTTON%%>
+					<%%DVPRINT_BUTTON%%>
+					<%%DELETE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%INSERT_BUTTON%%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div><!-- /div class="panel-body" -->
+	<script>
+		$j(function() {
+			var add_new_mode = (!$j('input[name=SelectedID]').val());
+			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			/* auto-close embedded page? */
+			var autoclose_mode = ($j('input[name=AutoClose]').val() == 1);
+			var record_added_ok = (location.search.split('record-added-ok=').length == 2);
+			var record_updated_ok = (location.search.split('record-updated-ok=').length == 2);
+			if((record_added_ok || record_updated_ok) && embedded_mode && autoclose_mode) {
+				setTimeout(AppGini.closeParentModal, 2000);
+			}
+
+			/* enable DV action buttons to float on scrolling down the form */
+			enable_dvab_floating();
+
+
+			setTimeout(function() {
+				$j('#hist_chr_dev_dv_container-loading').addClass('hidden');
+				$j('#hist_chr_dev_dv_container').removeClass('hidden');
+				AppGini.focusFormElement('hist_chr_dev', 'hist_story');
+			}, 1100);
+
+			$j('form').eq(0).change(function() {
+				if($j(this).data('already_changed')) return;
+				if($j('#deselect').length) $j('#deselect').removeClass('btn-default').addClass('btn-warning').get(0).lastChild.data = " <%%TRANSLATION(Cancel)%%>";
+				$j(this).data('already_changed', true);
+			});
+
+			$j('a[href="<%%BASE_UPLOAD_PATH%%>"]').click(function() { return false; });
+
+
+			if(!embedded_mode) {
+				/* add a horizontal spacer to [add new parent] buttons that don't have a spacered element before them */
+				$j('.add_new_parent').prev(':not(.hspacer-md)').next().addClass('hspacer-md');
+
+				$j('.add_new_parent').click(function() {
+					var pt = $j(this).attr('id').replace(/_add_new$/, '');
+					modal_window({
+						url: pt + '_view.php?addNew_x=1&Embedded=1',
+						close: function() {
+							var field_id = $j('#' + pt + '_add_new').prevAll('input:hidden').eq(0).attr('id');
+							$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+							/* if a new parent was added, select it */
+							var new_id = localStorage.getItem(pt + '_last_added_id');
+							if(new_id === null) return;
+
+							localStorage.clear(pt + '_last_added_id');
+							AppGini.lookupText({
+								id: new_id,
+								table: 'hist_chr_dev',
+								field: field_id,
+								callback: function(data) {
+									$j('#' + field_id + '-container').select2('data', data, true);
+								}
+							});
+						},
+						size: 'full',
+						title: $j(this).attr('title')
+					});
+				});
+			}
+
+			AppGini.hideViewParentLinks();
+
+			$j('form').on('click', '.view_parent', function() {
+				var pt = $j(this).attr('id').replace(/_view_parent$/, '');
+				if($j(this).prevAll('input:hidden').length) {
+					var parent_id = $j(this).prevAll('input:hidden').eq(0).val();
+				} else {
+					var parent_id = $j(this).prevAll().children('input:hidden').eq(0).val();
+				}
+
+				/* handle radio lookups */
+				if($j(this).prevAll('[type=radio]').length) {
+					parent_id = $j(this).prevAll('[type=radio]').eq(0).val();
+				}
+
+				if(parent_id != '{empty_value}' && parent_id != undefined && parent_id != '') {
+					var parent_link = $j(this).parents('.form-group').children('label').data('parent_link');
+					switch(parent_link) {
+						case 'view_parent_hidden':
+							break;
+						case 'view_parent_modal':
+							modal_window({
+								url: pt + '_view.php?Embedded=1&SelectedID=' + encodeURIComponent(parent_id),
+								close: function() {
+									var field_id = $j('#' + pt + '_view_parent').prevAll('input:hidden').eq(0).attr('id');
+									$j('#' + field_id + '-container').select2('focus').select2('focus');
+								},
+								size: 'full',
+								title: $j(this).attr('title')
+							});
+							break;
+						case 'view_parent_same_window':
+							window.location = pt + '_view.php?Embedded=' + (embedded_mode ? '1' : '') + '&SelectedID=' + encodeURIComponent(parent_id);
+							break;
+						case 'view_parent_new_window':
+							window.open(pt + '_view.php?SelectedID=' + encodeURIComponent(parent_id));
+							break;
+					}
+
+				}
+			});
+
+
+			/* load admin tools for admin user */
+			if(!add_new_mode) {
+				$j('body').append('<div id="admin-tools-appendix"></div>');
+				$j('#admin-tools-appendix').load(
+					'ajax_admin_tools.php?table=hist_chr_dev&id=<%%URLVALUE(id)%%>',
+					function(resp) {
+						if(!resp.length) return;
+						$j.ajax('ajax_admin_tools.php?action=get_admin_tools_js&table=hist_chr_dev&id=<%%URLVALUE(id)%%>');
+					}
+				);
+			}
+
+			/* warn user if 'add new' clicked while unsaved changes exist */
+			$j('#addNew').click(function() {
+				if($j('#deselect.btn-warning').length) {
+					return confirm('<%%TRANSLATION(discard changes confirm)%%>');
+				}
+			});
+
+		});
+	</script>

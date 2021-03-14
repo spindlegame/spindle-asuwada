@@ -1,0 +1,587 @@
+<!-- To change the layout of the detail view form, we recommend using JS code in hooks/bio_encounter-dv.js rather than editing this file -->
+
+<div id="detail-view"></div>
+<div class="panel-heading"><h3 class="panel-title"><strong><%%DETAIL_VIEW_TITLE%%></strong></h3></div>
+
+<div id="bio_encounter_dv_container-loading" class="text-center text-info text-bold vspacer-lg"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+<div class="panel-body hidden" id="bio_encounter_dv_container">
+	<!-- child links -->
+	<div class="row vspacer-md">
+		<div class="col-xs-12 children-links">
+			<a class="hidden-xs btn btn-default btn-lg pull-right hidden hspacer-sm vspacer-sm" href="bio_encounter_scene_view.php?filterer_scene=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="bio_encounter_scene_link"><i class="glyphicon glyphicon-list-alt"></i> Escenas de encuentro biogr&#225;fico</a>
+			<a class="visible-xs btn btn-default btn-lg btn-block hidden vspacer-sm" href="bio_encounter_scene_view.php?filterer_scene=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>" id="xs_bio_encounter_scene_link"><i class="glyphicon glyphicon-list-alt"></i> Escenas de encuentro biogr&#225;fico</a>
+			<input type="hidden" id="bio_encounter_scene_hclink" value="bio_encounter_scene_view.php?filterer_scene=<%%URLVALUE(id)%%>&<%%EMBEDDED%%>">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<hr class="hidden-xs hidden-sm">
+
+	<div class="row">
+		<!-- form inputs -->
+		<div class="col-md-8 col-lg-10" id="bio_encounter_dv_form">
+			<fieldset class="form-horizontal">
+
+				<!-- Field: ID -->
+				<div class="form-group bio_encounter-id">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="id">ID</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="id"><%%VALUE(id)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Agente A -->
+				<div class="form-group bio_encounter-authorA">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="authorA" data-parent_link="view_parent_modal">Agente A</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(authorA)%%><%%PLINK(authorA)%%><%%ADDNEW(game_agent)%%><span id="authorALoading"></span></div>
+					</div>
+				</div>
+
+				<!-- Field: Nombre agente A -->
+				<div class="form-group bio_encounter-author_nameA">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Nombre agente A</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="author_nameA"></div>
+					</div>
+				</div>
+
+				<!-- Field: Bibliograf&#237;a A -->
+				<div class="form-group bio_encounter-bibliographyA">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bibliographyA" data-parent_link="view_parent_modal">Bibliograf&#237;a A</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bibliographyA)%%><%%PLINK(bibliographyA)%%><%%ADDNEW(biblio_doc)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Transcripci&#243;n A -->
+				<div class="form-group bio_encounter-transcriptA">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="transcriptA" data-parent_link="view_parent_modal">Transcripci&#243;n A</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(transcriptA)%%><%%PLINK(transcriptA)%%><%%ADDNEW(biblio_transcript)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Token A -->
+				<div class="form-group bio_encounter-tokenA">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="tokenA" data-parent_link="view_parent_modal">Token A</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(tokenA)%%><%%PLINK(tokenA)%%><%%ADDNEW(biblio_token)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Impresi&#243;n A -->
+				<div class="form-group bio_encounter-bio_impressionA">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bio_impressionA" data-parent_link="view_parent_modal">Impresi&#243;n A</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bio_impressionA)%%><%%PLINK(bio_impressionA)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Tensi&#243;n no&#233;tica A -->
+				<div class="form-group bio_encounter-bio_ntA">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bio_ntA" data-parent_link="view_parent_modal">Tensi&#243;n no&#233;tica A</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bio_ntA)%%><%%PLINK(bio_ntA)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Contrafactuales A -->
+				<div class="form-group bio_encounter-bio_counterfactualA">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bio_counterfactualA" data-parent_link="view_parent_modal">Contrafactuales A</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bio_counterfactualA)%%><%%PLINK(bio_counterfactualA)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Dilema A -->
+				<div class="form-group bio_encounter-bio_dilemmaA">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bio_dilemmaA" data-parent_link="view_parent_modal">Dilema A</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bio_dilemmaA)%%><%%PLINK(bio_dilemmaA)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: ODS A -->
+				<div class="form-group bio_encounter-bio_sdgA">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bio_sdgA" data-parent_link="view_parent_modal">ODS A</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bio_sdgA)%%><%%PLINK(bio_sdgA)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Fecha inicio A -->
+				<div class="form-group bio_encounter-startdateA">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="startdateA" data-parent_link="view_parent_modal">Fecha inicio A</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(startdateA)%%><%%PLINK(startdateA)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Fecha fin A -->
+				<div class="form-group bio_encounter-enddateA">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="enddateA" data-parent_link="view_parent_modal">Fecha fin A</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(enddateA)%%><%%PLINK(enddateA)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Escena A -->
+				<div class="form-group bio_encounter-sceneA">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="sceneA" data-parent_link="view_parent_modal">Escena A</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(sceneA)%%><%%PLINK(sceneA)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Agente B -->
+				<div class="form-group bio_encounter-authorB">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="authorB" data-parent_link="view_parent_modal">Agente B</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(authorB)%%><%%PLINK(authorB)%%><%%ADDNEW(game_agent)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Nombre agente B -->
+				<div class="form-group bio_encounter-author_nameB">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3">Nombre agente B</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="author_nameB"></div>
+					</div>
+				</div>
+
+				<!-- Field: Bibliograf&#237;a B -->
+				<div class="form-group bio_encounter-bibliographyB">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bibliographyB" data-parent_link="view_parent_modal">Bibliograf&#237;a B</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bibliographyB)%%><%%PLINK(bibliographyB)%%><%%ADDNEW(biblio_doc)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Transcripci&#243;n B -->
+				<div class="form-group bio_encounter-transcriptB">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="transcriptB" data-parent_link="view_parent_modal">Transcripci&#243;n B</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(transcriptB)%%><%%PLINK(transcriptB)%%><%%ADDNEW(biblio_transcript)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Token B -->
+				<div class="form-group bio_encounter-tokenB">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="tokenB" data-parent_link="view_parent_modal">Token B</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(tokenB)%%><%%PLINK(tokenB)%%><%%ADDNEW(biblio_token)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Impresi&#243;n B -->
+				<div class="form-group bio_encounter-bio_impressionB">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bio_impressionB" data-parent_link="view_parent_modal">Impresi&#243;n B</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bio_impressionB)%%><%%PLINK(bio_impressionB)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Tensi&#243;n no&#233;tica B -->
+				<div class="form-group bio_encounter-bio_ntB">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bio_ntB" data-parent_link="view_parent_modal">Tensi&#243;n no&#233;tica B</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bio_ntB)%%><%%PLINK(bio_ntB)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Contrafactuales B -->
+				<div class="form-group bio_encounter-bio_counterfactualB">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bio_counterfactualB" data-parent_link="view_parent_modal">Contrafactuales B</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bio_counterfactualB)%%><%%PLINK(bio_counterfactualB)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Dilemma B -->
+				<div class="form-group bio_encounter-bio_dilemmaB">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bio_dilemmaB" data-parent_link="view_parent_modal">Dilemma B</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bio_dilemmaB)%%><%%PLINK(bio_dilemmaB)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: ODS B -->
+				<div class="form-group bio_encounter-bio_sdgB">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="bio_sdgB" data-parent_link="view_parent_modal">ODS B</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(bio_sdgB)%%><%%PLINK(bio_sdgB)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Fecha inicio B -->
+				<div class="form-group bio_encounter-startdateB">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="startdateB" data-parent_link="view_parent_modal">Fecha inicio B</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(startdateB)%%><%%PLINK(startdateB)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Fecha fin B -->
+				<div class="form-group bio_encounter-enddateB">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="enddateB" data-parent_link="view_parent_modal">Fecha fin B</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(enddateB)%%><%%PLINK(enddateB)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Escena B -->
+				<div class="form-group bio_encounter-sceneB">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="sceneB" data-parent_link="view_parent_modal">Escena B</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(sceneB)%%><%%PLINK(sceneB)%%><%%ADDNEW(bio_chr_scene)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Descripci&#243;n de la relaci&#243;n -->
+				<div class="form-group bio_encounter-relation_description">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="relation_description">Descripci&#243;n de la relaci&#243;n</label>
+					<div class="col-lg-9">
+						<textarea class="form-control" name="relation_description" id="relation_description" rows=" 5"><%%VALUE(relation_description)%%></textarea>
+					</div>
+				</div>
+
+				<!-- Field: Tipo de relaci&#243;n -->
+				<div class="form-group bio_encounter-type">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="type">Tipo de relaci&#243;n</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="type" id="type" value="<%%VALUE(type)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Tipo de conflicto -->
+				<div class="form-group bio_encounter-conflicttype">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="conflicttype">Tipo de conflicto</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="conflicttype" id="conflicttype" value="<%%VALUE(conflicttype)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Escena biogr&#225;fica -->
+				<div class="form-group bio_encounter-story_scene">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="story_scene">Escena biogr&#225;fica</label>
+					<div class="col-lg-9">
+						<textarea class="form-control" name="story_scene" id="story_scene" rows=" 5"><%%VALUE(story_scene)%%></textarea>
+					</div>
+				</div>
+
+				<!-- Field: Nd_color -->
+				<div class="form-group bio_encounter-nd_color">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="nd_color">Nd_color <i class="glyphicon glyphicon-info-sign text-info" data-toggle="collapse" data-target="#nd_color-description"></i></label>
+					<div class="col-lg-9">
+						<span class="help-block bspacer-xs collapse" id="nd_color-description"><div class="alert alert-info bspacer-xs">Lo siguiente son c&#243;digos para la exportaci&#243;n como CSV y usarlo en la herramienta Excel: NodeXL Workbook<br>https://nodexlgraphgallery.org/pages/Registration.aspx</div></span>
+						<input maxlength="10" type="text" class="form-control" name="nd_color" id="nd_color" value="<%%VALUE(nd_color)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Nd_width -->
+				<div class="form-group bio_encounter-nd_width">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="nd_width">Nd_width</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="nd_width" id="nd_width" value="<%%VALUE(nd_width)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Nd_style -->
+				<div class="form-group bio_encounter-nd_style">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="nd_style">Nd_style</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="nd_style" id="nd_style" value="<%%VALUE(nd_style)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Nd_opacity -->
+				<div class="form-group bio_encounter-nd_opacity">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="nd_opacity">Nd_opacity</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="nd_opacity" id="nd_opacity" value="<%%VALUE(nd_opacity)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Nd_visibility -->
+				<div class="form-group bio_encounter-nd_visibility">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="nd_visibility">Nd_visibility</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="nd_visibility" id="nd_visibility" value="<%%VALUE(nd_visibility)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Lbl_lable -->
+				<div class="form-group bio_encounter-lbl_lable">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="lbl_lable">Lbl_lable</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="lbl_lable" id="lbl_lable" value="<%%VALUE(lbl_lable)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Lbl_color -->
+				<div class="form-group bio_encounter-lbl_color">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="lbl_color">Lbl_color</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="lbl_color" id="lbl_color" value="<%%VALUE(lbl_color)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Lbl_size -->
+				<div class="form-group bio_encounter-lbl_size">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="lbl_size">Lbl_size</label>
+					<div class="col-lg-9">
+						<input maxlength="40" type="text" class="form-control" name="lbl_size" id="lbl_size" value="<%%VALUE(lbl_size)%%>">
+					</div>
+				</div>
+
+				<!-- Field: Equipo de conflictos -->
+				<div class="form-group bio_encounter-encounter_team">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="encounter_team" data-parent_link="view_parent_modal">Equipo de conflictos</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(encounter_team)%%><%%PLINK(encounter_team)%%><%%ADDNEW(encounter_team)%%></div>
+					</div>
+				</div>
+
+				<!-- Field: Encounter analyst -->
+				<div class="form-group bio_encounter-encounter_analyst">
+					<hr class="hidden-md hidden-lg">
+					<label class="control-label col-lg-3" for="encounter_analyst" data-parent_link="view_parent_modal">Encounter analyst</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" style="white-space: nowrap; overflow-x: hidden;"><%%COMBO(encounter_analyst)%%><%%PLINK(encounter_analyst)%%><%%ADDNEW(ecounter_analyst)%%></div>
+					</div>
+				</div>
+
+			</fieldset>
+		</div>
+
+		<!-- DV action buttons -->
+		<hr class="hidden-md hidden-lg">
+		<div class="col-md-4 col-lg-2" id="bio_encounter_dv_action_buttons">
+			<div class="btn-toolbar">
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%UPDATE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%DESELECT_BUTTON%%>
+					<%%DVPRINT_BUTTON%%>
+					<%%DELETE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%INSERT_BUTTON%%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- child records -->
+	<hr>
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1">
+			<div id="bio_encounter-children" class="children-tabs">
+				<div class="text-center"><i class="glyphicon glyphicon-refresh loop-rotate"></i> <%%TRANSLATION(Loading ...)%%></div>
+			</div>
+		</div>
+	</div>
+
+</div><!-- /div class="panel-body" -->
+	<script>
+		$j(function() {
+			var add_new_mode = (!$j('input[name=SelectedID]').val());
+			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			/* auto-close embedded page? */
+			var autoclose_mode = ($j('input[name=AutoClose]').val() == 1);
+			var record_added_ok = (location.search.split('record-added-ok=').length == 2);
+			var record_updated_ok = (location.search.split('record-updated-ok=').length == 2);
+			if((record_added_ok || record_updated_ok) && embedded_mode && autoclose_mode) {
+				setTimeout(AppGini.closeParentModal, 2000);
+			}
+
+			/* enable DV action buttons to float on scrolling down the form */
+			enable_dvab_floating();
+
+
+			setTimeout(function() {
+				$j('#bio_encounter_dv_container-loading').addClass('hidden');
+				$j('#bio_encounter_dv_container').removeClass('hidden');
+				AppGini.focusFormElement('bio_encounter', 'authorA');
+			}, 1100);
+
+			$j('form').eq(0).change(function() {
+				if($j(this).data('already_changed')) return;
+				if($j('#deselect').length) $j('#deselect').removeClass('btn-default').addClass('btn-warning').get(0).lastChild.data = " <%%TRANSLATION(Cancel)%%>";
+				$j(this).data('already_changed', true);
+			});
+
+			$j('a[href="<%%BASE_UPLOAD_PATH%%>"]').click(function() { return false; });
+
+			if(embedded_mode) {
+				/* hide links to children tables in embedded mode */
+				$j('.detail_view a[id$=_link]').remove();
+
+				/* append embedded mode to all links */
+				var append_embedded = function() {
+					$j('a[href]:not([href^="#"]):not([href^="javascript"]):not([href$="Embedded=1"]):not([href*="link.php?t="]):not([href^="mailto:"])').each(
+						function() {
+							$j(this).attr('href', $j(this).attr('href') + '&Embedded=1');
+						}
+					);
+				}
+				setTimeout(append_embedded, 500);
+				setTimeout(append_embedded, 1500);
+				setTimeout(append_embedded, 2500);
+				setTimeout(append_embedded, 3500);
+			}
+
+			/* when no record is selected ('add new' mode) */
+			if(add_new_mode) {
+				/* hide links to children tables */
+				$j('.detail_view a[id$=_link]').remove();
+			} else {
+				post(
+					'parent-children.php', {
+						ParentTable: 'bio_encounter',
+						SelectedID: '<%%VALUE(id)%%>',
+						Operation: 'show-children'
+					},
+					'bio_encounter-children'
+				);
+			}
+
+			if(!embedded_mode) {
+				/* add a horizontal spacer to [add new parent] buttons that don't have a spacered element before them */
+				$j('.add_new_parent').prev(':not(.hspacer-md)').next().addClass('hspacer-md');
+
+				$j('.add_new_parent').click(function() {
+					var pt = $j(this).attr('id').replace(/_add_new$/, '');
+					modal_window({
+						url: pt + '_view.php?addNew_x=1&Embedded=1',
+						close: function() {
+							var field_id = $j('#' + pt + '_add_new').prevAll('input:hidden').eq(0).attr('id');
+							$j('#' + field_id + '-container').select2('focus').select2('focus');
+
+							/* if a new parent was added, select it */
+							var new_id = localStorage.getItem(pt + '_last_added_id');
+							if(new_id === null) return;
+
+							localStorage.clear(pt + '_last_added_id');
+							AppGini.lookupText({
+								id: new_id,
+								table: 'bio_encounter',
+								field: field_id,
+								callback: function(data) {
+									$j('#' + field_id + '-container').select2('data', data, true);
+								}
+							});
+						},
+						size: 'full',
+						title: $j(this).attr('title')
+					});
+				});
+			}
+
+			AppGini.hideViewParentLinks();
+
+			$j('form').on('click', '.view_parent', function() {
+				var pt = $j(this).attr('id').replace(/_view_parent$/, '');
+				if($j(this).prevAll('input:hidden').length) {
+					var parent_id = $j(this).prevAll('input:hidden').eq(0).val();
+				} else {
+					var parent_id = $j(this).prevAll().children('input:hidden').eq(0).val();
+				}
+
+				/* handle radio lookups */
+				if($j(this).prevAll('[type=radio]').length) {
+					parent_id = $j(this).prevAll('[type=radio]').eq(0).val();
+				}
+
+				if(parent_id != '{empty_value}' && parent_id != undefined && parent_id != '') {
+					var parent_link = $j(this).parents('.form-group').children('label').data('parent_link');
+					switch(parent_link) {
+						case 'view_parent_hidden':
+							break;
+						case 'view_parent_modal':
+							modal_window({
+								url: pt + '_view.php?Embedded=1&SelectedID=' + encodeURIComponent(parent_id),
+								close: function() {
+									var field_id = $j('#' + pt + '_view_parent').prevAll('input:hidden').eq(0).attr('id');
+									$j('#' + field_id + '-container').select2('focus').select2('focus');
+								},
+								size: 'full',
+								title: $j(this).attr('title')
+							});
+							break;
+						case 'view_parent_same_window':
+							window.location = pt + '_view.php?Embedded=' + (embedded_mode ? '1' : '') + '&SelectedID=' + encodeURIComponent(parent_id);
+							break;
+						case 'view_parent_new_window':
+							window.open(pt + '_view.php?SelectedID=' + encodeURIComponent(parent_id));
+							break;
+					}
+
+				}
+			});
+
+
+			/* load admin tools for admin user */
+			if(!add_new_mode) {
+				$j('body').append('<div id="admin-tools-appendix"></div>');
+				$j('#admin-tools-appendix').load(
+					'ajax_admin_tools.php?table=bio_encounter&id=<%%URLVALUE(id)%%>',
+					function(resp) {
+						if(!resp.length) return;
+						$j.ajax('ajax_admin_tools.php?action=get_admin_tools_js&table=bio_encounter&id=<%%URLVALUE(id)%%>');
+					}
+				);
+			}
+
+			/* warn user if 'add new' clicked while unsaved changes exist */
+			$j('#addNew').click(function() {
+				if($j('#deselect.btn-warning').length) {
+					return confirm('<%%TRANSLATION(discard changes confirm)%%>');
+				}
+			});
+
+		});
+	</script>
